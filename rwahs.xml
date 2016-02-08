@@ -1100,6 +1100,21 @@
             <placement code="ca_attribute_Email">
               <bundle>ca_attribute_Email</bundle>
             </placement>
+            <placement code="ca_attribute_DonorNotes">
+              <bundle>ca_attribute_DonorNotes</bundle>
+            </placement>
+            <placement code="ca_attribute_Deceased">
+              <bundle>ca_attribute_Deceased</bundle>
+            </placement>
+            <placement code="ca_attribute_DonorAgentName">
+              <bundle>ca_attribute_DonorAgentName</bundle>
+            </placement>
+            <placement code="ca_attribute_DonorAgentAddress">
+              <bundle>ca_attribute_DonorAgentAddress</bundle>
+            </placement>
+            <placement code="ca_attribute_DonorAgentPhone">
+              <bundle>ca_attribute_DonorAgentPhone</bundle>
+            </placement>
           </bundlePlacements>
         </screen>
         <screen idno="altnames" default="0">
