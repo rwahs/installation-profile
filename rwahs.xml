@@ -413,10 +413,124 @@
         </item>
       </items>
     </list>
+    <list code="yesNoDefaultNo" hierarchical="0" system="1" vocabulary="0" defaultSort="1">
+      <labels>
+        <label locale="en_AU">
+          <name>Yes   No list</name>
+        </label>
+      </labels>
+      <items>
+        <item idno="yes" enabled="1" default="0" value="1">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Yes</name_singular>
+              <name_plural>Yes</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="no" enabled="1" default="0" value="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>No</name_singular>
+              <name_plural>No</name_plural>
+            </label>
+          </labels>
+        </item>
+      </items>
+    </list>
+    <list code="yesNoDefaultYes" hierarchical="0" system="1" vocabulary="0" defaultSort="1">
+      <labels>
+        <label locale="en_AU">
+          <name>Yes   No list</name>
+        </label>
+      </labels>
+      <items>
+        <item idno="yes" enabled="1" default="1" value="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Yes</name_singular>
+              <name_plural>Yes</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="no" enabled="1" default="0" value="1">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>No</name_singular>
+              <name_plural>No</name_plural>
+            </label>
+          </labels>
+        </item>
+      </items>
+    </list>
   </lists>
   <elementSets>
     <!--Basic Elements-->
-    <metadataElement code="description" datatype="Text">
+    <metadataElement code="LastEditBy" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Last Edited By</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">6</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">30</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="objects">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="entities">
+          <table>ca_entities</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="LastEditDate" datatype="DateRange">
+      <labels>
+        <label locale="en_AU">
+          <name>Last Edit Date</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">6</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">30</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="objects">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="entities">
+          <table>ca_entities</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Description" datatype="Text">
       <labels>
         <label locale="en_AU">
           <name>Description</name>
@@ -491,7 +605,7 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="itemType" datatype="List" list="itemTypes">
+    <metadataElement code="ItemType" datatype="List" list="itemTypes">
       <labels>
         <label locale="en_AU">
           <name>Item Type</name>
@@ -512,7 +626,7 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="legacyId" datatype="Integer">
+    <metadataElement code="LegacyID" datatype="Integer">
       <labels>
         <label locale="en_AU">
           <name>Legacy Identifier</name>
@@ -529,324 +643,8 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="description_source" datatype="Text">
-      <labels>
-        <label locale="en_AU">
-          <name>Source of description</name>
-          <description>Source of item description. This should be a formal citation if possible. For informal sources a narrative description is acceptable.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">640px</setting>
-        <setting name="fieldHeight">3</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">65535</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="r1">
-          <table>ca_objects</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="r2">
-          <table>ca_places</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="r3">
-          <table>ca_occurrences</table>
-          <type>event</type>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="r4">
-          <table>ca_collections</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="r5">
-          <table>ca_storage_locations</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="r6">
-          <table>ca_object_lots</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="date" datatype="Container">
-      <labels>
-        <label locale="en_AU">
-          <name>Date</name>
-          <description>A point or period of time associated with an event in the life cycle of the resource.</description>
-        </label>
-      </labels>
-      <documentationUrl>http://dublincore.org/documents/dcmi-terms/#terms-date</documentationUrl>
-      <elements>
-        <metadataElement code="dates_value" datatype="DateRange">
-          <labels>
-            <label locale="en_AU">
-              <name>Date</name>
-            </label>
-          </labels>
-          <settings>
-            <setting name="fieldWidth">40</setting>
-            <setting name="fieldHeight">1</setting>
-            <setting name="minChars">0</setting>
-            <setting name="maxChars">65535</setting>
-          </settings>
-        </metadataElement>
-        <metadataElement code="dc_dates_types" datatype="List" list="date_types">
-          <labels>
-            <label locale="en_AU">
-              <name>Type</name>
-            </label>
-          </labels>
-          <settings>
-            <setting name="fieldWidth">40</setting>
-          </settings>
-        </metadataElement>
-      </elements>
-      <typeRestrictions>
-        <restriction code="objects">
-          <table>ca_objects</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">255</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="r1">
-          <table>ca_object_representations</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="coverageDates" datatype="DateRange">
-      <labels>
-        <label locale="en_AU">
-          <name>Coverage Dates</name>
-        </label>
-      </labels>
-      <documentationUrl>http://dublincore.org/documents/dcmi-terms/#terms-coverage</documentationUrl>
-      <settings>
-        <setting name="fieldWidth">40</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">65535</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="r1">
-          <table>ca_objects</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="r2">
-          <table>ca_object_representations</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="dimensions" datatype="Container">
-      <labels>
-        <label locale="en_AU">
-          <name>Dimensions</name>
-        </label>
-      </labels>
-      <elements>
-        <metadataElement code="dimensions_length" datatype="Length">
-          <labels>
-            <label locale="en_AU">
-              <name>Length</name>
-              <description>Length of object; enter in your preferred units (eg. 10cm)</description>
-            </label>
-          </labels>
-          <settings>
-            <setting name="fieldWidth">10</setting>
-            <setting name="fieldHeight">1</setting>
-          </settings>
-        </metadataElement>
-        <metadataElement code="dimensions_width" datatype="Length">
-          <labels>
-            <label locale="en_AU">
-              <name>Width</name>
-              <description>Width of object; enter in your preferred units (eg. 10cm)</description>
-            </label>
-          </labels>
-          <settings>
-            <setting name="fieldWidth">10</setting>
-            <setting name="fieldHeight">1</setting>
-          </settings>
-        </metadataElement>
-        <metadataElement code="dimensions_height" datatype="Length">
-          <labels>
-            <label locale="en_AU">
-              <name>Height</name>
-              <description>Height of object; enter in your preferred units (eg. 10cm)</description>
-            </label>
-          </labels>
-          <settings>
-            <setting name="fieldWidth">10</setting>
-            <setting name="fieldHeight">1</setting>
-          </settings>
-        </metadataElement>
-        <metadataElement code="dimensions_thickness" datatype="Length">
-          <labels>
-            <label locale="en_AU">
-              <name>Thickness</name>
-              <description>Thickness of object; enter in your preferred units (eg. 10cm)</description>
-            </label>
-          </labels>
-          <settings>
-            <setting name="fieldWidth">10</setting>
-            <setting name="fieldHeight">1</setting>
-          </settings>
-        </metadataElement>
-        <metadataElement code="dimensions_weight" datatype="Weight">
-          <labels>
-            <label locale="en_AU">
-              <name>Weight</name>
-              <description>Weight of object; enter in your preferred units</description>
-            </label>
-          </labels>
-          <settings>
-            <setting name="fieldWidth">10</setting>
-            <setting name="fieldHeight">1</setting>
-          </settings>
-        </metadataElement>
-        <metadataElement code="meas_line1" datatype="Container">
-          <labels>
-            <label locale="en_AU">
-              <name>Line 1</name>
-            </label>
-          </labels>
-          <elements>
-            <metadataElement code="measurement_notes" datatype="Text">
-              <labels>
-                <label locale="en_AU">
-                  <name>Measurement Notes</name>
-                </label>
-              </labels>
-              <settings>
-                <setting name="fieldWidth">70</setting>
-                <setting name="fieldHeight">2</setting>
-                <setting name="minChars">0</setting>
-                <setting name="maxChars">65535</setting>
-              </settings>
-            </metadataElement>
-          </elements>
-        </metadataElement>
-      </elements>
-      <typeRestrictions>
-        <restriction code="r1">
-          <table>ca_objects</table>
-          <type>image</type>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="r3">
-          <table>ca_objects</table>
-          <type>physical_object</type>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <!--Subject Elements-->
-    <metadataElement code="lcsh_terms" datatype="LCSH">
-      <labels>
-        <label locale="en_AU">
-          <name>Library of Congress Subject Headings</name>
-          <description>Library of Congress Subject headings describing this object. To add a new heading simply type the first few letters of the heading and choose the desired one from the displayed list of possible matches.</description>
-        </label>
-      </labels>
-      <documentationUrl>http://dublincore.org/documents/dcmi-terms/#terms-subject</documentationUrl>
-      <settings>
-        <setting name="fieldWidth">500px</setting>
-        <setting name="fieldHeight">1</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="ca_objects">
-          <table>ca_objects</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="ca_entities">
-          <table>ca_entities</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="ca_places">
-          <table>ca_places</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="ca_occurrences">
-          <table>ca_occurrences</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="ca_collections">
-          <table>ca_collections</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
     <!--Entity Elements-->
-    <metadataElement code="address" datatype="Container">
+    <metadataElement code="AddressContainer" datatype="Container">
       <labels>
         <label locale="en_AU">
           <name>Address</name>
@@ -856,7 +654,7 @@
         <setting name="doesNotTakeLocale">1</setting>
       </settings>
       <elements>
-        <metadataElement code="line1" datatype="Container">
+        <metadataElement code="Line1" datatype="Container">
           <labels>
             <label locale="en_AU">
               <name>Address line 1</name>
@@ -864,7 +662,7 @@
           </labels>
           <settings/>
           <elements>
-            <metadataElement code="address1" datatype="Text">
+            <metadataElement code="Address1" datatype="Text">
               <labels>
                 <label locale="en_AU">
                   <name>Address line 1</name>
@@ -879,7 +677,7 @@
             </metadataElement>
           </elements>
         </metadataElement>
-        <metadataElement code="line2" datatype="Container">
+        <metadataElement code="Line2" datatype="Container">
           <labels>
             <label locale="en_AU">
               <name>Address line 1</name>
@@ -887,7 +685,7 @@
           </labels>
           <settings/>
           <elements>
-            <metadataElement code="address2" datatype="Text">
+            <metadataElement code="Address2" datatype="Text">
               <labels>
                 <label locale="en_AU">
                   <name>Address line 2</name>
@@ -902,7 +700,7 @@
             </metadataElement>
           </elements>
         </metadataElement>
-        <metadataElement code="line3" datatype="Container">
+        <metadataElement code="Line3" datatype="Container">
           <labels>
             <label locale="en_AU">
               <name>Address line 3</name>
@@ -910,7 +708,7 @@
           </labels>
           <settings/>
           <elements>
-            <metadataElement code="city" datatype="Text">
+            <metadataElement code="TownCity" datatype="Text">
               <labels>
                 <label locale="en_AU">
                   <name>City</name>
@@ -921,9 +719,10 @@
                 <setting name="fieldHeight">1</setting>
                 <setting name="minChars">0</setting>
                 <setting name="maxChars">255</setting>
+                <setting name="suggetExistingValues">1</setting>
               </settings>
             </metadataElement>
-            <metadataElement code="stateprovince" datatype="Text">
+            <metadataElement code="State" datatype="Text">
               <labels>
                 <label locale="en_AU">
                   <name>State/province</name>
@@ -934,9 +733,10 @@
                 <setting name="fieldHeight">1</setting>
                 <setting name="minChars">0</setting>
                 <setting name="maxChars">255</setting>
+                <setting name="suggetExistingValues">1</setting>
               </settings>
             </metadataElement>
-            <metadataElement code="postalcode" datatype="Text">
+            <metadataElement code="PostCode" datatype="Text">
               <labels>
                 <label locale="en_AU">
                   <name>Postal/zip code</name>
@@ -947,9 +747,10 @@
                 <setting name="fieldHeight">1</setting>
                 <setting name="minChars">0</setting>
                 <setting name="maxChars">255</setting>
+                <setting name="suggetExistingValues">1</setting>
               </settings>
             </metadataElement>
-            <metadataElement code="country" datatype="Text">
+            <metadataElement code="Country" datatype="Text">
               <labels>
                 <label locale="en_AU">
                   <name>Country</name>
@@ -960,6 +761,7 @@
                 <setting name="fieldHeight">1</setting>
                 <setting name="minChars">0</setting>
                 <setting name="maxChars">255</setting>
+                <setting name="suggetExistingValues">1</setting>
               </settings>
             </metadataElement>
           </elements>
@@ -984,17 +786,17 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="telephone" datatype="Text">
+    <metadataElement code="Phone" datatype="Text">
       <labels>
         <label locale="en_AU">
-          <name>Telephone/fax</name>
+          <name>Phone</name>
         </label>
       </labels>
       <settings>
         <setting name="fieldWidth">70</setting>
         <setting name="fieldHeight">1</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">65535</setting>
+        <setting name="maxChars">30</setting>
         <setting name="doesNotTakeLocale">1</setting>
       </settings>
       <typeRestrictions>
@@ -1002,21 +804,37 @@
           <table>ca_entities</table>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">10</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="ca_places">
-          <table>ca_places</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">10</setting>
+            <setting name="maxAttributesPerRow">3</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="email" datatype="Text">
+    <metadataElement code="MobilePhone" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Mobile Phone</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">30</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_entities">
+          <table>ca_entities</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Email" datatype="Text">
       <labels>
         <label locale="en_AU">
           <name>Email address</name>
@@ -1026,7 +844,7 @@
         <setting name="fieldWidth">70</setting>
         <setting name="fieldHeight">1</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">65535</setting>
+        <setting name="maxChars">255</setting>
         <setting name="doesNotTakeLocale">1</setting>
       </settings>
       <typeRestrictions>
@@ -1034,7 +852,7 @@
           <table>ca_entities</table>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">10</setting>
+            <setting name="maxAttributesPerRow">1</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
@@ -1042,27 +860,27 @@
           <table>ca_places</table>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">10</setting>
+            <setting name="maxAttributesPerRow">1</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="biography" datatype="Text">
+    <metadataElement code="DonorNotes" datatype="Text">
       <labels>
         <label locale="en_AU">
-          <name>Description</name>
-          <description>Narrative biography for entity. This is the primary text used to document the entity.</description>
+          <name>Notes</name>
         </label>
       </labels>
       <settings>
         <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">6</setting>
+        <setting name="fieldHeight">1</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">65535</setting>
+        <setting name="maxChars">255</setting>
+        <setting name="doesNotTakeLocale">1</setting>
       </settings>
       <typeRestrictions>
-        <restriction code="r1">
+        <restriction code="ca_entities">
           <table>ca_entities</table>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
@@ -1072,26 +890,95 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="biography_source" datatype="Text">
+    <metadataElement code="Deceased" datatype="List" list="yesNoDefaultNo">
       <labels>
         <label locale="en_AU">
-          <name>Source of description</name>
-          <description>Source of entity biography. This should be a formal citation if possible. For informal sources a narrative description is acceptable.</description>
+          <name>Deceased</name>
         </label>
       </labels>
       <settings>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">3</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">65535</setting>
+        <setting name="render">yes_no_checkboxes</setting>
+        <setting name="doesNotTakeLocale">1</setting>
       </settings>
       <typeRestrictions>
-        <restriction code="r1">
+        <restriction code="ca_entities">
           <table>ca_entities</table>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
             <setting name="maxAttributesPerRow">1</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="DonorAgentName" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Donor Agent Name</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_entities">
+          <table>ca_entities</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="DonorAgentAddress" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Donor Agent's Address</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_entities">
+          <table>ca_entities</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="DonorAgentPhone" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Donor Agent's Phone Number</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">30</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_entities">
+          <table>ca_entities</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
           </settings>
         </restriction>
       </typeRestrictions>
@@ -1119,8 +1006,8 @@
             </label>
           </labels>
           <bundlePlacements>
-            <placement code="ca_attribute_itemType">
-              <bundle>ca_attribute_itemType</bundle>
+            <placement code="ca_attribute_ItemType">
+              <bundle>ca_attribute_ItemType</bundle>
             </placement>
             <placement code="idno">
               <bundle>idno</bundle>
@@ -1150,8 +1037,8 @@
             </label>
           </labels>
           <bundlePlacements>
-            <placement code="ca_attribute_itemType">
-              <bundle>ca_attribute_itemType</bundle>
+            <placement code="ca_attribute_ItemType">
+              <bundle>ca_attribute_ItemType</bundle>
             </placement>
             <placement code="idno">
               <bundle>idno</bundle>
@@ -1168,8 +1055,8 @@
             </label>
           </labels>
           <bundlePlacements>
-            <placement code="ca_attribute_itemType">
-              <bundle>ca_attribute_itemType</bundle>
+            <placement code="ca_attribute_ItemType">
+              <bundle>ca_attribute_ItemType</bundle>
             </placement>
             <placement code="idno">
               <bundle>idno</bundle>
@@ -1188,10 +1075,10 @@
         </label>
       </labels>
       <screens>
-        <screen idno="s1" default="1">
+        <screen idno="donorData" default="1">
           <labels>
             <label locale="en_AU">
-              <name>Basic Info</name>
+              <name>Donor Data</name>
             </label>
           </labels>
           <bundlePlacements>
@@ -1201,14 +1088,17 @@
             <placement code="preferred_labels">
               <bundle>preferred_labels</bundle>
             </placement>
-            <placement code="ca_attribute_biography">
-              <bundle>ca_attribute_biography</bundle>
+            <placement code="ca_attribute_AddressContainer">
+              <bundle>ca_attribute_AddressContainer</bundle>
             </placement>
-            <placement code="ca_attribute_biography_source">
-              <bundle>ca_attribute_biography_source</bundle>
+            <placement code="ca_attribute_Phone">
+              <bundle>ca_attribute_Phone</bundle>
             </placement>
-            <placement code="ca_attribute_internal_notes">
-              <bundle>ca_attribute_internal_notes</bundle>
+            <placement code="ca_attribute_MobilePhone">
+              <bundle>ca_attribute_MobilePhone</bundle>
+            </placement>
+            <placement code="ca_attribute_Email">
+              <bundle>ca_attribute_Email</bundle>
             </placement>
           </bundlePlacements>
         </screen>
@@ -1225,24 +1115,6 @@
                 <setting name="label" locale="en_AU">Alternate names</setting>
                 <setting name="add_label" locale="en_AU">Add name</setting>
               </settings>
-            </placement>
-          </bundlePlacements>
-        </screen>
-        <screen idno="contact" default="0">
-          <labels>
-            <label locale="en_AU">
-              <name>Contact info</name>
-            </label>
-          </labels>
-          <bundlePlacements>
-            <placement code="ca_attribute_address">
-              <bundle>ca_attribute_address</bundle>
-            </placement>
-            <placement code="ca_attribute_telephone">
-              <bundle>ca_attribute_telephone</bundle>
-            </placement>
-            <placement code="ca_attribute_email">
-              <bundle>ca_attribute_email</bundle>
             </placement>
           </bundlePlacements>
         </screen>
