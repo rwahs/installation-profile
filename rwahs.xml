@@ -695,6 +695,173 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
+    <metadataElement code="AccessionPrefix" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Accession Prefix</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">10</setting>
+        <setting name="fieldHeight">6</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">4</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="r1">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="AccessionYear" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Accession Year</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">10</setting>
+        <setting name="fieldHeight">6</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">4</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="r1">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="AccessionNumber" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>AccessionNumber</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">10</setting>
+        <setting name="fieldHeight">6</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="r1">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="AccessionSeries" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>AccessionSeries</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">10</setting>
+        <setting name="fieldHeight">6</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="r1">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="AccessionParts" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>AccessionParts</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">10</setting>
+        <setting name="fieldHeight">6</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="r1">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="AccessionBy" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>AccessionBy</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">10</setting>
+        <setting name="fieldHeight">6</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">30</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="r1">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="AccessionDate" datatype="DateRange">
+      <labels>
+        <label locale="en_AU">
+          <name>AccessionDate</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction code="r1">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
     <metadataElement code="LegacyID" datatype="Integer">
       <labels>
         <label locale="en_AU">
