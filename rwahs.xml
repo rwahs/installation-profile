@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="profile.xsd" useForConfiguration="1" base="base_en_AU" infoUrl="https://github.com/rwahs/providence">
+<?xml version="1.0" encoding="UTF-8"?>
+<profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="profile.xsd"
+         useForConfiguration="1" base="base_en_AU" infoUrl="https://github.com/rwahs/providence">
   <profileName>RWAHS - Royal Western Australian Historical Society</profileName>
   <profileDescription>Royal Western Australian Historical Society profile</profileDescription>
   <locales>
@@ -98,51 +100,67 @@
       </items>
     </list>
     <list code="object_acq_types" hierarchical="0" system="1" vocabulary="0">
-      <labels><label locale="en_AU">
-        <name>Object acquisition types</name>
-      </label></labels>
+      <labels>
+        <label locale="en_AU">
+          <name>Object acquisition types</name>
+        </label>
+      </labels>
       <items>
         <item idno="bequest" enabled="1" default="1">
-          <labels><label locale="en_AU" preferred="1">
-            <name_singular>Bequest</name_singular>
-            <name_plural>Bequests</name_plural>
-          </label></labels>
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Bequest</name_singular>
+              <name_plural>Bequests</name_plural>
+            </label>
+          </labels>
         </item>
         <item idno="donation" enabled="1" default="0">
-          <labels><label locale="en_AU" preferred="1">
-            <name_singular>Donation</name_singular>
-            <name_plural>Donations</name_plural>
-          </label></labels>
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Donation</name_singular>
+              <name_plural>Donations</name_plural>
+            </label>
+          </labels>
         </item>
         <item idno="internal" enabled="1" default="0">
-          <labels><label locale="en_AU" preferred="1">
-            <name_singular>Internal</name_singular>
-            <name_plural>Internal</name_plural>
-          </label></labels>
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Internal</name_singular>
+              <name_plural>Internal</name_plural>
+            </label>
+          </labels>
         </item>
         <item idno="purchase" enabled="1" default="0">
-          <labels><label locale="en_AU" preferred="1">
-            <name_singular>Purchase</name_singular>
-            <name_plural>Purchases</name_plural>
-          </label></labels>
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Purchase</name_singular>
+              <name_plural>Purchases</name_plural>
+            </label>
+          </labels>
         </item>
         <item idno="salvage" enabled="1" default="0">
-          <labels><label locale="en_AU" preferred="1">
-            <name_singular>Salvage</name_singular>
-            <name_plural>Salvage</name_plural>
-          </label></labels>
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Salvage</name_singular>
+              <name_plural>Salvage</name_plural>
+            </label>
+          </labels>
         </item>
         <item idno="unknown" enabled="1" default="0">
-          <labels><label locale="en_AU" preferred="1">
-            <name_singular>Unknown</name_singular>
-            <name_plural>Unknown</name_plural>
-          </label></labels>
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Unknown</name_singular>
+              <name_plural>Unknown</name_plural>
+            </label>
+          </labels>
         </item>
         <item idno="other" enabled="1" default="0">
-          <labels><label locale="en_AU" preferred="1">
-            <name_singular>Other</name_singular>
-            <name_plural>Other</name_plural>
-          </label></labels>
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Other</name_singular>
+              <name_plural>Other</name_plural>
+            </label>
+          </labels>
         </item>
       </items>
     </list>
@@ -416,7 +434,7 @@
     <list code="yesNoDefaultNo" hierarchical="0" system="1" vocabulary="0" defaultSort="1">
       <labels>
         <label locale="en_AU">
-          <name>Yes   No list</name>
+          <name>Yes No list with Default of No</name>
         </label>
       </labels>
       <items>
@@ -441,7 +459,7 @@
     <list code="yesNoDefaultYes" hierarchical="0" system="1" vocabulary="0" defaultSort="1">
       <labels>
         <label locale="en_AU">
-          <name>Yes   No list</name>
+          <name>Yes No list with Default of Yes</name>
         </label>
       </labels>
       <items>
@@ -458,6 +476,55 @@
             <label locale="en_AU" preferred="1">
               <name_singular>No</name_singular>
               <name_plural>No</name_plural>
+            </label>
+          </labels>
+        </item>
+      </items>
+    </list>
+    <list code="conditionOnReceipt" hierarchical="0" system="1" vocabulary="0">
+      <labels>
+        <label locale="en_AU">
+          <name>Condition on Receipt</name>
+        </label>
+      </labels>
+      <items>
+        <item idno="excellent" enabled="1" default="1" value="5">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Excellent</name_singular>
+              <name_plural>Excellent</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="good" enabled="1" default="0" value="4">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Good</name_singular>
+              <name_plural>Good</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="fair_used" enabled="1" default="0" value="3">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Fair / Used</name_singular>
+              <name_plural>Fair / Used</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="damaged" enabled="1" default="0" value="2">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Damaged</name_singular>
+              <name_plural>Damaged</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="poor" enabled="1" default="0" value="1">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Damaged</name_singular>
+              <name_plural>Damaged</name_plural>
             </label>
           </labels>
         </item>
@@ -534,7 +601,9 @@
       <labels>
         <label locale="en_AU">
           <name>Description</name>
-          <description>An account of the resource. Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</description>
+          <description>An account of the resource. Description may include but is not limited to: an abstract, a table
+            of contents, a graphical representation, or a free-text account of the resource.
+          </description>
         </label>
       </labels>
       <documentationUrl>http://dublincore.org/documents/dcmi-terms/#terms-description</documentationUrl>
@@ -834,6 +903,30 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
+    <metadataElement code="Fax" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Fax</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">30</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_entities">
+          <table>ca_entities</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
     <metadataElement code="Email" datatype="Text">
       <labels>
         <label locale="en_AU">
@@ -983,6 +1076,196 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
+    <metadataElement code="ReceiptNum" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Receipt Number</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">30</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="DateReceived" datatype="DateRange">
+      <labels>
+        <label locale="en_AU">
+          <name>Date Received</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="suggestExistingValuesSort">recent</setting>
+        <setting name="useDatePicker">1</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="ConditionOnReceipt" datatype="List" list="conditionOnReceipt">
+      <labels>
+        <label locale="en_AU">
+          <name>Condition (on receipt)</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="nullOptionText">Not Set</setting>
+        <setting name="render">select</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="LegalTitle" datatype="Container">
+      <labels>
+        <label locale="en_AU">
+          <name>Legal Title?</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="render">yes_no_checkboxes</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <elements>
+        <metadataElement code="LegalTitleYesNo" datatype="List" list="yesNoDefaultNo">
+          <labels>
+            <label locale="en_AU">
+              <name>Legal Title?</name>
+            </label>
+          </labels>
+          <settings>
+            <setting name="render">yes_no_checkboxes</setting>
+            <setting name="doesNotTakeLocale">1</setting>
+          </settings>
+        </metadataElement>
+        <metadataElement code="TitleDetails" datatype="Text">
+          <labels>
+            <label locale="en_AU">
+              <name>Title Details</name>
+            </label>
+          </labels>
+          <settings>
+            <setting name="fieldWidth">70</setting>
+            <setting name="fieldHeight">1</setting>
+            <setting name="minChars">0</setting>
+            <setting name="maxChars">255</setting>
+            <setting name="doesNotTakeLocale">1</setting>
+          </settings>
+        </metadataElement>
+      </elements>
+      <typeRestrictions>
+        <restriction code="ca_objects">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Copyright" datatype="Container">
+      <labels>
+        <label locale="en_AU">
+          <name>Copyright</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <elements>
+        <metadataElement code="CopyrightYesNo" datatype="List" list="yesNoDefaultNo">
+          <labels>
+            <label locale="en_AU">
+              <name>Copyright?</name>
+            </label>
+          </labels>
+          <settings>
+            <setting name="render">yes_no_checkboxes</setting>
+            <setting name="doesNotTakeLocale">1</setting>
+          </settings>
+        </metadataElement>
+        <metadataElement code="CopyrightDetails" datatype="Text">
+          <labels>
+            <label locale="en_AU">
+              <name>Copyright Details</name>
+            </label>
+          </labels>
+          <settings>
+            <setting name="fieldWidth">70</setting>
+            <setting name="fieldHeight">1</setting>
+            <setting name="minChars">0</setting>
+            <setting name="maxChars">255</setting>
+            <setting name="doesNotTakeLocale">1</setting>
+          </settings>
+        </metadataElement>
+      </elements>
+      <typeRestrictions>
+        <restriction code="ca_objects">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+
+    <metadataElement code="Correspondence" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Correspondence</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="fieldWidth">450</setting>
+        <setting name="fieldHeight">4</setting>
+        <setting name="minChars">0</setting>
+        <setting name="usewysiwygeditor">1</setting>
+        <setting name="maxChars">65535</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
   </elementSets>
   <userInterfaces>
     <userInterface code="museum_object_ui" type="ca_objects">
@@ -1022,11 +1305,38 @@
                 <setting name="add_label" locale="en_AU">Add name</setting>
               </settings>
             </placement>
+
+            <placement code="ca_entities_donor">
+              <bundle>ca_entities</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Source / Donor</setting>
+                <setting name="restrictToTypes">donor</setting>
+              </settings>
+
+            </placement>
+            <placement code="ca_attribute_ReceiptNum">
+              <bundle>ca_attribute_ReceiptNum</bundle>
+            </placement>
             <placement code="acquisition_type_id">
               <bundle>acquisition_type_id</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Method of Acquisition</setting>
               </settings>
+            </placement>
+            <placement code="ca_attribute_DateReceived">
+              <bundle>ca_attribute_DateReceived</bundle>
+            </placement>
+            <placement code="ca_attribute_ConditionOnReceipt">
+              <bundle>ca_attribute_ConditionOnReceipt</bundle>
+            </placement>
+            <placement code="ca_attribute_LegalTitle">
+              <bundle>ca_attribute_LegalTitle</bundle>
+            </placement>
+            <placement code="ca_attribute_Copyright">
+              <bundle>ca_attribute_Copyright</bundle>
+            </placement>
+            <placement code="ca_attribute_Correspondence">
+              <bundle>ca_attribute_Correspondence</bundle>
             </placement>
           </bundlePlacements>
         </screen>
@@ -1858,7 +2168,7 @@
               <typename_reverse>is donor of</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
         <type code="creator" default="1">
@@ -1868,7 +2178,7 @@
               <typename_reverse>creator</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
         <type code="publisher" default="0">
@@ -1878,7 +2188,7 @@
               <typename_reverse>publisher</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
         <type code="contributor" default="0">
@@ -1888,7 +2198,7 @@
               <typename_reverse>contributor</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
         <type code="source" default="0">
@@ -1898,7 +2208,7 @@
               <typename_reverse>source</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -1912,7 +2222,7 @@
               <typename_reverse>is depicted by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight>event</subTypeRight>
         </type>
         <type code="used" default="0">
@@ -1922,7 +2232,7 @@
               <typename_reverse>used</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight>event</subTypeRight>
         </type>
         <type code="describes" default="0">
@@ -1932,7 +2242,7 @@
               <typename_reverse>is described by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -1946,7 +2256,7 @@
               <typename_reverse>contains</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -1960,7 +2270,7 @@
               <typename_reverse>is related to</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
         <type code="source" default="0">
@@ -1970,7 +2280,7 @@
               <typename_reverse>is source of</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
         <type code="duplicate" default="0">
@@ -1980,7 +2290,7 @@
               <typename_reverse>is duplicate of</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
         <type code="part_of" default="0">
@@ -1990,7 +2300,7 @@
               <typename_reverse>contains</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2032,7 +2342,7 @@
               <typename_reverse>was creation location of</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
         <type code="located" default="0">
@@ -2052,7 +2362,7 @@
               <typename_reverse>is depicted by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
         <type code="describes" default="0">
@@ -2062,7 +2372,7 @@
               <typename_reverse>is described by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2076,7 +2386,7 @@
               <typename_reverse>describes</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
         <type code="depicts" default="0">
@@ -2086,7 +2396,7 @@
               <typename_reverse>is depicted by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2100,7 +2410,7 @@
               <typename_reverse>is related to</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2114,7 +2424,7 @@
               <typename_reverse>was birthplace of</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
         <type code="residence" default="0">
@@ -2124,7 +2434,7 @@
               <typename_reverse>was residence of</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
         <type code="workplace" default="0">
@@ -2134,7 +2444,7 @@
               <typename_reverse>was workplace of</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
         <type code="ownership" default="0">
@@ -2144,7 +2454,7 @@
               <typename_reverse>was owned by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
         <type code="built_by" default="0">
@@ -2154,7 +2464,7 @@
               <typename_reverse>was built by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2168,7 +2478,7 @@
               <typename_reverse>was attended by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight>event</subTypeRight>
         </type>
       </types>
@@ -2182,7 +2492,7 @@
               <typename_reverse>is provider of</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2196,7 +2506,7 @@
               <typename_reverse>is origination location of</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2210,7 +2520,7 @@
               <typename_reverse>contains</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2224,7 +2534,7 @@
               <typename_reverse>is related to</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2238,7 +2548,7 @@
               <typename_reverse>describes</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2252,7 +2562,7 @@
               <typename_reverse>describes</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2266,7 +2576,7 @@
               <typename_reverse>is related to</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2280,7 +2590,7 @@
               <typename_reverse>describes</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2294,7 +2604,7 @@
               <typename_reverse>describes</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2308,7 +2618,7 @@
               <typename_reverse>occurred at</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight>event</subTypeRight>
         </type>
       </types>
@@ -2322,7 +2632,7 @@
               <typename_reverse>is related to</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2336,7 +2646,7 @@
               <typename_reverse>describes</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2350,7 +2660,7 @@
               <typename_reverse>is located in</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2364,7 +2674,7 @@
               <typename_reverse>is related to</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2378,7 +2688,7 @@
               <typename_reverse>is depicted by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
         <type code="illustrated" default="1">
@@ -2388,7 +2698,7 @@
               <typename_reverse>illustrates</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2402,7 +2712,7 @@
               <typename_reverse>is depicted by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
         <type code="describes" default="1">
@@ -2412,7 +2722,7 @@
               <typename_reverse>is described by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2426,7 +2736,7 @@
               <typename_reverse>is depicted by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
         <type code="describes" default="1">
@@ -2436,7 +2746,7 @@
               <typename_reverse>is described by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2450,7 +2760,7 @@
               <typename_reverse>is depicted by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight>event</subTypeRight>
         </type>
         <type code="describes" default="1">
@@ -2460,7 +2770,7 @@
               <typename_reverse>is described by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight>event</subTypeRight>
         </type>
       </types>
@@ -2474,7 +2784,7 @@
               <typename_reverse>describes</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft> </subTypeLeft>
+          <subTypeLeft></subTypeLeft>
           <subTypeRight></subTypeRight>
         </type>
       </types>
@@ -2492,7 +2802,9 @@
     <group code="museum">
       <name>Museum</name>
       <description>Museum Users</description>
-      <roles><role>museum</role></roles>
+      <roles>
+        <role>museum</role>
+      </roles>
     </group>
   </groups>
   <displays>
@@ -2817,7 +3129,8 @@
   </searchForms>
 
   <logins>
-    <login user_name="administrator" password="administrator" fname="CollectiveAccess" lname="Administrator" email="administrator@rwahs.org.au">
+    <login user_name="administrator" password="administrator" fname="CollectiveAccess" lname="Administrator"
+           email="administrator@rwahs.org.au">
       <group code="admin"/>
     </login>
     <login user_name="museum" password="museum" fname="Museum" lname="User" email="museum@rwahs.org.au">
