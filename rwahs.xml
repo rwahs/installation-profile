@@ -79,7 +79,7 @@
             </label>
           </labels>
         </item>
-        <item idno="photo" enabled="1" default="0">
+        <item idno="photograph" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Photograph</name_singular>
@@ -508,6 +508,23 @@
             <setting name="minAttributesPerRow">1</setting>
             <setting name="maxAttributesPerRow">1</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="legacyId" datatype="Integer">
+      <labels>
+        <label locale="en_AU">
+          <name>Legacy Identifier</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction code="r1">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
           </settings>
         </restriction>
       </typeRestrictions>
@@ -1109,6 +1126,13 @@
               <bundle>idno</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Accession ID</setting>
+              </settings>
+            </placement>
+            <placement code="preferred_labels">
+              <bundle>preferred_labels</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Item Name</setting>
+                <setting name="add_label" locale="en_AU">Add name</setting>
               </settings>
             </placement>
             <placement code="acquisition_type_id">
