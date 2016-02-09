@@ -1483,8 +1483,13 @@
               <bundle>ca_entities</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Source / Donor</setting>
-                <setting name="restrictToRelationshipTypes">donor</setting>
+                <setting name="restrict_to_relationship_types">donor</setting>
                 <setting name="list_format">list</setting>
+                <setting name="sortDirection">ASC</setting>
+                <setting name="dontShowDeleteButton">0</setting>
+                <setting name="minRelationshipsPerRow">1</setting>
+                <setting name="maxRelationshipsPerRow">1</setting>
+                <setting name="showCurrentOnly">0</setting>
                 <setting name="display_template"><![CDATA[
                   <dl>
                     <dt>Donor Name:
