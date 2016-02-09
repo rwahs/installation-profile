@@ -523,8 +523,8 @@
         <item idno="poor" enabled="1" default="0" value="1">
           <labels>
             <label locale="en_AU" preferred="1">
-              <name_singular>Damaged</name_singular>
-              <name_plural>Damaged</name_plural>
+              <name_singular>Poor</name_singular>
+              <name_plural>Poor</name_plural>
             </label>
           </labels>
         </item>
