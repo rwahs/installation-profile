@@ -1484,6 +1484,27 @@
               <settings>
                 <setting name="label" locale="en_AU">Source / Donor</setting>
                 <setting name="restrictToRelationshipTypes">donor</setting>
+                <setting name="display_template"><![CDATA[
+                <table class="table-bordered">
+                  <tr><th>Donor Name<l></th><td><l>^preferred_labels</l>(^type_id)</td></tr>
+                  <tr><th>Address</th>
+                  <td><pre>^ca_entities.AddressContainer.Address1
+                    ^ca_entities.AddressContainer.Address2
+                    ^ca_entities.AddressContainer.TownCity
+                    ^ca_entities.AddressContainer.State
+                    ^ca_entities.AddressContainer.PostCode</pre>
+                  </td>
+                  <tr><th>Phone</th><td>^Phone</td></tr>
+                  <tr><th>Mobile</th> <td> ^MobilePhone</td></tr>
+                  <tr><th>Fax</th><td>^Fax</td></tr>
+                  <tr><th>Email</th><td>^Email</td></tr>
+                  <tr><th>Notes</th><td>^DonorNotes</td></tr>
+                  <tr><th>Deceased</th><td>^Deceased</td></tr>
+                  <tr><th>Donor agent name</th><td>^DonorAgentName</td></tr>
+                  <tr><th>Donor agent's address</th><td> ^DonorAgentAddress</td></tr>
+                  <tr><th>Donor agent's Phone</th><td>^DonorAgentPhone</td></tr>
+                  </table>
+                  ]]></setting>
               </settings>
             </placement>
             <placement code="ca_attribute_ReceiptNum">
