@@ -1484,61 +1484,62 @@
               <settings>
                 <setting name="label" locale="en_AU">Source / Donor</setting>
                 <setting name="restrictToRelationshipTypes">donor</setting>
+                <setting name="list_format">list</setting>
                 <setting name="display_template"><![CDATA[
-                  <table class="table-bordered">
-                    <tr>
-                      <th>Donor Name
-                      </th>
-                      <td>
-                        <l>^preferred_labels</l>
-                        (^type_id)
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>Address</th>
-                      <td><pre>^ca_entities.AddressContainer.Address1
-                    ^ca_entities.AddressContainer.Address2
-                    ^ca_entities.AddressContainer.TownCity
-                    ^ca_entities.AddressContainer.State
-                    ^ca_entities.AddressContainer.PostCode</pre>
-                      </td>
-                    <tr>
-                      <th>Phone</th>
-                      <td>^Phone</td>
-                    </tr>
-                    <tr>
-                      <th>Mobile</th>
-                      <td> ^MobilePhone</td>
-                    </tr>
-                    <tr>
-                      <th>Fax</th>
-                      <td>^Fax</td>
-                    </tr>
-                    <tr>
-                      <th>Email</th>
-                      <td>^Email</td>
-                    </tr>
-                    <tr>
-                      <th>Notes</th>
-                      <td>^DonorNotes</td>
-                    </tr>
-                    <tr>
-                      <th>Deceased</th>
-                      <td>^Deceased</td>
-                    </tr>
-                    <tr>
-                      <th>Donor agent name</th>
-                      <td>^DonorAgentName</td>
-                    </tr>
-                    <tr>
-                      <th>Donor agent's address</th>
-                      <td> ^DonorAgentAddress</td>
-                    </tr>
-                    <tr>
-                      <th>Donor agent's Phone</th>
-                      <td>^DonorAgentPhone</td>
-                    </tr>
-                  </table>
+                  <dl>
+                    <dt>Donor Name:
+                    </dt>
+                    <dd>
+                      <l><strong>^ca_entities.preferred_labels.displayname</strong> (^ca_entities.type_id)</l>
+                    </dd>
+                    <ifdef code="ca_entities.AddressContainer">
+                      <dt>Address:</dt>
+                      <dd>
+                        <ifdef code="ca_entities.AddressContainer.Address1">^ca_entities.AddressContainer.Address1<br/></ifdef>
+                        <ifdef code="ca_entities.AddressContainer.Address2">^ca_entities.AddressContainer.Address2<br/></ifdef>
+                        <ifdef code="ca_entities.AddressContainer.TownCity">^ca_entities.AddressContainer.TownCity<br/></ifdef>
+                        <ifdef code="ca_entities.AddressContainer.State">^ca_entities.AddressContainer.State<br/></ifdef>
+                        <ifdef code="ca_entities.AddressContainer.PostCode">^ca_entities.AddressContainer.PostCode</ifdef>
+                        <ifdef code="ca_entities.AddressContainer.Country">^ca_entities.AddressContainer.Country</ifdef>
+                      </dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.Phone">
+                      <dt>Phone:</dt>
+                      <dd>^ca_entities.Phone</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.MobilePhone">
+                      <dt>Mobile:</dt>
+                      <dd>^ca_entities.MobilePhone</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.Fax">
+                      <dt>Fax:</dt>
+                      <dd>^ca_entities.Fax</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.Email">
+                      <dt>Email:</dt>
+                      <dd>^ca_entities.Email</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorNotes">
+                      <dt>Notes:</dt>
+                      <dd>^ca_entities.DonorNotes</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.Deceased">
+                      <dt>Deceased:</dt>
+                      <dd>^ca_entities.Deceased</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorAgentName">
+                      <dt>Donor agent name:</dt>
+                      <dd>^ca_entities.DonorAgentName</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorAgentAddress">
+                      <dt>Donor agent's address:</dt>
+                      <dd>^ca_entities.DonorAgentAddress</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorAgentPhone">
+                      <dt>Donor agent's Phone:</dt>
+                      <dd>^ca_entities.DonorAgentPhone</dd>
+                    </ifdef>
+                  </dl>
                   ]]></setting>
               </settings>
             </placement>
