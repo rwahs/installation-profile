@@ -1422,7 +1422,7 @@
         </label>
       </labels>
       <settings>
-        <setting name="fieldWidth">450</setting>
+        <setting name="fieldWidth">115</setting>
         <setting name="fieldHeight">4</setting>
         <setting name="minChars">0</setting>
         <setting name="usewysiwygeditor">1</setting>
@@ -1483,7 +1483,7 @@
               <bundle>ca_entities</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Source / Donor</setting>
-                <setting name="restrictToTypes">donor</setting>
+                <setting name="restrictToRelationshipTypes">donor</setting>
               </settings>
             </placement>
             <placement code="ca_attribute_ReceiptNum">
