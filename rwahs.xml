@@ -398,7 +398,7 @@
         </item>
       </items>
     </list>
-    <list code="itemTypes" hierarchical="0" system="0" vocabulary="1">
+    <list code="ItemTypes" hierarchical="0" system="0" vocabulary="1">
       <labels>
         <label locale="en_AU">
           <name>Item Types</name>
@@ -431,7 +431,7 @@
         </item>
       </items>
     </list>
-    <list code="yesNoDefaultNo" hierarchical="0" system="1" vocabulary="0" defaultSort="1">
+    <list code="YesNoDefaultNo" hierarchical="0" system="1" vocabulary="0" defaultSort="1">
       <labels>
         <label locale="en_AU">
           <name>Yes No list with Default of No</name>
@@ -456,7 +456,7 @@
         </item>
       </items>
     </list>
-    <list code="yesNoDefaultYes" hierarchical="0" system="1" vocabulary="0" defaultSort="1">
+    <list code="YesNoDefaultYes" hierarchical="0" system="1" vocabulary="0" defaultSort="1">
       <labels>
         <label locale="en_AU">
           <name>Yes No list with Default of Yes</name>
@@ -481,7 +481,7 @@
         </item>
       </items>
     </list>
-    <list code="conditionOnReceipt" hierarchical="0" system="1" vocabulary="0">
+    <list code="ConditionOnReceipt" hierarchical="0" system="1" vocabulary="0">
       <labels>
         <label locale="en_AU">
           <name>Condition on Receipt</name>
@@ -674,7 +674,7 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="ItemType" datatype="List" list="itemTypes">
+    <metadataElement code="ItemType" datatype="List" list="ItemTypes">
       <labels>
         <label locale="en_AU">
           <name>Item Type</name>
@@ -1158,7 +1158,7 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="Deceased" datatype="List" list="yesNoDefaultNo">
+    <metadataElement code="Deceased" datatype="List" list="YesNoDefaultNo">
       <labels>
         <label locale="en_AU">
           <name>Deceased</name>
@@ -1298,7 +1298,7 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="ConditionOnReceipt" datatype="List" list="conditionOnReceipt">
+    <metadataElement code="ConditionOnReceipt" datatype="List" list="ConditionOnReceipt">
       <labels>
         <label locale="en_AU">
           <name>Condition (on receipt)</name>
@@ -1331,7 +1331,7 @@
         <setting name="doesNotTakeLocale">1</setting>
       </settings>
       <elements>
-        <metadataElement code="LegalTitleYesNo" datatype="List" list="yesNoDefaultNo">
+        <metadataElement code="LegalTitleYesNo" datatype="List" list="YesNoDefaultNo">
           <labels>
             <label locale="en_AU">
               <name>Legal Title?</name>
@@ -1378,7 +1378,7 @@
         <setting name="doesNotTakeLocale">1</setting>
       </settings>
       <elements>
-        <metadataElement code="CopyrightYesNo" datatype="List" list="yesNoDefaultNo">
+        <metadataElement code="CopyrightYesNo" datatype="List" list="YesNoDefaultNo">
           <labels>
             <label locale="en_AU">
               <name>Copyright?</name>
