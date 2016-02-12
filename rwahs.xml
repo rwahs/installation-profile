@@ -628,16 +628,16 @@
         <item idno="condition" enabled="1" default="0" value="condition">
           <labels>
             <label locale="en_AU" preferred="1">
-              <name_singular>condition</name_singular>
-              <name_plural>condition</name_plural>
+              <name_singular>Condition</name_singular>
+              <name_plural>Condition</name_plural>
             </label>
           </labels>
         </item>
         <item idno="representativeness" enabled="1" default="0" value="representativeness">
           <labels>
             <label locale="en_AU" preferred="1">
-              <name_singular>representativeness</name_singular>
-              <name_plural>representativeness</name_plural>
+              <name_singular>Representativeness</name_singular>
+              <name_plural>Representativeness</name_plural>
             </label>
           </labels>
         </item>
