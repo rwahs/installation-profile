@@ -1712,6 +1712,9 @@
           <name>Significance Criteria</name>
         </label>
       </labels>
+      <settings>
+        <setting name="render">yes_no_checkboxes</setting>
+      </settings>
       <typeRestrictions>
         <restriction code="museum_SignificanceCriteria">
           <table>ca_objects</table>
@@ -1729,6 +1732,9 @@
           <name>Comparative Criteria</name>
         </label>
       </labels>
+      <settings>
+        <setting name="render">yes_no_checkboxes</setting>
+      </settings>
       <typeRestrictions>
         <restriction code="museum_ComparativeCriteria">
           <table>ca_objects</table>
