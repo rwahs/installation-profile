@@ -1768,9 +1768,16 @@
     <metadataElement code="StatementOfSignificance" datatype="Text">
       <labels>
         <label locale="en_AU">
-          <name>Statement Of Significance</name>
+          <name>Statement of Significance</name>
         </label>
       </labels>
+      <settings>
+        <setting name="usewysiwygeditor">1</setting>
+        <setting name="fieldWidth">115</setting>
+        <setting name="fieldHeight">6</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">65535</setting>
+      </settings>
       <typeRestrictions>
         <restriction code="museum_StatementOfSignificance">
           <table>ca_objects</table>
