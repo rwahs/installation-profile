@@ -1714,6 +1714,7 @@
       </labels>
       <settings>
         <setting name="render">checklist</setting>
+        <setting name="maxColumns">6</setting>
       </settings>
       <typeRestrictions>
         <restriction code="museum_SignificanceCriteria">
@@ -1734,6 +1735,7 @@
       </labels>
       <settings>
         <setting name="render">checklist</setting>
+        <setting name="maxColumns">6</setting>
       </settings>
       <typeRestrictions>
         <restriction code="museum_ComparativeCriteria">
