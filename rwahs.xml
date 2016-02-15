@@ -398,7 +398,7 @@
         </item>
       </items>
     </list>
-    <list code="itemTypes" hierarchical="0" system="0" vocabulary="1">
+    <list code="ItemTypes" hierarchical="0" system="0" vocabulary="0">
       <labels>
         <label locale="en_AU">
           <name>Item Types</name>
@@ -431,7 +431,7 @@
         </item>
       </items>
     </list>
-    <list code="yesNoDefaultNo" hierarchical="0" system="1" vocabulary="0" defaultSort="1">
+    <list code="YesNoDefaultNo" hierarchical="0" system="1" vocabulary="0" defaultSort="1">
       <labels>
         <label locale="en_AU">
           <name>Yes No list with Default of No</name>
@@ -456,7 +456,7 @@
         </item>
       </items>
     </list>
-    <list code="yesNoDefaultYes" hierarchical="0" system="1" vocabulary="0" defaultSort="1">
+    <list code="YesNoDefaultYes" hierarchical="0" system="1" vocabulary="0" defaultSort="1">
       <labels>
         <label locale="en_AU">
           <name>Yes No list with Default of Yes</name>
@@ -481,7 +481,7 @@
         </item>
       </items>
     </list>
-    <list code="conditionOnReceipt" hierarchical="0" system="1" vocabulary="0">
+    <list code="ConditionOnReceipt" hierarchical="0" system="1" vocabulary="0">
       <labels>
         <label locale="en_AU">
           <name>Condition on Receipt</name>
@@ -529,6 +529,133 @@
           </labels>
         </item>
       </items>
+    </list>
+    <list code="Importance" hierarchical="0" system="1" vocabulary="0">
+      <labels>
+        <label locale="en_AU">
+          <name>Importance</name>
+        </label>
+      </labels>
+    </list>
+    <list code="SignificanceCriteria" hierarchical="0" system="1" vocabulary="0">
+      <labels>
+        <label locale="en_AU">
+          <name>Significance Criteria</name>
+        </label>
+      </labels>
+      <items>
+        <item idno="aesthetic" enabled="1" default="0" value="aesthetic">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Aesthetic</name_singular>
+              <name_plural>Aesthetic</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="historic" enabled="1" default="0" value="historic">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Historic</name_singular>
+              <name_plural>Historic</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="scientific" enabled="1" default="0" value="scientific">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Scientific or Research</name_singular>
+              <name_plural>Scientific or Research</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="technical" enabled="1" default="0" value="technical">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Technical</name_singular>
+              <name_plural>Technical</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="social" enabled="1" default="0" value="social">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Social or Spiritual</name_singular>
+              <name_plural>Social or Spiritual</name_plural>
+            </label>
+          </labels>
+        </item>
+      </items>
+    </list>
+    <list code="ComparativeCriteria" hierarchical="0" system="1" vocabulary="0">
+      <labels>
+        <label locale="en_AU">
+          <name>Comparative Criteria</name>
+        </label>
+      </labels>
+      <items>
+        <item idno="completeness" enabled="1" default="0" value="completeness">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Completeness</name_singular>
+              <name_plural>Completeness</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="interpretive" enabled="1" default="0" value="interpretive">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Interpretive Potential</name_singular>
+              <name_plural>Interpretive Potential</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="provenance" enabled="1" default="0" value="provenance">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Provenance</name_singular>
+              <name_plural>Provenance</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="rarity" enabled="1" default="0" value="rarity">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Rarity</name_singular>
+              <name_plural>Rarity</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="condition" enabled="1" default="0" value="condition">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Condition</name_singular>
+              <name_plural>Condition</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="representativeness" enabled="1" default="0" value="representativeness">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Representativeness</name_singular>
+              <name_plural>Representativeness</name_plural>
+            </label>
+          </labels>
+        </item>
+      </items>
+    </list>
+    <list code="Classification" hierarchical="1" system="0" vocabulary="1">
+      <labels>
+        <label locale="en_AU">
+          <name>Classification</name>
+        </label>
+      </labels>
+    </list>
+    <list code="PhysicalCondition" hierarchical="0" system="1" vocabulary="0">
+      <labels>
+        <label locale="en_AU">
+          <name>Physical Condition</name>
+        </label>
+      </labels>
     </list>
   </lists>
   <elementSets>
@@ -609,7 +736,7 @@
       <documentationUrl>http://dublincore.org/documents/dcmi-terms/#terms-description</documentationUrl>
       <settings>
         <setting name="usewysiwygeditor">1</setting>
-        <setting name="fieldWidth">640px</setting>
+        <setting name="fieldWidth">115</setting>
         <setting name="fieldHeight">6</setting>
         <setting name="minChars">0</setting>
         <setting name="maxChars">65535</setting>
@@ -674,7 +801,7 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="ItemType" datatype="List" list="itemTypes">
+    <metadataElement code="ItemType" datatype="List" list="ItemTypes">
       <labels>
         <label locale="en_AU">
           <name>Item Type</name>
@@ -1151,14 +1278,14 @@
         <restriction code="ca_entities">
           <table>ca_entities</table>
           <settings>
-            <setting name="minAttributesPerRow">1</setting>
+            <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="Deceased" datatype="List" list="yesNoDefaultNo">
+    <metadataElement code="Deceased" datatype="List" list="YesNoDefaultNo">
       <labels>
         <label locale="en_AU">
           <name>Deceased</name>
@@ -1171,6 +1298,8 @@
       <typeRestrictions>
         <restriction code="ca_entities">
           <table>ca_entities</table>
+          <type>individual</type>
+          <includeSubtypes>1</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1251,6 +1380,7 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
+    <!-- Object Elements-->
     <metadataElement code="ReceiptNum" datatype="Text">
       <labels>
         <label locale="en_AU">
@@ -1298,7 +1428,7 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="ConditionOnReceipt" datatype="List" list="conditionOnReceipt">
+    <metadataElement code="ConditionOnReceipt" datatype="List" list="ConditionOnReceipt">
       <labels>
         <label locale="en_AU">
           <name>Condition (on receipt)</name>
@@ -1331,7 +1461,7 @@
         <setting name="doesNotTakeLocale">1</setting>
       </settings>
       <elements>
-        <metadataElement code="LegalTitleYesNo" datatype="List" list="yesNoDefaultNo">
+        <metadataElement code="LegalTitleYesNo" datatype="List" list="YesNoDefaultNo">
           <labels>
             <label locale="en_AU">
               <name>Legal Title?</name>
@@ -1378,7 +1508,7 @@
         <setting name="doesNotTakeLocale">1</setting>
       </settings>
       <elements>
-        <metadataElement code="CopyrightYesNo" datatype="List" list="yesNoDefaultNo">
+        <metadataElement code="CopyrightYesNo" datatype="List" list="YesNoDefaultNo">
           <labels>
             <label locale="en_AU">
               <name>Copyright?</name>
@@ -1440,6 +1570,266 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
+    <metadataElement code="MakersMarks" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Makers Marks</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction code="museum_MakersMarks">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="ItemDates" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Item Dates</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction code="museum_ItemDates">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="EarliestYear" datatype="DateRange">
+      <labels>
+        <label locale="en_AU">
+          <name>Earliest Year</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction code="museum_EarliestYear">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="LatestYear" datatype="DateRange">
+      <labels>
+        <label locale="en_AU">
+          <name>Latest Year</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction code="museum_LatestYear">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="HistoricalDetails" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Historical Details</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction code="museum_HistoricalDetails">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="ResearchBy" datatype="Entities">
+      <labels>
+        <label locale="en_AU">
+          <name>Research By</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction code="museum_ResearchBy">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="BibliographReferences" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Bibliograph References</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction code="museum_BibliographReferences">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Importance" datatype="List" list="Importance">
+      <labels>
+        <label locale="en_AU">
+          <name>Importance</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction code="museum_Importance">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="SignificanceCriteria" datatype="List" list="SignificanceCriteria">
+      <labels>
+        <label locale="en_AU">
+          <name>Significance Criteria</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="render">yes_no_checkboxes</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="museum_SignificanceCriteria">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">30</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="ComparativeCriteria" datatype="List" list="ComparativeCriteria">
+      <labels>
+        <label locale="en_AU">
+          <name>Comparative Criteria</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="render">yes_no_checkboxes</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="museum_ComparativeCriteria">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">30</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="PhysicalCondition" datatype="List" list="PhysicalCondition">
+      <labels>
+        <label locale="en_AU">
+          <name>Physical Condition</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction code="museum_PhysicalCondition">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="StatementOfSignificance" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Statement Of Significance</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction code="museum_StatementOfSignificance">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Materials" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Materials</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction code="museum_Materials">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Dimensions" datatype="Container">
+      <labels>
+        <label locale="en_AU">
+          <name>Dimensions</name>
+        </label>
+      </labels>
+      <elements>
+        <metadataElement code="DimensionsValue" datatype="Text">
+          <labels>
+            <label locale="en_AU">
+              <name>Value</name>
+            </label>
+          </labels>
+        </metadataElement>
+        <metadataElement code="DimensionsType" datatype="List" list="DimensionsType">
+          <labels>
+            <label locale="en_AU">
+              <name>Dimension Type</name>
+            </label>
+          </labels>
+        </metadataElement>
+      </elements>
+      <typeRestrictions>
+        <restriction code="museum_Dimensions">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
   </elementSets>
   <userInterfaces>
     <userInterface code="museum_object_ui" type="ca_objects">
@@ -1483,6 +1873,7 @@
               <bundle>ca_entities</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Source / Donor</setting>
+                <setting name="dont_include_subtypes_in_type_restriction">0</setting>
                 <setting name="restrict_to_relationship_types">donor</setting>
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
@@ -1495,17 +1886,31 @@
                     <dt>Donor Name:
                     </dt>
                     <dd>
-                      <l><strong>^ca_entities.preferred_labels.displayname</strong> (^ca_entities.type_id)</l>
+                      <unit relativeTo="ca_entities">
+                        <l><strong>^ca_entities.preferred_labels.displayname</strong> (^ca_entities.type_id)</l>
+                      </unit>
                     </dd>
                     <ifdef code="ca_entities.AddressContainer">
                       <dt>Address:</dt>
                       <dd>
-                        <ifdef code="ca_entities.AddressContainer.Address1">^ca_entities.AddressContainer.Address1<br/></ifdef>
-                        <ifdef code="ca_entities.AddressContainer.Address2">^ca_entities.AddressContainer.Address2<br/></ifdef>
-                        <ifdef code="ca_entities.AddressContainer.TownCity">^ca_entities.AddressContainer.TownCity<br/></ifdef>
-                        <ifdef code="ca_entities.AddressContainer.State">^ca_entities.AddressContainer.State<br/></ifdef>
-                        <ifdef code="ca_entities.AddressContainer.PostCode">^ca_entities.AddressContainer.PostCode</ifdef>
-                        <ifdef code="ca_entities.AddressContainer.Country">^ca_entities.AddressContainer.Country</ifdef>
+                        <ifdef code="ca_entities.AddressContainer.Address1">
+                          ^ca_entities.AddressContainer.Address1<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.Address2">
+                          ^ca_entities.AddressContainer.Address2<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.TownCity">
+                          ^ca_entities.AddressContainer.TownCity<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.State">
+                          ^ca_entities.AddressContainer.State
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.PostCode">
+                          ^ca_entities.AddressContainer.PostCode<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.Country">
+                          ^ca_entities.AddressContainer.Country
+                        </ifdef>
                       </dd>
                     </ifdef>
                     <ifdef code="ca_entities.Phone">
@@ -1588,6 +1993,74 @@
               <bundle>idno</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Accession ID</setting>
+              </settings>
+            </placement>
+            <placement code="ca_attribute_Description">
+              <bundle>ca_attribute_Description</bundle>
+            </placement>
+            <placement code="ca_attribute_MakersMarks">
+              <bundle>ca_attribute_MakersMarks</bundle>
+            </placement>
+            <placement code="ca_attribute_ItemDates">
+              <bundle>ca_attribute_ItemDates</bundle>
+            </placement>
+            <placement code="ca_attribute_EarliestYear">
+              <bundle>ca_attribute_EarliestYear</bundle>
+            </placement>
+            <placement code="ca_attribute_LatestYear">
+              <bundle>ca_attribute_LatestYear</bundle>
+            </placement>
+            <placement code="ca_attribute_HistoricalDetails">
+              <bundle>ca_attribute_HistoricalDetails</bundle>
+            </placement>
+            <placement code="ca_attribute_ResearchBy">
+              <bundle>ca_attribute_ResearchBy</bundle>
+            </placement>
+            <placement code="ca_attribute_BibliographReferences">
+              <bundle>ca_attribute_BibliographReferences</bundle>
+            </placement>
+            <placement code="ca_attribute_Importance">
+              <bundle>ca_attribute_Importance</bundle>
+            </placement>
+            <placement code="ca_attribute_SignificanceCriteria">
+              <bundle>ca_attribute_SignificanceCriteria</bundle>
+            </placement>
+            <placement code="ca_attribute_ComparativeCriteria">
+              <bundle>ca_attribute_ComparativeCriteria</bundle>
+            </placement>
+            <placement code="ca_attribute_PhysicalCondition">
+              <bundle>ca_attribute_PhysicalCondition</bundle>
+            </placement>
+            <placement code="ca_attribute_StatementOfSignificance">
+              <bundle>ca_attribute_StatementOfSignificance</bundle>
+            </placement>
+            <placement code="ca_attribute_Materials">
+              <bundle>ca_attribute_Materials</bundle>
+            </placement>
+            <placement code="ca_attribute_Dimensions">
+              <bundle>ca_attribute_Dimensions</bundle>
+            </placement>
+            <placement code="ca_list_items_described">
+              <bundle>ca_list_items</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Classification</setting>
+                <setting name="dont_include_subtypes_in_type_restriction">0</setting>
+                <setting name="restrict_to_relationship_types">described</setting>
+                <setting name="list_format">list</setting>
+                <setting name="sortDirection">ASC</setting>
+                <setting name="dontShowDeleteButton">0</setting>
+                <setting name="minRelationshipsPerRow">0</setting>
+                <setting name="maxRelationshipsPerRow">255</setting>
+                <setting name="showCurrentOnly">0</setting>
+                <setting name="useHierarchicalBrowser">1</setting>
+                <setting name="restrict_to_lists">Classification</setting>
+                <setting name="display_template"><![CDATA[
+                  <unit relativeTo="ca_list_items">
+                    <unit relativeTo="ca_list_items.hierarchy">
+                      <l>^ca_list_items.preferred_labels.name_singular</l>
+                    </unit>
+                  </unit>
+                  ]]></setting>
               </settings>
             </placement>
           </bundlePlacements>
@@ -2405,8 +2878,8 @@
               <typename_reverse>is donor of</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
         <type code="creator" default="1">
           <labels>
@@ -2415,8 +2888,8 @@
               <typename_reverse>creator</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
         <type code="publisher" default="0">
           <labels>
@@ -2425,8 +2898,8 @@
               <typename_reverse>publisher</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
         <type code="contributor" default="0">
           <labels>
@@ -2435,8 +2908,8 @@
               <typename_reverse>contributor</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
         <type code="source" default="0">
           <labels>
@@ -2445,8 +2918,8 @@
               <typename_reverse>source</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2459,7 +2932,7 @@
               <typename_reverse>is depicted by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
+          <subTypeLeft/>
           <subTypeRight>event</subTypeRight>
         </type>
         <type code="used" default="0">
@@ -2469,7 +2942,7 @@
               <typename_reverse>used</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
+          <subTypeLeft/>
           <subTypeRight>event</subTypeRight>
         </type>
         <type code="describes" default="0">
@@ -2479,8 +2952,8 @@
               <typename_reverse>is described by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2493,8 +2966,8 @@
               <typename_reverse>contains</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2507,8 +2980,8 @@
               <typename_reverse>is related to</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
         <type code="source" default="0">
           <labels>
@@ -2517,8 +2990,8 @@
               <typename_reverse>is source of</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
         <type code="duplicate" default="0">
           <labels>
@@ -2527,8 +3000,8 @@
               <typename_reverse>is duplicate of</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
         <type code="part_of" default="0">
           <labels>
@@ -2537,8 +3010,8 @@
               <typename_reverse>contains</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2565,8 +3038,8 @@
               <typename_reverse>is related to</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2579,8 +3052,8 @@
               <typename_reverse>was creation location of</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
         <type code="located" default="0">
           <labels>
@@ -2590,7 +3063,7 @@
             </label>
           </labels>
           <subTypeLeft>image</subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeRight/>
         </type>
         <type code="depicts" default="1">
           <labels>
@@ -2599,8 +3072,8 @@
               <typename_reverse>is depicted by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
         <type code="describes" default="0">
           <labels>
@@ -2609,8 +3082,8 @@
               <typename_reverse>is described by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2623,8 +3096,8 @@
               <typename_reverse>describes</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
         <type code="depicts" default="0">
           <labels>
@@ -2633,8 +3106,8 @@
               <typename_reverse>is depicted by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2647,8 +3120,8 @@
               <typename_reverse>is related to</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2661,8 +3134,8 @@
               <typename_reverse>was birthplace of</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
         <type code="residence" default="0">
           <labels>
@@ -2671,8 +3144,8 @@
               <typename_reverse>was residence of</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
         <type code="workplace" default="0">
           <labels>
@@ -2681,8 +3154,8 @@
               <typename_reverse>was workplace of</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
         <type code="ownership" default="0">
           <labels>
@@ -2691,8 +3164,8 @@
               <typename_reverse>was owned by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
         <type code="built_by" default="0">
           <labels>
@@ -2701,8 +3174,8 @@
               <typename_reverse>was built by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2715,7 +3188,7 @@
               <typename_reverse>was attended by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
+          <subTypeLeft/>
           <subTypeRight>event</subTypeRight>
         </type>
       </types>
@@ -2729,8 +3202,8 @@
               <typename_reverse>is provider of</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2743,8 +3216,8 @@
               <typename_reverse>is origination location of</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2757,8 +3230,8 @@
               <typename_reverse>contains</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2771,8 +3244,8 @@
               <typename_reverse>is related to</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2785,8 +3258,8 @@
               <typename_reverse>describes</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2799,8 +3272,8 @@
               <typename_reverse>describes</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2813,8 +3286,8 @@
               <typename_reverse>is related to</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2827,8 +3300,8 @@
               <typename_reverse>describes</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2841,8 +3314,8 @@
               <typename_reverse>describes</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2855,7 +3328,7 @@
               <typename_reverse>occurred at</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
+          <subTypeLeft/>
           <subTypeRight>event</subTypeRight>
         </type>
       </types>
@@ -2869,8 +3342,8 @@
               <typename_reverse>is related to</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2883,8 +3356,8 @@
               <typename_reverse>describes</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2897,8 +3370,8 @@
               <typename_reverse>is located in</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2911,8 +3384,8 @@
               <typename_reverse>is related to</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2925,8 +3398,8 @@
               <typename_reverse>is depicted by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
         <type code="illustrated" default="1">
           <labels>
@@ -2935,8 +3408,8 @@
               <typename_reverse>illustrates</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2949,8 +3422,8 @@
               <typename_reverse>is depicted by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
         <type code="describes" default="1">
           <labels>
@@ -2959,8 +3432,8 @@
               <typename_reverse>is described by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2973,8 +3446,8 @@
               <typename_reverse>is depicted by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
         <type code="describes" default="1">
           <labels>
@@ -2983,8 +3456,8 @@
               <typename_reverse>is described by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -2997,7 +3470,7 @@
               <typename_reverse>is depicted by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
+          <subTypeLeft/>
           <subTypeRight>event</subTypeRight>
         </type>
         <type code="describes" default="1">
@@ -3007,7 +3480,7 @@
               <typename_reverse>is described by</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
+          <subTypeLeft/>
           <subTypeRight>event</subTypeRight>
         </type>
       </types>
@@ -3021,8 +3494,8 @@
               <typename_reverse>describes</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft></subTypeLeft>
-          <subTypeRight></subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
