@@ -1878,7 +1878,7 @@
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
                 <setting name="dontShowDeleteButton">0</setting>
-                <setting name="minRelationshipsPerRow">0</setting>
+                <setting name="minRelationshipsPerRow">1</setting>
                 <setting name="maxRelationshipsPerRow">1</setting>
                 <setting name="showCurrentOnly">0</setting>
                 <setting name="display_template"><![CDATA[
@@ -1902,11 +1902,14 @@
                         <ifdef code="ca_entities.AddressContainer.TownCity">
                           ^ca_entities.AddressContainer.TownCity<br/>
                         </ifdef>
-                        <ifdef code="ca_entities.AddressContainer.State">^ca_entities.AddressContainer.State<br/>
+                        <ifdef code="ca_entities.AddressContainer.State">
+                          ^ca_entities.AddressContainer.State
                         </ifdef>
-                        <ifdef code="ca_entities.AddressContainer.PostCode">^ca_entities.AddressContainer.PostCode
+                        <ifdef code="ca_entities.AddressContainer.PostCode">
+                          ^ca_entities.AddressContainer.PostCode<br/>
                         </ifdef>
-                        <ifdef code="ca_entities.AddressContainer.Country">^ca_entities.AddressContainer.Country
+                        <ifdef code="ca_entities.AddressContainer.Country">
+                          ^ca_entities.AddressContainer.Country
                         </ifdef>
                       </dd>
                     </ifdef>
@@ -2052,9 +2055,13 @@
                 <setting name="useHierarchicalBrowser">1</setting>
                 <setting name="restrict_to_lists">Classification</setting>
                 <setting name="display_template"><![CDATA[
-                    <unit relativeTo="ca_list_items"><unit relativeTo="ca_list_items.hierarchy"><l>^ca_list_items.preferred_labels.name_singular</l></unit></unit>
-                ]]></setting>
-            </settings>
+                  <unit relativeTo="ca_list_items">
+                    <unit relativeTo="ca_list_items.hierarchy">
+                      <l>^ca_list_items.preferred_labels.name_singular</l>
+                    </unit>
+                  </unit>
+                  ]]></setting>
+              </settings>
             </placement>
           </bundlePlacements>
         </screen>
