@@ -306,13 +306,55 @@
         </label>
       </labels>
       <items>
-        <item idno="event" enabled="1" default="1">
+        <item idno="subject" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
-              <name_singular>event</name_singular>
-              <name_plural>events</name_plural>
+              <name_singular>Subject List Entry</name_singular>
+              <name_plural>Subject List Entries</name_plural>
             </label>
           </labels>
+          <items>
+            <item idno="Person" enabled="1" default="0">
+              <labels>
+                <label locale="en_AU" preferred="1">
+                  <name_singular>Person</name_singular>
+                  <name_plural>People</name_plural>
+                </label>
+              </labels>
+            </item>
+            <item idno="Organization" enabled="1" default="0">
+              <labels>
+                <label locale="en_AU" preferred="1">
+                  <name_singular>Organization</name_singular>
+                  <name_plural>Organizations</name_plural>
+                </label>
+              </labels>
+            </item>
+            <item idno="Topic" enabled="1" default="0">
+              <labels>
+                <label locale="en_AU" preferred="1">
+                  <name_singular>Topic</name_singular>
+                  <name_plural>Topics</name_plural>
+                </label>
+              </labels>
+            </item>
+            <item idno="Place" enabled="1" default="0">
+              <labels>
+                <label locale="en_AU" preferred="1">
+                  <name_singular>Place</name_singular>
+                  <name_plural>Places</name_plural>
+                </label>
+              </labels>
+            </item>
+            <item idno="Event" enabled="1" default="0">
+              <labels>
+                <label locale="en_AU" preferred="1">
+                  <name_singular>Event</name_singular>
+                  <name_plural>Events</name_plural>
+                </label>
+              </labels>
+            </item>
+          </items>
         </item>
       </items>
     </list>
@@ -690,6 +732,16 @@
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
+        <restriction code="subject">
+          <table>ca_occurrences</table>
+          <type>subject</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="LastEditDate" datatype="DateRange">
@@ -716,6 +768,16 @@
         </restriction>
         <restriction code="entities">
           <table>ca_entities</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="occurrences">
+          <table>ca_occurrences</table>
+          <type>subject</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -760,7 +822,6 @@
         </restriction>
         <restriction code="r3">
           <table>ca_occurrences</table>
-          <type>event</type>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">100</setting>
@@ -1010,6 +1071,32 @@
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
             <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+        <restriction code="r3">
+          <table>ca_occurrences</table>
+          <type>subject</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="r4">
+          <table>ca_objects_x_occurrences</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="r5">
+          <table>ca_occurrences_x_occurrences</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
       </typeRestrictions>
@@ -1768,9 +1855,16 @@
     <metadataElement code="StatementOfSignificance" datatype="Text">
       <labels>
         <label locale="en_AU">
-          <name>Statement Of Significance</name>
+          <name>Statement of Significance</name>
         </label>
       </labels>
+      <settings>
+        <setting name="usewysiwygeditor">1</setting>
+        <setting name="fieldWidth">115</setting>
+        <setting name="fieldHeight">6</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">65535</setting>
+      </settings>
       <typeRestrictions>
         <restriction code="museum_StatementOfSignificance">
           <table>ca_objects</table>
@@ -1824,6 +1918,67 @@
       <typeRestrictions>
         <restriction code="museum_Dimensions">
           <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <!-- Subject List fields-->
+    <metadataElement code="SubjectDates" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Subject Dates</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction code="museum_SubjectDates">
+          <table>ca_occurrences</table>
+          <type>subject</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="interstitial_object_SubjectDates">
+          <table>ca_objects_x_occurrences</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="interstitial_occurrence_SubjectDates">
+          <table>ca_occurrences_x_occurrences</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Association" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Association</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction code="interstitial_object_Association">
+          <table>ca_objects_x_occurrences</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="interstitial_occurrence_Association">
+          <table>ca_occurrences_x_occurrences</table>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -2021,6 +2176,41 @@
             <placement code="ca_attribute_BibliographReferences">
               <bundle>ca_attribute_BibliographReferences</bundle>
             </placement>
+            <placement code="subject">
+              <bundle>ca_occurrences</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Subject List</setting>
+                <setting name="dont_include_subtypes_in_type_restriction">0</setting>
+                <setting name="list_format">list</setting>
+                <setting name="sortDirection">ASC</setting>
+                <setting name="dontShowDeleteButton">0</setting>
+                <setting name="minRelationshipsPerRow">1</setting>
+                <setting name="maxRelationshipsPerRow">1</setting>
+                <setting name="showCurrentOnly">0</setting>
+                <setting name="display_template">
+                  <![CDATA[
+                  <dl>
+                    <dt>Subject:</dt>
+                    <dd>
+                      <unit relativeTo="ca_occurrences">
+                        <l>^preferred_labels</l>
+                      </unit>
+                    </dd>
+                    <dt>Subject Dates:</dt>
+                    <dd>^ca_occurrences.SubjectDates</dd>
+                    <dt>Type:</dt>
+                    <dd>^ca_occurrences.type_id</dd>
+                    <dt>Description:</dt>
+                    <dd>^ca_occurrences.Description</dd>
+                    <dt>Association:</dt>
+                    <dd>^ca_objects_x_occurrences.Association</dd>
+                    <dt>Dates:</dt>
+                    <dd>^ca_objects_x_occurrences.SubjectDates</dd>
+                  </dl>
+                  ]]>
+                </setting>
+              </settings>
+            </placement>
             <placement code="ca_attribute_Importance">
               <bundle>ca_attribute_Importance</bundle>
             </placement>
@@ -2198,6 +2388,136 @@
           <bundlePlacements>
             <placement code="ca_attribute_external_link">
               <bundle>ca_attribute_external_link</bundle>
+            </placement>
+          </bundlePlacements>
+        </screen>
+      </screens>
+    </userInterface>
+    <userInterface code="subject_list_ui" type="ca_occurrences">
+      <labels>
+        <label locale="en_AU">
+          <name>Subject List editor</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction type="subject"/>
+      </typeRestrictions>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="museum" access="edit"/>
+      </groupAccess>
+      <screens>
+        <screen idno="subjectListData" default="1">
+          <labels>
+            <label locale="en_AU">
+              <name>Subject List Data</name>
+            </label>
+          </labels>
+          <bundlePlacements>
+            <placement code="idno">
+              <bundle>idno</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Subject Name</setting>
+              </settings>
+            </placement>
+            <placement code="preferred_labels">
+              <bundle>preferred_labels</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Subject Label</setting>
+                <setting name="add_label" locale="en_AU">Add subject label</setting>
+              </settings>
+            </placement>
+            <placement code="ca_attribute_Description">
+              <bundle>ca_attribute_Description</bundle>
+            </placement>
+            <placement code="ca_attribute_SubjectDates">
+              <bundle>ca_attribute_SubjectDates</bundle>
+            </placement>
+          </bundlePlacements>
+        </screen>
+        <screen idno="relationships" default="0">
+          <labels>
+            <label locale="en_AU">
+              <name>Relationships</name>
+            </label>
+          </labels>
+          <bundlePlacements>
+            <placement code="ca_objects">
+              <bundle>ca_objects</bundle>
+            </placement>
+            <placement code="ca_occurrences">
+              <bundle>ca_occurrences</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Related Subjects</setting>
+              </settings>
+            </placement>
+          </bundlePlacements>
+        </screen>
+      </screens>
+    </userInterface>
+    <userInterface code="object_subject_list_ui" type="ca_objects_x_occurrences">
+      <labels>
+        <label locale="en_AU">
+          <name>Object to Subject List Join editor</name>
+        </label>
+      </labels>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="museum" access="edit"/>
+      </groupAccess>
+      <screens>
+        <screen idno="subjectListData" default="1">
+          <labels>
+            <label locale="en_AU">
+              <name>Relationship Information</name>
+            </label>
+          </labels>
+          <bundlePlacements>
+            <placement code="ca_attribute_SubjectDates">
+              <bundle>ca_attribute_SubjectDates</bundle>
+            </placement>
+            <placement code="ca_attribute_Association">
+              <bundle>ca_attribute_Association</bundle>
+            </placement>
+            <placement code="effective_date">
+              <bundle>effective_date</bundle>
+            </placement>
+            <placement code="source_info">
+              <bundle>source_info</bundle>
+            </placement>
+          </bundlePlacements>
+        </screen>
+      </screens>
+    </userInterface>
+    <userInterface code="occurrence_subject_list_ui" type="ca_occurrences_x_occurrences">
+      <labels>
+        <label locale="en_AU">
+          <name>Subject to Subject List Join editor</name>
+        </label>
+      </labels>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="museum" access="edit"/>
+      </groupAccess>
+      <screens>
+        <screen idno="subjectListData" default="1">
+          <labels>
+            <label locale="en_AU">
+              <name>Relationship Information</name>
+            </label>
+          </labels>
+          <bundlePlacements>
+            <placement code="ca_attribute_SubjectDates">
+              <bundle>ca_attribute_SubjectDates</bundle>
+            </placement>
+            <placement code="ca_attribute_Association">
+              <bundle>ca_attribute_Association</bundle>
+            </placement>
+            <placement code="effective_date">
+              <bundle>effective_date</bundle>
+            </placement>
+            <placement code="source_info">
+              <bundle>source_info</bundle>
             </placement>
           </bundlePlacements>
         </screen>
