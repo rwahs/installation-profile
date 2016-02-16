@@ -2198,8 +2198,8 @@
                     </dd>
                     <dt>Subject Dates:</dt>
                     <dd>^ca_occurrences.SubjectDates</dd>
-                    <dt>Tupe</dt>
-                    <dd>ca_occurrences.^type_id</dd>
+                    <dt>Type:</dt>
+                    <dd>^ca_occurrences.type_id</dd>
                     <dt>Description:</dt>
                     <dd>^ca_occurrences.Description</dd>
                     <dt>Association:</dt>
