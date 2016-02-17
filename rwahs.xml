@@ -2196,16 +2196,24 @@
                         <l>^preferred_labels</l>
                       </unit>
                     </dd>
-                    <dt>Subject Dates:</dt>
-                    <dd>^ca_occurrences.SubjectDates</dd>
+                    <ifdef code="ca_occurrences.SubjectDates">
+                      <dt>Subject Dates:</dt>
+                      <dd>^ca_occurrences.SubjectDates</dd>
+                    </ifdef>
                     <dt>Type:</dt>
                     <dd>^ca_occurrences.type_id</dd>
-                    <dt>Description:</dt>
-                    <dd>^ca_occurrences.Description</dd>
-                    <dt>Association:</dt>
-                    <dd>^ca_objects_x_occurrences.Association</dd>
-                    <dt>Dates:</dt>
-                    <dd>^ca_objects_x_occurrences.SubjectDates</dd>
+                    <ifdef code="ca_occurrences.Description">
+                      <dt>Description:</dt>
+                      <dd>^ca_occurrences.Description</dd>
+                    </ifdef>
+                    <ifdef code="ca_objects_x_occurrences.Association">
+                      <dt>Association:</dt>
+                      <dd>^ca_objects_x_occurrences.Association</dd>
+                    </ifdef>
+                    <ifdef code="ca_objects_x_occurrences.SubjectDates">
+                      <dt>Dates:</dt>
+                      <dd>^ca_objects_x_occurrences.SubjectDates</dd>
+                    </ifdef>
                   </dl>
                   ]]>
                 </setting>
