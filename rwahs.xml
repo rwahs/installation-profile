@@ -3354,7 +3354,7 @@
             </label>
           </labels>
           <bundlePlacements>
-            <placement code="ca_storage_locations2">
+            <placement code="ca_storage_locations">
               <bundle>ca_storage_locations</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Movement Destination</setting>
