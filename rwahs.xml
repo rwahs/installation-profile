@@ -2096,6 +2096,7 @@
       <typeRestrictions>
         <restriction code="ca_movements">
           <table>ca_movements</table>
+          <type>movement</type>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
