@@ -3402,12 +3402,6 @@
             <placement code="ca_objects">
               <bundle>ca_objects</bundle>
             </placement>
-            <placement code="ca_object_lots">
-              <bundle>ca_object_lots</bundle>
-            </placement>
-            <placement code="ca_entities">
-              <bundle>ca_entities</bundle>
-            </placement>
           </bundlePlacements>
         </screen>
       </screens>
