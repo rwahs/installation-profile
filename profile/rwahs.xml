@@ -438,6 +438,22 @@
             </label>
           </labels>
         </item>
+        <item idno="box" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>box</name_singular>
+              <name_plural>box</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="container" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>container</name_singular>
+              <name_plural>container</name_plural>
+            </label>
+          </labels>
+        </item>
       </items>
     </list>
     <list code="YesNoDefaultNo" hierarchical="0" system="1" vocabulary="0" defaultSort="1">
