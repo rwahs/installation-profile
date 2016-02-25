@@ -8,7 +8,7 @@ CollectiveAccess Installation Profile for RWAHS.
 
 To run tests:
 
-    cd test
+    cd tests
     phpunit
 
 ## Transforms
