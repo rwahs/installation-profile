@@ -440,39 +440,6 @@
         </item>
       </items>
     </list>
-    <list code="ItemTypes" hierarchical="0" system="0" vocabulary="0">
-      <labels>
-        <label locale="en_AU">
-          <name>Item Types</name>
-        </label>
-      </labels>
-      <items>
-        <item idno="artwork" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Artwork</name_singular>
-              <name_plural>Artworks</name_plural>
-            </label>
-          </labels>
-        </item>
-        <item idno="costume" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Costume</name_singular>
-              <name_plural>Costumes</name_plural>
-            </label>
-          </labels>
-        </item>
-        <item idno="museumArtefact" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Museum Artefact</name_singular>
-              <name_plural>Museum Artefacts</name_plural>
-            </label>
-          </labels>
-        </item>
-      </items>
-    </list>
     <list code="YesNoDefaultNo" hierarchical="0" system="1" vocabulary="0" defaultSort="1">
       <labels>
         <label locale="en_AU">
@@ -898,27 +865,6 @@
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="ItemType" datatype="List" list="ItemTypes">
-      <labels>
-        <label locale="en_AU">
-          <name>Item Type</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="nullOptionText">Not Set</setting>
-        <setting name="requireValue">0</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="r1">
-          <table>ca_objects</table>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
@@ -2128,9 +2074,6 @@
             </label>
           </labels>
           <bundlePlacements>
-            <placement code="ca_attribute_ItemType">
-              <bundle>ca_attribute_ItemType</bundle>
-            </placement>
             <placement code="idno">
               <bundle>idno</bundle>
               <settings>
@@ -2287,9 +2230,6 @@
             </label>
           </labels>
           <bundlePlacements>
-            <placement code="ca_attribute_ItemType">
-              <bundle>ca_attribute_ItemType</bundle>
-            </placement>
             <placement code="idno">
               <bundle>idno</bundle>
               <settings>
@@ -2416,9 +2356,6 @@
             </label>
           </labels>
           <bundlePlacements>
-            <placement code="ca_attribute_ItemType">
-              <bundle>ca_attribute_ItemType</bundle>
-            </placement>
             <placement code="idno">
               <bundle>idno</bundle>
               <settings>
