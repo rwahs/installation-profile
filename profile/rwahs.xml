@@ -666,6 +666,47 @@
         </label>
       </labels>
     </list>
+    <list code="LocationStatus" hierarchical="0" system="1" vocabulary="0">
+      <labels>
+        <label locale="en_AU">
+          <name>Location Status</name>
+        </label>
+      </labels>
+      <items>
+        <item idno="Stored" enabled="1" default="1">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Stored</name_singular>
+              <name_plural>Stored</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Displayed" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Displayed</name_singular>
+              <name_plural>Displayed</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Loaned" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Loaned</name_singular>
+              <name_plural>Loaned</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Removed" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Removed</name_singular>
+              <name_plural>Removed</name_plural>
+            </label>
+          </labels>
+        </item>
+      </items>
+    </list>
   </lists>
   <elementSets>
     <!--Basic Elements-->
@@ -1933,6 +1974,83 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
+    <metadataElement code="LocationStatus" datatype="List" list="LocationStatus">
+      <labels>
+        <label locale="en_AU">
+          <name>Location Status</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="nullOptionText">Not Set</setting>
+        <setting name="render">select</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction>
+          <table>ca_movements</table>
+          <type>movement</type>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="AuthorizedBy" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Authorized By</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="default_text">Curator</setting>
+        <setting name="suggestExistingValuesSort">recent</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction>
+          <table>ca_movements</table>
+          <type>movement</type>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="MovementDate" datatype="DateRange">
+      <labels>
+        <label locale="en_AU">
+          <name>Date of movement</name>
+          <description>The date an object was moved from its current location.</description>
+        </label>
+      </labels>
+      <settings>
+        <setting name="fieldWidth">40</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="suggestExistingValuesSort">recent</setting>
+        <setting name="useDatePicker">1</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+        <setting name="default_text">today</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_movements">
+          <table>ca_movements</table>
+          <type>movement</type>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
   </elementSets>
   <userInterfaces>
     <userInterface code="museum_object_ui" type="ca_objects">
@@ -2076,6 +2194,32 @@
             </placement>
             <placement code="ca_attribute_Correspondence">
               <bundle>ca_attribute_Correspondence</bundle>
+            </placement>
+            <placement code="ca_objects_location">
+              <bundle>ca_objects_location</bundle>
+              <settings>
+                <setting name="locationTrackingMode">ca_movements</setting>
+                <setting name="displayTemplate">
+                  <![CDATA[
+                  <unit relativeTo="ca_movements">
+                    <unit relativeTo="ca_storage_locations">
+                      <l>^hierarchy.preferred_labels</l>
+                    </unit>
+                    (Status: ^LocationStatus, Authorized by: ^AuthorizedBy on ^MovementDate)
+                  </unit>
+                  ]]>
+                  </setting>
+                <setting name="historyTemplate">
+                  <![CDATA[
+                  <unit relativeTo="ca_movements">
+                    <unit relativeTo="ca_storage_locations">
+                      <l>^hierarchy.preferred_labels</l>
+                    </unit>
+                    (Status: ^LocationStatus, Authorized by: ^AuthorizedBy on ^MovementDate)
+                  </unit>
+                  ]]>
+                  </setting>
+              </settings>
             </placement>
           </bundlePlacements>
         </screen>
@@ -3050,7 +3194,6 @@
         </screen>
       </screens>
     </userInterface>
-
     <userInterface code="standard_representation_annotation_ui" type="ca_representation_annotations">
       <labels>
         <label locale="en_AU">
@@ -3129,6 +3272,72 @@
                 <setting name="label" locale="en_AU">Alternate names</setting>
                 <setting name="add_label" locale="en_AU">Add name</setting>
               </settings>
+            </placement>
+          </bundlePlacements>
+        </screen>
+      </screens>
+    </userInterface>
+    <userInterface code="movement_cataloguers_ui" type="ca_movements">
+      <labels>
+        <label locale="en_AU">
+          <name>Movement editor</name>
+        </label>
+      </labels>
+      <screens>
+        <screen idno="basic" default="1">
+          <labels>
+            <label locale="en_AU">
+              <name>Basic info</name>
+            </label>
+          </labels>
+          <bundlePlacements>
+            <placement code="ca_storage_locations">
+              <bundle>ca_storage_locations</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Movement Destination</setting>
+                <setting name="add_label" locale="en_AU">add destination</setting>
+                <setting name="readonly"/>
+                <setting name="expand_collapse_value">dont_force</setting>
+                <setting name="expand_collapse_no_value">dont_force</setting>
+                <setting name="dont_include_subtypes_in_type_restriction">0</setting>
+                <setting name="list_format">bubbles</setting>
+                <setting name="sortDirection">ASC</setting>
+                <setting name="dontShowDeleteButton">0</setting>
+                <setting name="display_template"><![CDATA[
+                  <unit relativeTo="ca_storage_locations">
+                    <unit relativeTo="hierarchy">
+                      <l>^preferred_labels</l>
+                    </unit>
+                  </unit>
+                  ]]>
+                </setting>
+                <setting name="minRelationshipsPerRow">1</setting>
+                <setting name="maxRelationshipsPerRow">1</setting>
+                <setting name="showCurrentOnly">1</setting>
+                <setting name="useHierarchicalBrowser">1</setting>
+                <setting name="hierarchicalBrowserHeight">200px</setting>
+              </settings>
+            </placement>
+            <placement code="ca_attribute_LocationStatus">
+              <bundle>ca_attribute_LocationStatus</bundle>
+            </placement>
+            <placement code="ca_attribute_AuthorizedBy">
+              <bundle>ca_attribute_AuthorizedBy</bundle>
+            </placement>
+            <placement code="ca_attribute_MovementDate">
+              <bundle>ca_attribute_MovementDate</bundle>
+            </placement>
+          </bundlePlacements>
+        </screen>
+        <screen idno="relationships" default="0">
+          <labels>
+            <label locale="en_AU">
+              <name>Relationships</name>
+            </label>
+          </labels>
+          <bundlePlacements>
+            <placement code="ca_objects">
+              <bundle>ca_objects</bundle>
             </placement>
           </bundlePlacements>
         </screen>
