@@ -3332,7 +3332,7 @@
                 <setting name="dontShowDeleteButton">0</setting>
                 <setting name="display_template"><![CDATA[
                   <unit relativeTo="ca_storage_locations">
-                    <unit relativeTo="hierarchy">
+                    <unit relativeTo="ca_storage_locations.hierarchy">
                       <l>^preferred_labels</l>
                     </unit>
                   </unit>
