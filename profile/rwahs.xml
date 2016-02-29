@@ -729,7 +729,7 @@
     <metadataElement code="LastEditBy" datatype="Text">
       <labels>
         <label locale="en_AU">
-          <name>Last Edited By</name>
+          <name>Data Entered By</name>
         </label>
       </labels>
       <settings>
@@ -780,6 +780,7 @@
         <setting name="fieldHeight">6</setting>
         <setting name="minChars">0</setting>
         <setting name="maxChars">30</setting>
+        <setting name="useDatePicker">1</setting>
       </settings>
       <typeRestrictions>
         <restriction code="objects">
@@ -1011,48 +1012,57 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="AccessionBy" datatype="Text">
+    <metadataElement code="AccessionByContainer" datatype="Container">
       <labels>
         <label locale="en_AU">
-          <name>AccessionBy</name>
+          <name>Accession By</name>
         </label>
       </labels>
-      <settings>
-        <setting name="usewysiwygeditor">0</setting>
-        <setting name="fieldWidth">10</setting>
-        <setting name="fieldHeight">6</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">30</setting>
-        <setting name="doesNotTakeLocale">1</setting>
-      </settings>
+      <elements>
+        <metadataElement code="AccessionBy" datatype="Text">
+          <labels>
+            <label locale="en_AU">
+              <name>Name</name>
+            </label>
+          </labels>
+          <settings>
+            <setting name="usewysiwygeditor">0</setting>
+            <setting name="fieldWidth">10</setting>
+            <setting name="fieldHeight">6</setting>
+            <setting name="minChars">0</setting>
+            <setting name="maxChars">100</setting>
+            <setting name="doesNotTakeLocale">1</setting>
+            <setting name="suggestExistingValues">1</setting>
+            <setting name="suggestExistingValuesSort">recent</setting>
+          </settings>
+        </metadataElement>
+        <metadataElement code="AccessionDate" datatype="DateRange">
+          <labels>
+            <label locale="en_AU">
+              <name>On</name>
+            </label>
+          </labels>
+          <settings>
+            <setting name="suggestExistingValues">1</setting>
+            <setting name="suggestExistingValuesSort">recent</setting>
+            <setting name="useDatePicker">1</setting>
+            <setting name="doesNotTakeLocale">1</setting>
+            <setting name="default_text">today</setting>
+          </settings>
+        </metadataElement>
+      </elements>
       <typeRestrictions>
-        <restriction code="r1">
+        <restriction code="ca_objects_AccessionBy">
           <table>ca_objects</table>
           <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="AccessionDate" datatype="DateRange">
-      <labels>
-        <label locale="en_AU">
-          <name>AccessionDate</name>
-        </label>
-      </labels>
-      <typeRestrictions>
-        <restriction code="r1">
-          <table>ca_objects</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">0</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
+
     <metadataElement code="LegacyID" datatype="Integer">
       <labels>
         <label locale="en_AU">
@@ -1700,6 +1710,10 @@
           <name>Earliest Year</name>
         </label>
       </labels>
+      <settings>
+        <setting name="useDatePicker">1</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
       <typeRestrictions>
         <restriction code="museum_EarliestYear">
           <table>ca_objects</table>
@@ -1717,6 +1731,10 @@
           <name>Latest Year</name>
         </label>
       </labels>
+      <settings>
+        <setting name="useDatePicker">1</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
       <typeRestrictions>
         <restriction code="museum_LatestYear">
           <table>ca_objects</table>
@@ -1923,6 +1941,106 @@
           <table>ca_objects</table>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Value" datatype="Currency">
+      <labels>
+        <label locale="en_AU">
+          <name>Value</name>
+          <description>Amount advised by institution borrowing and insuring item.</description>
+        </label>
+      </labels>
+      <settings>
+        <setting name="minValue">0.00</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objectsValue">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="AuditSeen" datatype="DateRange">
+      <labels>
+        <label locale="en_AU">
+          <name>Audit Seen</name>
+          <description>Add a new value for when this object was seen during an audit.</description>
+        </label>
+      </labels>
+      <settings>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="suggestExistingValuesSort">recent</setting>
+        <setting name="useDatePicker">1</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+        <setting name="default_text">today</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objectsAuditSeen">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <!-- We start with no value, then the user adds new values which add the new dates with a default value of the current day-->
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="OtherNumber" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Other Number</name>
+          <description>Some items come marked with another number from an institution or in the museum records has received another number at some time.</description>
+        </label>
+      </labels>
+      <settings>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">30</setting>
+        <setting name="suggestExistingValues">0</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objectsOtherNumber">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <!-- We start with no value, then the user adds new values which add the new dates with a default value of the current day-->
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="AcquisitionNotes" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Acquisition Notes</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="fieldWidth">115</setting>
+        <setting name="fieldHeight">4</setting>
+        <setting name="minChars">0</setting>
+        <setting name="usewysiwygeditor">1</setting>
+        <setting name="maxChars">16777215</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_AcquisitionNotes">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
             <setting name="maxAttributesPerRow">1</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
@@ -2211,6 +2329,29 @@
             <placement code="ca_attribute_Correspondence">
               <bundle>ca_attribute_Correspondence</bundle>
             </placement>
+            <placement code="ca_storage_locations">
+              <bundle>ca_storage_locations</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Usual location</setting>
+                <setting name="dont_include_subtypes_in_type_restriction">0</setting>
+                <setting name="restrict_to_relationship_types">usual</setting>
+                <setting name="sortDirection">ASC</setting>
+                <setting name="dontShowDeleteButton">0</setting>
+                <setting name="minRelationshipsPerRow">0</setting>
+                <setting name="maxRelationshipsPerRow">1</setting>
+                <setting name="showCurrentOnly">1</setting>
+                <setting name="useHierarchicalBrowser">1</setting>
+                <setting name="display_template">
+                  <![CDATA[
+                  <unit relativeTo="ca_storage_locations">
+                    <unit relativeTo="ca_storage_locations.hierarchy">
+                      <l>^preferred_labels</l>
+                    </unit>
+                  </unit>
+                  ]]>
+                </setting>
+              </settings>
+            </placement>
             <placement code="ca_objects_location">
               <bundle>ca_objects_location</bundle>
               <settings>
@@ -2219,7 +2360,9 @@
                   <![CDATA[
                   <unit relativeTo="ca_movements">
                     <unit relativeTo="ca_storage_locations">
-                      <l>^hierarchy.preferred_labels</l>
+                      <unit relativeTo="ca_storage_locations.hierarchy">
+                        <l>^preferred_labels</l>
+                      </unit>
                     </unit>
                     (Status: ^LocationStatus, Authorized by: ^AuthorizedBy on ^MovementDate)
                   </unit>
@@ -2229,13 +2372,39 @@
                   <![CDATA[
                   <unit relativeTo="ca_movements">
                     <unit relativeTo="ca_storage_locations">
-                      <l>^hierarchy.preferred_labels</l>
+                      <unit relativeTo="ca_storage_locations.hierarchy">
+                        <l>^preferred_labels</l>
+                      </unit>
                     </unit>
                     (Status: ^LocationStatus, Authorized by: ^AuthorizedBy on ^MovementDate)
                   </unit>
                   ]]>
                   </setting>
               </settings>
+            </placement>
+            <placement code="ca_attribute_Value">
+              <bundle>ca_attribute_Value</bundle>
+            </placement>
+            <placement code="ca_attribute_AuditSeen">
+              <bundle>ca_attribute_AuditSeen</bundle>
+            </placement>
+            <placement code="ca_attribute_OtherNumber">
+              <bundle>ca_attribute_OtherNumber</bundle>
+            </placement>
+            <placement code="ca_objects_deaccession">
+              <bundle>ca_objects_deaccession</bundle>
+            </placement>
+            <placement code="ca_attribute_AcquisitionNotes">
+              <bundle>ca_attribute_AcquisitionNotes</bundle>
+            </placement>
+            <placement code="ca_attribute_AccessionByContainer">
+              <bundle>ca_attribute_AccessionByContainer</bundle>
+            </placement>
+            <placement code="ca_attribute_LastEditBy">
+              <bundle>ca_attribute_LastEditBy</bundle>
+            </placement>
+            <placement code="ca_attribute_LastEditDate">
+              <bundle>ca_attribute_LastEditDate</bundle>
             </placement>
           </bundlePlacements>
         </screen>
@@ -3016,8 +3185,10 @@
                 <setting name="locationTrackingMode">ca_movements</setting>
                 <setting name="colorItem">#ffffff</setting>
                 <setting name="displayTemplate"><![CDATA[
-                <unit relativeTo="ca_objects"><l>^ca_objects.preferred_labels (^ca_objects.idno)</l></unit>
-                ]]></setting>
+                  <unit relativeTo="ca_objects">
+                    <l>^ca_objects.preferred_labels (^ca_objects.idno)</l>
+                  </unit>
+                  ]]></setting>
               </settings>
             </placement>
           </bundlePlacements>
@@ -3610,6 +3781,20 @@
             <label locale="en_AU">
               <typename>depicts</typename>
               <typename_reverse>is depicted by</typename_reverse>
+            </label>
+          </labels>
+          <subTypeLeft/>
+          <subTypeRight/>
+        </type>
+      </types>
+    </relationshipTable>
+    <relationshipTable name="ca_objects_x_storage_locations">
+      <types>
+        <type code="usual" default="1">
+          <labels>
+            <label locale="en_AU">
+              <typename>is usually located at</typename>
+              <typename_reverse>is usual location of</typename_reverse>
             </label>
           </labels>
           <subTypeLeft/>
