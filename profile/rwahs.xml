@@ -2363,6 +2363,9 @@
                   ]]></setting>
               </settings>
             </placement>
+            <placement code="ca_object_representations">
+              <bundle>ca_object_representations</bundle>
+            </placement>
           </bundlePlacements>
         </screen>
         <screen idno="conservation" default="0">
