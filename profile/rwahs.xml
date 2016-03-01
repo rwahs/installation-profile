@@ -735,7 +735,7 @@
       <settings>
         <setting name="usewysiwygeditor">0</setting>
         <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">6</setting>
+        <setting name="fieldHeight">1</setting>
         <setting name="minChars">0</setting>
         <setting name="maxChars">30</setting>
       </settings>
@@ -777,7 +777,7 @@
       <settings>
         <setting name="usewysiwygeditor">0</setting>
         <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">6</setting>
+        <setting name="fieldHeight">1</setting>
         <setting name="minChars">0</setting>
         <setting name="maxChars">30</setting>
         <setting name="useDatePicker">1</setting>
@@ -826,7 +826,7 @@
         <setting name="fieldWidth">115</setting>
         <setting name="fieldHeight">6</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">65535</setting>
+        <setting name="maxChars">16777215</setting>
       </settings>
       <typeRestrictions>
         <restriction code="r1">
@@ -896,7 +896,7 @@
       <settings>
         <setting name="usewysiwygeditor">0</setting>
         <setting name="fieldWidth">10</setting>
-        <setting name="fieldHeight">6</setting>
+        <setting name="fieldHeight">1</setting>
         <setting name="minChars">0</setting>
         <setting name="maxChars">4</setting>
         <setting name="doesNotTakeLocale">1</setting>
@@ -921,7 +921,7 @@
       <settings>
         <setting name="usewysiwygeditor">0</setting>
         <setting name="fieldWidth">10</setting>
-        <setting name="fieldHeight">6</setting>
+        <setting name="fieldHeight">1</setting>
         <setting name="minChars">0</setting>
         <setting name="maxChars">4</setting>
         <setting name="doesNotTakeLocale">1</setting>
@@ -946,7 +946,7 @@
       <settings>
         <setting name="usewysiwygeditor">0</setting>
         <setting name="fieldWidth">10</setting>
-        <setting name="fieldHeight">6</setting>
+        <setting name="fieldHeight">1</setting>
         <setting name="minChars">0</setting>
         <setting name="maxChars">255</setting>
         <setting name="doesNotTakeLocale">1</setting>
@@ -971,7 +971,7 @@
       <settings>
         <setting name="usewysiwygeditor">0</setting>
         <setting name="fieldWidth">10</setting>
-        <setting name="fieldHeight">6</setting>
+        <setting name="fieldHeight">1</setting>
         <setting name="minChars">0</setting>
         <setting name="maxChars">255</setting>
         <setting name="doesNotTakeLocale">1</setting>
@@ -996,7 +996,7 @@
       <settings>
         <setting name="usewysiwygeditor">0</setting>
         <setting name="fieldWidth">10</setting>
-        <setting name="fieldHeight">6</setting>
+        <setting name="fieldHeight">1</setting>
         <setting name="minChars">0</setting>
         <setting name="maxChars">255</setting>
         <setting name="doesNotTakeLocale">1</setting>
@@ -1027,8 +1027,8 @@
           </labels>
           <settings>
             <setting name="usewysiwygeditor">0</setting>
-            <setting name="fieldWidth">10</setting>
-            <setting name="fieldHeight">6</setting>
+            <setting name="fieldWidth">70</setting>
+            <setting name="fieldHeight">1</setting>
             <setting name="minChars">0</setting>
             <setting name="maxChars">100</setting>
             <setting name="doesNotTakeLocale">1</setting>
@@ -1653,10 +1653,10 @@
       </labels>
       <settings>
         <setting name="fieldWidth">115</setting>
-        <setting name="fieldHeight">4</setting>
+        <setting name="fieldHeight">6</setting>
         <setting name="minChars">0</setting>
         <setting name="usewysiwygeditor">1</setting>
-        <setting name="maxChars">65535</setting>
+        <setting name="maxChars">16777215</setting>
         <setting name="doesNotTakeLocale">1</setting>
       </settings>
       <typeRestrictions>
@@ -1884,7 +1884,7 @@
         <setting name="fieldWidth">115</setting>
         <setting name="fieldHeight">6</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">65535</setting>
+        <setting name="maxChars">16777215</setting>
       </settings>
       <typeRestrictions>
         <restriction code="museum_StatementOfSignificance">
@@ -2030,7 +2030,7 @@
       </labels>
       <settings>
         <setting name="fieldWidth">115</setting>
-        <setting name="fieldHeight">4</setting>
+        <setting name="fieldHeight">6</setting>
         <setting name="minChars">0</setting>
         <setting name="usewysiwygeditor">1</setting>
         <setting name="maxChars">16777215</setting>
