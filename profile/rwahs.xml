@@ -356,6 +356,14 @@
             </item>
           </items>
         </item>
+        <item idno="Conservation" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Conservation Record</name_singular>
+              <name_plural>Conservation Records</name_plural>
+            </label>
+          </labels>
+        </item>
       </items>
     </list>
     <list code="occurrence_sources" hierarchical="1" system="1" vocabulary="0">
@@ -506,14 +514,14 @@
         </item>
       </items>
     </list>
-    <list code="ConditionOnReceipt" hierarchical="0" system="1" vocabulary="0">
+    <list code="Condition" hierarchical="0" system="1" vocabulary="0" defaultSort="2">
       <labels>
         <label locale="en_AU">
-          <name>Condition on Receipt</name>
+          <name>Object Conditions</name>
         </label>
       </labels>
       <items>
-        <item idno="excellent" enabled="1" default="1" value="5">
+        <item idno="E" enabled="1" default="1" value="1">
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Excellent</name_singular>
@@ -521,7 +529,7 @@
             </label>
           </labels>
         </item>
-        <item idno="good" enabled="1" default="0" value="4">
+        <item idno="G" enabled="1" default="0" value="2">
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Good</name_singular>
@@ -529,7 +537,7 @@
             </label>
           </labels>
         </item>
-        <item idno="fair_used" enabled="1" default="0" value="3">
+        <item idno="F" enabled="1" default="0" value="3">
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Fair / Used</name_singular>
@@ -537,7 +545,7 @@
             </label>
           </labels>
         </item>
-        <item idno="damaged" enabled="1" default="0" value="2">
+        <item idno="D" enabled="1" default="0" value="4">
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Damaged</name_singular>
@@ -545,7 +553,7 @@
             </label>
           </labels>
         </item>
-        <item idno="poor" enabled="1" default="0" value="1">
+        <item idno="P" enabled="1" default="0" value="5">
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Poor</name_singular>
@@ -675,13 +683,6 @@
         </label>
       </labels>
     </list>
-    <list code="PhysicalCondition" hierarchical="0" system="1" vocabulary="0">
-      <labels>
-        <label locale="en_AU">
-          <name>Physical Condition</name>
-        </label>
-      </labels>
-    </list>
     <list code="LocationStatus" hierarchical="0" system="1" vocabulary="0">
       <labels>
         <label locale="en_AU">
@@ -738,6 +739,7 @@
         <setting name="fieldHeight">1</setting>
         <setting name="minChars">0</setting>
         <setting name="maxChars">30</setting>
+        <setting name="suggestExistingValues">1</setting>
       </settings>
       <typeRestrictions>
         <restriction code="objects">
@@ -1528,7 +1530,7 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="ConditionOnReceipt" datatype="List" list="ConditionOnReceipt">
+    <metadataElement code="ConditionOnReceipt" datatype="List" list="Condition">
       <labels>
         <label locale="en_AU">
           <name>Condition (on receipt)</name>
@@ -1856,7 +1858,7 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="PhysicalCondition" datatype="List" list="PhysicalCondition">
+    <metadataElement code="PhysicalCondition" datatype="List" list="Condition">
       <labels>
         <label locale="en_AU">
           <name>Physical Condition</name>
@@ -1864,6 +1866,23 @@
       </labels>
       <typeRestrictions>
         <restriction code="museum_PhysicalCondition">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="VisualCondition" datatype="List" list="Condition">
+      <labels>
+        <label locale="en_AU">
+          <name>Visual Condition</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction code="museum_VisualCondition">
           <table>ca_objects</table>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -1881,6 +1900,7 @@
       </labels>
       <settings>
         <setting name="usewysiwygeditor">1</setting>
+        <setting name="suggestExistingValues">1</setting>
         <setting name="fieldWidth">115</setting>
         <setting name="fieldHeight">6</setting>
         <setting name="minChars">0</setting>
@@ -2047,6 +2067,153 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
+    <metadataElement code="ConditionReportContainer" datatype="Container">
+      <labels>
+        <label locale="en_AU">
+          <name>Condition Reports</name>
+        </label>
+      </labels>
+      <elements>
+        <metadataElement code="ConditionReport" datatype="Text">
+          <labels>
+            <label locale="en_AU">
+              <name>Condition Report</name>
+            </label>
+          </labels>
+          <settings>
+            <setting name="usewysiwygeditor">1</setting>
+            <setting name="fieldWidth">60</setting>
+            <setting name="fieldHeight">4</setting>
+            <setting name="minChars">0</setting>
+          </settings>
+        </metadataElement>
+        <metadataElement code="ConditionReportBy" datatype="Text"><labels>
+          <label locale="en_AU">
+            <name>surveyed By</name>
+          </label>
+        </labels>
+          <settings>
+            <setting name="usewysiwygeditor">0</setting>
+            <setting name="fieldWidth">20</setting>
+            <setting name="fieldHeight">1</setting>
+            <setting name="minChars">0</setting>
+            <setting name="maxChars">30</setting>
+            <setting name="suggestExistingValues">1</setting>
+            <setting name="suggestExistingValuesSort">value</setting>
+          </settings>
+        </metadataElement>
+        <metadataElement code="ConditionReportDate" datatype="DateRange">
+        <labels>
+          <label locale="en_AU">
+            <name>Date</name>
+          </label>
+        </labels>
+        <settings>
+          <setting name="fieldWidth">20</setting>
+          <setting name="fieldHeight">1</setting>
+          <setting name="minChars">0</setting>
+          <setting name="maxChars">30</setting>
+          <setting name="useDatePicker">1</setting>
+        </settings>
+        </metadataElement>
+      </elements>
+      <typeRestrictions>
+        <restriction code="ca_objects_ConditionReportContainer">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="RecommendationsContainer" datatype="Container">
+      <labels>
+        <label locale="en_AU">
+          <name>Recommendations</name>
+        </label>
+      </labels>
+      <elements>
+        <metadataElement code="Recommendation" datatype="Text">
+          <labels>
+            <label locale="en_AU">
+              <name>Recommendation</name>
+            </label>
+          </labels>
+          <settings>
+            <setting name="usewysiwygeditor">0</setting>
+            <setting name="fieldWidth">60</setting>
+            <setting name="fieldHeight">2</setting>
+            <setting name="minChars">0</setting>
+            <setting name="maxChars">255</setting>
+          </settings>
+        </metadataElement>
+        <metadataElement code="RecommendationsWhy" datatype="Text"><labels>
+          <label locale="en_AU">
+            <name>Why?</name>
+          </label>
+        </labels>
+          <settings>
+            <setting name="usewysiwygeditor">0</setting>
+            <setting name="fieldWidth">20</setting>
+            <setting name="fieldHeight">1</setting>
+            <setting name="minChars">0</setting>
+            <setting name="maxChars">30</setting>
+            <setting name="suggestExistingValues">1</setting>
+            <setting name="suggestExistingValuesSort">value</setting>
+          </settings>
+        </metadataElement>
+        <metadataElement code="ReminderDate" datatype="DateRange">
+        <labels>
+          <label locale="en_AU">
+            <name>Reminder Date</name>
+          </label>
+        </labels>
+        <settings>
+          <setting name="fieldWidth">20</setting>
+          <setting name="fieldHeight">1</setting>
+          <setting name="minChars">0</setting>
+          <setting name="maxChars">30</setting>
+          <setting name="useDatePicker">1</setting>
+        </settings>
+        </metadataElement>
+      </elements>
+      <typeRestrictions>
+        <restriction code="ca_objects_RecommendationsContainer">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="DisplayLoanCare" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Display &amp; Loan Care</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">115</setting>
+        <setting name="fieldHeight">3</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_DisplayLoanCare">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
     <!-- Subject List fields-->
     <metadataElement code="SubjectDates" datatype="Text">
       <labels>
@@ -2180,6 +2347,86 @@
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <!-- Conservation Details -->
+    <metadataElement code="ConservationDetails" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Conservation Details</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="suggestExistingValuesSort">recent</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+        <setting name="usewysiwygeditor">1</setting>
+        <setting name="fieldWidth">115</setting>
+        <setting name="fieldHeight">6</setting>
+        <setting name="minChars">0</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction>
+          <table>ca_occurrences</table>
+          <type>Conservation</type>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="ConservationDate" datatype="DateRange">
+      <labels>
+        <label locale="en_AU">
+          <name>Date of conservation</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="fieldWidth">40</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="suggestExistingValuesSort">recent</setting>
+        <setting name="useDatePicker">1</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+        <setting name="default_text">today</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_movements">
+          <table>ca_occurrences</table>
+          <type>Conservation</type>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Conservator" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Conservator/s</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="suggestExistingValuesSort">recent</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction>
+          <table>ca_occurrences</table>
+          <type>Conservation</type>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">255</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
@@ -2394,6 +2641,9 @@
             <placement code="ca_objects_deaccession">
               <bundle>ca_objects_deaccession</bundle>
             </placement>
+            <placement code="access">
+              <bundle>access</bundle>
+            </placement>
             <placement code="ca_attribute_AcquisitionNotes">
               <bundle>ca_attribute_AcquisitionNotes</bundle>
             </placement>
@@ -2449,6 +2699,7 @@
               <bundle>ca_occurrences</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Subject List</setting>
+                <setting name="restrict_to_type">subject</setting>
                 <setting name="dont_include_subtypes_in_type_restriction">0</setting>
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
@@ -2497,9 +2748,6 @@
             <placement code="ca_attribute_ComparativeCriteria">
               <bundle>ca_attribute_ComparativeCriteria</bundle>
             </placement>
-            <placement code="ca_attribute_PhysicalCondition">
-              <bundle>ca_attribute_PhysicalCondition</bundle>
-            </placement>
             <placement code="ca_attribute_StatementOfSignificance">
               <bundle>ca_attribute_StatementOfSignificance</bundle>
             </placement>
@@ -2546,9 +2794,56 @@
           <bundlePlacements>
             <placement code="idno">
               <bundle>idno</bundle>
+            </placement>
+            <placement code="ca_attribute_ConditionReportContainer">
+              <bundle>ca_attribute_ConditionReportContainer</bundle>
+            </placement>
+            <placement code="ca_attribute_RecommendationsContainer">
+              <bundle>ca_attribute_RecommendationsContainer</bundle>
+            </placement>
+            <placement code="ca_attribute_DisplayLoanCare">
+              <bundle>ca_attribute_DisplayLoanCare</bundle>
+            </placement>
+            <placement code="conservationDetails">
+              <bundle>ca_occurrences</bundle>
               <settings>
-                <setting name="label" locale="en_AU">Accession ID</setting>
+                <setting name="label" locale="en_AU">Conservation Details</setting>
+                <setting name="restrict_to_type">Conservation</setting>
+                <setting name="dont_include_subtypes_in_type_restriction">0</setting>
+                <setting name="list_format">list</setting>
+                <setting name="sortDirection">ASC</setting>
+                <setting name="dontShowDeleteButton">0</setting>
+                <setting name="minRelationshipsPerRow">0</setting>
+                <setting name="maxRelationshipsPerRow">255</setting>
+                <setting name="showCurrentOnly">0</setting>
+                <setting name="display_template">
+                  <![CDATA[
+                  <unit relativeTo="ca_occurrences">
+                    <l>^preferred_labels (^idno)</l>
+                  <dl>
+                    <ifdef code="ca_occurrences.ConservationDetails">
+                      <dt>Conservation Details:</dt>
+                      <dd><l>^ca_occurrences.ConservationDetails</l></dd>
+                    </ifdef>
+                    <ifdef code="ca_occurrences.ConservationDate">
+                      <dt>Date:</dt>
+                      <dd>^ca_occurrences.ConservationDate</dd>
+                    </ifdef>
+                    <ifdef code="ca_occurrences.Conservator">
+                      <dt>Conservator:</dt>
+                      <dd>^ca_occurrences.Conservator</dd>
+                    </ifdef>
+                    <l>^ca_object_representations.media.medium</l>
+                  </unit>
+                  ]]>
+                </setting>
               </settings>
+            </placement>
+            <placement code="ca_attribute_PhysicalCondition">
+              <bundle>ca_attribute_PhysicalCondition</bundle>
+            </placement>
+            <placement code="ca_attribute_VisualCondition">
+              <bundle>ca_attribute_VisualCondition</bundle>
             </placement>
           </bundlePlacements>
         </screen>
@@ -2727,6 +3022,65 @@
               <settings>
                 <setting name="label" locale="en_AU">Related Subjects</setting>
               </settings>
+            </placement>
+          </bundlePlacements>
+        </screen>
+      </screens>
+    </userInterface>
+    <userInterface code="conservation_ui" type="ca_occurrences">
+      <labels>
+        <label locale="en_AU">
+          <name>Conservation editor</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction type="Conservation"/>
+      </typeRestrictions>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="museum" access="edit"/>
+      </groupAccess>
+      <screens>
+        <screen idno="conservationData" default="1">
+          <labels>
+            <label locale="en_AU">
+              <name>Conservation Data</name>
+            </label>
+          </labels>
+          <bundlePlacements>
+            <placement code="preferred_labels">
+              <bundle>preferred_labels</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Title</setting>
+                <setting name="add_label" locale="en_AU">Add title</setting>
+              </settings>
+            </placement>
+            <placement code="ca_attribute_ConservationDetails">
+              <bundle>ca_attribute_ConservationDetails</bundle>
+            </placement>
+            <placement code="ca_attribute_ConservationDate">
+              <bundle>ca_attribute_ConservationDate</bundle>
+            </placement>
+            <placement code="ca_attribute_Conservator">
+              <bundle>ca_attribute_Conservator</bundle>
+            </placement>
+            <placement code="ca_object_representations">
+              <bundle>ca_object_representations</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Conservation Images</setting>
+              </settings>
+            </placement>
+          </bundlePlacements>
+        </screen>
+        <screen idno="relationships" default="0">
+          <labels>
+            <label locale="en_AU">
+              <name>Relationships</name>
+            </label>
+          </labels>
+          <bundlePlacements>
+            <placement code="ca_objects">
+              <bundle>ca_objects</bundle>
             </placement>
           </bundlePlacements>
         </screen>
