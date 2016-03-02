@@ -1,0 +1,15 @@
+{
+    "name": "rwahs/installation-profile",
+    "description": "description_text",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Kehan Harman",
+            "email": "kehan@gaiaresources.com.au"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "5.x"
+    }
+}
