@@ -2809,6 +2809,7 @@
               <settings>
                 <setting name="label" locale="en_AU">Conservation Details</setting>
                 <setting name="restrict_to_type">Conservation</setting>
+                <setting name="restrict_to_relationship_types">conservation</setting>
                 <setting name="dont_include_subtypes_in_type_restriction">0</setting>
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
@@ -3081,6 +3082,9 @@
           <bundlePlacements>
             <placement code="ca_objects">
               <bundle>ca_objects</bundle>
+              <settings>
+                <setting name="restrict_to_relationship_types">conservation</setting>
+              </settings>
             </placement>
           </bundlePlacements>
         </screen>
@@ -3847,7 +3851,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>event</subTypeRight>
+          <subTypeRight>Event</subTypeRight>
         </type>
         <type code="used" default="0">
           <labels>
@@ -3857,7 +3861,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>event</subTypeRight>
+          <subTypeRight>Event</subTypeRight>
         </type>
         <type code="describes" default="0">
           <labels>
@@ -3868,6 +3872,16 @@
           </labels>
           <subTypeLeft/>
           <subTypeRight/>
+        </type>
+        <type code="conservation" default="0">
+          <labels>
+            <label locale="en_AU">
+              <typename>conserved in</typename>
+              <typename_reverse>is conservation of</typename_reverse>
+            </label>
+          </labels>
+          <subTypeLeft/>
+          <subTypeRight>Conservation</subTypeRight>
         </type>
       </types>
     </relationshipTable>
@@ -3938,8 +3952,8 @@
               <typename_reverse>is related to</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft>event</subTypeLeft>
-          <subTypeRight>event</subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -4117,7 +4131,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>event</subTypeRight>
+          <subTypeRight>Event</subTypeRight>
         </type>
       </types>
     </relationshipTable>
@@ -4257,7 +4271,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>event</subTypeRight>
+          <subTypeRight>Event</subTypeRight>
         </type>
       </types>
     </relationshipTable>
@@ -4399,7 +4413,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>event</subTypeRight>
+          <subTypeRight>Event</subTypeRight>
         </type>
         <type code="describes" default="1">
           <labels>
@@ -4409,7 +4423,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>event</subTypeRight>
+          <subTypeRight>Event</subTypeRight>
         </type>
       </types>
     </relationshipTable>
