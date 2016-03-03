@@ -1,7 +1,8 @@
 {
     "name": "rwahs/installation-profile",
     "description": "description_text",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "prefer-stable": "true",
     "license": "proprietary",
     "authors": [
         {
