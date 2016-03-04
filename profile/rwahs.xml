@@ -2331,7 +2331,7 @@
     <metadataElement code="AuthorizedBy" datatype="Text">
       <labels>
         <label locale="en_AU">
-          <name>Authorized By</name>
+          <name>Authorised By</name>
         </label>
       </labels>
       <settings>
@@ -2641,7 +2641,7 @@
                         <l>^preferred_labels</l>
                       </unit>
                     </unit>
-                    (Status: ^LocationStatus, Authorized by: ^AuthorizedBy on ^MovementDate)
+                    (Status: ^LocationStatus, Authorised by: ^AuthorizedBy on ^MovementDate)
                   </unit>
                   ]]>
                   </setting>
@@ -2653,7 +2653,7 @@
                         <l>^preferred_labels</l>
                       </unit>
                     </unit>
-                    (Status: ^LocationStatus, Authorized by: ^AuthorizedBy on ^MovementDate)
+                    (Status: ^LocationStatus, Authorised by: ^AuthorizedBy on ^MovementDate)
                   </unit>
                   ]]>
                   </setting>
