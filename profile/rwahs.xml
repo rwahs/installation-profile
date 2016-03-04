@@ -2961,7 +2961,7 @@
             <placement code="ca_events">
               <bundle>ca_occurrences</bundle>
               <settings>
-                <setting name="restrict_to_type">event</setting>
+                <setting name="restrict_to_type">Event</setting>
                 <setting name="label" locale="en_AU">Related events</setting>
               </settings>
             </placement>
@@ -3347,7 +3347,7 @@
             <placement code="ca_events">
               <bundle>ca_occurrences</bundle>
               <settings>
-                <setting name="restrict_to_type">event</setting>
+                <setting name="restrict_to_type">Event</setting>
                 <setting name="label" locale="en_AU">Related events</setting>
               </settings>
             </placement>
