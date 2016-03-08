@@ -464,6 +464,23 @@
         </item>
       </items>
     </list>
+    <list code="movement_types" hierarchical="0" system="1" vocabulary="0">
+      <labels>
+        <label locale="en_AU">
+          <name>Movement type values</name>
+        </label>
+      </labels>
+      <items>
+        <item idno="movement" enabled="1" default="1">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Movement</name_singular>
+              <name_plural>Movements</name_plural>
+            </label>
+          </labels>
+        </item>
+      </items>
+    </list>
     <list code="YesNoDefaultNo" hierarchical="0" system="1" vocabulary="0" defaultSort="1">
       <labels>
         <label locale="en_AU">
@@ -881,6 +898,14 @@
         </restriction>
         <restriction code="r7">
           <table>ca_object_representations</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">100</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="r8">
+          <table>ca_representation_annotations</table>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">100</setting>
@@ -2021,7 +2046,9 @@
       <labels>
         <label locale="en_AU">
           <name>Other Number</name>
-          <description>Some items come marked with another number from an institution or in the museum records has received another number at some time.</description>
+          <description>Some items come marked with another number from an institution or in the museum records has
+            received another number at some time.
+          </description>
         </label>
       </labels>
       <settings>
@@ -2087,11 +2114,12 @@
             <setting name="minChars">0</setting>
           </settings>
         </metadataElement>
-        <metadataElement code="ConditionReportBy" datatype="Text"><labels>
-          <label locale="en_AU">
-            <name>surveyed By</name>
-          </label>
-        </labels>
+        <metadataElement code="ConditionReportBy" datatype="Text">
+          <labels>
+            <label locale="en_AU">
+              <name>surveyed By</name>
+            </label>
+          </labels>
           <settings>
             <setting name="usewysiwygeditor">0</setting>
             <setting name="fieldWidth">20</setting>
@@ -2103,18 +2131,18 @@
           </settings>
         </metadataElement>
         <metadataElement code="ConditionReportDate" datatype="DateRange">
-        <labels>
-          <label locale="en_AU">
-            <name>Date</name>
-          </label>
-        </labels>
-        <settings>
-          <setting name="fieldWidth">20</setting>
-          <setting name="fieldHeight">1</setting>
-          <setting name="minChars">0</setting>
-          <setting name="maxChars">30</setting>
-          <setting name="useDatePicker">1</setting>
-        </settings>
+          <labels>
+            <label locale="en_AU">
+              <name>Date</name>
+            </label>
+          </labels>
+          <settings>
+            <setting name="fieldWidth">20</setting>
+            <setting name="fieldHeight">1</setting>
+            <setting name="minChars">0</setting>
+            <setting name="maxChars">30</setting>
+            <setting name="useDatePicker">1</setting>
+          </settings>
         </metadataElement>
       </elements>
       <typeRestrictions>
@@ -2149,11 +2177,12 @@
             <setting name="maxChars">255</setting>
           </settings>
         </metadataElement>
-        <metadataElement code="RecommendationsWhy" datatype="Text"><labels>
-          <label locale="en_AU">
-            <name>Why?</name>
-          </label>
-        </labels>
+        <metadataElement code="RecommendationsWhy" datatype="Text">
+          <labels>
+            <label locale="en_AU">
+              <name>Why?</name>
+            </label>
+          </labels>
           <settings>
             <setting name="usewysiwygeditor">0</setting>
             <setting name="fieldWidth">20</setting>
@@ -2165,18 +2194,18 @@
           </settings>
         </metadataElement>
         <metadataElement code="ReminderDate" datatype="DateRange">
-        <labels>
-          <label locale="en_AU">
-            <name>Reminder Date</name>
-          </label>
-        </labels>
-        <settings>
-          <setting name="fieldWidth">20</setting>
-          <setting name="fieldHeight">1</setting>
-          <setting name="minChars">0</setting>
-          <setting name="maxChars">30</setting>
-          <setting name="useDatePicker">1</setting>
-        </settings>
+          <labels>
+            <label locale="en_AU">
+              <name>Reminder Date</name>
+            </label>
+          </labels>
+          <settings>
+            <setting name="fieldWidth">20</setting>
+            <setting name="fieldHeight">1</setting>
+            <setting name="minChars">0</setting>
+            <setting name="maxChars">30</setting>
+            <setting name="useDatePicker">1</setting>
+          </settings>
         </metadataElement>
       </elements>
       <typeRestrictions>
@@ -2259,6 +2288,7 @@
       <typeRestrictions>
         <restriction code="interstitial_object_Association">
           <table>ca_objects_x_occurrences</table>
+          <type>describes</type>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -2301,7 +2331,7 @@
     <metadataElement code="AuthorizedBy" datatype="Text">
       <labels>
         <label locale="en_AU">
-          <name>Authorized By</name>
+          <name>Authorised By</name>
         </label>
       </labels>
       <settings>
@@ -2611,7 +2641,7 @@
                         <l>^preferred_labels</l>
                       </unit>
                     </unit>
-                    (Status: ^LocationStatus, Authorized by: ^AuthorizedBy on ^MovementDate)
+                    (Status: ^LocationStatus, Authorised by: ^AuthorizedBy on ^MovementDate)
                   </unit>
                   ]]>
                   </setting>
@@ -2623,7 +2653,7 @@
                         <l>^preferred_labels</l>
                       </unit>
                     </unit>
-                    (Status: ^LocationStatus, Authorized by: ^AuthorizedBy on ^MovementDate)
+                    (Status: ^LocationStatus, Authorised by: ^AuthorizedBy on ^MovementDate)
                   </unit>
                   ]]>
                   </setting>
@@ -2809,6 +2839,7 @@
               <settings>
                 <setting name="label" locale="en_AU">Conservation Details</setting>
                 <setting name="restrict_to_type">Conservation</setting>
+                <setting name="restrict_to_relationship_types">conservation</setting>
                 <setting name="dont_include_subtypes_in_type_restriction">0</setting>
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
@@ -2820,20 +2851,22 @@
                   <![CDATA[
                   <unit relativeTo="ca_occurrences">
                     <l>^preferred_labels (^idno)</l>
-                  <dl>
-                    <ifdef code="ca_occurrences.ConservationDetails">
-                      <dt>Conservation Details:</dt>
-                      <dd><l>^ca_occurrences.ConservationDetails</l></dd>
-                    </ifdef>
-                    <ifdef code="ca_occurrences.ConservationDate">
-                      <dt>Date:</dt>
-                      <dd>^ca_occurrences.ConservationDate</dd>
-                    </ifdef>
-                    <ifdef code="ca_occurrences.Conservator">
-                      <dt>Conservator:</dt>
-                      <dd>^ca_occurrences.Conservator</dd>
-                    </ifdef>
-                    <l>^ca_object_representations.media.medium</l>
+                    <dl>
+                      <ifdef code="ca_occurrences.ConservationDetails">
+                        <dt>Conservation Details:</dt>
+                        <dd>
+                          <l>^ca_occurrences.ConservationDetails</l>
+                        </dd>
+                      </ifdef>
+                      <ifdef code="ca_occurrences.ConservationDate">
+                        <dt>Date:</dt>
+                        <dd>^ca_occurrences.ConservationDate</dd>
+                      </ifdef>
+                      <ifdef code="ca_occurrences.Conservator">
+                        <dt>Conservator:</dt>
+                        <dd>^ca_occurrences.Conservator</dd>
+                      </ifdef>
+                      <l>^ca_object_representations.media.medium</l>
                   </unit>
                   ]]>
                 </setting>
@@ -2936,7 +2969,7 @@
             <placement code="ca_events">
               <bundle>ca_occurrences</bundle>
               <settings>
-                <setting name="restrict_to_type">event</setting>
+                <setting name="restrict_to_type">Event</setting>
                 <setting name="label" locale="en_AU">Related events</setting>
               </settings>
             </placement>
@@ -2948,18 +2981,6 @@
             </placement>
             <placement code="ca_loans">
               <bundle>ca_loans</bundle>
-            </placement>
-          </bundlePlacements>
-        </screen>
-        <screen idno="links" default="0">
-          <labels>
-            <label locale="en_AU">
-              <name>Links</name>
-            </label>
-          </labels>
-          <bundlePlacements>
-            <placement code="ca_attribute_external_link">
-              <bundle>ca_attribute_external_link</bundle>
             </placement>
           </bundlePlacements>
         </screen>
@@ -3081,6 +3102,9 @@
           <bundlePlacements>
             <placement code="ca_objects">
               <bundle>ca_objects</bundle>
+              <settings>
+                <setting name="restrict_to_relationship_types">conservation</setting>
+              </settings>
             </placement>
           </bundlePlacements>
         </screen>
@@ -3181,11 +3205,8 @@
             <placement code="idno">
               <bundle>idno</bundle>
             </placement>
-            <placement code="ca_attribute_georeference">
-              <bundle>ca_attribute_georeference</bundle>
-            </placement>
-            <placement code="ca_attribute_description">
-              <bundle>ca_attribute_description</bundle>
+            <placement code="ca_attribute_Description">
+              <bundle>ca_attribute_Description</bundle>
             </placement>
             <placement code="access">
               <bundle>access</bundle>
@@ -3279,11 +3300,8 @@
             <placement code="status">
               <bundle>status</bundle>
             </placement>
-            <placement code="ca_attribute_description">
-              <bundle>ca_attribute_description</bundle>
-            </placement>
-            <placement code="ca_attribute_internal_notes">
-              <bundle>ca_attribute_internal_notes</bundle>
+            <placement code="ca_attribute_Description">
+              <bundle>ca_attribute_Description</bundle>
             </placement>
           </bundlePlacements>
         </screen>
@@ -3319,7 +3337,7 @@
             <placement code="ca_events">
               <bundle>ca_occurrences</bundle>
               <settings>
-                <setting name="restrict_to_type">event</setting>
+                <setting name="restrict_to_type">Event</setting>
                 <setting name="label" locale="en_AU">Related events</setting>
               </settings>
             </placement>
@@ -3328,28 +3346,6 @@
             </placement>
             <placement code="ca_collections">
               <bundle>ca_collections</bundle>
-            </placement>
-          </bundlePlacements>
-        </screen>
-        <screen idno="subjects" default="0">
-          <labels>
-            <label locale="en_AU">
-              <name>Subjects</name>
-            </label>
-          </labels>
-          <bundlePlacements>
-            <placement code="ca_list_items">
-              <bundle>ca_list_items</bundle>
-            </placement>
-            <placement code="ca_attribute_lcsh_terms">
-              <bundle>ca_attribute_lcsh_terms</bundle>
-              <settings>
-                <setting name="label" locale="en_AU">Library of Congress Subject Headings</setting>
-                <setting name="add_label" locale="en_AU">Add new subject heading</setting>
-              </settings>
-            </placement>
-            <placement code="ca_attribute_subject">
-              <bundle>ca_attribute_subject</bundle>
             </placement>
           </bundlePlacements>
         </screen>
@@ -3385,8 +3381,8 @@
             <placement code="status">
               <bundle>status</bundle>
             </placement>
-            <placement code="ca_attribute_description">
-              <bundle>ca_attribute_description</bundle>
+            <placement code="ca_attribute_Description">
+              <bundle>ca_attribute_Description</bundle>
             </placement>
           </bundlePlacements>
         </screen>
@@ -3481,8 +3477,8 @@
             <placement code="lot_status_id">
               <bundle>lot_status_id</bundle>
             </placement>
-            <placement code="ca_attribute_description">
-              <bundle>ca_attribute_description</bundle>
+            <placement code="ca_attribute_Description">
+              <bundle>ca_attribute_Description</bundle>
             </placement>
             <placement code="extent">
               <bundle>extent</bundle>
@@ -3573,9 +3569,6 @@
             <placement code="status">
               <bundle>status</bundle>
             </placement>
-            <placement code="ca_attribute_caption">
-              <bundle>ca_attribute_caption</bundle>
-            </placement>
           </bundlePlacements>
         </screen>
         <screen idno="annotations" default="0">
@@ -3662,8 +3655,8 @@
             <placement code="status">
               <bundle>status</bundle>
             </placement>
-            <placement code="ca_attribute_description">
-              <bundle>ca_attribute_description</bundle>
+            <placement code="ca_attribute_Description">
+              <bundle>ca_attribute_Description</bundle>
             </placement>
           </bundlePlacements>
         </screen>
@@ -3847,7 +3840,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>event</subTypeRight>
+          <subTypeRight>Event</subTypeRight>
         </type>
         <type code="used" default="0">
           <labels>
@@ -3857,7 +3850,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>event</subTypeRight>
+          <subTypeRight>Event</subTypeRight>
         </type>
         <type code="describes" default="0">
           <labels>
@@ -3868,6 +3861,16 @@
           </labels>
           <subTypeLeft/>
           <subTypeRight/>
+        </type>
+        <type code="conservation" default="0">
+          <labels>
+            <label locale="en_AU">
+              <typename>conserved in</typename>
+              <typename_reverse>is conservation of</typename_reverse>
+            </label>
+          </labels>
+          <subTypeLeft/>
+          <subTypeRight>Conservation</subTypeRight>
         </type>
       </types>
     </relationshipTable>
@@ -3938,8 +3941,8 @@
               <typename_reverse>is related to</typename_reverse>
             </label>
           </labels>
-          <subTypeLeft>event</subTypeLeft>
-          <subTypeRight>event</subTypeRight>
+          <subTypeLeft/>
+          <subTypeRight/>
         </type>
       </types>
     </relationshipTable>
@@ -4117,7 +4120,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>event</subTypeRight>
+          <subTypeRight>Event</subTypeRight>
         </type>
       </types>
     </relationshipTable>
@@ -4257,7 +4260,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>event</subTypeRight>
+          <subTypeRight>Event</subTypeRight>
         </type>
       </types>
     </relationshipTable>
@@ -4399,7 +4402,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>event</subTypeRight>
+          <subTypeRight>Event</subTypeRight>
         </type>
         <type code="describes" default="1">
           <labels>
@@ -4409,7 +4412,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>event</subTypeRight>
+          <subTypeRight>Event</subTypeRight>
         </type>
       </types>
     </relationshipTable>

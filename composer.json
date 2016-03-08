@@ -7,9 +7,18 @@
         {
             "name": "Kehan Harman",
             "email": "kehan@gaiaresources.com.au"
+        },
+        {
+            "name": "Ben New",
+            "email": "ben.new@gaiaresources.com.au"
         }
     ],
     "require-dev": {
         "phpunit/phpunit": "5.x"
+    },
+    "autoload-dev": {
+        "psr-0": {
+            "RWAHS\\": "tests/"
+        }
     }
 }
