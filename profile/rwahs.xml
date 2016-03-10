@@ -4496,6 +4496,12 @@
       <actions>
       </actions>
     </role>
+    <role code="library">
+      <name>Library</name>
+      <description>Library Users</description>
+      <actions>
+      </actions>
+    </role>
   </roles>
   <groups>
     <group code="museum">
@@ -4503,6 +4509,15 @@
       <description>Museum Users</description>
       <roles>
         <role>museum</role>
+        <role>cataloguer</role>
+      </roles>
+    </group>
+    <group code="library">
+      <name>Library</name>
+      <description>Library Users</description>
+      <roles>
+        <role>library</role>
+        <role>cataloguer</role>
       </roles>
     </group>
   </groups>
@@ -4829,16 +4844,22 @@
 
   <logins>
     <login user_name="administrator" password="administrator" fname="CollectiveAccess" lname="Administrator"
-           email="administrator@rwahs.org.au">
+           email="administrator@histwest.org.au">
       <group code="admin"/>
     </login>
-    <login user_name="museum" password="museum" fname="Museum" lname="User" email="museum@rwahs.org.au">
+    <login user_name="museum" password="museum" fname="Museum" lname="User" email="museum@histwest.org.au">
       <role code="museum"/>
       <role code="cataloguer"/>
       <group code="museum"/>
       <group code="cataloguer"/>
     </login>
-    <login user_name="researcher" password="researcher" fname="Researcher" lname="User" email="researcher@rwahs.org.au">
+    <login user_name="library" password="library" fname="Library" lname="User" email="library@histwest.org.au">
+      <role code="museum"/>
+      <role code="cataloguer"/>
+      <group code="museum"/>
+      <group code="cataloguer"/>
+    </login>
+    <login user_name="researcher" password="researcher" fname="Researcher" lname="User" email="researcher@histwest.org.au">
       <role code="researcher"/>
     </login>
   </logins>
