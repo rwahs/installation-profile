@@ -240,11 +240,11 @@
             <setting name="entity_class">IND</setting>
           </settings>
         </item>
-        <item idno="family" enabled="1" default="1">
+        <item idno="family" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Family</name_singular>
-              <name_plural>Familites</name_plural>
+              <name_plural>Families</name_plural>
             </label>
           </labels>
           <settings>
