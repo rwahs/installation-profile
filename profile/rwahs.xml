@@ -80,6 +80,64 @@
               <name_plural>Library Records</name_plural>
             </label>
           </labels>
+          <items>
+            <item idno="book" enabled="1" default="0">
+              <labels>
+                <label locale="en_AU" preferred="1">
+                  <name_singular>Book</name_singular>
+                  <name_plural>Books</name_plural>
+                </label>
+              </labels>
+            </item>
+            <item idno="document" enabled="1" default="0">
+              <labels>
+                <label locale="en_AU" preferred="1">
+                  <name_singular>Document</name_singular>
+                  <name_plural>Documents</name_plural>
+                </label>
+              </labels>
+            </item>
+            <item idno="journal_article" enabled="1" default="0">
+              <labels>
+                <label locale="en_AU" preferred="1">
+                  <name_singular>Journal article</name_singular>
+                  <name_plural>Journal articles</name_plural>
+                </label>
+              </labels>
+            </item>
+            <item idno="journal_title" enabled="1" default="0">
+              <labels>
+                <label locale="en_AU" preferred="1">
+                  <name_singular>Journal title</name_singular>
+                  <name_plural>Journal titles</name_plural>
+                </label>
+              </labels>
+            </item>
+            <item idno="map" enabled="1" default="0">
+              <labels>
+                <label locale="en_AU" preferred="1">
+                  <name_singular>Map</name_singular>
+                  <name_plural>Maps</name_plural>
+                </label>
+              </labels>
+            </item>
+            <item idno="non_book" enabled="1" default="0">
+              <labels>
+                <label locale="en_AU" preferred="1">
+                  <name_singular>Non-book</name_singular>
+                  <name_plural>Non-books</name_plural>
+                </label>
+              </labels>
+            </item>
+            <item idno="pamphlet" enabled="1" default="0">
+              <labels>
+                <label locale="en_AU" preferred="1">
+                  <name_singular>Pamphlet</name_singular>
+                  <name_plural>Pamphlets</name_plural>
+                </label>
+              </labels>
+            </item>
+          </items>
         </item>
         <item idno="photograph" enabled="1" default="0">
           <labels>
