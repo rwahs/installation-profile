@@ -989,6 +989,8 @@
       <typeRestrictions>
         <restriction code="r1">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1014,6 +1016,8 @@
       <typeRestrictions>
         <restriction code="r1">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1039,6 +1043,8 @@
       <typeRestrictions>
         <restriction code="r1">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1064,6 +1070,8 @@
       <typeRestrictions>
         <restriction code="r1">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1089,6 +1097,8 @@
       <typeRestrictions>
         <restriction code="r1">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1139,6 +1149,8 @@
       <typeRestrictions>
         <restriction code="ca_objects_AccessionBy">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
             <setting name="maxAttributesPerRow">255</setting>
@@ -1582,6 +1594,8 @@
       <typeRestrictions>
         <restriction code="ca_objects">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1605,6 +1619,8 @@
       <typeRestrictions>
         <restriction code="ca_objects">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1627,6 +1643,8 @@
       <typeRestrictions>
         <restriction code="ca_objects">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1675,6 +1693,8 @@
       <typeRestrictions>
         <restriction code="ca_objects">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1722,6 +1742,8 @@
       <typeRestrictions>
         <restriction code="ca_objects">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1747,6 +1769,8 @@
       <typeRestrictions>
         <restriction code="ca_objects">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">255</setting>
@@ -1764,6 +1788,8 @@
       <typeRestrictions>
         <restriction code="museum_MakersMarks">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1781,6 +1807,8 @@
       <typeRestrictions>
         <restriction code="museum_ItemDates">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1802,6 +1830,8 @@
       <typeRestrictions>
         <restriction code="museum_EarliestYear">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1823,6 +1853,8 @@
       <typeRestrictions>
         <restriction code="museum_LatestYear">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1840,6 +1872,8 @@
       <typeRestrictions>
         <restriction code="museum_HistoricalDetails">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1857,6 +1891,8 @@
       <typeRestrictions>
         <restriction code="museum_ResearchBy">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1874,6 +1910,8 @@
       <typeRestrictions>
         <restriction code="museum_BibliographReferences">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1891,6 +1929,8 @@
       <typeRestrictions>
         <restriction code="museum_Importance">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1912,6 +1952,8 @@
       <typeRestrictions>
         <restriction code="museum_SignificanceCriteria">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">255</setting>
@@ -1933,6 +1975,8 @@
       <typeRestrictions>
         <restriction code="museum_ComparativeCriteria">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">255</setting>
@@ -1950,6 +1994,8 @@
       <typeRestrictions>
         <restriction code="museum_PhysicalCondition">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1967,6 +2013,8 @@
       <typeRestrictions>
         <restriction code="museum_VisualCondition">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1992,6 +2040,8 @@
       <typeRestrictions>
         <restriction code="museum_StatementOfSignificance">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -2009,6 +2059,8 @@
       <typeRestrictions>
         <restriction code="museum_Materials">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -2042,6 +2094,8 @@
       <typeRestrictions>
         <restriction code="museum_Dimensions">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -2064,6 +2118,8 @@
       <typeRestrictions>
         <restriction code="ca_objectsValue">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -2091,6 +2147,8 @@
       <typeRestrictions>
         <restriction code="ca_objectsAuditSeen">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">255</setting>
@@ -2118,6 +2176,8 @@
       <typeRestrictions>
         <restriction code="ca_objectsOtherNumber">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">255</setting>
@@ -2144,6 +2204,8 @@
       <typeRestrictions>
         <restriction code="ca_objects_AcquisitionNotes">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -2206,6 +2268,8 @@
       <typeRestrictions>
         <restriction code="ca_objects_ConditionReportContainer">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
             <setting name="maxAttributesPerRow">255</setting>
@@ -2269,6 +2333,8 @@
       <typeRestrictions>
         <restriction code="ca_objects_RecommendationsContainer">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -2293,6 +2359,602 @@
       <typeRestrictions>
         <restriction code="ca_objects_DisplayLoanCare">
           <table>ca_objects</table>
+          <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="FirstAuthor" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>First Author</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_FirstAuthor">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="SecondAuthor" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Second Author</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_SecondAuthor">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="ThirdAuthor" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>ThirdAuthor</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_ThirdAuthor">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="PlaceOfPublication" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>PlaceOfPublication</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_PlaceOfPublication">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Publisher" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Publisher</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_Publisher">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="DateOfPublication" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>DateOfPublication</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_DateOfPublication">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Edition" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Edition</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_Edition">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Size" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Size</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_Size">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="PublicationType" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Publication Type</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_PublicationType">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Series" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Series</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_Series">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="SubjectHeadings" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>SubjectHeadings</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_SubjectHeadings">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Collation" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Collation</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_Collation">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Summary" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Summary</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_Summary">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="ca_object_representations" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>ca_object_representations</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_ca_object_representations">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Purchased" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Purchased</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_Purchased">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="OrderNo" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>OrderNo</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_OrderNo">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="ISBNISSN" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>ISBNISSN</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_ISBNISSN">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Review" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Review</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_Review">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Notes" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Notes</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_Notes">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="CopyNumber" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>CopyNumber</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_CopyNumber">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="LibraryNumber" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>LibraryNumber</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_LibraryNumber">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Donated" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Donated</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_Donated">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -2935,6 +3597,247 @@
             </placement>
             <placement code="ca_attribute_VisualCondition">
               <bundle>ca_attribute_VisualCondition</bundle>
+            </placement>
+          </bundlePlacements>
+        </screen>
+      </screens>
+    </userInterface>
+    <userInterface code="library_object_ui" type="ca_objects">
+      <labels>
+        <label locale="en_AU">
+          <name>Library object editor</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction type="library"/>
+      </typeRestrictions>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="library" access="edit"/>
+      </groupAccess>
+      <screens>
+        <screen idno="library" default="1">
+          <labels>
+            <label locale="en_AU">
+              <name>Library Data</name>
+            </label>
+          </labels>
+          <bundlePlacements>
+            <placement code="idno">
+              <bundle>idno</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Record number</setting>
+              </settings>
+            </placement>
+            <placement code="preferred_labels">
+              <bundle>preferred_labels</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Title</setting>
+                <setting name="add_label" locale="en_AU">Add title</setting>
+              </settings>
+            </placement>
+            <placement code="ca_entities_author">
+              <bundle>ca_entities</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Author(s)</setting>
+                <setting name="add_label" locale="en_AU">Add Author</setting>
+                <setting name="dont_include_subtypes_in_type_restriction">0</setting>
+                <setting name="restrict_to_relationship_types">author</setting>
+                <setting name="list_format">list</setting>
+                <setting name="sortDirection">ASC</setting>
+                <setting name="dontShowDeleteButton">0</setting>
+                <setting name="minRelationshipsPerRow">1</setting>
+                <setting name="maxRelationshipsPerRow">255</setting>
+                <setting name="showCurrentOnly">0</setting>
+                <setting name="display_template"><![CDATA[
+                  <l>^ca_entities</l>
+                  ]]></setting>
+              </settings>
+            </placement>
+            <placement code="ca_attribute_FirstAuthor">
+              <bundle>ca_attribute_FirstAuthor</bundle>
+            </placement>
+            <placement code="ca_attribute_SecondAuthor">
+              <bundle>ca_attribute_SecondAuthor</bundle>
+            </placement>
+            <placement code="ca_attribute_ThirdAuthor">
+              <bundle>ca_attribute_ThirdAuthor</bundle>
+            </placement>
+            <placement code="ca_attribute_PlaceOfPublication">
+              <bundle>ca_attribute_PlaceOfPublication</bundle>
+            </placement>
+            <placement code="ca_attribute_Publisher">
+              <bundle>ca_attribute_Publisher</bundle>
+            </placement>
+            <placement code="ca_attribute_DateOfPublication">
+              <bundle>ca_attribute_DateOfPublication</bundle>
+            </placement>
+            <placement code="ca_attribute_Edition">
+              <bundle>ca_attribute_Edition</bundle>
+            </placement>
+            <placement code="ca_attribute_Size">
+              <bundle>ca_attribute_Size</bundle>
+            </placement>
+            <placement code="ca_attribute_PublicationType">
+              <bundle>ca_attribute_PublicationType</bundle>
+            </placement>
+            <placement code="ca_attribute_Series">
+              <bundle>ca_attribute_Series</bundle>
+            </placement>
+            <placement code="ca_attribute_SubjectHeadings">
+              <bundle>ca_attribute_SubjectHeadings</bundle>
+            </placement>
+            <placement code="ca_attribute_Collation">
+              <bundle>ca_attribute_Collation</bundle>
+            </placement>
+            <placement code="ca_attribute_Summary">
+              <bundle>ca_attribute_Summary</bundle>
+            </placement>
+            <placement code="ca_object_representations">
+              <bundle>ca_object_representations</bundle>
+            </placement>
+            <placement code="ca_attribute_Purchased">
+              <bundle>ca_attribute_Purchased</bundle>
+            </placement>
+            <placement code="ca_attribute_OrderNo">
+              <bundle>ca_attribute_OrderNo</bundle>
+            </placement>
+            <placement code="ca_attribute_ISBNISSN">
+              <bundle>ca_attribute_ISBNISSN</bundle>
+            </placement>
+            <placement code="ca_attribute_Review">
+              <bundle>ca_attribute_Review</bundle>
+            </placement>
+            <placement code="ca_attribute_Notes">
+              <bundle>ca_attribute_Notes</bundle>
+            </placement>
+            <placement code="ca_attribute_CopyNumber">
+              <bundle>ca_attribute_CopyNumber</bundle>
+            </placement>
+            <placement code="ca_attribute_LibraryNumber">
+              <bundle>ca_attribute_LibraryNumber</bundle>
+            </placement>
+            <placement code="ca_storage_locations">
+              <bundle>ca_storage_locations</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Usual location</setting>
+                <setting name="dont_include_subtypes_in_type_restriction">0</setting>
+                <setting name="restrict_to_relationship_types">usual</setting>
+                <setting name="sortDirection">ASC</setting>
+                <setting name="dontShowDeleteButton">0</setting>
+                <setting name="minRelationshipsPerRow">0</setting>
+                <setting name="maxRelationshipsPerRow">1</setting>
+                <setting name="showCurrentOnly">1</setting>
+                <setting name="useHierarchicalBrowser">1</setting>
+                <setting name="display_template">
+                  <![CDATA[
+                  <unit relativeTo="ca_storage_locations">
+                    <unit relativeTo="ca_storage_locations.hierarchy">
+                      <l>^preferred_labels</l>
+                    </unit>
+                  </unit>
+                  ]]>
+                </setting>
+              </settings>
+            </placement>
+            <placement code="ca_attribute_Donated">
+              <bundle>ca_attribute_Donated</bundle>
+            </placement>
+            <placement code="ca_entities_donor">
+              <bundle>ca_entities</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Source / Donor</setting>
+                <setting name="dont_include_subtypes_in_type_restriction">0</setting>
+                <setting name="restrict_to_relationship_types">donor</setting>
+                <setting name="list_format">list</setting>
+                <setting name="sortDirection">ASC</setting>
+                <setting name="dontShowDeleteButton">0</setting>
+                <setting name="minRelationshipsPerRow">1</setting>
+                <setting name="maxRelationshipsPerRow">1</setting>
+                <setting name="showCurrentOnly">0</setting>
+                <setting name="display_template"><![CDATA[
+                  <dl>
+                    <dt>Donor Name:
+                    </dt>
+                    <dd>
+                      <unit relativeTo="ca_entities">
+                        <l><strong>^ca_entities.preferred_labels.displayname</strong> (^ca_entities.type_id)</l>
+                      </unit>
+                    </dd>
+                    <ifdef code="ca_entities.AddressContainer">
+                      <dt>Address:</dt>
+                      <dd>
+                        <ifdef code="ca_entities.AddressContainer.Address1">
+                          ^ca_entities.AddressContainer.Address1<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.Address2">
+                          ^ca_entities.AddressContainer.Address2<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.TownCity">
+                          ^ca_entities.AddressContainer.TownCity<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.State">
+                          ^ca_entities.AddressContainer.State
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.PostCode">
+                          ^ca_entities.AddressContainer.PostCode<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.Country">
+                          ^ca_entities.AddressContainer.Country
+                        </ifdef>
+                      </dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.Phone">
+                      <dt>Phone:</dt>
+                      <dd>^ca_entities.Phone</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.MobilePhone">
+                      <dt>Mobile:</dt>
+                      <dd>^ca_entities.MobilePhone</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.Fax">
+                      <dt>Fax:</dt>
+                      <dd>^ca_entities.Fax</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.Email">
+                      <dt>Email:</dt>
+                      <dd>^ca_entities.Email</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorNotes">
+                      <dt>Notes:</dt>
+                      <dd>^ca_entities.DonorNotes</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.Deceased">
+                      <dt>Deceased:</dt>
+                      <dd>^ca_entities.Deceased</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorAgentName">
+                      <dt>Donor agent name:</dt>
+                      <dd>^ca_entities.DonorAgentName</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorAgentAddress">
+                      <dt>Donor agent's address:</dt>
+                      <dd>^ca_entities.DonorAgentAddress</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorAgentPhone">
+                      <dt>Donor agent's Phone:</dt>
+                      <dd>^ca_entities.DonorAgentPhone</dd>
+                    </ifdef>
+                  </dl>
+                  ]]></setting>
+              </settings>
+            </placement>
+            <placement code="ca_objects_deaccession">
+              <bundle>ca_objects_deaccession</bundle>
+            </placement>
+            <placement code="access">
+              <bundle>access</bundle>
+            </placement>
+            <placement code="ca_attribute_LastEditBy">
+              <bundle>ca_attribute_LastEditBy</bundle>
+            </placement>
+            <placement code="ca_attribute_LastEditDate">
+              <bundle>ca_attribute_LastEditDate</bundle>
             </placement>
           </bundlePlacements>
         </screen>
@@ -4859,7 +5762,8 @@
       <group code="museum"/>
       <group code="cataloguer"/>
     </login>
-    <login user_name="researcher" password="researcher" fname="Researcher" lname="User" email="researcher@histwest.org.au">
+    <login user_name="researcher" password="researcher" fname="Researcher" lname="User"
+           email="researcher@histwest.org.au">
       <role code="researcher"/>
     </login>
   </logins>
