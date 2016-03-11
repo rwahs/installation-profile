@@ -80,64 +80,6 @@
               <name_plural>Library Records</name_plural>
             </label>
           </labels>
-          <items>
-            <item idno="book" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Book</name_singular>
-                  <name_plural>Books</name_plural>
-                </label>
-              </labels>
-            </item>
-            <item idno="document" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Document</name_singular>
-                  <name_plural>Documents</name_plural>
-                </label>
-              </labels>
-            </item>
-            <item idno="journal_article" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Journal article</name_singular>
-                  <name_plural>Journal articles</name_plural>
-                </label>
-              </labels>
-            </item>
-            <item idno="journal_title" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Journal title</name_singular>
-                  <name_plural>Journal titles</name_plural>
-                </label>
-              </labels>
-            </item>
-            <item idno="map" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Map</name_singular>
-                  <name_plural>Maps</name_plural>
-                </label>
-              </labels>
-            </item>
-            <item idno="non_book" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Non-book</name_singular>
-                  <name_plural>Non-books</name_plural>
-                </label>
-              </labels>
-            </item>
-            <item idno="pamphlet" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Pamphlet</name_singular>
-                  <name_plural>Pamphlets</name_plural>
-                </label>
-              </labels>
-            </item>
-          </items>
         </item>
         <item idno="photograph" enabled="1" default="0">
           <labels>
@@ -794,6 +736,71 @@
             <label locale="en_AU" preferred="1">
               <name_singular>Removed</name_singular>
               <name_plural>Removed</name_plural>
+            </label>
+          </labels>
+        </item>
+      </items>
+    </list>
+    <list code="PublicationType" hierarchical="0" system="1" vocabulary="0">
+      <labels>
+        <label locale="en_AU">
+          <name>Publication Types</name>
+        </label>
+      </labels>
+      <items>
+        <item idno="book" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Book</name_singular>
+              <name_plural>Books</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="document" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Document</name_singular>
+              <name_plural>Documents</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="journal_article" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Journal article</name_singular>
+              <name_plural>Journal articles</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="journal_title" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Journal title</name_singular>
+              <name_plural>Journal titles</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="map" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Map</name_singular>
+              <name_plural>Maps</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="non_book" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Non-book</name_singular>
+              <name_plural>Non-books</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="pamphlet" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Pamphlet</name_singular>
+              <name_plural>Pamphlets</name_plural>
             </label>
           </labels>
         </item>
@@ -2396,6 +2403,33 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
+    <metadataElement code="Author" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Author(s)</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_Author">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
     <metadataElement code="SecondAuthor" datatype="Text">
       <labels>
         <label locale="en_AU">
@@ -2453,7 +2487,7 @@
     <metadataElement code="PlaceOfPublication" datatype="Text">
       <labels>
         <label locale="en_AU">
-          <name>PlaceOfPublication</name>
+          <name>Place Of Publication</name>
         </label>
       </labels>
       <settings>
@@ -2504,14 +2538,14 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="DateOfPublication" datatype="Text">
+    <metadataElement code="DateOfPublication" datatype="DateRange">
       <labels>
         <label locale="en_AU">
-          <name>DateOfPublication</name>
+          <name>Date Of Publication</name>
         </label>
       </labels>
       <settings>
-        <setting name="usewysiwygeditor">0</setting>
+        <setting name="useDatePicker">1</setting>
         <setting name="fieldWidth">70</setting>
         <setting name="fieldHeight">1</setting>
         <setting name="suggestExistingValues">1</setting>
@@ -2585,7 +2619,7 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="PublicationType" datatype="Text">
+    <metadataElement code="PublicationType" datatype="List" list="PublicationType">
       <labels>
         <label locale="en_AU">
           <name>Publication Type</name>
@@ -2642,7 +2676,7 @@
     <metadataElement code="SubjectHeadings" datatype="Text">
       <labels>
         <label locale="en_AU">
-          <name>SubjectHeadings</name>
+          <name>Subject Headings</name>
         </label>
       </labels>
       <settings>
@@ -2720,33 +2754,6 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="ca_object_representations" datatype="Text">
-      <labels>
-        <label locale="en_AU">
-          <name>ca_object_representations</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="usewysiwygeditor">0</setting>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="suggestExistingValues">1</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="ca_objects_ca_object_representations">
-          <table>ca_objects</table>
-          <type>library</type>
-          <includeSubtypes>true</includeSubtypes>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
     <metadataElement code="Purchased" datatype="Text">
       <labels>
         <label locale="en_AU">
@@ -2777,7 +2784,7 @@
     <metadataElement code="OrderNo" datatype="Text">
       <labels>
         <label locale="en_AU">
-          <name>OrderNo</name>
+          <name>Order No.</name>
         </label>
       </labels>
       <settings>
@@ -2804,7 +2811,7 @@
     <metadataElement code="ISBNISSN" datatype="Text">
       <labels>
         <label locale="en_AU">
-          <name>ISBNISSN</name>
+          <name>ISBN/ISSN</name>
         </label>
       </labels>
       <settings>
@@ -2885,7 +2892,7 @@
     <metadataElement code="CopyNumber" datatype="Text">
       <labels>
         <label locale="en_AU">
-          <name>CopyNumber</name>
+          <name>Copy Number</name>
         </label>
       </labels>
       <settings>
@@ -2912,7 +2919,7 @@
     <metadataElement code="LibraryNumber" datatype="Text">
       <labels>
         <label locale="en_AU">
-          <name>LibraryNumber</name>
+          <name>Library Number</name>
         </label>
       </labels>
       <settings>
@@ -2936,10 +2943,10 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="Donated" datatype="Text">
+    <metadataElement code="Donated" datatype="List" list="YesNoDefaultNo">
       <labels>
         <label locale="en_AU">
-          <name>Donated</name>
+          <name>Donated?</name>
         </label>
       </labels>
       <settings>
@@ -3653,6 +3660,9 @@
                   <l>^ca_entities</l>
                   ]]></setting>
               </settings>
+            </placement>
+            <placement code="ca_attribute_Author">
+              <bundle>ca_attribute_Author</bundle>
             </placement>
             <placement code="ca_attribute_FirstAuthor">
               <bundle>ca_attribute_FirstAuthor</bundle>
