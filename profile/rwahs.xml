@@ -5761,15 +5761,11 @@
       <group code="admin"/>
     </login>
     <login user_name="museum" password="museum" fname="Museum" lname="User" email="museum@histwest.org.au">
-      <role code="museum"/>
-      <role code="cataloguer"/>
       <group code="museum"/>
       <group code="cataloguer"/>
     </login>
     <login user_name="library" password="library" fname="Library" lname="User" email="library@histwest.org.au">
-      <role code="museum"/>
-      <role code="cataloguer"/>
-      <group code="museum"/>
+      <group code="library"/>
       <group code="cataloguer"/>
     </login>
     <login user_name="researcher" password="researcher" fname="Researcher" lname="User"
