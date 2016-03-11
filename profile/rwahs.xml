@@ -700,6 +700,63 @@
         </label>
       </labels>
     </list>
+    <list code="LibraryStorageLocations" hierarchical="0" system="1" vocabulary="0">
+      <labels>
+        <label locale="en_AU">
+          <name>Library Storage Locations</name>
+        </label>
+      </labels>
+      <items>
+        <item idno="FoyerAnnex" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Foyer annex</name_singular>
+              <name_plural>Foyer annex</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Library" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Library</name_singular>
+              <name_plural>Library</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="MapAnnex" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Map annex</name_singular>
+              <name_plural>Map annex</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="MuseumStore" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Museum Store</name_singular>
+              <name_plural>Museum Store</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Passage" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Passage</name_singular>
+              <name_plural>Passage</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="PhotographsRoom" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Photographs Room</name_singular>
+              <name_plural>Photographs Room</name_plural>
+            </label>
+          </labels>
+        </item>
+      </items>
+    </list>
     <list code="LocationStatus" hierarchical="0" system="1" vocabulary="0">
       <labels>
         <label locale="en_AU">
@@ -748,7 +805,7 @@
         </label>
       </labels>
       <items>
-        <item idno="book" enabled="1" default="0">
+        <item idno="book" enabled="1" default="1">
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Book</name_singular>
@@ -2376,37 +2433,11 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="FirstAuthor" datatype="Text">
-      <labels>
-        <label locale="en_AU">
-          <name>First Author</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="usewysiwygeditor">0</setting>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="suggestExistingValues">1</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="ca_objects_FirstAuthor">
-          <table>ca_objects</table>
-          <type>library</type>
-          <includeSubtypes>true</includeSubtypes>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
     <metadataElement code="Author" datatype="Text">
       <labels>
         <label locale="en_AU">
           <name>Author(s)</name>
+          <description>Enter author names in the format "Smith, John"</description>
         </label>
       </labels>
       <settings>
@@ -2430,60 +2461,6 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="SecondAuthor" datatype="Text">
-      <labels>
-        <label locale="en_AU">
-          <name>Second Author</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="usewysiwygeditor">0</setting>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="suggestExistingValues">1</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="ca_objects_SecondAuthor">
-          <table>ca_objects</table>
-          <type>library</type>
-          <includeSubtypes>true</includeSubtypes>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="ThirdAuthor" datatype="Text">
-      <labels>
-        <label locale="en_AU">
-          <name>ThirdAuthor</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="usewysiwygeditor">0</setting>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="suggestExistingValues">1</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="ca_objects_ThirdAuthor">
-          <table>ca_objects</table>
-          <type>library</type>
-          <includeSubtypes>true</includeSubtypes>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
     <metadataElement code="PlaceOfPublication" datatype="Text">
       <labels>
         <label locale="en_AU">
@@ -2496,7 +2473,7 @@
         <setting name="fieldHeight">1</setting>
         <setting name="suggestExistingValues">1</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
+        <setting name="maxChars">100</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_PlaceOfPublication">
@@ -2523,7 +2500,7 @@
         <setting name="fieldHeight">1</setting>
         <setting name="suggestExistingValues">1</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
+        <setting name="maxChars">100</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_Publisher">
@@ -2577,7 +2554,7 @@
         <setting name="fieldHeight">1</setting>
         <setting name="suggestExistingValues">1</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
+        <setting name="maxChars">20</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_Edition">
@@ -2604,7 +2581,7 @@
         <setting name="fieldHeight">1</setting>
         <setting name="suggestExistingValues">1</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
+        <setting name="maxChars">20</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_Size">
@@ -2626,12 +2603,9 @@
         </label>
       </labels>
       <settings>
-        <setting name="usewysiwygeditor">0</setting>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="suggestExistingValues">1</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
+        <setting name="nullOptionText">Not Set</setting>
+        <setting name="render">select</setting>
+        <setting name="doesNotTakeLocale">1</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_PublicationType">
@@ -2639,7 +2613,7 @@
           <type>library</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
-            <setting name="minAttributesPerRow">1</setting>
+            <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
@@ -2658,37 +2632,10 @@
         <setting name="fieldHeight">1</setting>
         <setting name="suggestExistingValues">1</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
+        <setting name="maxChars">150</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_Series">
-          <table>ca_objects</table>
-          <type>library</type>
-          <includeSubtypes>true</includeSubtypes>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="SubjectHeadings" datatype="Text">
-      <labels>
-        <label locale="en_AU">
-          <name>Subject Headings</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="usewysiwygeditor">0</setting>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="suggestExistingValues">1</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="ca_objects_SubjectHeadings">
           <table>ca_objects</table>
           <type>library</type>
           <includeSubtypes>true</includeSubtypes>
@@ -2712,7 +2659,7 @@
         <setting name="fieldHeight">1</setting>
         <setting name="suggestExistingValues">1</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
+        <setting name="maxChars">100</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_Collation">
@@ -2734,12 +2681,11 @@
         </label>
       </labels>
       <settings>
-        <setting name="usewysiwygeditor">0</setting>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="suggestExistingValues">1</setting>
+        <setting name="usewysiwygeditor">1</setting>
+        <setting name="fieldWidth">115</setting>
+        <setting name="fieldHeight">6</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
+        <setting name="maxChars">16777215</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_Summary">
@@ -2754,19 +2700,15 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="Purchased" datatype="Text">
+    <metadataElement code="Purchased" datatype="List" list="YesNoDefaultNo">
       <labels>
         <label locale="en_AU">
-          <name>Purchased</name>
+          <name>Purchased (Y/N)?</name>
         </label>
       </labels>
       <settings>
-        <setting name="usewysiwygeditor">0</setting>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="suggestExistingValues">1</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
+        <setting name="render">yes_no_checkboxes</setting>
+        <setting name="doesNotTakeLocale">1</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_Purchased">
@@ -2793,7 +2735,7 @@
         <setting name="fieldHeight">1</setting>
         <setting name="suggestExistingValues">1</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
+        <setting name="maxChars">20</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_OrderNo">
@@ -2820,7 +2762,7 @@
         <setting name="fieldHeight">1</setting>
         <setting name="suggestExistingValues">1</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
+        <setting name="maxChars">13</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_ISBNISSN">
@@ -2870,11 +2812,10 @@
       </labels>
       <settings>
         <setting name="usewysiwygeditor">0</setting>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="suggestExistingValues">1</setting>
+        <setting name="fieldWidth">115</setting>
+        <setting name="fieldHeight">6</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
+        <setting name="maxChars">16777215</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_Notes">
@@ -2901,7 +2842,7 @@
         <setting name="fieldHeight">1</setting>
         <setting name="suggestExistingValues">1</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
+        <setting name="maxChars">5</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_CopyNumber">
@@ -2928,7 +2869,7 @@
         <setting name="fieldHeight">1</setting>
         <setting name="suggestExistingValues">1</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
+        <setting name="maxChars">20</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_LibraryNumber">
@@ -2943,10 +2884,10 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="Donated" datatype="List" list="YesNoDefaultNo">
+    <metadataElement code="StoredLocation" datatype="List" list="LibraryStorageLocations">
       <labels>
         <label locale="en_AU">
-          <name>Donated?</name>
+          <name>Stored Location</name>
         </label>
       </labels>
       <settings>
@@ -2955,7 +2896,30 @@
         <setting name="fieldHeight">1</setting>
         <setting name="suggestExistingValues">1</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">255</setting>
+        <setting name="maxChars">20</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_StoredLocation">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Donated" datatype="List" list="YesNoDefaultNo">
+      <labels>
+        <label locale="en_AU">
+          <name>Donated (Y/N)?</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="render">yes_no_checkboxes</setting>
+        <setting name="doesNotTakeLocale">1</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_Donated">
@@ -3456,14 +3420,21 @@
               <bundle>ca_occurrences</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Subject List</setting>
-                <setting name="restrict_to_type">subject</setting>
+                <setting name="readonly"/>
+                <setting name="expand_collapse_value">dont_force</setting>
+                <setting name="expand_collapse_no_value">dont_force</setting>
+                <setting name="restrict_to_relationship_types">depicts</setting>
+                <setting name="restrict_to_relationship_types">used</setting>
+                <setting name="restrict_to_relationship_types">describes</setting>
+                <setting name="restrict_to_types">Event</setting>
+                <setting name="restrict_to_types">Organization</setting>
+                <setting name="restrict_to_types">Person</setting>
+                <setting name="restrict_to_types">Place</setting>
+                <setting name="restrict_to_types">Topic</setting>
                 <setting name="dont_include_subtypes_in_type_restriction">0</setting>
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
                 <setting name="dontShowDeleteButton">0</setting>
-                <setting name="minRelationshipsPerRow">1</setting>
-                <setting name="maxRelationshipsPerRow">1</setting>
-                <setting name="showCurrentOnly">0</setting>
                 <setting name="display_template">
                   <![CDATA[
                   <dl>
@@ -3494,6 +3465,9 @@
                   </dl>
                   ]]>
                 </setting>
+                <setting name="minRelationshipsPerRow"/>
+                <setting name="maxRelationshipsPerRow">255</setting>
+                <setting name="showCurrentOnly">0</setting>
               </settings>
             </placement>
             <placement code="ca_attribute_Importance">
@@ -3643,35 +3617,8 @@
                 <setting name="add_label" locale="en_AU">Add title</setting>
               </settings>
             </placement>
-            <placement code="ca_entities_author">
-              <bundle>ca_entities</bundle>
-              <settings>
-                <setting name="label" locale="en_AU">Author(s)</setting>
-                <setting name="add_label" locale="en_AU">Add Author</setting>
-                <setting name="dont_include_subtypes_in_type_restriction">0</setting>
-                <setting name="restrict_to_relationship_types">author</setting>
-                <setting name="list_format">list</setting>
-                <setting name="sortDirection">ASC</setting>
-                <setting name="dontShowDeleteButton">0</setting>
-                <setting name="minRelationshipsPerRow">1</setting>
-                <setting name="maxRelationshipsPerRow">255</setting>
-                <setting name="showCurrentOnly">0</setting>
-                <setting name="display_template"><![CDATA[
-                  <l>^ca_entities</l>
-                  ]]></setting>
-              </settings>
-            </placement>
             <placement code="ca_attribute_Author">
               <bundle>ca_attribute_Author</bundle>
-            </placement>
-            <placement code="ca_attribute_FirstAuthor">
-              <bundle>ca_attribute_FirstAuthor</bundle>
-            </placement>
-            <placement code="ca_attribute_SecondAuthor">
-              <bundle>ca_attribute_SecondAuthor</bundle>
-            </placement>
-            <placement code="ca_attribute_ThirdAuthor">
-              <bundle>ca_attribute_ThirdAuthor</bundle>
             </placement>
             <placement code="ca_attribute_PlaceOfPublication">
               <bundle>ca_attribute_PlaceOfPublication</bundle>
@@ -3694,8 +3641,59 @@
             <placement code="ca_attribute_Series">
               <bundle>ca_attribute_Series</bundle>
             </placement>
-            <placement code="ca_attribute_SubjectHeadings">
-              <bundle>ca_attribute_SubjectHeadings</bundle>
+            <placement code="subject">
+              <bundle>ca_occurrences</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Subject List</setting>
+                <setting name="readonly"/>
+                <setting name="expand_collapse_value">dont_force</setting>
+                <setting name="expand_collapse_no_value">dont_force</setting>
+                <setting name="restrict_to_relationship_types">depicts</setting>
+                <setting name="restrict_to_relationship_types">used</setting>
+                <setting name="restrict_to_relationship_types">describes</setting>
+                <setting name="restrict_to_types">Event</setting>
+                <setting name="restrict_to_types">Organization</setting>
+                <setting name="restrict_to_types">Person</setting>
+                <setting name="restrict_to_types">Place</setting>
+                <setting name="restrict_to_types">Topic</setting>
+                <setting name="dont_include_subtypes_in_type_restriction">0</setting>
+                <setting name="list_format">list</setting>
+                <setting name="sortDirection">ASC</setting>
+                <setting name="dontShowDeleteButton">0</setting>
+                <setting name="display_template">
+                  <![CDATA[
+                  <dl>
+                    <dt>Subject:</dt>
+                    <dd>
+                      <unit relativeTo="ca_occurrences">
+                        <l>^preferred_labels</l>
+                      </unit>
+                    </dd>
+                    <ifdef code="ca_occurrences.SubjectDates">
+                      <dt>Subject Dates:</dt>
+                      <dd>^ca_occurrences.SubjectDates</dd>
+                    </ifdef>
+                    <dt>Type:</dt>
+                    <dd>^ca_occurrences.type_id</dd>
+                    <ifdef code="ca_occurrences.Description">
+                      <dt>Description:</dt>
+                      <dd>^ca_occurrences.Description</dd>
+                    </ifdef>
+                    <ifdef code="ca_objects_x_occurrences.Association">
+                      <dt>Association:</dt>
+                      <dd>^ca_objects_x_occurrences.Association</dd>
+                    </ifdef>
+                    <ifdef code="ca_objects_x_occurrences.SubjectDates">
+                      <dt>Dates:</dt>
+                      <dd>^ca_objects_x_occurrences.SubjectDates</dd>
+                    </ifdef>
+                  </dl>
+                  ]]>
+                </setting>
+                <setting name="minRelationshipsPerRow"/>
+                <setting name="maxRelationshipsPerRow">255</setting>
+                <setting name="showCurrentOnly">0</setting>
+              </settings>
             </placement>
             <placement code="ca_attribute_Collation">
               <bundle>ca_attribute_Collation</bundle>
