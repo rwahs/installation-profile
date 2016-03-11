@@ -3155,7 +3155,7 @@
     </metadataElement>
   </elementSets>
   <userInterfaces>
-    <userInterface code="museum_object_ui" type="ca_objects">
+    <userInterface code="museum_object_ui" type="ca_objects" system="0">
       <labels>
         <label locale="en_AU">
           <name>Museum object editor</name>
@@ -3167,6 +3167,7 @@
       <groupAccess>
         <permission group="admin" access="edit"/>
         <permission group="museum" access="edit"/>
+        <permission group="library" access="read"/>
       </groupAccess>
       <screens>
         <screen idno="administrationData" default="1">
@@ -3583,7 +3584,7 @@
         </screen>
       </screens>
     </userInterface>
-    <userInterface code="library_object_ui" type="ca_objects">
+    <userInterface code="library_object_ui" type="ca_objects" system="0">
       <labels>
         <label locale="en_AU">
           <name>Library object editor</name>
@@ -3609,6 +3610,12 @@
               <settings>
                 <setting name="label" locale="en_AU">Record number</setting>
               </settings>
+            </placement>
+            <placement code="ca_attribute_LastEditDate">
+              <bundle>ca_attribute_LastEditDate</bundle>
+            </placement>
+            <placement code="ca_attribute_LastEditBy">
+              <bundle>ca_attribute_LastEditBy</bundle>
             </placement>
             <placement code="preferred_labels">
               <bundle>preferred_labels</bundle>
@@ -3840,12 +3847,6 @@
             </placement>
             <placement code="access">
               <bundle>access</bundle>
-            </placement>
-            <placement code="ca_attribute_LastEditBy">
-              <bundle>ca_attribute_LastEditBy</bundle>
-            </placement>
-            <placement code="ca_attribute_LastEditDate">
-              <bundle>ca_attribute_LastEditDate</bundle>
             </placement>
           </bundlePlacements>
         </screen>
