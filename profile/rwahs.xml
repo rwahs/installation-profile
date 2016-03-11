@@ -861,6 +861,14 @@
             </label>
           </labels>
         </item>
+        <item idno="other" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Other</name_singular>
+              <name_plural>Other</name_plural>
+            </label>
+          </labels>
+        </item>
       </items>
     </list>
   </lists>
@@ -2785,8 +2793,8 @@
       </labels>
       <settings>
         <setting name="usewysiwygeditor">0</setting>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">1</setting>
+        <setting name="fieldWidth">115</setting>
+        <setting name="fieldHeight">3</setting>
         <setting name="suggestExistingValues">1</setting>
         <setting name="minChars">0</setting>
         <setting name="maxChars">255</setting>
@@ -3420,7 +3428,7 @@
             <placement code="subject">
               <bundle>ca_occurrences</bundle>
               <settings>
-                <setting name="label" locale="en_AU">Subject List</setting>
+                <setting name="label" locale="en_AU">Subject Headings</setting>
                 <setting name="readonly"/>
                 <setting name="expand_collapse_value">dont_force</setting>
                 <setting name="expand_collapse_no_value">dont_force</setting>
@@ -3732,28 +3740,8 @@
             <placement code="ca_attribute_LibraryNumber">
               <bundle>ca_attribute_LibraryNumber</bundle>
             </placement>
-            <placement code="ca_storage_locations">
-              <bundle>ca_storage_locations</bundle>
-              <settings>
-                <setting name="label" locale="en_AU">Usual location</setting>
-                <setting name="dont_include_subtypes_in_type_restriction">0</setting>
-                <setting name="restrict_to_relationship_types">usual</setting>
-                <setting name="sortDirection">ASC</setting>
-                <setting name="dontShowDeleteButton">0</setting>
-                <setting name="minRelationshipsPerRow">0</setting>
-                <setting name="maxRelationshipsPerRow">1</setting>
-                <setting name="showCurrentOnly">1</setting>
-                <setting name="useHierarchicalBrowser">1</setting>
-                <setting name="display_template">
-                  <![CDATA[
-                  <unit relativeTo="ca_storage_locations">
-                    <unit relativeTo="ca_storage_locations.hierarchy">
-                      <l>^preferred_labels</l>
-                    </unit>
-                  </unit>
-                  ]]>
-                </setting>
-              </settings>
+            <placement code="ca_attribute_StoredLocation">
+              <bundle>ca_attribute_StoredLocation</bundle>
             </placement>
             <placement code="ca_attribute_Donated">
               <bundle>ca_attribute_Donated</bundle>
