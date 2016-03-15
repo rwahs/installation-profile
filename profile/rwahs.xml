@@ -1069,6 +1069,26 @@
             <setting name="minimumAttributeBundlesToDisplay">0</setting>
           </settings>
         </restriction>
+        <restriction>
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="AccessionYear" datatype="Text">
@@ -1089,6 +1109,26 @@
         <restriction code="r1">
           <table>ca_objects</table>
           <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -1123,6 +1163,26 @@
             <setting name="minimumAttributeBundlesToDisplay">0</setting>
           </settings>
         </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="AccessionSeries" datatype="Text">
@@ -1150,6 +1210,26 @@
             <setting name="minimumAttributeBundlesToDisplay">0</setting>
           </settings>
         </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="AccessionParts" datatype="Text">
@@ -1170,6 +1250,26 @@
         <restriction code="r1">
           <table>ca_objects</table>
           <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -1222,6 +1322,26 @@
         <restriction code="ca_objects_AccessionBy">
           <table>ca_objects</table>
           <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
@@ -1674,6 +1794,26 @@
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="DateReceived" datatype="DateRange">
@@ -1699,6 +1839,26 @@
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="ConditionOnReceipt" datatype="List" list="Condition">
@@ -1716,6 +1876,26 @@
         <restriction code="ca_objects">
           <table>ca_objects</table>
           <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -1773,6 +1953,26 @@
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="Copyright" datatype="Container">
@@ -1822,6 +2022,26 @@
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="Correspondence" datatype="Text">
@@ -1849,6 +2069,26 @@
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="MakersMarks" datatype="Text">
@@ -1868,6 +2108,26 @@
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="ItemDates" datatype="Text">
@@ -1880,6 +2140,26 @@
         <restriction code="museum_ItemDates">
           <table>ca_objects</table>
           <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -1910,6 +2190,26 @@
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="LatestYear" datatype="DateRange">
@@ -1926,6 +2226,26 @@
         <restriction code="museum_LatestYear">
           <table>ca_objects</table>
           <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -1952,6 +2272,26 @@
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="ResearchBy" datatype="Entities">
@@ -1964,6 +2304,26 @@
         <restriction code="museum_ResearchBy">
           <table>ca_objects</table>
           <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -1990,6 +2350,26 @@
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="Importance" datatype="List" list="Importance">
@@ -2002,6 +2382,26 @@
         <restriction code="museum_Importance">
           <table>ca_objects</table>
           <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -2032,6 +2432,26 @@
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="ComparativeCriteria" datatype="List" list="ComparativeCriteria">
@@ -2048,6 +2468,26 @@
         <restriction code="museum_ComparativeCriteria">
           <table>ca_objects</table>
           <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -2074,6 +2514,26 @@
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="VisualCondition" datatype="List" list="Condition">
@@ -2086,6 +2546,26 @@
         <restriction code="museum_VisualCondition">
           <table>ca_objects</table>
           <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -2120,6 +2600,26 @@
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="Materials" datatype="Text">
@@ -2132,6 +2632,26 @@
         <restriction code="museum_Materials">
           <table>ca_objects</table>
           <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -2174,6 +2694,26 @@
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="Value" datatype="Currency">
@@ -2191,6 +2731,26 @@
         <restriction code="ca_objectsValue">
           <table>ca_objects</table>
           <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -2228,6 +2788,28 @@
             <setting name="minimumAttributeBundlesToDisplay">0</setting>
           </settings>
         </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <!-- We start with no value, then the user adds new values which add the new dates with a default value of the current day-->
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <!-- We start with no value, then the user adds new values which add the new dates with a default value of the current day-->
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="OtherNumber" datatype="Text">
@@ -2257,6 +2839,28 @@
             <setting name="minimumAttributeBundlesToDisplay">0</setting>
           </settings>
         </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <!-- We start with no value, then the user adds new values which add the new dates with a default value of the current day-->
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <!-- We start with no value, then the user adds new values which add the new dates with a default value of the current day-->
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="AcquisitionNotes" datatype="Text">
@@ -2277,6 +2881,26 @@
         <restriction code="ca_objects_AcquisitionNotes">
           <table>ca_objects</table>
           <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
@@ -2341,6 +2965,26 @@
         <restriction code="ca_objects_ConditionReportContainer">
           <table>ca_objects</table>
           <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <setting name="minimumAttributeBundlesToDisplay">0</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
@@ -2413,6 +3057,26 @@
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
     <metadataElement code="DisplayLoanCare" datatype="Text">
@@ -2432,6 +3096,26 @@
         <restriction code="ca_objects_DisplayLoanCare">
           <table>ca_objects</table>
           <type>museum</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="publicMemorial">
+          <table>ca_objects</table>
+          <type>publicMemorial</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
