@@ -805,7 +805,7 @@
         </label>
       </labels>
       <items>
-        <item idno="book" enabled="1" default="1">
+        <item idno="Book" enabled="1" default="1">
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Book</name_singular>
@@ -813,7 +813,7 @@
             </label>
           </labels>
         </item>
-        <item idno="document" enabled="1" default="0">
+        <item idno="Document" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Document</name_singular>
@@ -821,7 +821,7 @@
             </label>
           </labels>
         </item>
-        <item idno="journal_article" enabled="1" default="0">
+        <item idno="JournalArticle" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Journal article</name_singular>
@@ -829,7 +829,7 @@
             </label>
           </labels>
         </item>
-        <item idno="journal_title" enabled="1" default="0">
+        <item idno="JournalTitle" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Journal title</name_singular>
@@ -837,7 +837,7 @@
             </label>
           </labels>
         </item>
-        <item idno="map" enabled="1" default="0">
+        <item idno="Map" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Map</name_singular>
@@ -845,7 +845,7 @@
             </label>
           </labels>
         </item>
-        <item idno="non_book" enabled="1" default="0">
+        <item idno="NonBook" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Non-book</name_singular>
@@ -853,7 +853,7 @@
             </label>
           </labels>
         </item>
-        <item idno="pamphlet" enabled="1" default="0">
+        <item idno="Pamphlet" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Pamphlet</name_singular>
@@ -861,11 +861,52 @@
             </label>
           </labels>
         </item>
-        <item idno="other" enabled="1" default="0">
+        <item idno="Other" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Other</name_singular>
               <name_plural>Other</name_plural>
+            </label>
+          </labels>
+        </item>
+      </items>
+    </list>
+    <list code="Restrictions" hierarchical="0" system="1" vocabulary="0">
+      <labels>
+        <label locale="en_AU">
+          <name>Restrictions</name>
+        </label>
+      </labels>
+      <items>
+        <item idno="NotForLoan" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Not For Loan</name_singular>
+              <name_plural>Not For Loan</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Library" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Library</name_singular>
+              <name_plural>Library</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="BoxCollection" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Box Collection</name_singular>
+              <name_plural>Box Collection</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="NotForPublication" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Not For Publication</name_singular>
+              <name_plural>Not For Publication</name_plural>
             </label>
           </labels>
         </item>
@@ -3583,12 +3624,9 @@
         </label>
       </labels>
       <settings>
-        <setting name="usewysiwygeditor">0</setting>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="suggestExistingValues">1</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">20</setting>
+        <setting name="nullOptionText">Not Set</setting>
+        <setting name="render">select</setting>
+        <setting name="doesNotTakeLocale">1</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_StoredLocation">
@@ -3626,6 +3664,309 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
+    <metadataElement code="CopyrightNotes" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Copyright Notes</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_CopyrightNotes">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="CurrentLocation" datatype="List" list="LibraryStorageLocations">
+      <labels>
+        <label locale="en_AU">
+          <name>Current Location</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="nullOptionText">Not Set</setting>
+        <setting name="render">select</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_CurrentLocation">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Illustrations" datatype="List" list="YesNoDefaultNo">
+      <labels>
+        <label locale="en_AU">
+          <name>Illustrations</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="nullOptionText">Not Set</setting>
+        <setting name="render">yes_no_checkboxes</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_Illustrations">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Maps" datatype="List" list="YesNoDefaultNo">
+      <labels>
+        <label locale="en_AU">
+          <name>Maps</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="nullOptionText">Not Set</setting>
+        <setting name="render">yes_no_checkboxes</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_Maps">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Marks" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Marks</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_Marks">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Pages" datatype="Integer">
+      <labels>
+        <label locale="en_AU">
+          <name>Pages</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction code="ca_objects_Pages">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Rare" datatype="List" list="YesNoDefaultNo">
+      <labels>
+        <label locale="en_AU">
+          <name>Rare</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="nullOptionText">Not Set</setting>
+        <setting name="render">yes_no_checkboxes</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_Rare">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Restrictions" datatype="List" list="Restrictions">
+      <labels>
+        <label locale="en_AU">
+          <name>Restrictions</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="nullOptionText">Not Set</setting>
+        <setting name="render">select</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_Restrictions">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="DateDue" datatype="DateRange">
+      <labels>
+        <label locale="en_AU">
+          <name>DateDue</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">30</setting>
+        <setting name="useDatePicker">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_DateDue">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="DateOut" datatype="DateRange">
+      <labels>
+        <label locale="en_AU">
+          <name>DateOut</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">30</setting>
+        <setting name="useDatePicker">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_DateOut">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="DateReturned" datatype="DateRange">
+      <labels>
+        <label locale="en_AU">
+          <name>DateReturned</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">30</setting>
+        <setting name="useDatePicker">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_DateReturned">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="VolumeNumber" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>VolumeNumber</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects_VolumeNumber">
+          <table>ca_objects</table>
+          <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+
+    
     <!-- Subject List fields-->
     <metadataElement code="SubjectDates" datatype="Text">
       <labels>
