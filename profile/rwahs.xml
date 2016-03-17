@@ -3365,7 +3365,7 @@
         <setting name="minChars">0</setting>
         <setting name="maxChars">150</setting>
         <setting name="minValue">0</setting>
-        <setting name="doesNotTakeLocale">0</setting>
+        <setting name="doesNotTakeLocale">1</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_Series">
