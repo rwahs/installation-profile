@@ -3353,19 +3353,19 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="Series" datatype="Text">
+    <metadataElement code="Series" datatype="Integer">
       <labels>
         <label locale="en_AU">
           <name>Series</name>
         </label>
       </labels>
       <settings>
-        <setting name="usewysiwygeditor">0</setting>
         <setting name="fieldWidth">70</setting>
         <setting name="fieldHeight">1</setting>
-        <setting name="suggestExistingValues">1</setting>
         <setting name="minChars">0</setting>
         <setting name="maxChars">150</setting>
+        <setting name="minValue">0</setting>
+        <setting name="doesNotTakeLocale">1</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_Series">
