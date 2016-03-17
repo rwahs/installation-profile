@@ -722,12 +722,36 @@
               <name_plural>Library</name_plural>
             </label>
           </labels>
+          <items><item idno="LargeBook" enabled="1" default="0">
+            <labels>
+              <label locale="en_AU" preferred="1">
+                <name_singular>Large Book</name_singular>
+                <name_plural>Large Book</name_plural>
+              </label>
+            </labels>
+          </item></items>
         </item>
         <item idno="MapAnnex" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Map annex</name_singular>
               <name_plural>Map annex</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Display" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Display</name_singular>
+              <name_plural>Display</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Reference" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Reference</name_singular>
+              <name_plural>Reference</name_plural>
             </label>
           </labels>
         </item>
@@ -752,6 +776,30 @@
             <label locale="en_AU" preferred="1">
               <name_singular>Photographs Room</name_singular>
               <name_plural>Photographs Room</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="BoxCollection" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Box Collection</name_singular>
+              <name_plural>Box Collection</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="TranbyRoom" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Tranby Room</name_singular>
+              <name_plural>Tranby Room</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="BattyeLibrary" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Battye Library</name_singular>
+              <name_plural>Battye Library</name_plural>
             </label>
           </labels>
         </item>
@@ -1399,6 +1447,14 @@
           <name>Legacy Identifier</name>
         </label>
       </labels>
+      <settings>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">11</setting>
+        <setting name="minValue">0</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
       <typeRestrictions>
         <restriction code="r1">
           <table>ca_objects</table>
@@ -3363,7 +3419,7 @@
         <setting name="fieldWidth">70</setting>
         <setting name="fieldHeight">1</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">150</setting>
+        <setting name="maxChars">11</setting>
         <setting name="minValue">0</setting>
         <setting name="doesNotTakeLocale">1</setting>
       </settings>
@@ -3796,6 +3852,14 @@
           <name>Pages</name>
         </label>
       </labels>
+      <settings>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">11</setting>
+        <setting name="minValue">0</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
       <typeRestrictions>
         <restriction code="ca_objects_Pages">
           <table>ca_objects</table>
@@ -4684,7 +4748,7 @@
             <placement code="subject">
               <bundle>ca_occurrences</bundle>
               <settings>
-                <setting name="label" locale="en_AU">Subject List</setting>
+                <setting name="label" locale="en_AU">Subject headings</setting>
                 <setting name="readonly"/>
                 <setting name="expand_collapse_value">dont_force</setting>
                 <setting name="expand_collapse_no_value">dont_force</setting>
@@ -4696,6 +4760,7 @@
                 <setting name="restrict_to_types">Person</setting>
                 <setting name="restrict_to_types">Place</setting>
                 <setting name="restrict_to_types">Topic</setting>
+                <setting name="restrict_to_types">subject</setting>
                 <setting name="dont_include_subtypes_in_type_restriction">0</setting>
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
