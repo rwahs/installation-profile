@@ -7545,6 +7545,10 @@
       <group code="library"/>
       <group code="cataloguer"/>
     </login>
+    <login user_name="photograph" password="photograph" fname="Photograph" lname="User" email="photograph@histwest.org.au">
+      <group code="photograph"/>
+      <group code="cataloguer"/>
+    </login>
     <login user_name="researcher" password="researcher" fname="Researcher" lname="User"
            email="researcher@histwest.org.au">
       <role code="researcher"/>
