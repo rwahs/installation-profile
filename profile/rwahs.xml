@@ -7178,6 +7178,12 @@
       <actions>
       </actions>
     </role>
+    <role code="photograph">
+      <name>Photograph</name>
+      <description>Photograph Users</description>
+      <actions>
+      </actions>
+    </role>
   </roles>
   <groups>
     <group code="museum">
@@ -7193,6 +7199,14 @@
       <description>Library Users</description>
       <roles>
         <role>library</role>
+        <role>cataloguer</role>
+      </roles>
+    </group>
+    <group code="photograph">
+      <name>Photograph</name>
+      <description>Photograph Users</description>
+      <roles>
+        <role>photograph</role>
         <role>cataloguer</role>
       </roles>
     </group>
