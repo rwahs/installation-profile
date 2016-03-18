@@ -230,11 +230,11 @@
         </label>
       </labels>
       <items>
-        <item idno="dc" enabled="1" default="1">
+        <item idno="places" enabled="1" default="1">
           <labels>
             <label locale="en_AU" preferred="1">
-              <name_singular>DC Coverage Authority</name_singular>
-              <name_plural>DC Coverage Authorities</name_plural>
+              <name_singular>Place</name_singular>
+              <name_plural>Places</name_plural>
             </label>
           </labels>
         </item>
