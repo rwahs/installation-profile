@@ -960,6 +960,145 @@
         </item>
       </items>
     </list>
+    <list code="CreatorTypes" hierarchical="0" system="1" vocabulary="0">
+      <labels>
+        <label locale="en_AU">
+          <name>Creator Types</name>
+        </label>
+      </labels>
+      <items>
+        <item idno="Photographer" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Photographer</name_singular>
+              <name_plural>Photographer</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Illustrator" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Illustrator</name_singular>
+              <name_plural>Illustrator</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Artist" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Artist</name_singular>
+              <name_plural>Artist</name_plural>
+            </label>
+          </labels>
+        </item>
+      </items>
+    </list>
+    <list code="Medium" hierarchical="0" system="1" vocabulary="0">
+      <labels>
+        <label locale="en_AU">
+          <name>Medium</name>
+        </label>
+      </labels>
+      <items>
+        <item idno="Photograph" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Photograph</name_singular>
+              <name_plural>Photograph</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Diagram" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Diagram</name_singular>
+              <name_plural>Diagram</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Negative" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Negative</name_singular>
+              <name_plural>Negative</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Slide" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Slide</name_singular>
+              <name_plural>Slide</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Picture" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Picture</name_singular>
+              <name_plural>Picture</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Other" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Other</name_singular>
+              <name_plural>Other</name_plural>
+            </label>
+          </labels>
+        </item>
+      </items>
+    </list>
+    <list code="TypeOfLocation" hierarchical="0" system="1" vocabulary="0">
+      <labels>
+        <label locale="en_AU">
+          <name>TypeOfLocation</name>
+        </label>
+      </labels>
+      <items>
+        <item idno="Stored" enabled="1" default="1">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Stored</name_singular>
+              <name_plural>Stored</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Displayed" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Displayed</name_singular>
+              <name_plural>Displayed</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Loaned" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Loaned</name_singular>
+              <name_plural>Loaned</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Removed" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Removed</name_singular>
+              <name_plural>Removed</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="NA" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>N/A</name_singular>
+              <name_plural>N/A</name_plural>
+            </label>
+          </labels>
+        </item>
+      </items>
+    </list>
   </lists>
   <elementSets>
     <!--Basic Elements-->
@@ -3265,9 +3404,19 @@
         <setting name="maxChars">100</setting>
       </settings>
       <typeRestrictions>
-        <restriction code="ca_objects_PlaceOfPublication">
+        <restriction code="library_PlaceOfPublication">
           <table>ca_objects</table>
           <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph_PlaceOfPublication">
+          <table>ca_objects</table>
+          <type>photograph</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
@@ -3292,9 +3441,19 @@
         <setting name="maxChars">100</setting>
       </settings>
       <typeRestrictions>
-        <restriction code="ca_objects_Publisher">
+        <restriction code="library_Publisher">
           <table>ca_objects</table>
           <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph_Publisher">
+          <table>ca_objects</table>
+          <type>photograph</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
@@ -3319,9 +3478,19 @@
         <setting name="maxChars">255</setting>
       </settings>
       <typeRestrictions>
-        <restriction code="ca_objects_DateOfPublication">
+        <restriction code="library_DateOfPublication">
           <table>ca_objects</table>
           <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph_DateOfPublication">
+          <table>ca_objects</table>
+          <type>photograph</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
@@ -3467,6 +3636,7 @@
       <labels>
         <label locale="en_AU">
           <name>Summary</name>
+          <description>Description of item</description>
         </label>
       </labels>
       <settings>
@@ -3477,9 +3647,19 @@
         <setting name="maxChars">16777215</setting>
       </settings>
       <typeRestrictions>
-        <restriction code="ca_objects_Summary">
+        <restriction code="library_Summary">
           <table>ca_objects</table>
           <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph_Summary">
+          <table>ca_objects</table>
+          <type>photograph</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
@@ -3607,9 +3787,19 @@
         <setting name="maxChars">16777215</setting>
       </settings>
       <typeRestrictions>
-        <restriction code="ca_objects_Notes">
+        <restriction code="library_Notes">
           <table>ca_objects</table>
           <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph_Notes">
+          <table>ca_objects</table>
+          <type>photograph</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
@@ -3685,9 +3875,19 @@
         <setting name="doesNotTakeLocale">1</setting>
       </settings>
       <typeRestrictions>
-        <restriction code="ca_objects_StoredLocation">
+        <restriction code="library_StoredLocation">
           <table>ca_objects</table>
           <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph_StoredLocation">
+          <table>ca_objects</table>
+          <type>photograph</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
@@ -3708,9 +3908,19 @@
         <setting name="doesNotTakeLocale">1</setting>
       </settings>
       <typeRestrictions>
-        <restriction code="ca_objects_Donated">
+        <restriction code="library_Donated">
           <table>ca_objects</table>
           <type>library</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+        <restriction code="photograph_Donated">
+          <table>ca_objects</table>
+          <type>photograph</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
@@ -4029,8 +4239,228 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-
-    
+    <!-- Photograph fields-->
+    <metadataElement code="Creator" datatype="List" list="CreatorTypes">
+      <labels>
+        <label locale="en_AU">
+          <name>Creator</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="nullOptionText">Not Set</setting>
+        <setting name="render">select</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="photograph_Creator">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="DateOfCreation" datatype="DateRange">
+      <labels>
+        <label locale="en_AU">
+          <name>Date Of Creation</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="useDatePicker">1</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="photograph_DateOfCreation">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Medium" datatype="List" list="Medium">
+      <labels>
+        <label locale="en_AU">
+          <name>Medium</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="nullOptionText">Not Set</setting>
+        <setting name="render">select</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="photograph_Medium">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="PhysicalDescription" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Physical description</name>
+          <description>Includes type of image, dimensions, any other details.</description>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">115</setting>
+        <setting name="fieldHeight">3</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="photograph_PhysicalDescription">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="TermsOfUse" datatype="Text">
+      <labels>
+        <label locale="en_AU">
+          <name>Terms Of Use</name>
+          <description>Includes type of image, dimensions, any other details.</description>
+        </label>
+      </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">115</setting>
+        <setting name="fieldHeight">3</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="photograph_TermsOfUse">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="TypeOfLocation" datatype="List" list="TypeOfLocation">
+      <labels>
+        <label locale="en_AU">
+          <name>Type of location</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="nullOptionText">Not Set</setting>
+        <setting name="render">select</setting>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="photograph_TypeOfLocation">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="SpecificLocation" datatype="Container">
+      <labels>
+        <label locale="en_AU">
+          <name>Specific location</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="doesNotTakeLocale">1</setting>
+      </settings>
+      <elements>
+        <metadataElement code="BoxType" datatype="Text">
+          <labels>
+            <label locale="en_AU">
+              <name>Box Type</name>
+            </label>
+          </labels>
+          <settings>
+            <setting name="usewysiwygeditor">0</setting>
+            <setting name="fieldWidth">40</setting>
+            <setting name="fieldHeight">1</setting>
+            <setting name="suggestExistingValues">1</setting>
+            <setting name="minChars">0</setting>
+            <setting name="maxChars">30</setting>
+          </settings>
+        </metadataElement>
+        <metadataElement code="BoxNumber" datatype="Text">
+          <labels>
+            <label locale="en_AU">
+              <name>Number</name>
+            </label>
+          </labels>
+          <settings>
+            <setting name="usewysiwygeditor">0</setting>
+            <setting name="fieldWidth">20</setting>
+            <setting name="fieldHeight">1</setting>
+            <setting name="suggestExistingValues">1</setting>
+            <setting name="minChars">0</setting>
+            <setting name="maxChars">10</setting>
+            <setting name="doesNotTakeLocale">1</setting>
+          </settings>
+        </metadataElement>
+        <metadataElement code="Copied" datatype="List" list="YesNoDefaultNo">
+          <labels>
+            <label locale="en_AU">
+              <name>Copied(Yes/No)</name>
+            </label>
+          </labels>
+          <settings>
+            <setting name="render">yes_no_checkboxes</setting>
+            <setting name="doesNotTakeLocale">1</setting>
+          </settings>
+        </metadataElement>
+      </elements>
+      <typeRestrictions>
+        <restriction code="photograph_SpecificLocation">
+          <table>ca_objects</table>
+          <type>photograph</type>
+          <includeSubtypes>true</includeSubtypes>
+          <settings>
+            <setting name="minAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
     <!-- Subject List fields-->
     <metadataElement code="SubjectDates" datatype="Text">
       <labels>
@@ -4705,6 +5135,12 @@
             <placement code="idno">
               <bundle>idno</bundle>
               <settings>
+                <setting name="label" locale="en_AU">Accession number</setting>
+              </settings>
+            </placement>
+            <placement code="object_id">
+              <bundle>object_id</bundle>
+              <settings>
                 <setting name="label" locale="en_AU">Record number</setting>
               </settings>
             </placement>
@@ -4922,6 +5358,256 @@
             </placement>
             <placement code="ca_objects_deaccession">
               <bundle>ca_objects_deaccession</bundle>
+            </placement>
+            <placement code="access">
+              <bundle>access</bundle>
+            </placement>
+          </bundlePlacements>
+        </screen>
+      </screens>
+    </userInterface>
+    <userInterface code="photograph_object_ui" type="ca_objects" system="0">
+      <labels>
+        <label locale="en_AU">
+          <name>Photographs object editor</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction type="photograph"/>
+      </typeRestrictions>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="photograph" access="edit"/>
+      </groupAccess>
+      <screens>
+        <screen idno="photograph" default="1">
+          <labels>
+            <label locale="en_AU">
+              <name>Photograph Data</name>
+            </label>
+          </labels>
+          <bundlePlacements>
+            <placement code="idno">
+              <bundle>idno</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Accession number</setting>
+              </settings>
+            </placement>
+            <placement code="object_id">
+              <bundle>object_id</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Record number</setting>
+              </settings>
+            </placement>
+            <placement code="ca_attribute_LastEditDate">
+              <bundle>ca_attribute_LastEditDate</bundle>
+            </placement>
+            <placement code="preferred_labels">
+              <bundle>preferred_labels</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Title</setting>
+                <setting name="add_label" locale="en_AU">Add title</setting>
+              </settings>
+            </placement>
+            <placement code="ca_attribute_Creator">
+              <bundle>ca_attribute_Creator</bundle>
+            </placement>
+            <placement code="ca_attribute_DateOfCreation">
+              <bundle>ca_attribute_DateOfCreation</bundle>
+            </placement>
+            <placement code="ca_attribute_PlaceOfPublication">
+              <bundle>ca_attribute_PlaceOfPublication</bundle>
+            </placement>
+            <placement code="ca_attribute_Publisher">
+              <bundle>ca_attribute_Publisher</bundle>
+            </placement>
+            <placement code="ca_attribute_DateOfPublication">
+              <bundle>ca_attribute_DateOfPublication</bundle>
+            </placement>
+            <placement code="ca_attribute_Medium">
+              <bundle>ca_attribute_Medium</bundle>
+            </placement>
+            <placement code="ca_attribute_PhysicalDescription">
+              <bundle>ca_attribute_PhysicalDescription</bundle>
+            </placement>
+            <placement code="subject">
+              <bundle>ca_occurrences</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Subject authority list</setting>
+                <setting name="readonly"/>
+                <setting name="expand_collapse_value">dont_force</setting>
+                <setting name="expand_collapse_no_value">dont_force</setting>
+                <setting name="restrict_to_relationship_types">depicts</setting>
+                <setting name="restrict_to_relationship_types">used</setting>
+                <setting name="restrict_to_relationship_types">describes</setting>
+                <setting name="restrict_to_types">Event</setting>
+                <setting name="restrict_to_types">Organization</setting>
+                <setting name="restrict_to_types">Person</setting>
+                <setting name="restrict_to_types">Place</setting>
+                <setting name="restrict_to_types">Topic</setting>
+                <setting name="restrict_to_types">subject</setting>
+                <setting name="dont_include_subtypes_in_type_restriction">0</setting>
+                <setting name="list_format">list</setting>
+                <setting name="sortDirection">ASC</setting>
+                <setting name="dontShowDeleteButton">0</setting>
+                <setting name="display_template">
+                  <![CDATA[
+                  <dl>
+                    <dt>Subject:</dt>
+                    <dd>
+                      <unit relativeTo="ca_occurrences">
+                        <l>^preferred_labels</l>
+                      </unit>
+                    </dd>
+                    <ifdef code="ca_occurrences.SubjectDates">
+                      <dt>Subject Dates:</dt>
+                      <dd>^ca_occurrences.SubjectDates</dd>
+                    </ifdef>
+                    <dt>Type:</dt>
+                    <dd>^ca_occurrences.type_id</dd>
+                    <ifdef code="ca_occurrences.Description">
+                      <dt>Description:</dt>
+                      <dd>^ca_occurrences.Description</dd>
+                    </ifdef>
+                    <ifdef code="ca_objects_x_occurrences.Association">
+                      <dt>Association:</dt>
+                      <dd>^ca_objects_x_occurrences.Association</dd>
+                    </ifdef>
+                    <ifdef code="ca_objects_x_occurrences.SubjectDates">
+                      <dt>Dates:</dt>
+                      <dd>^ca_objects_x_occurrences.SubjectDates</dd>
+                    </ifdef>
+                  </dl>
+                  ]]>
+                </setting>
+                <setting name="minRelationshipsPerRow"/>
+                <setting name="maxRelationshipsPerRow">255</setting>
+                <setting name="showCurrentOnly">0</setting>
+              </settings>
+            </placement>
+            <placement code="ca_attribute_Summary">
+              <bundle>ca_attribute_Summary</bundle>
+            </placement>
+            <placement code="ca_attribute_Notes">
+              <bundle>ca_attribute_Notes</bundle>
+            </placement>
+            <placement code="ca_attribute_TermsOfUse">
+              <bundle>ca_attribute_TermsOfUse</bundle>
+            </placement>
+            <placement code="ca_attribute_TypeOfLocation">
+              <bundle>ca_attribute_TypeOfLocation</bundle>
+            </placement>
+            <placement code="ca_attribute_StoredLocation">
+              <bundle>ca_attribute_StoredLocation</bundle>
+            </placement>
+            <placement code="ca_attribute_SpecificLocation">
+              <bundle>ca_attribute_SpecificLocation</bundle>
+            </placement>
+            <placement code="ca_attribute_Donated">
+              <bundle>ca_attribute_Donated</bundle>
+            </placement>
+            <placement code="ca_entities_donor">
+              <bundle>ca_entities</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Source / Donor</setting>
+                <setting name="dont_include_subtypes_in_type_restriction">0</setting>
+                <setting name="restrict_to_relationship_types">donor</setting>
+                <setting name="list_format">list</setting>
+                <setting name="sortDirection">ASC</setting>
+                <setting name="dontShowDeleteButton">0</setting>
+                <setting name="minRelationshipsPerRow">1</setting>
+                <setting name="maxRelationshipsPerRow">1</setting>
+                <setting name="showCurrentOnly">0</setting>
+                <setting name="display_template"><![CDATA[
+                  <dl>
+                    <dt>Donor Name:
+                    </dt>
+                    <dd>
+                      <unit relativeTo="ca_entities">
+                        <l><strong>^ca_entities.preferred_labels.displayname</strong> (^ca_entities.type_id)</l>
+                      </unit>
+                    </dd>
+                    <ifdef code="ca_entities.AddressContainer">
+                      <dt>Address:</dt>
+                      <dd>
+                        <ifdef code="ca_entities.AddressContainer.Address1">
+                          ^ca_entities.AddressContainer.Address1<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.Address2">
+                          ^ca_entities.AddressContainer.Address2<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.TownCity">
+                          ^ca_entities.AddressContainer.TownCity<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.State">
+                          ^ca_entities.AddressContainer.State
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.PostCode">
+                          ^ca_entities.AddressContainer.PostCode<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.Country">
+                          ^ca_entities.AddressContainer.Country
+                        </ifdef>
+                      </dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.Phone">
+                      <dt>Phone:</dt>
+                      <dd>^ca_entities.Phone</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.MobilePhone">
+                      <dt>Mobile:</dt>
+                      <dd>^ca_entities.MobilePhone</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.Fax">
+                      <dt>Fax:</dt>
+                      <dd>^ca_entities.Fax</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.Email">
+                      <dt>Email:</dt>
+                      <dd>^ca_entities.Email</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorNotes">
+                      <dt>Notes:</dt>
+                      <dd>^ca_entities.DonorNotes</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.Deceased">
+                      <dt>Deceased:</dt>
+                      <dd>^ca_entities.Deceased</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorAgentName">
+                      <dt>Donor agent name:</dt>
+                      <dd>^ca_entities.DonorAgentName</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorAgentAddress">
+                      <dt>Donor agent's address:</dt>
+                      <dd>^ca_entities.DonorAgentAddress</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorAgentPhone">
+                      <dt>Donor agent's Phone:</dt>
+                      <dd>^ca_entities.DonorAgentPhone</dd>
+                    </ifdef>
+                  </dl>
+                  ]]></setting>
+              </settings>
+            </placement>
+
+            <placement code="ca_attribute_DateReceived">
+              <bundle>ca_attribute_DateReceived</bundle>
+            </placement>
+            <placement code="ca_attribute_ConditionOnReceipt">
+              <bundle>ca_attribute_ConditionOnReceipt</bundle>
+            </placement>
+            <placement code="ca_attribute_LegalTitle">
+              <bundle>ca_attribute_LegalTitle</bundle>
+            </placement>
+            <placement code="ca_attribute_Copyright">
+              <bundle>ca_attribute_Copyright</bundle>
+            </placement>
+            <placement code="ca_objects_deaccession">
+              <bundle>ca_objects_deaccession</bundle>
+            </placement>
+            <placement code="ca_object_representations">
+              <bundle>ca_object_representations</bundle>
             </placement>
             <placement code="access">
               <bundle>access</bundle>
@@ -6492,6 +7178,12 @@
       <actions>
       </actions>
     </role>
+    <role code="photograph">
+      <name>Photograph</name>
+      <description>Photograph Users</description>
+      <actions>
+      </actions>
+    </role>
   </roles>
   <groups>
     <group code="museum">
@@ -6507,6 +7199,14 @@
       <description>Library Users</description>
       <roles>
         <role>library</role>
+        <role>cataloguer</role>
+      </roles>
+    </group>
+    <group code="photograph">
+      <name>Photograph</name>
+      <description>Photograph Users</description>
+      <roles>
+        <role>photograph</role>
         <role>cataloguer</role>
       </roles>
     </group>
@@ -6843,6 +7543,10 @@
     </login>
     <login user_name="library" password="library" fname="Library" lname="User" email="library@histwest.org.au">
       <group code="library"/>
+      <group code="cataloguer"/>
+    </login>
+    <login user_name="photograph" password="photograph" fname="Photograph" lname="User" email="photograph@histwest.org.au">
+      <group code="photograph"/>
       <group code="cataloguer"/>
     </login>
     <login user_name="researcher" password="researcher" fname="Researcher" lname="User"
