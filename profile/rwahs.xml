@@ -7502,7 +7502,6 @@
         <action>can_edit_ca_bundle_displays</action>
         <action>can_delete_ca_bundle_displays</action>
         <action>can_use_ca_bundle_displays</action>
-        <action>can_create_user_groups</action>
         <action>can_create_sets</action>
         <action>can_edit_sets</action>
         <action>can_delete_sets</action>
