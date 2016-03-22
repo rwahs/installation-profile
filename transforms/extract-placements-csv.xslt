@@ -17,21 +17,31 @@
     <!-- Produce a single record per <placement> in the source; look up the tree to find parent screen and UI names -->
     <!-- Note this matches object UIs only; remove the @type check to produce all UIs for all data types. -->
     <xsl:template match="/profile/userInterfaces/userInterface[@type='ca_objects']/screens/screen/bundlePlacements/placement">
-        <xsl:variable name="placementLabel" select="settings/setting[@name='label'][@locale='en_AU']/text()" />
+        <xsl:variable name="placementLabel" select="normalize-space(settings/setting[@name='label'][@locale='en_AU']/text())" />
+        <xsl:variable name="placementDescription" select="normalize-space(settings/setting[@name='description'][@locale='en_AU']/text())" />
         <xsl:variable name="elementCode" select="substring-after(./bundle/text(), 'ca_attribute_')" />
+        <xsl:variable name="elementLabel" select="normalize-space(/profile/elementSets/metadataElement[@code=$elementCode]/labels/label[@locale='en_AU']/name/text())" />
+        <xsl:variable name="elementDescription" select="normalize-space(/profile/elementSets/metadataElement[@code=$elementCode]/labels/label[@locale='en_AU']/description/text())" />
         <xsl:text>"</xsl:text>
-        <xsl:value-of select="../../../../labels/label[@locale='en_AU']/name/text()" />
+        <xsl:value-of select="normalize-space(../../../../labels/label[@locale='en_AU']/name/text())" />
         <xsl:text>","</xsl:text>
-        <xsl:value-of select="../../labels/label[@locale='en_AU']/name/text()" />
+        <xsl:value-of select="normalize-space(../../labels/label[@locale='en_AU']/name/text())" />
         <xsl:text>","</xsl:text>
         <xsl:if test="$placementLabel">
             <xsl:value-of select="$placementLabel" />
         </xsl:if>
         <xsl:if test="not($placementLabel)">
-            <xsl:value-of select="/profile/elementSets/metadataElement[@code=$elementCode]/labels/label[@locale='en_AU']/name/text()" />
+            <xsl:value-of select="$elementLabel" />
         </xsl:if>
         <xsl:text>","</xsl:text>
         <xsl:value-of select="bundle/text()" />
-        <xsl:text>",""&#xa;</xsl:text>
+        <xsl:text>","</xsl:text>
+        <xsl:if test="$placementDescription">
+            <xsl:value-of select="$placementDescription" />
+        </xsl:if>
+        <xsl:if test="not($placementDescription)">
+            <xsl:value-of select="$elementDescription" />
+        </xsl:if>
+        <xsl:text>"&#xa;</xsl:text>
     </xsl:template>
 </xsl:stylesheet>
