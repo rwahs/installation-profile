@@ -5018,6 +5018,7 @@
             <placement code="ca_objects_location">
               <bundle>ca_objects_location</bundle>
               <settings>
+                <setting name="label" locale="en_AU">Stored Location</setting>
                 <setting name="locationTrackingMode">ca_movements</setting>
                 <setting name="displayTemplate">
                   <![CDATA[
@@ -5056,9 +5057,15 @@
             </placement>
             <placement code="ca_objects_deaccession">
               <bundle>ca_objects_deaccession</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Deaccession</setting>
+              </settings>
             </placement>
             <placement code="access">
               <bundle>access</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Access Control</setting>
+              </settings>
             </placement>
             <placement code="ca_attribute_AcquisitionNotes">
               <bundle>ca_attribute_AcquisitionNotes</bundle>
@@ -5208,6 +5215,9 @@
             </placement>
             <placement code="ca_object_representations">
               <bundle>ca_object_representations</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Media</setting>
+              </settings>
             </placement>
           </bundlePlacements>
         </screen>
@@ -5220,6 +5230,9 @@
           <bundlePlacements>
             <placement code="idno">
               <bundle>idno</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Accession number</setting>
+              </settings>
             </placement>
             <placement code="ca_attribute_ConditionReportContainer">
               <bundle>ca_attribute_ConditionReportContainer</bundle>
@@ -5411,6 +5424,9 @@
             </placement>
             <placement code="ca_object_representations">
               <bundle>ca_object_representations</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Media</setting>
+              </settings>
             </placement>
             <placement code="ca_attribute_Purchased">
               <bundle>ca_attribute_Purchased</bundle>
@@ -5525,9 +5541,15 @@
             </placement>
             <placement code="ca_objects_deaccession">
               <bundle>ca_objects_deaccession</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Deaccession</setting>
+              </settings>
             </placement>
             <placement code="access">
               <bundle>access</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Access Control</setting>
+              </settings>
             </placement>
           </bundlePlacements>
         </screen>
@@ -5772,12 +5794,21 @@
             </placement>
             <placement code="ca_objects_deaccession">
               <bundle>ca_objects_deaccession</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Deaccession</setting>
+              </settings>
             </placement>
             <placement code="ca_object_representations">
               <bundle>ca_object_representations</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Media</setting>
+              </settings>
             </placement>
             <placement code="access">
               <bundle>access</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Access Control</setting>
+              </settings>
             </placement>
           </bundlePlacements>
         </screen>
@@ -5910,6 +5941,9 @@
             </placement>
             <placement code="ca_object_representations">
               <bundle>ca_object_representations</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Media</setting>
+              </settings>
             </placement>
           </bundlePlacements>
         </screen>
@@ -6121,7 +6155,7 @@
             <placement code="ca_object_representations">
               <bundle>ca_object_representations</bundle>
               <settings>
-                <setting name="label" locale="en_AU">Conservation Images</setting>
+                <setting name="label" locale="en_AU">Conservation Media</setting>
               </settings>
             </placement>
           </bundlePlacements>
@@ -6243,6 +6277,9 @@
             </placement>
             <placement code="access">
               <bundle>access</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Access Control</setting>
+              </settings>
             </placement>
             <placement code="status">
               <bundle>status</bundle>
@@ -6329,6 +6366,9 @@
             </placement>
             <placement code="access">
               <bundle>access</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Access Control</setting>
+              </settings>
             </placement>
             <placement code="status">
               <bundle>status</bundle>
@@ -6518,6 +6558,9 @@
             </placement>
             <placement code="access">
               <bundle>access</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Access Control</setting>
+              </settings>
             </placement>
             <placement code="status">
               <bundle>status</bundle>
@@ -6598,6 +6641,9 @@
             </placement>
             <placement code="access">
               <bundle>access</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Access Control</setting>
+              </settings>
             </placement>
             <placement code="status">
               <bundle>status</bundle>
@@ -6684,6 +6730,9 @@
             </placement>
             <placement code="access">
               <bundle>access</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Access Control</setting>
+              </settings>
             </placement>
             <placement code="status">
               <bundle>status</bundle>
@@ -7724,6 +7773,9 @@
         </placement>
         <placement code="access">
           <bundle>ca_objects.access</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Access Control</setting>
+          </settings>
         </placement>
         <placement code="status">
           <bundle>ca_objects.status</bundle>
@@ -7757,6 +7809,9 @@
         </placement>
         <placement code="access">
           <bundle>ca_entities.access</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Access Control</setting>
+          </settings>
         </placement>
         <placement code="status">
           <bundle>ca_entities.status</bundle>
@@ -7784,6 +7839,9 @@
         </placement>
         <placement code="access">
           <bundle>ca_places.access</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Access Control</setting>
+          </settings>
         </placement>
         <placement code="status">
           <bundle>ca_places.status</bundle>
@@ -7811,6 +7869,9 @@
         </placement>
         <placement code="access">
           <bundle>ca_places.access</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Access Control</setting>
+          </settings>
         </placement>
         <placement code="status">
           <bundle>ca_places.status</bundle>
@@ -7838,6 +7899,9 @@
         </placement>
         <placement code="access">
           <bundle>ca_collections.access</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Access Control</setting>
+          </settings>
         </placement>
         <placement code="status">
           <bundle>ca_collections.status</bundle>
