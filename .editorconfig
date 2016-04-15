@@ -11,6 +11,6 @@ end_of_line = lf
 insert_final_newline = true
 charset = utf-8
 
-[{*.xml,*.xsd}]
+[{*.xml,*.xsd,*.xslt}]
 # match the output from CollectiveAccess profile export
 indent_size = 2
