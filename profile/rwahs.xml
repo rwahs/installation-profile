@@ -4860,6 +4860,8 @@
         <permission group="admin" access="edit"/>
         <permission group="museum" access="edit"/>
         <permission group="library" access="read"/>
+        <permission group="photograph" access="read"/>
+        <permission group="memorial" access="read"/>
       </groupAccess>
       <screens>
         <screen idno="administrationData" default="1">
@@ -5301,6 +5303,9 @@
       <groupAccess>
         <permission group="admin" access="edit"/>
         <permission group="library" access="edit"/>
+        <permission group="museum" access="read"/>
+        <permission group="photograph" access="read"/>
+        <permission group="memorial" access="read"/>
       </groupAccess>
       <screens>
         <screen idno="library" default="1">
@@ -5565,6 +5570,9 @@
       <groupAccess>
         <permission group="admin" access="edit"/>
         <permission group="photograph" access="edit"/>
+        <permission group="museum" access="read"/>
+        <permission group="library" access="read"/>
+        <permission group="memorial" access="read"/>
       </groupAccess>
       <screens>
         <screen idno="photograph" default="1">
@@ -5824,6 +5832,9 @@
       <groupAccess>
         <permission group="admin" access="edit"/>
         <permission group="memorial" access="edit"/>
+        <permission group="museum" access="read"/>
+        <permission group="library" access="read"/>
+        <permission group="photograph" access="read"/>
       </groupAccess>
       <screens>
         <screen idno="memorial" default="1">
