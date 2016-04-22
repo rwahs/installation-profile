@@ -8853,39 +8853,70 @@
     </display>
   </displays>
   <searchForms>
-    <searchForm code="ca_objects_adv_search" type="ca_objects" system="1">
+    <searchForm code="library_search" type="ca_objects" system="1">
       <labels>
         <label locale="en_AU">
-          <name>Extended search</name>
+          <name>Library search</name>
         </label>
       </labels>
       <settings>
         <setting name="form_width">3</setting>
       </settings>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="library" access="read"/>
+        <permission group="museum" access="read"/>
+        <permission group="photograph" access="read"/>
+        <permission group="memorial" access="read"/>
+      </groupAccess>
       <bundlePlacements>
+        <placement code="fulltext">
+          <bundle>_fulltext</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Keywords (Full text)</setting>
+          </settings>
+        </placement>
         <placement code="preferred_labels">
           <bundle>ca_object_labels.name</bundle>
           <settings>
             <setting name="label" locale="en_AU">Title</setting>
           </settings>
         </placement>
-        <placement code="idno">
-          <bundle>ca_objects.idno</bundle>
-        </placement>
-        <placement code="type_id">
-          <bundle>ca_objects.type_id</bundle>
-        </placement>
-        <placement code="ca_entities">
-          <bundle>ca_entity_labels.displayname</bundle>
-        </placement>
-        <placement code="access">
-          <bundle>ca_objects.access</bundle>
+        <placement code="Author">
+          <bundle>ca_objects.Author</bundle>
           <settings>
-            <setting name="label" locale="en_AU">Access Control</setting>
+            <setting name="label" locale="en_AU">Name of author</setting>
           </settings>
         </placement>
-        <placement code="status">
-          <bundle>ca_objects.status</bundle>
+        <placement code="Publisher">
+          <bundle>ca_objects.Publisher</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Publisher</setting>
+          </settings>
+        </placement>
+        <placement code="DateOfPublication">
+          <bundle>ca_objects.DateOfPublication</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Date of publication</setting>
+          </settings>
+        </placement>
+        <placement code="PublicationType">
+          <bundle>ca_objects.PublicationType</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Type of publication</setting>
+          </settings>
+        </placement>
+        <placement code="idno">
+          <bundle>ca_objects.idno</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Accession no.</setting>
+          </settings>
+        </placement>
+        <placement code="LibraryNumber">
+          <bundle>ca_objects.LibraryNumber</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Library no.</setting>
+          </settings>
         </placement>
       </bundlePlacements>
     </searchForm>
