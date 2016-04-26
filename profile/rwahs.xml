@@ -9080,7 +9080,7 @@
           <bundle>ca_objects.HistoricalDetails</bundle>
         </placement>
         <placement code="Donor">
-          <bundle>ca_entities</bundle>
+          <bundle>ca_entity_labels.displayname</bundle>
           <settings>
             <setting name="label" locale="en_AU">Donor</setting>
             <setting name="restrict_to_relationship_types">donor</setting>
