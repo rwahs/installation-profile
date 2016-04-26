@@ -8687,7 +8687,7 @@
           </settings>
         </placement>
         <placement code="Thumbnail">
-          <bundle>ca_object_representations.thumbnail</bundle>
+          <bundle>ca_object_representations.media.thumbnail</bundle>
           <settings>
             <setting name="label" locale="en_AU">Thumbnail</setting>
           </settings>
