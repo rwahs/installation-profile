@@ -8648,6 +8648,58 @@
         </placement>
       </bundlePlacements>
     </display>
+    <display code="museum_object_search" type="ca_objects" system="1">
+      <labels>
+        <label locale="en_AU">
+          <name>Museum Object search</name>
+        </label>
+      </labels>
+      <bundlePlacements>
+        <placement code="preferred_labels">
+          <bundle>ca_object_labels.name</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Item Name</setting>
+          </settings>
+        </placement>
+        <placement code="ItemDates">
+          <bundle>ca_objects.ItemDates</bundle>
+        </placement>
+        <placement code="Description">
+          <bundle>ca_objects.Description</bundle>
+        </placement>
+        <placement code="MakersMarks">
+          <bundle>ca_objects.MakersMarks</bundle>
+        </placement>
+        <placement code="HistoricalDetails">
+          <bundle>ca_objects.HistoricalDetails</bundle>
+        </placement>
+        <placement code="Donor">
+          <bundle>ca_entities</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Donor</setting>
+            <setting name="restrict_to_relationship_types">donor</setting>
+          </settings>
+        </placement>
+        <placement code="Location">
+          <bundle>ca_objects.ca_objects_location</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Location</setting>
+          </settings>
+        </placement>
+        <placement code="Thumbnail">
+          <bundle>ca_object_representations.media.thumbnail</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Thumbnail</setting>
+          </settings>
+        </placement>
+        <placement code="idno">
+          <bundle>ca_objects.idno</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Accession number</setting>
+          </settings>
+        </placement>
+      </bundlePlacements>
+    </display>
     <display code="photograph_object_display" type="ca_objects" system="1">
       <labels>
         <label locale="en_AU">
@@ -8932,7 +8984,7 @@
           <bundle>hideme</bundle>
           <!-- Adding this bundle to work around the issue where the first item in the form ends up the last item on the page-->
         </placement>
-        <placement code="fultext">
+        <placement code="fulltext">
           <bundle>_fulltext</bundle>
           <settings>
             <setting name="label" locale="en_AU">Keywords (Full text)</setting>
@@ -8978,6 +9030,72 @@
           <bundle>ca_objects.LibraryNumber</bundle>
           <settings>
             <setting name="label" locale="en_AU">Library no.</setting>
+          </settings>
+        </placement>
+      </bundlePlacements>
+    </searchForm>
+    <searchForm code="museum_search" type="ca_objects" system="1">
+      <labels>
+        <label locale="en_AU">
+          <name>Museum search</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="form_width">3</setting>
+      </settings>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="library" access="read"/>
+        <permission group="museum" access="read"/>
+        <permission group="photograph" access="read"/>
+        <permission group="memorial" access="read"/>
+      </groupAccess>
+      <bundlePlacements>
+        <placement code="hideme">
+          <bundle>hideme</bundle>
+          <!-- Adding this bundle to work around the issue where the first item in the form ends up the last item on the page-->
+        </placement>
+        <placement code="fulltext">
+          <bundle>_fulltext</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Keywords (Full text)</setting>
+          </settings>
+        </placement>
+        <placement code="preferred_labels">
+          <bundle>ca_object_labels.name</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Item Name</setting>
+          </settings>
+        </placement>
+        <placement code="ItemDates">
+          <bundle>ca_objects.ItemDates</bundle>
+        </placement>
+        <placement code="Description">
+          <bundle>ca_objects.Description</bundle>
+        </placement>
+        <placement code="MakersMarks">
+          <bundle>ca_objects.MakersMarks</bundle>
+        </placement>
+        <placement code="HistoricalDetails">
+          <bundle>ca_objects.HistoricalDetails</bundle>
+        </placement>
+        <placement code="Donor">
+          <bundle>ca_entities</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Donor</setting>
+            <setting name="restrict_to_relationship_types">donor</setting>
+          </settings>
+        </placement>
+        <placement code="Location">
+          <bundle>ca_storage_location_labels.name</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Location</setting>
+          </settings>
+        </placement>
+        <placement code="idno">
+          <bundle>ca_objects.idno</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Accession number</setting>
           </settings>
         </placement>
       </bundlePlacements>
