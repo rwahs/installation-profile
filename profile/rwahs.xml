@@ -8870,7 +8870,11 @@
         <permission group="memorial" access="read"/>
       </groupAccess>
       <bundlePlacements>
-        <placement code="fulltext">
+        <placement code="hideme">
+          <bundle>hideme</bundle>
+          <!-- Adding this bundle to work around the issue where the first item in the form ends up the last item on the page-->
+        </placement>
+        <placement code="fultext">
           <bundle>_fulltext</bundle>
           <settings>
             <setting name="label" locale="en_AU">Keywords (Full text)</setting>
