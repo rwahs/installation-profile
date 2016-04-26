@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="profile.xsd" useForConfiguration="1" base="base_en_AU" infoUrl="https://github.com/rwahs/providence">
+<?xml version="1.0" encoding="UTF-8"?><profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="profile.xsd" useForConfiguration="1" infoUrl="https://github.com/rwahs/providence">
   <profileName>RWAHS - Royal Western Australian Historical Society</profileName>
   <profileDescription>Royal Western Australian Historical Society profile</profileDescription>
   <locales>
