@@ -9087,7 +9087,7 @@
           </settings>
         </placement>
         <placement code="Location">
-          <bundle>location</bundle>
+          <bundle>ca_storage_location_labels.name</bundle>
           <settings>
             <setting name="label" locale="en_AU">Location</setting>
           </settings>
