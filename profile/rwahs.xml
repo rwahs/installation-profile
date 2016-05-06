@@ -4981,7 +4981,7 @@
                     </unit>
                   </unit>
 
-                ]]></setting>
+                  ]]></setting>
               </settings>
             </placement>
             <placement code="ca_objects_location">
@@ -5130,7 +5130,7 @@
                     </ifdef>
                   </dl>
 
-                ]]></setting>
+                  ]]></setting>
                 <setting name="minRelationshipsPerRow"/>
                 <setting name="maxRelationshipsPerRow">255</setting>
                 <setting name="showCurrentOnly">0</setting>
@@ -5242,7 +5242,7 @@
                       <l>^ca_object_representations.media.medium</l>
                   </unit>
 
-                ]]></setting>
+                  ]]></setting>
               </settings>
             </placement>
             <placement code="ca_attribute_PhysicalCondition">
@@ -5371,7 +5371,7 @@
                     </ifdef>
                   </dl>
 
-                ]]></setting>
+                  ]]></setting>
                 <setting name="minRelationshipsPerRow"/>
                 <setting name="maxRelationshipsPerRow">255</setting>
                 <setting name="showCurrentOnly">0</setting>
@@ -5626,7 +5626,7 @@
                     </ifdef>
                   </dl>
 
-                ]]></setting>
+                  ]]></setting>
                 <setting name="minRelationshipsPerRow"/>
                 <setting name="maxRelationshipsPerRow">255</setting>
                 <setting name="showCurrentOnly">0</setting>
@@ -5874,7 +5874,7 @@
                     </ifdef>
                   </dl>
 
-                ]]></setting>
+                  ]]></setting>
                 <setting name="minRelationshipsPerRow"/>
                 <setting name="maxRelationshipsPerRow">255</setting>
                 <setting name="showCurrentOnly">0</setting>
@@ -6765,7 +6765,7 @@
                     </unit>
                   </unit>
 
-                ]]></setting>
+                  ]]></setting>
                 <setting name="minRelationshipsPerRow">1</setting>
                 <setting name="maxRelationshipsPerRow">1</setting>
                 <setting name="showCurrentOnly">1</setting>
@@ -7882,7 +7882,7 @@
           <bundle>ca_objects.Series</bundle>
           <settings/>
         </placement>
-        <placement code="subject">
+        <placement code="Subject">
           <bundle>ca_occurrences</bundle>
           <settings>
             <setting name="label" locale="en_AU">Subject headings</setting>
@@ -8126,7 +8126,7 @@
           <bundle>ca_objects.Dates</bundle>
           <settings/>
         </placement>
-        <placement code="subject">
+        <placement code="Subject">
           <bundle>ca_occurrences</bundle>
           <settings>
             <setting name="label" locale="en_AU">Subject headings</setting>
@@ -8695,7 +8695,7 @@
           <bundle>ca_objects.PhysicalDescription</bundle>
           <settings/>
         </placement>
-        <placement code="subject">
+        <placement code="Subject">
           <bundle>ca_occurrences</bundle>
           <settings>
             <setting name="label" locale="en_AU">Subject authority list</setting>
@@ -8965,13 +8965,6 @@
         <placement code="ca_entities">
           <bundle>ca_entities</bundle>
           <settings/>
-        </placement>
-        <placement code="ca_events">
-          <bundle>ca_occurrences</bundle>
-          <settings>
-            <setting name="restrict_to_type">Event</setting>
-            <setting name="label" locale="en_AU">Related events</setting>
-          </settings>
         </placement>
         <placement code="ca_places">
           <bundle>ca_places</bundle>
