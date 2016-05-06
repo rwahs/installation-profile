@@ -5335,9 +5335,6 @@
                 <setting name="readonly"/>
                 <setting name="expand_collapse_value">dont_force</setting>
                 <setting name="expand_collapse_no_value">dont_force</setting>
-                <setting name="restrict_to_relationship_types">depicts</setting>
-                <setting name="restrict_to_relationship_types">used</setting>
-                <setting name="restrict_to_relationship_types">describes</setting>
                 <setting name="restrict_to_relationship_types">subject</setting>
                 <setting name="restrict_to_types">Subject</setting>
                 <setting name="dont_include_subtypes_in_type_restriction">0</setting>
@@ -7889,9 +7886,6 @@
             <setting name="readonly"/>
             <setting name="expand_collapse_value">dont_force</setting>
             <setting name="expand_collapse_no_value">dont_force</setting>
-            <setting name="restrict_to_relationship_types">depicts</setting>
-            <setting name="restrict_to_relationship_types">used</setting>
-            <setting name="restrict_to_relationship_types">describes</setting>
             <setting name="restrict_to_relationship_types">subject</setting>
             <setting name="restrict_to_types">Subject</setting>
             <setting name="dont_include_subtypes_in_type_restriction">0</setting>
@@ -7925,7 +7919,7 @@
                     </ifdef>
                   </dl>
 
-                ]]></setting>
+                  ]]></setting>
             <setting name="minRelationshipsPerRow"/>
             <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
@@ -8169,7 +8163,7 @@
                     </ifdef>
                   </dl>
 
-                ]]></setting>
+                  ]]></setting>
             <setting name="minRelationshipsPerRow"/>
             <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
@@ -8357,7 +8351,7 @@
                     </unit>
                   </unit>
 
-                ]]></setting>
+                  ]]></setting>
           </settings>
         </placement>
         <placement code="ca_objects_location">
@@ -8512,7 +8506,7 @@
                     </ifdef>
                   </dl>
 
-                ]]></setting>
+                  ]]></setting>
             <setting name="minRelationshipsPerRow"/>
             <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
@@ -8624,7 +8618,7 @@
                       <l>^ca_object_representations.media.medium</l>
                   </unit>
 
-                ]]></setting>
+                  ]]></setting>
           </settings>
         </placement>
         <placement code="ca_attribute_PhysicalCondition">
@@ -8738,7 +8732,7 @@
                     </ifdef>
                   </dl>
 
-                ]]></setting>
+                  ]]></setting>
             <setting name="minRelationshipsPerRow"/>
             <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
@@ -9222,7 +9216,7 @@
                     </unit>
                   </unit>
 
-                ]]></setting>
+                  ]]></setting>
             <setting name="minRelationshipsPerRow">1</setting>
             <setting name="maxRelationshipsPerRow">1</setting>
             <setting name="showCurrentOnly">1</setting>
