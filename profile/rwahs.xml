@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="profile.xsd"
-         useForConfiguration="1" base="base_en_AU" infoUrl="https://github.com/rwahs/providence">
+<?xml version="1.0" encoding="UTF-8"?><profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="profile.xsd" useForConfiguration="1" base="base_en_AU" infoUrl="https://github.com/rwahs/providence">
   <profileName>RWAHS - Royal Western Australian Historical Society</profileName>
   <profileDescription>Royal Western Australian Historical Society profile</profileDescription>
   <locales>
@@ -306,55 +304,13 @@
         </label>
       </labels>
       <items>
-        <item idno="subject" enabled="1" default="0">
+        <item idno="Subject" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
-              <name_singular>Subject List Entry</name_singular>
-              <name_plural>Subject List Entries</name_plural>
+              <name_singular>Subject</name_singular>
+              <name_plural>Subjects</name_plural>
             </label>
           </labels>
-          <items>
-            <item idno="Person" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Person</name_singular>
-                  <name_plural>People</name_plural>
-                </label>
-              </labels>
-            </item>
-            <item idno="Organization" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Organization</name_singular>
-                  <name_plural>Organizations</name_plural>
-                </label>
-              </labels>
-            </item>
-            <item idno="Topic" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Topic</name_singular>
-                  <name_plural>Topics</name_plural>
-                </label>
-              </labels>
-            </item>
-            <item idno="Place" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Place</name_singular>
-                  <name_plural>Places</name_plural>
-                </label>
-              </labels>
-            </item>
-            <item idno="Event" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Event</name_singular>
-                  <name_plural>Events</name_plural>
-                </label>
-              </labels>
-            </item>
-          </items>
         </item>
         <item idno="Conservation" enabled="1" default="0">
           <labels>
@@ -1160,9 +1116,9 @@
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
-        <restriction code="subject">
+        <restriction code="Subject">
           <table>ca_occurrences</table>
-          <type>subject</type>
+          <type>Subject</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -1205,7 +1161,7 @@
         </restriction>
         <restriction code="occurrences">
           <table>ca_occurrences</table>
-          <type>subject</type>
+          <type>Subject</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -1640,7 +1596,7 @@
         </restriction>
         <restriction code="r3">
           <table>ca_occurrences</table>
-          <type>subject</type>
+          <type>Subject</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -4696,7 +4652,7 @@
       <typeRestrictions>
         <restriction code="museum_SubjectDates">
           <table>ca_occurrences</table>
-          <type>subject</type>
+          <type>Subject</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -4728,10 +4684,19 @@
           <name>Association</name>
         </label>
       </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">115</setting>
+        <setting name="fieldHeight">3</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
       <typeRestrictions>
         <restriction code="interstitial_object_Association">
           <table>ca_objects_x_occurrences</table>
-          <type>describes</type>
+          <!-- This is the code of the relationship type, not the occurrence type-->
+          <type>subject</type>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -4740,6 +4705,8 @@
         </restriction>
         <restriction code="interstitial_occurrence_Association">
           <table>ca_occurrences_x_occurrences</table>
+          <!-- This is the code of the relationship type, not the occurrence type-->
+          <type>subject</type>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -5066,11 +5033,13 @@
                 <setting name="showCurrentOnly">1</setting>
                 <setting name="useHierarchicalBrowser">1</setting>
                 <setting name="display_template"><![CDATA[
+
                   <unit relativeTo="ca_storage_locations">
                     <unit relativeTo="ca_storage_locations.hierarchy">
                       <l>^preferred_labels</l>
                     </unit>
                   </unit>
+
                   ]]></setting>
               </settings>
             </placement>
@@ -5080,6 +5049,7 @@
                 <setting name="label" locale="en_AU">Stored Location</setting>
                 <setting name="locationTrackingMode">ca_movements</setting>
                 <setting name="displayTemplate"><![CDATA[
+
                   <unit relativeTo="ca_movements">
                     <unit relativeTo="ca_storage_locations">
                       <unit relativeTo="ca_storage_locations.hierarchy">
@@ -5088,8 +5058,10 @@
                     </unit>
                     (Status: ^LocationStatus, Authorised by: ^AuthorizedBy on ^MovementDate)
                   </unit>
+
                   ]]></setting>
                 <setting name="historyTemplate"><![CDATA[
+
                   <unit relativeTo="ca_movements">
                     <unit relativeTo="ca_storage_locations">
                       <unit relativeTo="ca_storage_locations.hierarchy">
@@ -5098,6 +5070,7 @@
                     </unit>
                     (Status: ^LocationStatus, Authorised by: ^AuthorizedBy on ^MovementDate)
                   </unit>
+
                   ]]></setting>
               </settings>
             </placement>
@@ -5183,16 +5156,14 @@
                 <setting name="restrict_to_relationship_types">depicts</setting>
                 <setting name="restrict_to_relationship_types">used</setting>
                 <setting name="restrict_to_relationship_types">describes</setting>
-                <setting name="restrict_to_types">Event</setting>
-                <setting name="restrict_to_types">Organization</setting>
-                <setting name="restrict_to_types">Person</setting>
-                <setting name="restrict_to_types">Place</setting>
-                <setting name="restrict_to_types">Topic</setting>
+                <setting name="restrict_to_relationship_types">subject</setting>
+                <setting name="restrict_to_types">Subject</setting>
                 <setting name="dont_include_subtypes_in_type_restriction">0</setting>
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
                 <setting name="dontShowDeleteButton">0</setting>
                 <setting name="display_template"><![CDATA[
+
                   <dl>
                     <dt>Subject:</dt>
                     <dd>
@@ -5204,8 +5175,6 @@
                       <dt>Subject Dates:</dt>
                       <dd>^ca_occurrences.SubjectDates</dd>
                     </ifdef>
-                    <dt>Type:</dt>
-                    <dd>^ca_occurrences.type_id</dd>
                     <ifdef code="ca_occurrences.Description">
                       <dt>Description:</dt>
                       <dd>^ca_occurrences.Description</dd>
@@ -5215,10 +5184,11 @@
                       <dd>^ca_objects_x_occurrences.Association</dd>
                     </ifdef>
                     <ifdef code="ca_objects_x_occurrences.SubjectDates">
-                      <dt>Dates:</dt>
+                      <dt>Relationship Dates:</dt>
                       <dd>^ca_objects_x_occurrences.SubjectDates</dd>
                     </ifdef>
                   </dl>
+
                   ]]></setting>
                 <setting name="minRelationshipsPerRow"/>
                 <setting name="maxRelationshipsPerRow">255</setting>
@@ -5310,6 +5280,7 @@
                 <setting name="maxRelationshipsPerRow">255</setting>
                 <setting name="showCurrentOnly">0</setting>
                 <setting name="display_template"><![CDATA[
+
                   <unit relativeTo="ca_occurrences">
                     <l>^preferred_labels (^idno)</l>
                     <dl>
@@ -5329,6 +5300,7 @@
                       </ifdef>
                       <l>^ca_object_representations.media.medium</l>
                   </unit>
+
                   ]]></setting>
               </settings>
             </placement>
@@ -5415,27 +5387,21 @@
             <placement code="ca_attribute_Series">
               <bundle>ca_attribute_Series</bundle>
             </placement>
-            <placement code="subject">
+            <placement code="Subject">
               <bundle>ca_occurrences</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Subject headings</setting>
                 <setting name="readonly"/>
                 <setting name="expand_collapse_value">dont_force</setting>
                 <setting name="expand_collapse_no_value">dont_force</setting>
-                <setting name="restrict_to_relationship_types">depicts</setting>
-                <setting name="restrict_to_relationship_types">used</setting>
-                <setting name="restrict_to_relationship_types">describes</setting>
-                <setting name="restrict_to_types">Event</setting>
-                <setting name="restrict_to_types">Organization</setting>
-                <setting name="restrict_to_types">Person</setting>
-                <setting name="restrict_to_types">Place</setting>
-                <setting name="restrict_to_types">Topic</setting>
-                <setting name="restrict_to_types">subject</setting>
+                <setting name="restrict_to_relationship_types">subject</setting>
+                <setting name="restrict_to_types">Subject</setting>
                 <setting name="dont_include_subtypes_in_type_restriction">0</setting>
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
                 <setting name="dontShowDeleteButton">0</setting>
                 <setting name="display_template"><![CDATA[
+
                   <dl>
                     <dt>Subject:</dt>
                     <dd>
@@ -5447,8 +5413,6 @@
                       <dt>Subject Dates:</dt>
                       <dd>^ca_occurrences.SubjectDates</dd>
                     </ifdef>
-                    <dt>Type:</dt>
-                    <dd>^ca_occurrences.type_id</dd>
                     <ifdef code="ca_occurrences.Description">
                       <dt>Description:</dt>
                       <dd>^ca_occurrences.Description</dd>
@@ -5458,10 +5422,11 @@
                       <dd>^ca_objects_x_occurrences.Association</dd>
                     </ifdef>
                     <ifdef code="ca_objects_x_occurrences.SubjectDates">
-                      <dt>Dates:</dt>
+                      <dt>Relationship Dates:</dt>
                       <dd>^ca_objects_x_occurrences.SubjectDates</dd>
                     </ifdef>
                   </dl>
+
                   ]]></setting>
                 <setting name="minRelationshipsPerRow"/>
                 <setting name="maxRelationshipsPerRow">255</setting>
@@ -5674,7 +5639,7 @@
             <placement code="ca_attribute_PhysicalDescription">
               <bundle>ca_attribute_PhysicalDescription</bundle>
             </placement>
-            <placement code="subject">
+            <placement code="Subject">
               <bundle>ca_occurrences</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Subject authority list</setting>
@@ -5684,17 +5649,14 @@
                 <setting name="restrict_to_relationship_types">depicts</setting>
                 <setting name="restrict_to_relationship_types">used</setting>
                 <setting name="restrict_to_relationship_types">describes</setting>
-                <setting name="restrict_to_types">Event</setting>
-                <setting name="restrict_to_types">Organization</setting>
-                <setting name="restrict_to_types">Person</setting>
-                <setting name="restrict_to_types">Place</setting>
-                <setting name="restrict_to_types">Topic</setting>
-                <setting name="restrict_to_types">subject</setting>
+                <setting name="restrict_to_relationship_types">subject</setting>
+                <setting name="restrict_to_types">Subject</setting>
                 <setting name="dont_include_subtypes_in_type_restriction">0</setting>
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
                 <setting name="dontShowDeleteButton">0</setting>
                 <setting name="display_template"><![CDATA[
+
                   <dl>
                     <dt>Subject:</dt>
                     <dd>
@@ -5706,8 +5668,6 @@
                       <dt>Subject Dates:</dt>
                       <dd>^ca_occurrences.SubjectDates</dd>
                     </ifdef>
-                    <dt>Type:</dt>
-                    <dd>^ca_occurrences.type_id</dd>
                     <ifdef code="ca_occurrences.Description">
                       <dt>Description:</dt>
                       <dd>^ca_occurrences.Description</dd>
@@ -5717,10 +5677,11 @@
                       <dd>^ca_objects_x_occurrences.Association</dd>
                     </ifdef>
                     <ifdef code="ca_objects_x_occurrences.SubjectDates">
-                      <dt>Dates:</dt>
+                      <dt>Relationship Dates:</dt>
                       <dd>^ca_objects_x_occurrences.SubjectDates</dd>
                     </ifdef>
                   </dl>
+
                   ]]></setting>
                 <setting name="minRelationshipsPerRow"/>
                 <setting name="maxRelationshipsPerRow">255</setting>
@@ -5926,7 +5887,7 @@
             <placement code="ca_attribute_Dates">
               <bundle>ca_attribute_Dates</bundle>
             </placement>
-            <placement code="subject">
+            <placement code="Subject">
               <bundle>ca_occurrences</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Subject headings</setting>
@@ -5936,16 +5897,14 @@
                 <setting name="restrict_to_relationship_types">depicts</setting>
                 <setting name="restrict_to_relationship_types">used</setting>
                 <setting name="restrict_to_relationship_types">describes</setting>
-                <setting name="restrict_to_types">Event</setting>
-                <setting name="restrict_to_types">Organization</setting>
-                <setting name="restrict_to_types">Person</setting>
-                <setting name="restrict_to_types">Place</setting>
-                <setting name="restrict_to_types">Topic</setting>
+                <setting name="restrict_to_relationship_types">subject</setting>
+                <setting name="restrict_to_types">Subject</setting>
                 <setting name="dont_include_subtypes_in_type_restriction">0</setting>
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
                 <setting name="dontShowDeleteButton">0</setting>
                 <setting name="display_template"><![CDATA[
+
                   <dl>
                     <dt>Subject:</dt>
                     <dd>
@@ -5957,8 +5916,6 @@
                       <dt>Subject Dates:</dt>
                       <dd>^ca_occurrences.SubjectDates</dd>
                     </ifdef>
-                    <dt>Type:</dt>
-                    <dd>^ca_occurrences.type_id</dd>
                     <ifdef code="ca_occurrences.Description">
                       <dt>Description:</dt>
                       <dd>^ca_occurrences.Description</dd>
@@ -5968,10 +5925,11 @@
                       <dd>^ca_objects_x_occurrences.Association</dd>
                     </ifdef>
                     <ifdef code="ca_objects_x_occurrences.SubjectDates">
-                      <dt>Dates:</dt>
+                      <dt>Relationship Dates:</dt>
                       <dd>^ca_objects_x_occurrences.SubjectDates</dd>
                     </ifdef>
                   </dl>
+
                   ]]></setting>
                 <setting name="minRelationshipsPerRow"/>
                 <setting name="maxRelationshipsPerRow">255</setting>
@@ -6087,13 +6045,6 @@
             <placement code="ca_entities">
               <bundle>ca_entities</bundle>
             </placement>
-            <placement code="ca_events">
-              <bundle>ca_occurrences</bundle>
-              <settings>
-                <setting name="restrict_to_type">Event</setting>
-                <setting name="label" locale="en_AU">Related events</setting>
-              </settings>
-            </placement>
             <placement code="ca_places">
               <bundle>ca_places</bundle>
             </placement>
@@ -6114,7 +6065,7 @@
         </label>
       </labels>
       <typeRestrictions>
-        <restriction type="subject"/>
+        <restriction type="Subject"/>
       </typeRestrictions>
       <groupAccess>
         <permission group="admin" access="edit"/>
@@ -6131,7 +6082,7 @@
             <placement code="idno">
               <bundle>idno</bundle>
               <settings>
-                <setting name="label" locale="en_AU">Subject Name</setting>
+                <setting name="label" locale="en_AU">Subject Identifier</setting>
               </settings>
             </placement>
             <placement code="preferred_labels">
@@ -6460,13 +6411,6 @@
             </placement>
             <placement code="ca_entities">
               <bundle>ca_entities</bundle>
-            </placement>
-            <placement code="ca_events">
-              <bundle>ca_occurrences</bundle>
-              <settings>
-                <setting name="restrict_to_type">Event</setting>
-                <setting name="label" locale="en_AU">Related events</setting>
-              </settings>
             </placement>
             <placement code="ca_places">
               <bundle>ca_places</bundle>
@@ -6876,6 +6820,7 @@
                       <l>^preferred_labels</l>
                     </unit>
                   </unit>
+
                   ]]></setting>
                 <setting name="minRelationshipsPerRow">1</setting>
                 <setting name="maxRelationshipsPerRow">1</setting>
@@ -6975,7 +6920,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>Event</subTypeRight>
+          <subTypeRight>Subject</subTypeRight>
         </type>
         <type code="used" default="0">
           <labels>
@@ -6985,7 +6930,17 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>Event</subTypeRight>
+          <subTypeRight>Subject</subTypeRight>
+        </type>
+        <type code="subject" default="0">
+          <labels>
+            <label locale="en_AU">
+              <typename>has subject</typename>
+              <typename_reverse>is subject of</typename_reverse>
+            </label>
+          </labels>
+          <subTypeLeft/>
+          <subTypeRight>Subject</subTypeRight>
         </type>
         <type code="describes" default="0">
           <labels>
@@ -7078,6 +7033,16 @@
           </labels>
           <subTypeLeft/>
           <subTypeRight/>
+        </type>
+        <type code="subject" default="1">
+          <labels>
+            <label locale="en_AU">
+              <typename>has related subject</typename>
+              <typename_reverse>has related subject</typename_reverse>
+            </label>
+          </labels>
+          <subTypeLeft>Subject</subTypeLeft>
+          <subTypeRight>Subject</subTypeRight>
         </type>
       </types>
     </relationshipTable>
@@ -7255,7 +7220,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>Event</subTypeRight>
+          <subTypeRight>Subject</subTypeRight>
         </type>
       </types>
     </relationshipTable>
@@ -7395,7 +7360,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>Event</subTypeRight>
+          <subTypeRight>Subject</subTypeRight>
         </type>
       </types>
     </relationshipTable>
@@ -7537,7 +7502,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>Event</subTypeRight>
+          <subTypeRight>Subject</subTypeRight>
         </type>
         <type code="describes" default="1">
           <labels>
@@ -7547,7 +7512,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>Event</subTypeRight>
+          <subTypeRight>Subject</subTypeRight>
         </type>
       </types>
     </relationshipTable>
@@ -7797,6 +7762,116 @@
         </placement>
       </bundlePlacements>
     </display>
+    <display code="library_search_display" type="ca_objects" system="1">
+      <labels>
+        <label locale="en_AU">
+          <name>Library Search display</name>
+        </label>
+      </labels>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="library" access="read"/>
+        <permission group="museum" access="read"/>
+        <permission group="photograph" access="read"/>
+        <permission group="memorial" access="read"/>
+      </groupAccess>
+      <bundlePlacements>
+        <placement code="preferred_labels">
+          <bundle>ca_object_labels.name</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Title</setting>
+          </settings>
+        </placement>
+        <placement code="Author">
+          <bundle>ca_objects.Author</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Name of author</setting>
+          </settings>
+        </placement>
+        <placement code="Publisher">
+          <bundle>ca_objects.Publisher</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Publisher</setting>
+          </settings>
+        </placement>
+        <placement code="DateOfPublication">
+          <bundle>ca_objects.DateOfPublication</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Date of publication</setting>
+          </settings>
+        </placement>
+        <placement code="PublicationType">
+          <bundle>ca_objects.PublicationType</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Type of publication</setting>
+          </settings>
+        </placement>
+        <placement code="idno">
+          <bundle>ca_objects.idno</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Accession no.</setting>
+          </settings>
+        </placement>
+        <placement code="LibraryNumber">
+          <bundle>ca_objects.LibraryNumber</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Library no.</setting>
+          </settings>
+        </placement>
+      </bundlePlacements>
+    </display>
+    <display code="museum_object_search" type="ca_objects" system="1">
+      <labels>
+        <label locale="en_AU">
+          <name>Museum Object search</name>
+        </label>
+      </labels>
+      <bundlePlacements>
+        <placement code="preferred_labels">
+          <bundle>ca_object_labels.name</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Item Name</setting>
+          </settings>
+        </placement>
+        <placement code="ItemDates">
+          <bundle>ca_objects.ItemDates</bundle>
+        </placement>
+        <placement code="Description">
+          <bundle>ca_objects.Description</bundle>
+        </placement>
+        <placement code="MakersMarks">
+          <bundle>ca_objects.MakersMarks</bundle>
+        </placement>
+        <placement code="HistoricalDetails">
+          <bundle>ca_objects.HistoricalDetails</bundle>
+        </placement>
+        <placement code="Donor">
+          <bundle>ca_entities</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Donor</setting>
+            <setting name="restrict_to_relationship_types">donor</setting>
+          </settings>
+        </placement>
+        <placement code="Location">
+          <bundle>ca_objects.ca_objects_location</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Location</setting>
+          </settings>
+        </placement>
+        <placement code="Thumbnail">
+          <bundle>ca_object_representations.media.thumbnail</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Thumbnail</setting>
+          </settings>
+        </placement>
+        <placement code="idno">
+          <bundle>ca_objects.idno</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Accession number</setting>
+          </settings>
+        </placement>
+      </bundlePlacements>
+    </display>
     <display code="library_object_display" type="ca_objects" system="1">
       <labels>
         <label locale="en_AU">
@@ -7863,54 +7938,47 @@
           <bundle>ca_objects.Series</bundle>
           <settings/>
         </placement>
-        <placement code="subject">
+        <placement code="Subject">
           <bundle>ca_occurrences</bundle>
           <settings>
             <setting name="label" locale="en_AU">Subject headings</setting>
             <setting name="readonly"/>
             <setting name="expand_collapse_value">dont_force</setting>
             <setting name="expand_collapse_no_value">dont_force</setting>
-            <setting name="restrict_to_relationship_types">depicts</setting>
-            <setting name="restrict_to_relationship_types">used</setting>
-            <setting name="restrict_to_relationship_types">describes</setting>
-            <setting name="restrict_to_types">Event</setting>
-            <setting name="restrict_to_types">Organization</setting>
-            <setting name="restrict_to_types">Person</setting>
-            <setting name="restrict_to_types">Place</setting>
-            <setting name="restrict_to_types">Topic</setting>
-            <setting name="restrict_to_types">subject</setting>
+            <setting name="restrict_to_relationship_types">subject</setting>
+            <setting name="restrict_to_types">Subject</setting>
             <setting name="dont_include_subtypes_in_type_restriction">0</setting>
             <setting name="list_format">list</setting>
             <setting name="sortDirection">ASC</setting>
             <setting name="dontShowDeleteButton">0</setting>
             <setting name="display_template"><![CDATA[
-              <dl>
-                <dt>Subject:</dt>
-                <dd>
-                  <unit relativeTo="ca_occurrences">
-                    <l>^preferred_labels</l>
-                  </unit>
-                </dd>
-                <ifdef code="ca_occurrences.SubjectDates">
-                  <dt>Subject Dates:</dt>
-                  <dd>^ca_occurrences.SubjectDates</dd>
-                </ifdef>
-                <dt>Type:</dt>
-                <dd>^ca_occurrences.type_id</dd>
-                <ifdef code="ca_occurrences.Description">
-                  <dt>Description:</dt>
-                  <dd>^ca_occurrences.Description</dd>
-                </ifdef>
-                <ifdef code="ca_objects_x_occurrences.Association">
-                  <dt>Association:</dt>
-                  <dd>^ca_objects_x_occurrences.Association</dd>
-                </ifdef>
-                <ifdef code="ca_objects_x_occurrences.SubjectDates">
-                  <dt>Dates:</dt>
-                  <dd>^ca_objects_x_occurrences.SubjectDates</dd>
-                </ifdef>
-              </dl>
-              ]]></setting>
+
+                  <dl>
+                    <dt>Subject:</dt>
+                    <dd>
+                      <unit relativeTo="ca_occurrences">
+                        <l>^preferred_labels</l>
+                      </unit>
+                    </dd>
+                    <ifdef code="ca_occurrences.SubjectDates">
+                      <dt>Subject Dates:</dt>
+                      <dd>^ca_occurrences.SubjectDates</dd>
+                    </ifdef>
+                    <ifdef code="ca_occurrences.Description">
+                      <dt>Description:</dt>
+                      <dd>^ca_occurrences.Description</dd>
+                    </ifdef>
+                    <ifdef code="ca_objects_x_occurrences.Association">
+                      <dt>Association:</dt>
+                      <dd>^ca_objects_x_occurrences.Association</dd>
+                    </ifdef>
+                    <ifdef code="ca_objects_x_occurrences.SubjectDates">
+                      <dt>Relationship Dates:</dt>
+                      <dd>^ca_objects_x_occurrences.SubjectDates</dd>
+                    </ifdef>
+                  </dl>
+
+                  ]]></setting>
             <setting name="minRelationshipsPerRow"/>
             <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
@@ -7979,75 +8047,75 @@
             <setting name="maxRelationshipsPerRow">1</setting>
             <setting name="showCurrentOnly">0</setting>
             <setting name="display_template"><![CDATA[
-              <dl>
-                <dt>Donor Name:
-                </dt>
-                <dd>
-                  <unit relativeTo="ca_entities">
-                    <l><strong>^ca_entities.preferred_labels.displayname</strong> (^ca_entities.type_id)</l>
-                  </unit>
-                </dd>
-                <ifdef code="ca_entities.AddressContainer">
-                  <dt>Address:</dt>
-                  <dd>
-                    <ifdef code="ca_entities.AddressContainer.Address1">
-                      ^ca_entities.AddressContainer.Address1<br/>
+                  <dl>
+                    <dt>Donor Name:
+                    </dt>
+                    <dd>
+                      <unit relativeTo="ca_entities">
+                        <l><strong>^ca_entities.preferred_labels.displayname</strong> (^ca_entities.type_id)</l>
+                      </unit>
+                    </dd>
+                    <ifdef code="ca_entities.AddressContainer">
+                      <dt>Address:</dt>
+                      <dd>
+                        <ifdef code="ca_entities.AddressContainer.Address1">
+                          ^ca_entities.AddressContainer.Address1<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.Address2">
+                          ^ca_entities.AddressContainer.Address2<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.TownCity">
+                          ^ca_entities.AddressContainer.TownCity<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.State">
+                          ^ca_entities.AddressContainer.State
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.PostCode">
+                          ^ca_entities.AddressContainer.PostCode<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.Country">
+                          ^ca_entities.AddressContainer.Country
+                        </ifdef>
+                      </dd>
                     </ifdef>
-                    <ifdef code="ca_entities.AddressContainer.Address2">
-                      ^ca_entities.AddressContainer.Address2<br/>
+                    <ifdef code="ca_entities.Phone">
+                      <dt>Phone:</dt>
+                      <dd>^ca_entities.Phone</dd>
                     </ifdef>
-                    <ifdef code="ca_entities.AddressContainer.TownCity">
-                      ^ca_entities.AddressContainer.TownCity<br/>
+                    <ifdef code="ca_entities.MobilePhone">
+                      <dt>Mobile:</dt>
+                      <dd>^ca_entities.MobilePhone</dd>
                     </ifdef>
-                    <ifdef code="ca_entities.AddressContainer.State">
-                      ^ca_entities.AddressContainer.State
+                    <ifdef code="ca_entities.Fax">
+                      <dt>Fax:</dt>
+                      <dd>^ca_entities.Fax</dd>
                     </ifdef>
-                    <ifdef code="ca_entities.AddressContainer.PostCode">
-                      ^ca_entities.AddressContainer.PostCode<br/>
+                    <ifdef code="ca_entities.Email">
+                      <dt>Email:</dt>
+                      <dd>^ca_entities.Email</dd>
                     </ifdef>
-                    <ifdef code="ca_entities.AddressContainer.Country">
-                      ^ca_entities.AddressContainer.Country
+                    <ifdef code="ca_entities.DonorNotes">
+                      <dt>Notes:</dt>
+                      <dd>^ca_entities.DonorNotes</dd>
                     </ifdef>
-                  </dd>
-                </ifdef>
-                <ifdef code="ca_entities.Phone">
-                  <dt>Phone:</dt>
-                  <dd>^ca_entities.Phone</dd>
-                </ifdef>
-                <ifdef code="ca_entities.MobilePhone">
-                  <dt>Mobile:</dt>
-                  <dd>^ca_entities.MobilePhone</dd>
-                </ifdef>
-                <ifdef code="ca_entities.Fax">
-                  <dt>Fax:</dt>
-                  <dd>^ca_entities.Fax</dd>
-                </ifdef>
-                <ifdef code="ca_entities.Email">
-                  <dt>Email:</dt>
-                  <dd>^ca_entities.Email</dd>
-                </ifdef>
-                <ifdef code="ca_entities.DonorNotes">
-                  <dt>Notes:</dt>
-                  <dd>^ca_entities.DonorNotes</dd>
-                </ifdef>
-                <ifdef code="ca_entities.Deceased">
-                  <dt>Deceased:</dt>
-                  <dd>^ca_entities.Deceased</dd>
-                </ifdef>
-                <ifdef code="ca_entities.DonorAgentName">
-                  <dt>Donor agent name:</dt>
-                  <dd>^ca_entities.DonorAgentName</dd>
-                </ifdef>
-                <ifdef code="ca_entities.DonorAgentAddress">
-                  <dt>Donor agent's address:</dt>
-                  <dd>^ca_entities.DonorAgentAddress</dd>
-                </ifdef>
-                <ifdef code="ca_entities.DonorAgentPhone">
-                  <dt>Donor agent's Phone:</dt>
-                  <dd>^ca_entities.DonorAgentPhone</dd>
-                </ifdef>
-              </dl>
-              ]]></setting>
+                    <ifdef code="ca_entities.Deceased">
+                      <dt>Deceased:</dt>
+                      <dd>^ca_entities.Deceased</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorAgentName">
+                      <dt>Donor agent name:</dt>
+                      <dd>^ca_entities.DonorAgentName</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorAgentAddress">
+                      <dt>Donor agent's address:</dt>
+                      <dd>^ca_entities.DonorAgentAddress</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorAgentPhone">
+                      <dt>Donor agent's Phone:</dt>
+                      <dd>^ca_entities.DonorAgentPhone</dd>
+                    </ifdef>
+                  </dl>
+                  ]]></setting>
           </settings>
         </placement>
         <placement code="ca_objects_deaccession">
@@ -8060,64 +8128,6 @@
           <bundle>ca_objects.access</bundle>
           <settings>
             <setting name="label" locale="en_AU">Access Control</setting>
-          </settings>
-        </placement>
-      </bundlePlacements>
-    </display>
-    <display code="library_search_display" type="ca_objects" system="1">
-      <labels>
-        <label locale="en_AU">
-          <name>Library Search display</name>
-        </label>
-      </labels>
-      <groupAccess>
-        <permission group="admin" access="edit"/>
-        <permission group="library" access="read"/>
-        <permission group="museum" access="read"/>
-        <permission group="photograph" access="read"/>
-        <permission group="memorial" access="read"/>
-      </groupAccess>
-      <bundlePlacements>
-        <placement code="preferred_labels">
-          <bundle>ca_object_labels.name</bundle>
-          <settings>
-            <setting name="label" locale="en_AU">Title</setting>
-          </settings>
-        </placement>
-        <placement code="Author">
-          <bundle>ca_objects.Author</bundle>
-          <settings>
-            <setting name="label" locale="en_AU">Name of author</setting>
-          </settings>
-        </placement>
-        <placement code="Publisher">
-          <bundle>ca_objects.Publisher</bundle>
-          <settings>
-            <setting name="label" locale="en_AU">Publisher</setting>
-          </settings>
-        </placement>
-        <placement code="DateOfPublication">
-          <bundle>ca_objects.DateOfPublication</bundle>
-          <settings>
-            <setting name="label" locale="en_AU">Date of publication</setting>
-          </settings>
-        </placement>
-        <placement code="PublicationType">
-          <bundle>ca_objects.PublicationType</bundle>
-          <settings>
-            <setting name="label" locale="en_AU">Type of publication</setting>
-          </settings>
-        </placement>
-        <placement code="idno">
-          <bundle>ca_objects.idno</bundle>
-          <settings>
-            <setting name="label" locale="en_AU">Accession no.</setting>
-          </settings>
-        </placement>
-        <placement code="LibraryNumber">
-          <bundle>ca_objects.LibraryNumber</bundle>
-          <settings>
-            <setting name="label" locale="en_AU">Library no.</setting>
           </settings>
         </placement>
       </bundlePlacements>
@@ -8169,7 +8179,7 @@
           <bundle>ca_objects.Dates</bundle>
           <settings/>
         </placement>
-        <placement code="subject">
+        <placement code="Subject">
           <bundle>ca_occurrences</bundle>
           <settings>
             <setting name="label" locale="en_AU">Subject headings</setting>
@@ -8179,43 +8189,40 @@
             <setting name="restrict_to_relationship_types">depicts</setting>
             <setting name="restrict_to_relationship_types">used</setting>
             <setting name="restrict_to_relationship_types">describes</setting>
-            <setting name="restrict_to_types">Event</setting>
-            <setting name="restrict_to_types">Organization</setting>
-            <setting name="restrict_to_types">Person</setting>
-            <setting name="restrict_to_types">Place</setting>
-            <setting name="restrict_to_types">Topic</setting>
+            <setting name="restrict_to_relationship_types">subject</setting>
+            <setting name="restrict_to_types">Subject</setting>
             <setting name="dont_include_subtypes_in_type_restriction">0</setting>
             <setting name="list_format">list</setting>
             <setting name="sortDirection">ASC</setting>
             <setting name="dontShowDeleteButton">0</setting>
             <setting name="display_template"><![CDATA[
-              <dl>
-                <dt>Subject:</dt>
-                <dd>
-                  <unit relativeTo="ca_occurrences">
-                    <l>^preferred_labels</l>
-                  </unit>
-                </dd>
-                <ifdef code="ca_occurrences.SubjectDates">
-                  <dt>Subject Dates:</dt>
-                  <dd>^ca_occurrences.SubjectDates</dd>
-                </ifdef>
-                <dt>Type:</dt>
-                <dd>^ca_occurrences.type_id</dd>
-                <ifdef code="ca_occurrences.Description">
-                  <dt>Description:</dt>
-                  <dd>^ca_occurrences.Description</dd>
-                </ifdef>
-                <ifdef code="ca_objects_x_occurrences.Association">
-                  <dt>Association:</dt>
-                  <dd>^ca_objects_x_occurrences.Association</dd>
-                </ifdef>
-                <ifdef code="ca_objects_x_occurrences.SubjectDates">
-                  <dt>Dates:</dt>
-                  <dd>^ca_objects_x_occurrences.SubjectDates</dd>
-                </ifdef>
-              </dl>
-              ]]></setting>
+
+                  <dl>
+                    <dt>Subject:</dt>
+                    <dd>
+                      <unit relativeTo="ca_occurrences">
+                        <l>^preferred_labels</l>
+                      </unit>
+                    </dd>
+                    <ifdef code="ca_occurrences.SubjectDates">
+                      <dt>Subject Dates:</dt>
+                      <dd>^ca_occurrences.SubjectDates</dd>
+                    </ifdef>
+                    <ifdef code="ca_occurrences.Description">
+                      <dt>Description:</dt>
+                      <dd>^ca_occurrences.Description</dd>
+                    </ifdef>
+                    <ifdef code="ca_objects_x_occurrences.Association">
+                      <dt>Association:</dt>
+                      <dd>^ca_objects_x_occurrences.Association</dd>
+                    </ifdef>
+                    <ifdef code="ca_objects_x_occurrences.SubjectDates">
+                      <dt>Relationship Dates:</dt>
+                      <dd>^ca_objects_x_occurrences.SubjectDates</dd>
+                    </ifdef>
+                  </dl>
+
+                  ]]></setting>
             <setting name="minRelationshipsPerRow"/>
             <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
@@ -8282,75 +8289,75 @@
             <setting name="maxRelationshipsPerRow">1</setting>
             <setting name="showCurrentOnly">0</setting>
             <setting name="display_template"><![CDATA[
-              <dl>
-                <dt>Donor Name:
-                </dt>
-                <dd>
-                  <unit relativeTo="ca_entities">
-                    <l><strong>^ca_entities.preferred_labels.displayname</strong> (^ca_entities.type_id)</l>
-                  </unit>
-                </dd>
-                <ifdef code="ca_entities.AddressContainer">
-                  <dt>Address:</dt>
-                  <dd>
-                    <ifdef code="ca_entities.AddressContainer.Address1">
-                      ^ca_entities.AddressContainer.Address1<br/>
+                  <dl>
+                    <dt>Donor Name:
+                    </dt>
+                    <dd>
+                      <unit relativeTo="ca_entities">
+                        <l><strong>^ca_entities.preferred_labels.displayname</strong> (^ca_entities.type_id)</l>
+                      </unit>
+                    </dd>
+                    <ifdef code="ca_entities.AddressContainer">
+                      <dt>Address:</dt>
+                      <dd>
+                        <ifdef code="ca_entities.AddressContainer.Address1">
+                          ^ca_entities.AddressContainer.Address1<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.Address2">
+                          ^ca_entities.AddressContainer.Address2<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.TownCity">
+                          ^ca_entities.AddressContainer.TownCity<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.State">
+                          ^ca_entities.AddressContainer.State
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.PostCode">
+                          ^ca_entities.AddressContainer.PostCode<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.Country">
+                          ^ca_entities.AddressContainer.Country
+                        </ifdef>
+                      </dd>
                     </ifdef>
-                    <ifdef code="ca_entities.AddressContainer.Address2">
-                      ^ca_entities.AddressContainer.Address2<br/>
+                    <ifdef code="ca_entities.Phone">
+                      <dt>Phone:</dt>
+                      <dd>^ca_entities.Phone</dd>
                     </ifdef>
-                    <ifdef code="ca_entities.AddressContainer.TownCity">
-                      ^ca_entities.AddressContainer.TownCity<br/>
+                    <ifdef code="ca_entities.MobilePhone">
+                      <dt>Mobile:</dt>
+                      <dd>^ca_entities.MobilePhone</dd>
                     </ifdef>
-                    <ifdef code="ca_entities.AddressContainer.State">
-                      ^ca_entities.AddressContainer.State
+                    <ifdef code="ca_entities.Fax">
+                      <dt>Fax:</dt>
+                      <dd>^ca_entities.Fax</dd>
                     </ifdef>
-                    <ifdef code="ca_entities.AddressContainer.PostCode">
-                      ^ca_entities.AddressContainer.PostCode<br/>
+                    <ifdef code="ca_entities.Email">
+                      <dt>Email:</dt>
+                      <dd>^ca_entities.Email</dd>
                     </ifdef>
-                    <ifdef code="ca_entities.AddressContainer.Country">
-                      ^ca_entities.AddressContainer.Country
+                    <ifdef code="ca_entities.DonorNotes">
+                      <dt>Notes:</dt>
+                      <dd>^ca_entities.DonorNotes</dd>
                     </ifdef>
-                  </dd>
-                </ifdef>
-                <ifdef code="ca_entities.Phone">
-                  <dt>Phone:</dt>
-                  <dd>^ca_entities.Phone</dd>
-                </ifdef>
-                <ifdef code="ca_entities.MobilePhone">
-                  <dt>Mobile:</dt>
-                  <dd>^ca_entities.MobilePhone</dd>
-                </ifdef>
-                <ifdef code="ca_entities.Fax">
-                  <dt>Fax:</dt>
-                  <dd>^ca_entities.Fax</dd>
-                </ifdef>
-                <ifdef code="ca_entities.Email">
-                  <dt>Email:</dt>
-                  <dd>^ca_entities.Email</dd>
-                </ifdef>
-                <ifdef code="ca_entities.DonorNotes">
-                  <dt>Notes:</dt>
-                  <dd>^ca_entities.DonorNotes</dd>
-                </ifdef>
-                <ifdef code="ca_entities.Deceased">
-                  <dt>Deceased:</dt>
-                  <dd>^ca_entities.Deceased</dd>
-                </ifdef>
-                <ifdef code="ca_entities.DonorAgentName">
-                  <dt>Donor agent name:</dt>
-                  <dd>^ca_entities.DonorAgentName</dd>
-                </ifdef>
-                <ifdef code="ca_entities.DonorAgentAddress">
-                  <dt>Donor agent's address:</dt>
-                  <dd>^ca_entities.DonorAgentAddress</dd>
-                </ifdef>
-                <ifdef code="ca_entities.DonorAgentPhone">
-                  <dt>Donor agent's Phone:</dt>
-                  <dd>^ca_entities.DonorAgentPhone</dd>
-                </ifdef>
-              </dl>
-              ]]></setting>
+                    <ifdef code="ca_entities.Deceased">
+                      <dt>Deceased:</dt>
+                      <dd>^ca_entities.Deceased</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorAgentName">
+                      <dt>Donor agent name:</dt>
+                      <dd>^ca_entities.DonorAgentName</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorAgentAddress">
+                      <dt>Donor agent's address:</dt>
+                      <dd>^ca_entities.DonorAgentAddress</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorAgentPhone">
+                      <dt>Donor agent's Phone:</dt>
+                      <dd>^ca_entities.DonorAgentPhone</dd>
+                    </ifdef>
+                  </dl>
+                  ]]></setting>
           </settings>
         </placement>
         <placement code="ca_attribute_ReceiptNum">
@@ -8396,12 +8403,14 @@
             <setting name="showCurrentOnly">1</setting>
             <setting name="useHierarchicalBrowser">1</setting>
             <setting name="display_template"><![CDATA[
-              <unit relativeTo="ca_storage_locations">
-                <unit relativeTo="ca_storage_locations.hierarchy">
-                  <l>^preferred_labels</l>
-                </unit>
-              </unit>
-              ]]></setting>
+
+                  <unit relativeTo="ca_storage_locations">
+                    <unit relativeTo="ca_storage_locations.hierarchy">
+                      <l>^preferred_labels</l>
+                    </unit>
+                  </unit>
+
+                  ]]></setting>
           </settings>
         </placement>
         <placement code="ca_objects_location">
@@ -8410,25 +8419,29 @@
             <setting name="label" locale="en_AU">Stored Location</setting>
             <setting name="locationTrackingMode">ca_movements</setting>
             <setting name="displayTemplate"><![CDATA[
-              <unit relativeTo="ca_movements">
-                <unit relativeTo="ca_storage_locations">
-                  <unit relativeTo="ca_storage_locations.hierarchy">
-                    <l>^preferred_labels</l>
+
+                  <unit relativeTo="ca_movements">
+                    <unit relativeTo="ca_storage_locations">
+                      <unit relativeTo="ca_storage_locations.hierarchy">
+                        <l>^preferred_labels</l>
+                      </unit>
+                    </unit>
+                    (Status: ^LocationStatus, Authorised by: ^AuthorizedBy on ^MovementDate)
                   </unit>
-                </unit>
-                (Status: ^LocationStatus, Authorised by: ^AuthorizedBy on ^MovementDate)
-              </unit>
-              ]]></setting>
+
+                  ]]></setting>
             <setting name="historyTemplate"><![CDATA[
-              <unit relativeTo="ca_movements">
-                <unit relativeTo="ca_storage_locations">
-                  <unit relativeTo="ca_storage_locations.hierarchy">
-                    <l>^preferred_labels</l>
+
+                  <unit relativeTo="ca_movements">
+                    <unit relativeTo="ca_storage_locations">
+                      <unit relativeTo="ca_storage_locations.hierarchy">
+                        <l>^preferred_labels</l>
+                      </unit>
+                    </unit>
+                    (Status: ^LocationStatus, Authorised by: ^AuthorizedBy on ^MovementDate)
                   </unit>
-                </unit>
-                (Status: ^LocationStatus, Authorised by: ^AuthorizedBy on ^MovementDate)
-              </unit>
-              ]]></setting>
+
+                  ]]></setting>
           </settings>
         </placement>
         <placement code="ca_attribute_Value">
@@ -8519,43 +8532,40 @@
             <setting name="restrict_to_relationship_types">depicts</setting>
             <setting name="restrict_to_relationship_types">used</setting>
             <setting name="restrict_to_relationship_types">describes</setting>
-            <setting name="restrict_to_types">Event</setting>
-            <setting name="restrict_to_types">Organization</setting>
-            <setting name="restrict_to_types">Person</setting>
-            <setting name="restrict_to_types">Place</setting>
-            <setting name="restrict_to_types">Topic</setting>
+            <setting name="restrict_to_relationship_types">subject</setting>
+            <setting name="restrict_to_types">Subject</setting>
             <setting name="dont_include_subtypes_in_type_restriction">0</setting>
             <setting name="list_format">list</setting>
             <setting name="sortDirection">ASC</setting>
             <setting name="dontShowDeleteButton">0</setting>
             <setting name="display_template"><![CDATA[
-              <dl>
-                <dt>Subject:</dt>
-                <dd>
-                  <unit relativeTo="ca_occurrences">
-                    <l>^preferred_labels</l>
-                  </unit>
-                </dd>
-                <ifdef code="ca_occurrences.SubjectDates">
-                  <dt>Subject Dates:</dt>
-                  <dd>^ca_occurrences.SubjectDates</dd>
-                </ifdef>
-                <dt>Type:</dt>
-                <dd>^ca_occurrences.type_id</dd>
-                <ifdef code="ca_occurrences.Description">
-                  <dt>Description:</dt>
-                  <dd>^ca_occurrences.Description</dd>
-                </ifdef>
-                <ifdef code="ca_objects_x_occurrences.Association">
-                  <dt>Association:</dt>
-                  <dd>^ca_objects_x_occurrences.Association</dd>
-                </ifdef>
-                <ifdef code="ca_objects_x_occurrences.SubjectDates">
-                  <dt>Dates:</dt>
-                  <dd>^ca_objects_x_occurrences.SubjectDates</dd>
-                </ifdef>
-              </dl>
-              ]]></setting>
+
+                  <dl>
+                    <dt>Subject:</dt>
+                    <dd>
+                      <unit relativeTo="ca_occurrences">
+                        <l>^preferred_labels</l>
+                      </unit>
+                    </dd>
+                    <ifdef code="ca_occurrences.SubjectDates">
+                      <dt>Subject Dates:</dt>
+                      <dd>^ca_occurrences.SubjectDates</dd>
+                    </ifdef>
+                    <ifdef code="ca_occurrences.Description">
+                      <dt>Description:</dt>
+                      <dd>^ca_occurrences.Description</dd>
+                    </ifdef>
+                    <ifdef code="ca_objects_x_occurrences.Association">
+                      <dt>Association:</dt>
+                      <dd>^ca_objects_x_occurrences.Association</dd>
+                    </ifdef>
+                    <ifdef code="ca_objects_x_occurrences.SubjectDates">
+                      <dt>Relationship Dates:</dt>
+                      <dd>^ca_objects_x_occurrences.SubjectDates</dd>
+                    </ifdef>
+                  </dl>
+
+                  ]]></setting>
             <setting name="minRelationshipsPerRow"/>
             <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
@@ -8600,12 +8610,12 @@
             <setting name="useHierarchicalBrowser">1</setting>
             <setting name="restrict_to_lists">Classification</setting>
             <setting name="display_template"><![CDATA[
-              <unit relativeTo="ca_list_items">
-                <unit relativeTo="ca_list_items.hierarchy">
-                  <l>^ca_list_items.preferred_labels.name_singular</l>
-                </unit>
-              </unit>
-              ]]></setting>
+                  <unit relativeTo="ca_list_items">
+                    <unit relativeTo="ca_list_items.hierarchy">
+                      <l>^ca_list_items.preferred_labels.name_singular</l>
+                    </unit>
+                  </unit>
+                  ]]></setting>
           </settings>
         </placement>
         <placement code="ca_object_representations">
@@ -8646,26 +8656,28 @@
             <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
             <setting name="display_template"><![CDATA[
-              <unit relativeTo="ca_occurrences">
-                <l>^preferred_labels (^idno)</l>
-                <dl>
-                  <ifdef code="ca_occurrences.ConservationDetails">
-                    <dt>Conservation Details:</dt>
-                    <dd>
-                      <l>^ca_occurrences.ConservationDetails</l>
-                    </dd>
-                  </ifdef>
-                  <ifdef code="ca_occurrences.ConservationDate">
-                    <dt>Date:</dt>
-                    <dd>^ca_occurrences.ConservationDate</dd>
-                  </ifdef>
-                  <ifdef code="ca_occurrences.Conservator">
-                    <dt>Conservator:</dt>
-                    <dd>^ca_occurrences.Conservator</dd>
-                  </ifdef>
-                  <l>^ca_object_representations.media.medium</l>
-              </unit>
-              ]]></setting>
+
+                  <unit relativeTo="ca_occurrences">
+                    <l>^preferred_labels (^idno)</l>
+                    <dl>
+                      <ifdef code="ca_occurrences.ConservationDetails">
+                        <dt>Conservation Details:</dt>
+                        <dd>
+                          <l>^ca_occurrences.ConservationDetails</l>
+                        </dd>
+                      </ifdef>
+                      <ifdef code="ca_occurrences.ConservationDate">
+                        <dt>Date:</dt>
+                        <dd>^ca_occurrences.ConservationDate</dd>
+                      </ifdef>
+                      <ifdef code="ca_occurrences.Conservator">
+                        <dt>Conservator:</dt>
+                        <dd>^ca_occurrences.Conservator</dd>
+                      </ifdef>
+                      <l>^ca_object_representations.media.medium</l>
+                  </unit>
+
+                  ]]></setting>
           </settings>
         </placement>
         <placement code="ca_attribute_PhysicalCondition">
@@ -8675,58 +8687,6 @@
         <placement code="ca_attribute_VisualCondition">
           <bundle>ca_objects.VisualCondition</bundle>
           <settings/>
-        </placement>
-      </bundlePlacements>
-    </display>
-    <display code="museum_object_search" type="ca_objects" system="1">
-      <labels>
-        <label locale="en_AU">
-          <name>Museum Object search</name>
-        </label>
-      </labels>
-      <bundlePlacements>
-        <placement code="preferred_labels">
-          <bundle>ca_object_labels.name</bundle>
-          <settings>
-            <setting name="label" locale="en_AU">Item Name</setting>
-          </settings>
-        </placement>
-        <placement code="ItemDates">
-          <bundle>ca_objects.ItemDates</bundle>
-        </placement>
-        <placement code="Description">
-          <bundle>ca_objects.Description</bundle>
-        </placement>
-        <placement code="MakersMarks">
-          <bundle>ca_objects.MakersMarks</bundle>
-        </placement>
-        <placement code="HistoricalDetails">
-          <bundle>ca_objects.HistoricalDetails</bundle>
-        </placement>
-        <placement code="Donor">
-          <bundle>ca_entities</bundle>
-          <settings>
-            <setting name="label" locale="en_AU">Donor</setting>
-            <setting name="restrict_to_relationship_types">donor</setting>
-          </settings>
-        </placement>
-        <placement code="Location">
-          <bundle>ca_objects.ca_objects_location</bundle>
-          <settings>
-            <setting name="label" locale="en_AU">Location</setting>
-          </settings>
-        </placement>
-        <placement code="Thumbnail">
-          <bundle>ca_object_representations.media.thumbnail</bundle>
-          <settings>
-            <setting name="label" locale="en_AU">Thumbnail</setting>
-          </settings>
-        </placement>
-        <placement code="idno">
-          <bundle>ca_objects.idno</bundle>
-          <settings>
-            <setting name="label" locale="en_AU">Accession number</setting>
-          </settings>
         </placement>
       </bundlePlacements>
     </display>
@@ -8788,7 +8748,7 @@
           <bundle>ca_objects.PhysicalDescription</bundle>
           <settings/>
         </placement>
-        <placement code="subject">
+        <placement code="Subject">
           <bundle>ca_occurrences</bundle>
           <settings>
             <setting name="label" locale="en_AU">Subject authority list</setting>
@@ -8798,44 +8758,40 @@
             <setting name="restrict_to_relationship_types">depicts</setting>
             <setting name="restrict_to_relationship_types">used</setting>
             <setting name="restrict_to_relationship_types">describes</setting>
-            <setting name="restrict_to_types">Event</setting>
-            <setting name="restrict_to_types">Organization</setting>
-            <setting name="restrict_to_types">Person</setting>
-            <setting name="restrict_to_types">Place</setting>
-            <setting name="restrict_to_types">Topic</setting>
-            <setting name="restrict_to_types">subject</setting>
+            <setting name="restrict_to_relationship_types">subject</setting>
+            <setting name="restrict_to_types">Subject</setting>
             <setting name="dont_include_subtypes_in_type_restriction">0</setting>
             <setting name="list_format">list</setting>
             <setting name="sortDirection">ASC</setting>
             <setting name="dontShowDeleteButton">0</setting>
             <setting name="display_template"><![CDATA[
-              <dl>
-                <dt>Subject:</dt>
-                <dd>
-                  <unit relativeTo="ca_occurrences">
-                    <l>^preferred_labels</l>
-                  </unit>
-                </dd>
-                <ifdef code="ca_occurrences.SubjectDates">
-                  <dt>Subject Dates:</dt>
-                  <dd>^ca_occurrences.SubjectDates</dd>
-                </ifdef>
-                <dt>Type:</dt>
-                <dd>^ca_occurrences.type_id</dd>
-                <ifdef code="ca_occurrences.Description">
-                  <dt>Description:</dt>
-                  <dd>^ca_occurrences.Description</dd>
-                </ifdef>
-                <ifdef code="ca_objects_x_occurrences.Association">
-                  <dt>Association:</dt>
-                  <dd>^ca_objects_x_occurrences.Association</dd>
-                </ifdef>
-                <ifdef code="ca_objects_x_occurrences.SubjectDates">
-                  <dt>Dates:</dt>
-                  <dd>^ca_objects_x_occurrences.SubjectDates</dd>
-                </ifdef>
-              </dl>
-              ]]></setting>
+
+                  <dl>
+                    <dt>Subject:</dt>
+                    <dd>
+                      <unit relativeTo="ca_occurrences">
+                        <l>^preferred_labels</l>
+                      </unit>
+                    </dd>
+                    <ifdef code="ca_occurrences.SubjectDates">
+                      <dt>Subject Dates:</dt>
+                      <dd>^ca_occurrences.SubjectDates</dd>
+                    </ifdef>
+                    <ifdef code="ca_occurrences.Description">
+                      <dt>Description:</dt>
+                      <dd>^ca_occurrences.Description</dd>
+                    </ifdef>
+                    <ifdef code="ca_objects_x_occurrences.Association">
+                      <dt>Association:</dt>
+                      <dd>^ca_objects_x_occurrences.Association</dd>
+                    </ifdef>
+                    <ifdef code="ca_objects_x_occurrences.SubjectDates">
+                      <dt>Relationship Dates:</dt>
+                      <dd>^ca_objects_x_occurrences.SubjectDates</dd>
+                    </ifdef>
+                  </dl>
+
+                  ]]></setting>
             <setting name="minRelationshipsPerRow"/>
             <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
@@ -8882,75 +8838,75 @@
             <setting name="maxRelationshipsPerRow">1</setting>
             <setting name="showCurrentOnly">0</setting>
             <setting name="display_template"><![CDATA[
-              <dl>
-                <dt>Donor Name:
-                </dt>
-                <dd>
-                  <unit relativeTo="ca_entities">
-                    <l><strong>^ca_entities.preferred_labels.displayname</strong> (^ca_entities.type_id)</l>
-                  </unit>
-                </dd>
-                <ifdef code="ca_entities.AddressContainer">
-                  <dt>Address:</dt>
-                  <dd>
-                    <ifdef code="ca_entities.AddressContainer.Address1">
-                      ^ca_entities.AddressContainer.Address1<br/>
+                  <dl>
+                    <dt>Donor Name:
+                    </dt>
+                    <dd>
+                      <unit relativeTo="ca_entities">
+                        <l><strong>^ca_entities.preferred_labels.displayname</strong> (^ca_entities.type_id)</l>
+                      </unit>
+                    </dd>
+                    <ifdef code="ca_entities.AddressContainer">
+                      <dt>Address:</dt>
+                      <dd>
+                        <ifdef code="ca_entities.AddressContainer.Address1">
+                          ^ca_entities.AddressContainer.Address1<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.Address2">
+                          ^ca_entities.AddressContainer.Address2<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.TownCity">
+                          ^ca_entities.AddressContainer.TownCity<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.State">
+                          ^ca_entities.AddressContainer.State
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.PostCode">
+                          ^ca_entities.AddressContainer.PostCode<br/>
+                        </ifdef>
+                        <ifdef code="ca_entities.AddressContainer.Country">
+                          ^ca_entities.AddressContainer.Country
+                        </ifdef>
+                      </dd>
                     </ifdef>
-                    <ifdef code="ca_entities.AddressContainer.Address2">
-                      ^ca_entities.AddressContainer.Address2<br/>
+                    <ifdef code="ca_entities.Phone">
+                      <dt>Phone:</dt>
+                      <dd>^ca_entities.Phone</dd>
                     </ifdef>
-                    <ifdef code="ca_entities.AddressContainer.TownCity">
-                      ^ca_entities.AddressContainer.TownCity<br/>
+                    <ifdef code="ca_entities.MobilePhone">
+                      <dt>Mobile:</dt>
+                      <dd>^ca_entities.MobilePhone</dd>
                     </ifdef>
-                    <ifdef code="ca_entities.AddressContainer.State">
-                      ^ca_entities.AddressContainer.State
+                    <ifdef code="ca_entities.Fax">
+                      <dt>Fax:</dt>
+                      <dd>^ca_entities.Fax</dd>
                     </ifdef>
-                    <ifdef code="ca_entities.AddressContainer.PostCode">
-                      ^ca_entities.AddressContainer.PostCode<br/>
+                    <ifdef code="ca_entities.Email">
+                      <dt>Email:</dt>
+                      <dd>^ca_entities.Email</dd>
                     </ifdef>
-                    <ifdef code="ca_entities.AddressContainer.Country">
-                      ^ca_entities.AddressContainer.Country
+                    <ifdef code="ca_entities.DonorNotes">
+                      <dt>Notes:</dt>
+                      <dd>^ca_entities.DonorNotes</dd>
                     </ifdef>
-                  </dd>
-                </ifdef>
-                <ifdef code="ca_entities.Phone">
-                  <dt>Phone:</dt>
-                  <dd>^ca_entities.Phone</dd>
-                </ifdef>
-                <ifdef code="ca_entities.MobilePhone">
-                  <dt>Mobile:</dt>
-                  <dd>^ca_entities.MobilePhone</dd>
-                </ifdef>
-                <ifdef code="ca_entities.Fax">
-                  <dt>Fax:</dt>
-                  <dd>^ca_entities.Fax</dd>
-                </ifdef>
-                <ifdef code="ca_entities.Email">
-                  <dt>Email:</dt>
-                  <dd>^ca_entities.Email</dd>
-                </ifdef>
-                <ifdef code="ca_entities.DonorNotes">
-                  <dt>Notes:</dt>
-                  <dd>^ca_entities.DonorNotes</dd>
-                </ifdef>
-                <ifdef code="ca_entities.Deceased">
-                  <dt>Deceased:</dt>
-                  <dd>^ca_entities.Deceased</dd>
-                </ifdef>
-                <ifdef code="ca_entities.DonorAgentName">
-                  <dt>Donor agent name:</dt>
-                  <dd>^ca_entities.DonorAgentName</dd>
-                </ifdef>
-                <ifdef code="ca_entities.DonorAgentAddress">
-                  <dt>Donor agent's address:</dt>
-                  <dd>^ca_entities.DonorAgentAddress</dd>
-                </ifdef>
-                <ifdef code="ca_entities.DonorAgentPhone">
-                  <dt>Donor agent's Phone:</dt>
-                  <dd>^ca_entities.DonorAgentPhone</dd>
-                </ifdef>
-              </dl>
-              ]]></setting>
+                    <ifdef code="ca_entities.Deceased">
+                      <dt>Deceased:</dt>
+                      <dd>^ca_entities.Deceased</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorAgentName">
+                      <dt>Donor agent name:</dt>
+                      <dd>^ca_entities.DonorAgentName</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorAgentAddress">
+                      <dt>Donor agent's address:</dt>
+                      <dd>^ca_entities.DonorAgentAddress</dd>
+                    </ifdef>
+                    <ifdef code="ca_entities.DonorAgentPhone">
+                      <dt>Donor agent's Phone:</dt>
+                      <dd>^ca_entities.DonorAgentPhone</dd>
+                    </ifdef>
+                  </dl>
+                  ]]></setting>
           </settings>
         </placement>
         <placement code="ca_attribute_DateReceived">
@@ -8986,6 +8942,362 @@
           <settings>
             <setting name="label" locale="en_AU">Access Control</setting>
           </settings>
+        </placement>
+      </bundlePlacements>
+    </display>
+    <display code="standard_entity_display" type="ca_entities" system="1">
+      <labels>
+        <label locale="en_AU">
+          <name>Standard Entity display</name>
+        </label>
+      </labels>
+      <bundlePlacements>
+        <placement code="idno">
+          <bundle>ca_entities.idno</bundle>
+          <settings/>
+        </placement>
+        <placement code="preferred_labels">
+          <bundle>ca_entities.preferred_labels</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_attribute_AddressContainer">
+          <bundle>ca_entities.AddressContainer</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_attribute_Phone">
+          <bundle>ca_entities.Phone</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_attribute_Fax">
+          <bundle>ca_entities.Fax</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_attribute_MobilePhone">
+          <bundle>ca_entities.MobilePhone</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_attribute_Email">
+          <bundle>ca_entities.Email</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_attribute_DonorNotes">
+          <bundle>ca_entities.DonorNotes</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_attribute_Deceased">
+          <bundle>ca_entities.Deceased</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_attribute_DonorAgentName">
+          <bundle>ca_entities.DonorAgentName</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_attribute_DonorAgentAddress">
+          <bundle>ca_entities.DonorAgentAddress</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_attribute_DonorAgentPhone">
+          <bundle>ca_entities.DonorAgentPhone</bundle>
+          <settings/>
+        </placement>
+        <placement code="nonpreferred_labels">
+          <bundle>ca_entities.nonpreferred_labels</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Alternate names</setting>
+            <setting name="add_label" locale="en_AU">Add name</setting>
+          </settings>
+        </placement>
+        <placement code="ca_objects">
+          <bundle>ca_objects</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_object_lots">
+          <bundle>ca_object_lots</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_entities">
+          <bundle>ca_entities</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_places">
+          <bundle>ca_places</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_collections">
+          <bundle>ca_collections</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_loans">
+          <bundle>ca_loans</bundle>
+          <settings/>
+        </placement>
+      </bundlePlacements>
+    </display>
+    <display code="subject_list_display" type="ca_occurrences" system="1">
+      <labels>
+        <label locale="en_AU">
+          <name>Subject List display</name>
+        </label>
+      </labels>
+      <bundlePlacements>
+        <placement code="idno">
+          <bundle>ca_occurrences.idno</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Subject Identifier</setting>
+          </settings>
+        </placement>
+        <placement code="preferred_labels">
+          <bundle>ca_occurrences.preferred_labels</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Subject Label</setting>
+            <setting name="add_label" locale="en_AU">Add subject label</setting>
+          </settings>
+        </placement>
+        <placement code="ca_attribute_Description">
+          <bundle>ca_occurrences.Description</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_attribute_SubjectDates">
+          <bundle>ca_occurrences.SubjectDates</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_objects">
+          <bundle>ca_objects</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_occurrences">
+          <bundle>ca_occurrences</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Related Subjects</setting>
+          </settings>
+        </placement>
+      </bundlePlacements>
+    </display>
+    <display code="conservation_display" type="ca_occurrences" system="1">
+      <labels>
+        <label locale="en_AU">
+          <name>Conservation display</name>
+        </label>
+      </labels>
+      <bundlePlacements>
+        <placement code="preferred_labels">
+          <bundle>ca_occurrences.preferred_labels</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Title</setting>
+            <setting name="add_label" locale="en_AU">Add title</setting>
+          </settings>
+        </placement>
+        <placement code="ca_attribute_ConservationDetails">
+          <bundle>ca_occurrences.ConservationDetails</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_attribute_ConservationDate">
+          <bundle>ca_occurrences.ConservationDate</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_attribute_Conservator">
+          <bundle>ca_occurrences.Conservator</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_object_representations">
+          <bundle>ca_object_representations</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Conservation Media</setting>
+          </settings>
+        </placement>
+        <placement code="ca_objects">
+          <bundle>ca_objects</bundle>
+          <settings>
+            <setting name="restrict_to_relationship_types">conservation</setting>
+          </settings>
+        </placement>
+      </bundlePlacements>
+    </display>
+    <display code="places_display" type="ca_places" system="1">
+      <labels>
+        <label locale="en_AU">
+          <name>Places display</name>
+        </label>
+      </labels>
+      <bundlePlacements>
+        <placement code="hierarchy_navigation">
+          <bundle>ca_places.hierarchy_navigation</bundle>
+          <settings/>
+        </placement>
+        <placement code="preferred_labels">
+          <bundle>ca_places.preferred_labels</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Name</setting>
+            <setting name="add_label" locale="en_AU">Add name</setting>
+          </settings>
+        </placement>
+        <placement code="idno">
+          <bundle>ca_places.idno</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_attribute_Description">
+          <bundle>ca_places.Description</bundle>
+          <settings/>
+        </placement>
+        <placement code="access">
+          <bundle>ca_places.access</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Access Control</setting>
+          </settings>
+        </placement>
+        <placement code="status">
+          <bundle>ca_places.status</bundle>
+          <settings/>
+        </placement>
+        <placement code="hierarchy_navigation">
+          <bundle>ca_places.hierarchy_navigation</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_objects">
+          <bundle>ca_objects</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_entities">
+          <bundle>ca_entities</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_collections">
+          <bundle>ca_collections</bundle>
+          <settings/>
+        </placement>
+        <placement code="hierarchy_location">
+          <bundle>ca_places.hierarchy_location</bundle>
+          <settings/>
+        </placement>
+        <placement code="hierarchy_navigation">
+          <bundle>ca_places.hierarchy_navigation</bundle>
+          <settings/>
+        </placement>
+        <placement code="nonpreferred_labels">
+          <bundle>ca_places.nonpreferred_labels</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Alternate names</setting>
+            <setting name="add_label" locale="en_AU">Add alternate name</setting>
+          </settings>
+        </placement>
+      </bundlePlacements>
+    </display>
+    <display code="standard_storage_locations_display" type="ca_storage_locations" system="1">
+      <labels>
+        <label locale="en_AU">
+          <name>Standard Storage Locations display</name>
+        </label>
+      </labels>
+      <bundlePlacements>
+        <placement code="hierarchy_navigation">
+          <bundle>ca_storage_locations.hierarchy_navigation</bundle>
+          <settings/>
+        </placement>
+        <placement code="preferred_labels">
+          <bundle>ca_storage_locations.preferred_labels</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Name</setting>
+            <setting name="add_label" locale="en_AU">Add name</setting>
+          </settings>
+        </placement>
+        <placement code="idno">
+          <bundle>ca_storage_locations.idno</bundle>
+          <settings/>
+        </placement>
+        <placement code="status">
+          <bundle>ca_storage_locations.status</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_attribute_Description">
+          <bundle>ca_storage_locations.Description</bundle>
+          <settings/>
+        </placement>
+        <placement code="hierarchy_location">
+          <bundle>ca_storage_locations.hierarchy_navigation</bundle>
+          <settings/>
+        </placement>
+        <placement code="hierarchy_navigation">
+          <bundle>ca_storage_locations.hierarchy_navigation</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_storage_locations_contents">
+          <bundle>ca_storage_locations_contents</bundle>
+          <settings>
+            <setting name="readonly"/>
+            <setting name="expand_collapse_value">dont_force</setting>
+            <setting name="expand_collapse_no_value">dont_force</setting>
+            <setting name="list_format">bubbles</setting>
+            <setting name="locationTrackingMode">ca_movements</setting>
+            <setting name="colorItem">#ffffff</setting>
+            <setting name="displayTemplate"><![CDATA[
+                  <unit relativeTo="ca_objects">
+                    <l>^ca_objects.preferred_labels (^ca_objects.idno)</l>
+                  </unit>
+                  ]]></setting>
+          </settings>
+        </placement>
+        <placement code="hierarchy_navigation">
+          <bundle>ca_storage_locations.hierarchy_navigation</bundle>
+          <settings/>
+        </placement>
+        <placement code="nonpreferred_labels">
+          <bundle>ca_storage_locations.nonpreferred_labels</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Alternate names</setting>
+            <setting name="add_label" locale="en_AU">Add name</setting>
+          </settings>
+        </placement>
+      </bundlePlacements>
+    </display>
+    <display code="movement_cataloguers_display" type="ca_movements" system="1">
+      <labels>
+        <label locale="en_AU">
+          <name>Movement Cataloguers display</name>
+        </label>
+      </labels>
+      <bundlePlacements>
+        <placement code="ca_storage_locations">
+          <bundle>ca_storage_locations</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Movement Destination</setting>
+            <setting name="add_label" locale="en_AU">add destination</setting>
+            <setting name="readonly"/>
+            <setting name="expand_collapse_value">dont_force</setting>
+            <setting name="expand_collapse_no_value">dont_force</setting>
+            <setting name="dont_include_subtypes_in_type_restriction">0</setting>
+            <setting name="list_format">bubbles</setting>
+            <setting name="sortDirection">ASC</setting>
+            <setting name="dontShowDeleteButton">0</setting>
+            <setting name="display_template"><![CDATA[
+                  <unit relativeTo="ca_storage_locations">
+                    <unit relativeTo="ca_storage_locations.hierarchy">
+                      <l>^preferred_labels</l>
+                    </unit>
+                  </unit>
+
+                  ]]></setting>
+            <setting name="minRelationshipsPerRow">1</setting>
+            <setting name="maxRelationshipsPerRow">1</setting>
+            <setting name="showCurrentOnly">1</setting>
+            <setting name="useHierarchicalBrowser">1</setting>
+            <setting name="hierarchicalBrowserHeight">200px</setting>
+          </settings>
+        </placement>
+        <placement code="ca_attribute_LocationStatus">
+          <bundle>ca_movements.LocationStatus</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_attribute_AuthorizedBy">
+          <bundle>ca_movements.AuthorizedBy</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_attribute_MovementDate">
+          <bundle>ca_movements.MovementDate</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_objects">
+          <bundle>ca_objects</bundle>
+          <settings/>
         </placement>
       </bundlePlacements>
     </display>
@@ -9317,8 +9629,7 @@
   </searchForms>
 
   <logins>
-    <login user_name="administrator" password="administrator" fname="CollectiveAccess" lname="Administrator"
-           email="administrator@histwest.org.au">
+    <login user_name="administrator" password="administrator" fname="CollectiveAccess" lname="Administrator" email="administrator@histwest.org.au">
       <group code="admin"/>
     </login>
     <login user_name="museum" password="museum" fname="Museum" lname="User" email="museum@histwest.org.au">
@@ -9329,8 +9640,7 @@
       <group code="library"/>
       <group code="cataloguer"/>
     </login>
-    <login user_name="photograph" password="photograph" fname="Photograph" lname="User"
-           email="photograph@histwest.org.au">
+    <login user_name="photograph" password="photograph" fname="Photograph" lname="User" email="photograph@histwest.org.au">
       <group code="photograph"/>
       <group code="cataloguer"/>
     </login>
@@ -9338,12 +9648,10 @@
       <group code="memorial"/>
       <group code="cataloguer"/>
     </login>
-    <login user_name="researcher" password="researcher" fname="Researcher" lname="User"
-           email="researcher@histwest.org.au">
+    <login user_name="researcher" password="researcher" fname="Researcher" lname="User" email="researcher@histwest.org.au">
       <role code="researcher"/>
     </login>
-    <login user_name="cataloguer" password="cataloguer" fname="Cataloguer" lname="User"
-           email="cataloguer@histwest.org.au">
+    <login user_name="cataloguer" password="cataloguer" fname="Cataloguer" lname="User" email="cataloguer@histwest.org.au">
       <role code="cataloguer"/>
     </login>
   </logins>

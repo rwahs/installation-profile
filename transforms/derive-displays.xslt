@@ -24,7 +24,16 @@
   <xsl:template match="displays">
     <xsl:element name="displays">
       <xsl:for-each select="./display">
-        <xsl:if test="@code != 'library_object_display' and @code != 'memorial_object_display' and @code != 'museum_object_display' and @code != 'photograph_object_display'">
+        <xsl:if test="@code != 'library_object_display' and
+                      @code != 'memorial_object_display' and
+                      @code != 'museum_object_display' and
+                      @code != 'photograph_object_display' and
+                      @code != 'standard_entity_display' and
+                      @code != 'subject_list_display' and
+                      @code != 'conservation_display' and
+                      @code != 'places_display' and
+                      @code != 'standard_storage_locations_display' and
+                      @code != 'movement_cataloguers_display'">
           <xsl:apply-templates select="."/>
         </xsl:if>
       </xsl:for-each>
@@ -32,21 +41,61 @@
         <xsl:with-param name="display_label">Library Object display</xsl:with-param>
         <xsl:with-param name="display_code">library_object_display</xsl:with-param>
         <xsl:with-param name="ui_code">library_object_ui</xsl:with-param>
+        <xsl:with-param name="base_data_type">ca_objects</xsl:with-param>
       </xsl:call-template>
       <xsl:call-template name="generateDisplay">
         <xsl:with-param name="display_label">Memorial Object display</xsl:with-param>
         <xsl:with-param name="display_code">memorial_object_display</xsl:with-param>
         <xsl:with-param name="ui_code">memorial_object_ui</xsl:with-param>
+        <xsl:with-param name="base_data_type">ca_objects</xsl:with-param>
       </xsl:call-template>
       <xsl:call-template name="generateDisplay">
         <xsl:with-param name="display_label">Museum Object display</xsl:with-param>
         <xsl:with-param name="display_code">museum_object_display</xsl:with-param>
         <xsl:with-param name="ui_code">museum_object_ui</xsl:with-param>
+        <xsl:with-param name="base_data_type">ca_objects</xsl:with-param>
       </xsl:call-template>
       <xsl:call-template name="generateDisplay">
         <xsl:with-param name="display_label">Photograph Object display</xsl:with-param>
         <xsl:with-param name="display_code">photograph_object_display</xsl:with-param>
         <xsl:with-param name="ui_code">photograph_object_ui</xsl:with-param>
+        <xsl:with-param name="base_data_type">ca_objects</xsl:with-param>
+      </xsl:call-template>
+      <xsl:call-template name="generateDisplay">
+        <xsl:with-param name="display_label">Standard Entity display</xsl:with-param>
+        <xsl:with-param name="display_code">standard_entity_display</xsl:with-param>
+        <xsl:with-param name="ui_code">standard_entity_ui</xsl:with-param>
+        <xsl:with-param name="base_data_type">ca_entities</xsl:with-param>
+      </xsl:call-template>
+      <xsl:call-template name="generateDisplay">
+        <xsl:with-param name="display_label">Subject List display</xsl:with-param>
+        <xsl:with-param name="display_code">subject_list_display</xsl:with-param>
+        <xsl:with-param name="ui_code">subject_list_ui</xsl:with-param>
+        <xsl:with-param name="base_data_type">ca_occurrences</xsl:with-param>
+      </xsl:call-template>
+      <xsl:call-template name="generateDisplay">
+        <xsl:with-param name="display_label">Conservation display</xsl:with-param>
+        <xsl:with-param name="display_code">conservation_display</xsl:with-param>
+        <xsl:with-param name="ui_code">conservation_ui</xsl:with-param>
+        <xsl:with-param name="base_data_type">ca_occurrences</xsl:with-param>
+      </xsl:call-template>
+      <xsl:call-template name="generateDisplay">
+        <xsl:with-param name="display_label">Places display</xsl:with-param>
+        <xsl:with-param name="display_code">places_display</xsl:with-param>
+        <xsl:with-param name="ui_code">places_ui</xsl:with-param>
+        <xsl:with-param name="base_data_type">ca_places</xsl:with-param>
+      </xsl:call-template>
+      <xsl:call-template name="generateDisplay">
+        <xsl:with-param name="display_label">Standard Storage Locations display</xsl:with-param>
+        <xsl:with-param name="display_code">standard_storage_locations_display</xsl:with-param>
+        <xsl:with-param name="ui_code">standard_storage_locations_ui</xsl:with-param>
+        <xsl:with-param name="base_data_type">ca_storage_locations</xsl:with-param>
+      </xsl:call-template>
+      <xsl:call-template name="generateDisplay">
+        <xsl:with-param name="display_label">Movement Cataloguers display</xsl:with-param>
+        <xsl:with-param name="display_code">movement_cataloguers_display</xsl:with-param>
+        <xsl:with-param name="ui_code">movement_cataloguers_ui</xsl:with-param>
+        <xsl:with-param name="base_data_type">ca_movements</xsl:with-param>
       </xsl:call-template>
     </xsl:element>
   </xsl:template>
@@ -56,11 +105,14 @@
     <xsl:param name="display_label"/>
     <xsl:param name="display_code"/>
     <xsl:param name="ui_code"/>
+    <xsl:param name="base_data_type"/>
     <xsl:element name="display">
       <xsl:attribute name="code">
         <xsl:value-of select="$display_code"/>
       </xsl:attribute>
-      <xsl:attribute name="type">ca_objects</xsl:attribute>
+      <xsl:attribute name="type">
+        <xsl:value-of select="$base_data_type"/>
+      </xsl:attribute>
       <xsl:attribute name="system">1</xsl:attribute>
       <xsl:element name="labels">
         <xsl:element name="label">
@@ -79,14 +131,14 @@
             <xsl:element name="bundle">
               <xsl:if test="starts-with(bundle/text(), 'ca_attribute_')">
                 <xsl:value-of
-                    select="concat('ca_objects.', substring-after(bundle/text(), 'ca_attribute_'))"/>
+                    select="concat($base_data_type, '.', substring-after(bundle/text(), 'ca_attribute_'))"/>
               </xsl:if>
               <xsl:if test="not(starts-with(bundle/text(), 'ca_attribute_'))">
                 <xsl:if test="starts-with(bundle/text(), 'ca_')">
                   <xsl:value-of select="bundle/text()"/>
                 </xsl:if>
                 <xsl:if test="not(starts-with(bundle/text(), 'ca_'))">
-                  <xsl:value-of select="concat('ca_objects.', bundle/text())"/>
+                  <xsl:value-of select="concat($base_data_type, '.', bundle/text())"/>
                 </xsl:if>
               </xsl:if>
             </xsl:element>
