@@ -925,11 +925,19 @@
         </label>
       </labels>
       <items>
-        <item idno="Photographer" enabled="1" default="0">
+        <item idno="Artist" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
-              <name_singular>Photographer</name_singular>
-              <name_plural>Photographer</name_plural>
+              <name_singular>Artist</name_singular>
+              <name_plural>Artist</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Designer" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Designer</name_singular>
+              <name_plural>Designer</name_plural>
             </label>
           </labels>
         </item>
@@ -941,11 +949,19 @@
             </label>
           </labels>
         </item>
-        <item idno="Artist" enabled="1" default="0">
+        <item idno="Photographer" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
-              <name_singular>Artist</name_singular>
-              <name_plural>Artist</name_plural>
+              <name_singular>Photographer</name_singular>
+              <name_plural>Photographer</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Other" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Other</name_singular>
+              <name_plural>Other</name_plural>
             </label>
           </labels>
         </item>
