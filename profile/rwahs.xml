@@ -304,55 +304,13 @@
         </label>
       </labels>
       <items>
-        <item idno="subject" enabled="1" default="0">
+        <item idno="Subject" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
-              <name_singular>Subject List Entry</name_singular>
-              <name_plural>Subject List Entries</name_plural>
+              <name_singular>Subject</name_singular>
+              <name_plural>Subjects</name_plural>
             </label>
           </labels>
-          <items>
-            <item idno="Person" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Person</name_singular>
-                  <name_plural>People</name_plural>
-                </label>
-              </labels>
-            </item>
-            <item idno="Organization" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Organization</name_singular>
-                  <name_plural>Organizations</name_plural>
-                </label>
-              </labels>
-            </item>
-            <item idno="Topic" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Topic</name_singular>
-                  <name_plural>Topics</name_plural>
-                </label>
-              </labels>
-            </item>
-            <item idno="Place" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Place</name_singular>
-                  <name_plural>Places</name_plural>
-                </label>
-              </labels>
-            </item>
-            <item idno="Event" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Event</name_singular>
-                  <name_plural>Events</name_plural>
-                </label>
-              </labels>
-            </item>
-          </items>
         </item>
         <item idno="Conservation" enabled="1" default="0">
           <labels>
@@ -1133,9 +1091,9 @@
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
-        <restriction code="subject">
+        <restriction code="Subject">
           <table>ca_occurrences</table>
-          <type>subject</type>
+          <type>Subject</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -1178,7 +1136,7 @@
         </restriction>
         <restriction code="occurrences">
           <table>ca_occurrences</table>
-          <type>subject</type>
+          <type>Subject</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -1613,7 +1571,7 @@
         </restriction>
         <restriction code="r3">
           <table>ca_occurrences</table>
-          <type>subject</type>
+          <type>Subject</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -4636,7 +4594,7 @@
       <typeRestrictions>
         <restriction code="museum_SubjectDates">
           <table>ca_occurrences</table>
-          <type>subject</type>
+          <type>Subject</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -4668,10 +4626,19 @@
           <name>Association</name>
         </label>
       </labels>
+      <settings>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">115</setting>
+        <setting name="fieldHeight">3</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
+      </settings>
       <typeRestrictions>
         <restriction code="interstitial_object_Association">
           <table>ca_objects_x_occurrences</table>
-          <type>describes</type>
+          <!-- This is the code of the relationship type, not the occurrence type-->
+          <type>subject</type>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -4680,6 +4647,8 @@
         </restriction>
         <restriction code="interstitial_occurrence_Association">
           <table>ca_occurrences_x_occurrences</table>
+          <!-- This is the code of the relationship type, not the occurrence type-->
+          <type>subject</type>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -5012,7 +4981,7 @@
                     </unit>
                   </unit>
 
-                ]]></setting>
+                  ]]></setting>
               </settings>
             </placement>
             <placement code="ca_objects_location">
@@ -5128,11 +5097,8 @@
                 <setting name="restrict_to_relationship_types">depicts</setting>
                 <setting name="restrict_to_relationship_types">used</setting>
                 <setting name="restrict_to_relationship_types">describes</setting>
-                <setting name="restrict_to_types">Event</setting>
-                <setting name="restrict_to_types">Organization</setting>
-                <setting name="restrict_to_types">Person</setting>
-                <setting name="restrict_to_types">Place</setting>
-                <setting name="restrict_to_types">Topic</setting>
+                <setting name="restrict_to_relationship_types">subject</setting>
+                <setting name="restrict_to_types">Subject</setting>
                 <setting name="dont_include_subtypes_in_type_restriction">0</setting>
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
@@ -5150,8 +5116,6 @@
                       <dt>Subject Dates:</dt>
                       <dd>^ca_occurrences.SubjectDates</dd>
                     </ifdef>
-                    <dt>Type:</dt>
-                    <dd>^ca_occurrences.type_id</dd>
                     <ifdef code="ca_occurrences.Description">
                       <dt>Description:</dt>
                       <dd>^ca_occurrences.Description</dd>
@@ -5161,12 +5125,12 @@
                       <dd>^ca_objects_x_occurrences.Association</dd>
                     </ifdef>
                     <ifdef code="ca_objects_x_occurrences.SubjectDates">
-                      <dt>Dates:</dt>
+                      <dt>Relationship Dates:</dt>
                       <dd>^ca_objects_x_occurrences.SubjectDates</dd>
                     </ifdef>
                   </dl>
 
-                ]]></setting>
+                  ]]></setting>
                 <setting name="minRelationshipsPerRow"/>
                 <setting name="maxRelationshipsPerRow">255</setting>
                 <setting name="showCurrentOnly">0</setting>
@@ -5278,7 +5242,7 @@
                       <l>^ca_object_representations.media.medium</l>
                   </unit>
 
-                ]]></setting>
+                  ]]></setting>
               </settings>
             </placement>
             <placement code="ca_attribute_PhysicalCondition">
@@ -5364,22 +5328,15 @@
             <placement code="ca_attribute_Series">
               <bundle>ca_attribute_Series</bundle>
             </placement>
-            <placement code="subject">
+            <placement code="Subject">
               <bundle>ca_occurrences</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Subject headings</setting>
                 <setting name="readonly"/>
                 <setting name="expand_collapse_value">dont_force</setting>
                 <setting name="expand_collapse_no_value">dont_force</setting>
-                <setting name="restrict_to_relationship_types">depicts</setting>
-                <setting name="restrict_to_relationship_types">used</setting>
-                <setting name="restrict_to_relationship_types">describes</setting>
-                <setting name="restrict_to_types">Event</setting>
-                <setting name="restrict_to_types">Organization</setting>
-                <setting name="restrict_to_types">Person</setting>
-                <setting name="restrict_to_types">Place</setting>
-                <setting name="restrict_to_types">Topic</setting>
-                <setting name="restrict_to_types">subject</setting>
+                <setting name="restrict_to_relationship_types">subject</setting>
+                <setting name="restrict_to_types">Subject</setting>
                 <setting name="dont_include_subtypes_in_type_restriction">0</setting>
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
@@ -5397,8 +5354,6 @@
                       <dt>Subject Dates:</dt>
                       <dd>^ca_occurrences.SubjectDates</dd>
                     </ifdef>
-                    <dt>Type:</dt>
-                    <dd>^ca_occurrences.type_id</dd>
                     <ifdef code="ca_occurrences.Description">
                       <dt>Description:</dt>
                       <dd>^ca_occurrences.Description</dd>
@@ -5408,12 +5363,12 @@
                       <dd>^ca_objects_x_occurrences.Association</dd>
                     </ifdef>
                     <ifdef code="ca_objects_x_occurrences.SubjectDates">
-                      <dt>Dates:</dt>
+                      <dt>Relationship Dates:</dt>
                       <dd>^ca_objects_x_occurrences.SubjectDates</dd>
                     </ifdef>
                   </dl>
 
-                ]]></setting>
+                  ]]></setting>
                 <setting name="minRelationshipsPerRow"/>
                 <setting name="maxRelationshipsPerRow">255</setting>
                 <setting name="showCurrentOnly">0</setting>
@@ -5625,7 +5580,7 @@
             <placement code="ca_attribute_PhysicalDescription">
               <bundle>ca_attribute_PhysicalDescription</bundle>
             </placement>
-            <placement code="subject">
+            <placement code="Subject">
               <bundle>ca_occurrences</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Subject authority list</setting>
@@ -5635,12 +5590,8 @@
                 <setting name="restrict_to_relationship_types">depicts</setting>
                 <setting name="restrict_to_relationship_types">used</setting>
                 <setting name="restrict_to_relationship_types">describes</setting>
-                <setting name="restrict_to_types">Event</setting>
-                <setting name="restrict_to_types">Organization</setting>
-                <setting name="restrict_to_types">Person</setting>
-                <setting name="restrict_to_types">Place</setting>
-                <setting name="restrict_to_types">Topic</setting>
-                <setting name="restrict_to_types">subject</setting>
+                <setting name="restrict_to_relationship_types">subject</setting>
+                <setting name="restrict_to_types">Subject</setting>
                 <setting name="dont_include_subtypes_in_type_restriction">0</setting>
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
@@ -5658,8 +5609,6 @@
                       <dt>Subject Dates:</dt>
                       <dd>^ca_occurrences.SubjectDates</dd>
                     </ifdef>
-                    <dt>Type:</dt>
-                    <dd>^ca_occurrences.type_id</dd>
                     <ifdef code="ca_occurrences.Description">
                       <dt>Description:</dt>
                       <dd>^ca_occurrences.Description</dd>
@@ -5669,12 +5618,12 @@
                       <dd>^ca_objects_x_occurrences.Association</dd>
                     </ifdef>
                     <ifdef code="ca_objects_x_occurrences.SubjectDates">
-                      <dt>Dates:</dt>
+                      <dt>Relationship Dates:</dt>
                       <dd>^ca_objects_x_occurrences.SubjectDates</dd>
                     </ifdef>
                   </dl>
 
-                ]]></setting>
+                  ]]></setting>
                 <setting name="minRelationshipsPerRow"/>
                 <setting name="maxRelationshipsPerRow">255</setting>
                 <setting name="showCurrentOnly">0</setting>
@@ -5879,7 +5828,7 @@
             <placement code="ca_attribute_Dates">
               <bundle>ca_attribute_Dates</bundle>
             </placement>
-            <placement code="subject">
+            <placement code="Subject">
               <bundle>ca_occurrences</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Subject headings</setting>
@@ -5889,11 +5838,8 @@
                 <setting name="restrict_to_relationship_types">depicts</setting>
                 <setting name="restrict_to_relationship_types">used</setting>
                 <setting name="restrict_to_relationship_types">describes</setting>
-                <setting name="restrict_to_types">Event</setting>
-                <setting name="restrict_to_types">Organization</setting>
-                <setting name="restrict_to_types">Person</setting>
-                <setting name="restrict_to_types">Place</setting>
-                <setting name="restrict_to_types">Topic</setting>
+                <setting name="restrict_to_relationship_types">subject</setting>
+                <setting name="restrict_to_types">Subject</setting>
                 <setting name="dont_include_subtypes_in_type_restriction">0</setting>
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
@@ -5911,8 +5857,6 @@
                       <dt>Subject Dates:</dt>
                       <dd>^ca_occurrences.SubjectDates</dd>
                     </ifdef>
-                    <dt>Type:</dt>
-                    <dd>^ca_occurrences.type_id</dd>
                     <ifdef code="ca_occurrences.Description">
                       <dt>Description:</dt>
                       <dd>^ca_occurrences.Description</dd>
@@ -5922,12 +5866,12 @@
                       <dd>^ca_objects_x_occurrences.Association</dd>
                     </ifdef>
                     <ifdef code="ca_objects_x_occurrences.SubjectDates">
-                      <dt>Dates:</dt>
+                      <dt>Relationship Dates:</dt>
                       <dd>^ca_objects_x_occurrences.SubjectDates</dd>
                     </ifdef>
                   </dl>
 
-                ]]></setting>
+                  ]]></setting>
                 <setting name="minRelationshipsPerRow"/>
                 <setting name="maxRelationshipsPerRow">255</setting>
                 <setting name="showCurrentOnly">0</setting>
@@ -6042,13 +5986,6 @@
             <placement code="ca_entities">
               <bundle>ca_entities</bundle>
             </placement>
-            <placement code="ca_events">
-              <bundle>ca_occurrences</bundle>
-              <settings>
-                <setting name="restrict_to_type">Event</setting>
-                <setting name="label" locale="en_AU">Related events</setting>
-              </settings>
-            </placement>
             <placement code="ca_places">
               <bundle>ca_places</bundle>
             </placement>
@@ -6069,7 +6006,7 @@
         </label>
       </labels>
       <typeRestrictions>
-        <restriction type="subject"/>
+        <restriction type="Subject"/>
       </typeRestrictions>
       <groupAccess>
         <permission group="admin" access="edit"/>
@@ -6086,7 +6023,7 @@
             <placement code="idno">
               <bundle>idno</bundle>
               <settings>
-                <setting name="label" locale="en_AU">Subject Name</setting>
+                <setting name="label" locale="en_AU">Subject Identifier</setting>
               </settings>
             </placement>
             <placement code="preferred_labels">
@@ -6415,13 +6352,6 @@
             </placement>
             <placement code="ca_entities">
               <bundle>ca_entities</bundle>
-            </placement>
-            <placement code="ca_events">
-              <bundle>ca_occurrences</bundle>
-              <settings>
-                <setting name="restrict_to_type">Event</setting>
-                <setting name="label" locale="en_AU">Related events</setting>
-              </settings>
             </placement>
             <placement code="ca_places">
               <bundle>ca_places</bundle>
@@ -6832,7 +6762,7 @@
                     </unit>
                   </unit>
 
-                ]]></setting>
+                  ]]></setting>
                 <setting name="minRelationshipsPerRow">1</setting>
                 <setting name="maxRelationshipsPerRow">1</setting>
                 <setting name="showCurrentOnly">1</setting>
@@ -6931,7 +6861,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>Event</subTypeRight>
+          <subTypeRight>Subject</subTypeRight>
         </type>
         <type code="used" default="0">
           <labels>
@@ -6941,7 +6871,17 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>Event</subTypeRight>
+          <subTypeRight>Subject</subTypeRight>
+        </type>
+        <type code="subject" default="0">
+          <labels>
+            <label locale="en_AU">
+              <typename>has subject</typename>
+              <typename_reverse>is subject of</typename_reverse>
+            </label>
+          </labels>
+          <subTypeLeft/>
+          <subTypeRight>Subject</subTypeRight>
         </type>
         <type code="describes" default="0">
           <labels>
@@ -7034,6 +6974,16 @@
           </labels>
           <subTypeLeft/>
           <subTypeRight/>
+        </type>
+        <type code="subject" default="1">
+          <labels>
+            <label locale="en_AU">
+              <typename>has related subject</typename>
+              <typename_reverse>has related subject</typename_reverse>
+            </label>
+          </labels>
+          <subTypeLeft>Subject</subTypeLeft>
+          <subTypeRight>Subject</subTypeRight>
         </type>
       </types>
     </relationshipTable>
@@ -7211,7 +7161,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>Event</subTypeRight>
+          <subTypeRight>Subject</subTypeRight>
         </type>
       </types>
     </relationshipTable>
@@ -7351,7 +7301,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>Event</subTypeRight>
+          <subTypeRight>Subject</subTypeRight>
         </type>
       </types>
     </relationshipTable>
@@ -7493,7 +7443,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>Event</subTypeRight>
+          <subTypeRight>Subject</subTypeRight>
         </type>
         <type code="describes" default="1">
           <labels>
@@ -7503,7 +7453,7 @@
             </label>
           </labels>
           <subTypeLeft/>
-          <subTypeRight>Event</subTypeRight>
+          <subTypeRight>Subject</subTypeRight>
         </type>
       </types>
     </relationshipTable>
@@ -7929,22 +7879,15 @@
           <bundle>ca_objects.Series</bundle>
           <settings/>
         </placement>
-        <placement code="subject">
+        <placement code="Subject">
           <bundle>ca_occurrences</bundle>
           <settings>
             <setting name="label" locale="en_AU">Subject headings</setting>
             <setting name="readonly"/>
             <setting name="expand_collapse_value">dont_force</setting>
             <setting name="expand_collapse_no_value">dont_force</setting>
-            <setting name="restrict_to_relationship_types">depicts</setting>
-            <setting name="restrict_to_relationship_types">used</setting>
-            <setting name="restrict_to_relationship_types">describes</setting>
-            <setting name="restrict_to_types">Event</setting>
-            <setting name="restrict_to_types">Organization</setting>
-            <setting name="restrict_to_types">Person</setting>
-            <setting name="restrict_to_types">Place</setting>
-            <setting name="restrict_to_types">Topic</setting>
-            <setting name="restrict_to_types">subject</setting>
+            <setting name="restrict_to_relationship_types">subject</setting>
+            <setting name="restrict_to_types">Subject</setting>
             <setting name="dont_include_subtypes_in_type_restriction">0</setting>
             <setting name="list_format">list</setting>
             <setting name="sortDirection">ASC</setting>
@@ -7962,8 +7905,6 @@
                       <dt>Subject Dates:</dt>
                       <dd>^ca_occurrences.SubjectDates</dd>
                     </ifdef>
-                    <dt>Type:</dt>
-                    <dd>^ca_occurrences.type_id</dd>
                     <ifdef code="ca_occurrences.Description">
                       <dt>Description:</dt>
                       <dd>^ca_occurrences.Description</dd>
@@ -7973,12 +7914,12 @@
                       <dd>^ca_objects_x_occurrences.Association</dd>
                     </ifdef>
                     <ifdef code="ca_objects_x_occurrences.SubjectDates">
-                      <dt>Dates:</dt>
+                      <dt>Relationship Dates:</dt>
                       <dd>^ca_objects_x_occurrences.SubjectDates</dd>
                     </ifdef>
                   </dl>
 
-                ]]></setting>
+                  ]]></setting>
             <setting name="minRelationshipsPerRow"/>
             <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
@@ -8179,7 +8120,7 @@
           <bundle>ca_objects.Dates</bundle>
           <settings/>
         </placement>
-        <placement code="subject">
+        <placement code="Subject">
           <bundle>ca_occurrences</bundle>
           <settings>
             <setting name="label" locale="en_AU">Subject headings</setting>
@@ -8189,11 +8130,8 @@
             <setting name="restrict_to_relationship_types">depicts</setting>
             <setting name="restrict_to_relationship_types">used</setting>
             <setting name="restrict_to_relationship_types">describes</setting>
-            <setting name="restrict_to_types">Event</setting>
-            <setting name="restrict_to_types">Organization</setting>
-            <setting name="restrict_to_types">Person</setting>
-            <setting name="restrict_to_types">Place</setting>
-            <setting name="restrict_to_types">Topic</setting>
+            <setting name="restrict_to_relationship_types">subject</setting>
+            <setting name="restrict_to_types">Subject</setting>
             <setting name="dont_include_subtypes_in_type_restriction">0</setting>
             <setting name="list_format">list</setting>
             <setting name="sortDirection">ASC</setting>
@@ -8211,8 +8149,6 @@
                       <dt>Subject Dates:</dt>
                       <dd>^ca_occurrences.SubjectDates</dd>
                     </ifdef>
-                    <dt>Type:</dt>
-                    <dd>^ca_occurrences.type_id</dd>
                     <ifdef code="ca_occurrences.Description">
                       <dt>Description:</dt>
                       <dd>^ca_occurrences.Description</dd>
@@ -8222,12 +8158,12 @@
                       <dd>^ca_objects_x_occurrences.Association</dd>
                     </ifdef>
                     <ifdef code="ca_objects_x_occurrences.SubjectDates">
-                      <dt>Dates:</dt>
+                      <dt>Relationship Dates:</dt>
                       <dd>^ca_objects_x_occurrences.SubjectDates</dd>
                     </ifdef>
                   </dl>
 
-                ]]></setting>
+                  ]]></setting>
             <setting name="minRelationshipsPerRow"/>
             <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
@@ -8415,7 +8351,7 @@
                     </unit>
                   </unit>
 
-                ]]></setting>
+                  ]]></setting>
           </settings>
         </placement>
         <placement code="ca_objects_location">
@@ -8537,11 +8473,8 @@
             <setting name="restrict_to_relationship_types">depicts</setting>
             <setting name="restrict_to_relationship_types">used</setting>
             <setting name="restrict_to_relationship_types">describes</setting>
-            <setting name="restrict_to_types">Event</setting>
-            <setting name="restrict_to_types">Organization</setting>
-            <setting name="restrict_to_types">Person</setting>
-            <setting name="restrict_to_types">Place</setting>
-            <setting name="restrict_to_types">Topic</setting>
+            <setting name="restrict_to_relationship_types">subject</setting>
+            <setting name="restrict_to_types">Subject</setting>
             <setting name="dont_include_subtypes_in_type_restriction">0</setting>
             <setting name="list_format">list</setting>
             <setting name="sortDirection">ASC</setting>
@@ -8559,8 +8492,6 @@
                       <dt>Subject Dates:</dt>
                       <dd>^ca_occurrences.SubjectDates</dd>
                     </ifdef>
-                    <dt>Type:</dt>
-                    <dd>^ca_occurrences.type_id</dd>
                     <ifdef code="ca_occurrences.Description">
                       <dt>Description:</dt>
                       <dd>^ca_occurrences.Description</dd>
@@ -8570,12 +8501,12 @@
                       <dd>^ca_objects_x_occurrences.Association</dd>
                     </ifdef>
                     <ifdef code="ca_objects_x_occurrences.SubjectDates">
-                      <dt>Dates:</dt>
+                      <dt>Relationship Dates:</dt>
                       <dd>^ca_objects_x_occurrences.SubjectDates</dd>
                     </ifdef>
                   </dl>
 
-                ]]></setting>
+                  ]]></setting>
             <setting name="minRelationshipsPerRow"/>
             <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
@@ -8687,7 +8618,7 @@
                       <l>^ca_object_representations.media.medium</l>
                   </unit>
 
-                ]]></setting>
+                  ]]></setting>
           </settings>
         </placement>
         <placement code="ca_attribute_PhysicalCondition">
@@ -8758,7 +8689,7 @@
           <bundle>ca_objects.PhysicalDescription</bundle>
           <settings/>
         </placement>
-        <placement code="subject">
+        <placement code="Subject">
           <bundle>ca_occurrences</bundle>
           <settings>
             <setting name="label" locale="en_AU">Subject authority list</setting>
@@ -8768,12 +8699,8 @@
             <setting name="restrict_to_relationship_types">depicts</setting>
             <setting name="restrict_to_relationship_types">used</setting>
             <setting name="restrict_to_relationship_types">describes</setting>
-            <setting name="restrict_to_types">Event</setting>
-            <setting name="restrict_to_types">Organization</setting>
-            <setting name="restrict_to_types">Person</setting>
-            <setting name="restrict_to_types">Place</setting>
-            <setting name="restrict_to_types">Topic</setting>
-            <setting name="restrict_to_types">subject</setting>
+            <setting name="restrict_to_relationship_types">subject</setting>
+            <setting name="restrict_to_types">Subject</setting>
             <setting name="dont_include_subtypes_in_type_restriction">0</setting>
             <setting name="list_format">list</setting>
             <setting name="sortDirection">ASC</setting>
@@ -8791,8 +8718,6 @@
                       <dt>Subject Dates:</dt>
                       <dd>^ca_occurrences.SubjectDates</dd>
                     </ifdef>
-                    <dt>Type:</dt>
-                    <dd>^ca_occurrences.type_id</dd>
                     <ifdef code="ca_occurrences.Description">
                       <dt>Description:</dt>
                       <dd>^ca_occurrences.Description</dd>
@@ -8802,12 +8727,12 @@
                       <dd>^ca_objects_x_occurrences.Association</dd>
                     </ifdef>
                     <ifdef code="ca_objects_x_occurrences.SubjectDates">
-                      <dt>Dates:</dt>
+                      <dt>Relationship Dates:</dt>
                       <dd>^ca_objects_x_occurrences.SubjectDates</dd>
                     </ifdef>
                   </dl>
 
-                ]]></setting>
+                  ]]></setting>
             <setting name="minRelationshipsPerRow"/>
             <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
@@ -9035,13 +8960,6 @@
           <bundle>ca_entities</bundle>
           <settings/>
         </placement>
-        <placement code="ca_events">
-          <bundle>ca_occurrences</bundle>
-          <settings>
-            <setting name="restrict_to_type">Event</setting>
-            <setting name="label" locale="en_AU">Related events</setting>
-          </settings>
-        </placement>
         <placement code="ca_places">
           <bundle>ca_places</bundle>
           <settings/>
@@ -9066,7 +8984,7 @@
         <placement code="idno">
           <bundle>ca_occurrences.idno</bundle>
           <settings>
-            <setting name="label" locale="en_AU">Subject Name</setting>
+            <setting name="label" locale="en_AU">Subject Identifier</setting>
           </settings>
         </placement>
         <placement code="preferred_labels">
@@ -9298,7 +9216,7 @@
                     </unit>
                   </unit>
 
-                ]]></setting>
+                  ]]></setting>
             <setting name="minRelationshipsPerRow">1</setting>
             <setting name="maxRelationshipsPerRow">1</setting>
             <setting name="showCurrentOnly">1</setting>
