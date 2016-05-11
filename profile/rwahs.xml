@@ -3567,7 +3567,8 @@
     <metadataElement code="Collation" datatype="Text">
       <labels>
         <label locale="en_AU">
-          <name>Collation</name>
+          <name>Collation (Physical Description)</name>
+          <description>Enter the collation of the item. This replaces the legacy `Marks` field from CollectionsMosaic.</description>
         </label>
       </labels>
       <settings>
