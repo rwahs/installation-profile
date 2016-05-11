@@ -3928,17 +3928,20 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="CurrentLocation" datatype="List" list="LibraryStorageLocations">
+    <metadataElement code="CurrentLocation" datatype="Text">
       <labels>
         <label locale="en_AU">
           <name>Current Location</name>
+          <description>Legacy data. Not shown on forms.</description>
         </label>
       </labels>
       <settings>
-        <setting name="nullOptionText">Not Set</setting>
-        <setting name="render">select</setting>
-        <setting name="doesNotTakeLocale">1</setting>
-        <setting name="requireValue">0</setting>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_CurrentLocation">
