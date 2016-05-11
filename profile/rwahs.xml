@@ -835,47 +835,6 @@
         </item>
       </items>
     </list>
-    <list code="Restrictions" hierarchical="0" system="1" vocabulary="0">
-      <labels>
-        <label locale="en_AU">
-          <name>Restrictions</name>
-        </label>
-      </labels>
-      <items>
-        <item idno="NotForLoan" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Not For Loan</name_singular>
-              <name_plural>Not For Loan</name_plural>
-            </label>
-          </labels>
-        </item>
-        <item idno="Library" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Library</name_singular>
-              <name_plural>Library</name_plural>
-            </label>
-          </labels>
-        </item>
-        <item idno="BoxCollection" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Box Collection</name_singular>
-              <name_plural>Box Collection</name_plural>
-            </label>
-          </labels>
-        </item>
-        <item idno="NotForPublication" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Not For Publication</name_singular>
-              <name_plural>Not For Publication</name_plural>
-            </label>
-          </labels>
-        </item>
-      </items>
-    </list>
     <list code="CreatorTypes" hierarchical="0" system="1" vocabulary="0">
       <labels>
         <label locale="en_AU">
@@ -4079,17 +4038,20 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="Restrictions" datatype="List" list="Restrictions">
+    <metadataElement code="Restrictions" datatype="Text">
       <labels>
         <label locale="en_AU">
           <name>Restrictions</name>
+          <description>Legacy field not in library form.</description>
         </label>
       </labels>
       <settings>
-        <setting name="nullOptionText">Not Set</setting>
-        <setting name="render">select</setting>
-        <setting name="doesNotTakeLocale">1</setting>
-        <setting name="requireValue">0</setting>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_Restrictions">
