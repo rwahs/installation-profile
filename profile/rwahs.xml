@@ -678,16 +678,6 @@
               <name_plural>Library</name_plural>
             </label>
           </labels>
-          <items>
-            <item idno="LargeBook" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Large Book</name_singular>
-                  <name_plural>Large Book</name_plural>
-                </label>
-              </labels>
-            </item>
-          </items>
         </item>
         <item idno="MapAnnex" enabled="1" default="0">
           <labels>
@@ -697,27 +687,11 @@
             </label>
           </labels>
         </item>
-        <item idno="Display" enabled="1" default="0">
+        <item idno="Museum" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
-              <name_singular>Display</name_singular>
-              <name_plural>Display</name_plural>
-            </label>
-          </labels>
-        </item>
-        <item idno="Reference" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Reference</name_singular>
-              <name_plural>Reference</name_plural>
-            </label>
-          </labels>
-        </item>
-        <item idno="MuseumStore" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Museum Store</name_singular>
-              <name_plural>Museum Store</name_plural>
+              <name_singular>Museum</name_singular>
+              <name_plural>Museum</name_plural>
             </label>
           </labels>
         </item>
@@ -734,22 +708,6 @@
             <label locale="en_AU" preferred="1">
               <name_singular>Photographs Room</name_singular>
               <name_plural>Photographs Room</name_plural>
-            </label>
-          </labels>
-        </item>
-        <item idno="BoxCollection" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Box Collection</name_singular>
-              <name_plural>Box Collection</name_plural>
-            </label>
-          </labels>
-        </item>
-        <item idno="TranbyRoom" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Tranby Room</name_singular>
-              <name_plural>Tranby Room</name_plural>
             </label>
           </labels>
         </item>
