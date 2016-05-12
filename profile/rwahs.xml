@@ -925,11 +925,19 @@
         </label>
       </labels>
       <items>
-        <item idno="Photographer" enabled="1" default="0">
+        <item idno="Artist" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
-              <name_singular>Photographer</name_singular>
-              <name_plural>Photographer</name_plural>
+              <name_singular>Artist</name_singular>
+              <name_plural>Artist</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Designer" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Designer</name_singular>
+              <name_plural>Designer</name_plural>
             </label>
           </labels>
         </item>
@@ -941,11 +949,19 @@
             </label>
           </labels>
         </item>
-        <item idno="Artist" enabled="1" default="0">
+        <item idno="Photographer" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
-              <name_singular>Artist</name_singular>
-              <name_plural>Artist</name_plural>
+              <name_singular>Photographer</name_singular>
+              <name_plural>Photographer</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="Other" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Other</name_singular>
+              <name_plural>Other</name_plural>
             </label>
           </labels>
         </item>
@@ -1052,6 +1068,31 @@
             <label locale="en_AU" preferred="1">
               <name_singular>N/A</name_singular>
               <name_plural>N/A</name_plural>
+            </label>
+          </labels>
+        </item>
+      </items>
+    </list>
+    <list code="DimensionsType" hierarchical="0" system="1" vocabulary="0">
+      <labels>
+        <label locale="en_AU">
+          <name>DimensionsType</name>
+        </label>
+      </labels>
+      <items>
+        <item idno="dlhcm" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>D: cm L: cm H: cm</name_singular>
+              <name_plural>D: cm L: cm H: cm</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="dlhm" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>D: m L: m H: m</name_singular>
+              <name_plural>D: m L: m H: m</name_plural>
             </label>
           </labels>
         </item>
@@ -2065,6 +2106,7 @@
         <setting name="nullOptionText">Not Set</setting>
         <setting name="render">select</setting>
         <setting name="doesNotTakeLocale">1</setting>
+        <setting name="requireValue">0</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects">
@@ -3522,6 +3564,7 @@
         <setting name="nullOptionText">Not Set</setting>
         <setting name="render">select</setting>
         <setting name="doesNotTakeLocale">1</setting>
+        <setting name="requireValue">0</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_PublicationType">
@@ -3841,6 +3884,7 @@
         <setting name="nullOptionText">Not Set</setting>
         <setting name="render">select</setting>
         <setting name="doesNotTakeLocale">1</setting>
+        <setting name="requireValue">0</setting>
       </settings>
       <typeRestrictions>
         <restriction code="library_StoredLocation">
@@ -3935,6 +3979,7 @@
         <setting name="nullOptionText">Not Set</setting>
         <setting name="render">select</setting>
         <setting name="doesNotTakeLocale">1</setting>
+        <setting name="requireValue">0</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_CurrentLocation">
@@ -3956,7 +4001,6 @@
         </label>
       </labels>
       <settings>
-        <setting name="nullOptionText">Not Set</setting>
         <setting name="render">yes_no_checkboxes</setting>
         <setting name="doesNotTakeLocale">1</setting>
       </settings>
@@ -3980,7 +4024,6 @@
         </label>
       </labels>
       <settings>
-        <setting name="nullOptionText">Not Set</setting>
         <setting name="render">yes_no_checkboxes</setting>
         <setting name="doesNotTakeLocale">1</setting>
       </settings>
@@ -4058,7 +4101,6 @@
         </label>
       </labels>
       <settings>
-        <setting name="nullOptionText">Not Set</setting>
         <setting name="render">yes_no_checkboxes</setting>
         <setting name="doesNotTakeLocale">1</setting>
       </settings>
@@ -4085,6 +4127,7 @@
         <setting name="nullOptionText">Not Set</setting>
         <setting name="render">select</setting>
         <setting name="doesNotTakeLocale">1</setting>
+        <setting name="requireValue">0</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_Restrictions">
@@ -4208,7 +4251,7 @@
       </typeRestrictions>
     </metadataElement>
     <!-- Photograph fields-->
-    <metadataElement code="Creator" datatype="List" list="CreatorTypes">
+    <metadataElement code="Creator" datatype="Container">
       <labels>
         <label locale="en_AU">
           <name>Creator</name>
@@ -4219,6 +4262,35 @@
         <setting name="render">select</setting>
         <setting name="doesNotTakeLocale">1</setting>
       </settings>
+      <elements>
+        <metadataElement code="CreatorType" datatype="List" list="CreatorTypes">
+          <labels>
+            <label locale="en_AU">
+              <name>Type</name>
+            </label>
+          </labels>
+          <settings>
+            <setting name="usewysiwygeditor">0</setting>
+            <setting name="fieldWidth">70</setting>
+            <setting name="fieldHeight">1</setting>
+            <setting name="minChars">0</setting>
+            <setting name="maxChars">255</setting>
+            <setting name="suggestExistingValues">1</setting>
+          </settings>
+        </metadataElement>
+        <metadataElement code="CreatorName" datatype="Text">
+          <labels>
+            <label locale="en_AU">
+              <name>Name</name>
+            </label>
+          </labels>
+          <settings>
+            <setting name="nullOptionText">Not Set</setting>
+            <setting name="render">select</setting>
+            <setting name="doesNotTakeLocale">1</setting>
+          </settings>
+        </metadataElement>
+      </elements>
       <typeRestrictions>
         <restriction code="photograph_Creator">
           <table>ca_objects</table>
@@ -4226,7 +4298,7 @@
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">255</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
@@ -4236,7 +4308,7 @@
           <includeSubtypes>true</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">255</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
@@ -4279,6 +4351,7 @@
         <setting name="nullOptionText">Not Set</setting>
         <setting name="render">select</setting>
         <setting name="doesNotTakeLocale">1</setting>
+        <setting name="requireValue">0</setting>
       </settings>
       <typeRestrictions>
         <restriction code="photograph_Medium">
@@ -4359,6 +4432,7 @@
         <setting name="nullOptionText">Not Set</setting>
         <setting name="render">select</setting>
         <setting name="doesNotTakeLocale">1</setting>
+        <setting name="requireValue">0</setting>
       </settings>
       <typeRestrictions>
         <restriction code="photograph_TypeOfLocation">
@@ -4667,6 +4741,7 @@
         <setting name="nullOptionText">Not Set</setting>
         <setting name="render">select</setting>
         <setting name="doesNotTakeLocale">1</setting>
+        <setting name="requireValue">0</setting>
       </settings>
       <typeRestrictions>
         <restriction>
