@@ -678,16 +678,6 @@
               <name_plural>Library</name_plural>
             </label>
           </labels>
-          <items>
-            <item idno="LargeBook" enabled="1" default="0">
-              <labels>
-                <label locale="en_AU" preferred="1">
-                  <name_singular>Large Book</name_singular>
-                  <name_plural>Large Book</name_plural>
-                </label>
-              </labels>
-            </item>
-          </items>
         </item>
         <item idno="MapAnnex" enabled="1" default="0">
           <labels>
@@ -697,27 +687,11 @@
             </label>
           </labels>
         </item>
-        <item idno="Display" enabled="1" default="0">
+        <item idno="Museum" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
-              <name_singular>Display</name_singular>
-              <name_plural>Display</name_plural>
-            </label>
-          </labels>
-        </item>
-        <item idno="Reference" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Reference</name_singular>
-              <name_plural>Reference</name_plural>
-            </label>
-          </labels>
-        </item>
-        <item idno="MuseumStore" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Museum Store</name_singular>
-              <name_plural>Museum Store</name_plural>
+              <name_singular>Museum</name_singular>
+              <name_plural>Museum</name_plural>
             </label>
           </labels>
         </item>
@@ -734,22 +708,6 @@
             <label locale="en_AU" preferred="1">
               <name_singular>Photographs Room</name_singular>
               <name_plural>Photographs Room</name_plural>
-            </label>
-          </labels>
-        </item>
-        <item idno="BoxCollection" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Box Collection</name_singular>
-              <name_plural>Box Collection</name_plural>
-            </label>
-          </labels>
-        </item>
-        <item idno="TranbyRoom" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Tranby Room</name_singular>
-              <name_plural>Tranby Room</name_plural>
             </label>
           </labels>
         </item>
@@ -872,47 +830,6 @@
             <label locale="en_AU" preferred="1">
               <name_singular>Other</name_singular>
               <name_plural>Other</name_plural>
-            </label>
-          </labels>
-        </item>
-      </items>
-    </list>
-    <list code="Restrictions" hierarchical="0" system="1" vocabulary="0">
-      <labels>
-        <label locale="en_AU">
-          <name>Restrictions</name>
-        </label>
-      </labels>
-      <items>
-        <item idno="NotForLoan" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Not For Loan</name_singular>
-              <name_plural>Not For Loan</name_plural>
-            </label>
-          </labels>
-        </item>
-        <item idno="Library" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Library</name_singular>
-              <name_plural>Library</name_plural>
-            </label>
-          </labels>
-        </item>
-        <item idno="BoxCollection" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Box Collection</name_singular>
-              <name_plural>Box Collection</name_plural>
-            </label>
-          </labels>
-        </item>
-        <item idno="NotForPublication" enabled="1" default="0">
-          <labels>
-            <label locale="en_AU" preferred="1">
-              <name_singular>Not For Publication</name_singular>
-              <name_plural>Not For Publication</name_plural>
             </label>
           </labels>
         </item>
@@ -3609,7 +3526,8 @@
     <metadataElement code="Collation" datatype="Text">
       <labels>
         <label locale="en_AU">
-          <name>Collation</name>
+          <name>Collation (Physical Description)</name>
+          <description>Enter the collation of the item. This replaces the legacy `Marks` field from CollectionsMosaic.</description>
         </label>
       </labels>
       <settings>
@@ -3969,17 +3887,20 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="CurrentLocation" datatype="List" list="LibraryStorageLocations">
+    <metadataElement code="CurrentLocation" datatype="Text">
       <labels>
         <label locale="en_AU">
           <name>Current Location</name>
+          <description>Legacy data. Not shown on forms.</description>
         </label>
       </labels>
       <settings>
-        <setting name="nullOptionText">Not Set</setting>
-        <setting name="render">select</setting>
-        <setting name="doesNotTakeLocale">1</setting>
-        <setting name="requireValue">0</setting>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_CurrentLocation">
@@ -4117,17 +4038,20 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="Restrictions" datatype="List" list="Restrictions">
+    <metadataElement code="Restrictions" datatype="Text">
       <labels>
         <label locale="en_AU">
           <name>Restrictions</name>
+          <description>Legacy field not in library form.</description>
         </label>
       </labels>
       <settings>
-        <setting name="nullOptionText">Not Set</setting>
-        <setting name="render">select</setting>
-        <setting name="doesNotTakeLocale">1</setting>
-        <setting name="requireValue">0</setting>
+        <setting name="usewysiwygeditor">0</setting>
+        <setting name="fieldWidth">70</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="suggestExistingValues">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">255</setting>
       </settings>
       <typeRestrictions>
         <restriction code="ca_objects_Restrictions">
@@ -4145,7 +4069,8 @@
     <metadataElement code="DateDue" datatype="DateRange">
       <labels>
         <label locale="en_AU">
-          <name>DateDue</name>
+          <name>Date Due</name>
+          <description>Legacy field not in library form.</description>
         </label>
       </labels>
       <settings>
@@ -4172,7 +4097,8 @@
     <metadataElement code="DateOut" datatype="DateRange">
       <labels>
         <label locale="en_AU">
-          <name>DateOut</name>
+          <name>Date Out</name>
+          <description>Legacy field not in library form.</description>
         </label>
       </labels>
       <settings>
@@ -4199,7 +4125,8 @@
     <metadataElement code="DateReturned" datatype="DateRange">
       <labels>
         <label locale="en_AU">
-          <name>DateReturned</name>
+          <name>Date Returned</name>
+          <description>Legacy field not in library form.</description>
         </label>
       </labels>
       <settings>
@@ -4226,7 +4153,8 @@
     <metadataElement code="VolumeNumber" datatype="Text">
       <labels>
         <label locale="en_AU">
-          <name>VolumeNumber</name>
+          <name>Volume Number</name>
+          <description>Legacy field not in library form.</description>
         </label>
       </labels>
       <settings>
