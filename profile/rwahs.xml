@@ -5896,6 +5896,12 @@
             <placement code="ca_attribute_Notes">
               <bundle>ca_attribute_Notes</bundle>
             </placement>
+            <placement code="ca_attribute_BibliographReferences">
+              <bundle>ca_attribute_BibliographReferences</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">References</setting>
+              </settings>
+            </placement>
             <placement code="ca_object_representations">
               <bundle>ca_object_representations</bundle>
               <settings>
