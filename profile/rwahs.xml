@@ -3113,6 +3113,13 @@
             <setting name="useDatePicker">1</setting>
           </settings>
         </metadataElement>
+        <metadataElement code="ConditionReportMedia" datatype="Media">
+          <labels>
+            <label locale="en_AU">
+              <name>Media</name>
+            </label>
+          </labels>
+        </metadataElement>
       </elements>
       <typeRestrictions>
         <restriction code="ca_objects_ConditionReportContainer">
