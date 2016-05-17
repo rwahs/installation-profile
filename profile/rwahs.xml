@@ -5383,12 +5383,6 @@
             <placement code="ca_attribute_Summary">
               <bundle>ca_attribute_Summary</bundle>
             </placement>
-            <placement code="ca_object_representations">
-              <bundle>ca_object_representations</bundle>
-              <settings>
-                <setting name="label" locale="en_AU">Media</setting>
-              </settings>
-            </placement>
             <placement code="ca_attribute_Purchased">
               <bundle>ca_attribute_Purchased</bundle>
             </placement>
@@ -5397,6 +5391,13 @@
             </placement>
             <placement code="ca_attribute_ISBNISSN">
               <bundle>ca_attribute_ISBNISSN</bundle>
+            </placement>
+            <placement code="ca_object_representations">
+              <bundle>ca_object_representations</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Images / Media</setting>
+                <setting name="description" locale="en_AU">Images to be attached to a Library record</setting>
+              </settings>
             </placement>
             <placement code="ca_attribute_Review">
               <bundle>ca_attribute_Review</bundle>
