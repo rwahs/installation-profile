@@ -4865,8 +4865,8 @@
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
                 <setting name="dontShowDeleteButton">0</setting>
-                <setting name="minRelationshipsPerRow">1</setting>
-                <setting name="maxRelationshipsPerRow">1</setting>
+                <setting name="minRelationshipsPerRow">0</setting>
+                <setting name="maxRelationshipsPerRow">255</setting>
                 <setting name="showCurrentOnly">0</setting>
                 <setting name="display_template"><![CDATA[
                   <dl>
@@ -5426,8 +5426,8 @@
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
                 <setting name="dontShowDeleteButton">0</setting>
-                <setting name="minRelationshipsPerRow">1</setting>
-                <setting name="maxRelationshipsPerRow">1</setting>
+                <setting name="minRelationshipsPerRow">0</setting>
+                <setting name="maxRelationshipsPerRow">255</setting>
                 <setting name="showCurrentOnly">0</setting>
                 <setting name="display_template"><![CDATA[
                   <dl>
@@ -5663,8 +5663,8 @@
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
                 <setting name="dontShowDeleteButton">0</setting>
-                <setting name="minRelationshipsPerRow">1</setting>
-                <setting name="maxRelationshipsPerRow">1</setting>
+                <setting name="minRelationshipsPerRow">0</setting>
+                <setting name="maxRelationshipsPerRow">255</setting>
                 <setting name="showCurrentOnly">0</setting>
                 <setting name="display_template"><![CDATA[
                   <dl>
@@ -7995,8 +7995,8 @@
             <setting name="list_format">list</setting>
             <setting name="sortDirection">ASC</setting>
             <setting name="dontShowDeleteButton">0</setting>
-            <setting name="minRelationshipsPerRow">1</setting>
-            <setting name="maxRelationshipsPerRow">1</setting>
+            <setting name="minRelationshipsPerRow">0</setting>
+            <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
             <setting name="display_template"><![CDATA[
                   <dl>
@@ -8243,8 +8243,8 @@
             <setting name="list_format">list</setting>
             <setting name="sortDirection">ASC</setting>
             <setting name="dontShowDeleteButton">0</setting>
-            <setting name="minRelationshipsPerRow">1</setting>
-            <setting name="maxRelationshipsPerRow">1</setting>
+            <setting name="minRelationshipsPerRow">0</setting>
+            <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
             <setting name="display_template"><![CDATA[
                   <dl>
@@ -8792,8 +8792,8 @@
             <setting name="list_format">list</setting>
             <setting name="sortDirection">ASC</setting>
             <setting name="dontShowDeleteButton">0</setting>
-            <setting name="minRelationshipsPerRow">1</setting>
-            <setting name="maxRelationshipsPerRow">1</setting>
+            <setting name="minRelationshipsPerRow">0</setting>
+            <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
             <setting name="display_template"><![CDATA[
                   <dl>
