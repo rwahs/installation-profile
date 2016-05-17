@@ -437,6 +437,31 @@
         </item>
       </items>
     </list>
+    <list code="object_representation_types" hierarchical="1" system="1" vocabulary="0">
+      <labels><label locale="en_AU">
+        <name>Object representation types</name>
+      </label></labels>
+      <items>
+        <item idno="front" enabled="1" default="1">
+          <labels><label locale="en_AU" preferred="1">
+            <name_singular>front</name_singular>
+            <name_plural>front</name_plural>
+          </label></labels>
+        </item>
+        <item idno="back" enabled="1" default="0">
+          <labels><label locale="en_AU" preferred="1">
+            <name_singular>back</name_singular>
+            <name_plural>back</name_plural>
+          </label></labels>
+        </item>
+        <item idno="condition" enabled="1" default="0">
+          <labels><label locale="en_AU" preferred="1">
+            <name_singular>depicts condition</name_singular>
+            <name_plural>depicts condition</name_plural>
+          </label></labels>
+        </item>
+      </items>
+    </list>
     <list code="YesNoDefaultNo" hierarchical="0" system="1" vocabulary="0" defaultSort="1">
       <labels>
         <label locale="en_AU">
