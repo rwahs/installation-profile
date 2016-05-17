@@ -3081,6 +3081,7 @@
             <setting name="fieldWidth">60</setting>
             <setting name="fieldHeight">4</setting>
             <setting name="minChars">0</setting>
+            <setting name="lineBreakAfterNumberOfElements">3</setting>
           </settings>
         </metadataElement>
         <metadataElement code="ConditionReportBy" datatype="Text">
@@ -3112,6 +3113,13 @@
             <setting name="maxChars">30</setting>
             <setting name="useDatePicker">1</setting>
           </settings>
+        </metadataElement>
+        <metadataElement code="ConditionReportMedia" datatype="Media">
+          <labels>
+            <label locale="en_AU">
+              <name>Media</name>
+            </label>
+          </labels>
         </metadataElement>
       </elements>
       <typeRestrictions>
