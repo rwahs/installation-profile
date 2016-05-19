@@ -437,6 +437,39 @@
         </item>
       </items>
     </list>
+    <list code="object_representation_types" hierarchical="1" system="1" vocabulary="0">
+      <labels>
+        <label locale="en_AU">
+          <name>Object representation types</name>
+        </label>
+      </labels>
+      <items>
+        <item idno="front" enabled="1" default="1">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>front</name_singular>
+              <name_plural>front</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="back" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>back</name_singular>
+              <name_plural>back</name_plural>
+            </label>
+          </labels>
+        </item>
+        <item idno="condition" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>depicts condition</name_singular>
+              <name_plural>depicts condition</name_plural>
+            </label>
+          </labels>
+        </item>
+      </items>
+    </list>
     <list code="YesNoDefaultNo" hierarchical="0" system="1" vocabulary="0" defaultSort="1">
       <labels>
         <label locale="en_AU">
@@ -5222,7 +5255,7 @@
               <bundle>ca_occurrences</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Conservation Details</setting>
-                <setting name="restrict_to_type">Conservation</setting>
+                <setting name="restrict_to_types">Conservation</setting>
                 <setting name="restrict_to_relationship_types">conservation</setting>
                 <setting name="dont_include_subtypes_in_type_restriction">0</setting>
                 <setting name="list_format">list</setting>
@@ -5261,6 +5294,12 @@
             </placement>
             <placement code="ca_attribute_VisualCondition">
               <bundle>ca_attribute_VisualCondition</bundle>
+            </placement>
+            <placement code="ca_object_representations">
+              <bundle>ca_object_representations</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Media</setting>
+              </settings>
             </placement>
           </bundlePlacements>
         </screen>
@@ -5405,6 +5444,8 @@
               <settings>
                 <setting name="label" locale="en_AU">Images / Media</setting>
                 <setting name="description" locale="en_AU">Images to be attached to a Library record</setting>
+                <setting name="restrict_to_types">front</setting>
+                <setting name="restrict_to_types">back</setting>
               </settings>
             </placement>
             <placement code="ca_attribute_Review">
@@ -5769,6 +5810,8 @@
               <bundle>ca_object_representations</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Media</setting>
+                <setting name="restrict_to_types">front</setting>
+                <setting name="restrict_to_types">back</setting>
               </settings>
             </placement>
             <placement code="access">
@@ -6120,6 +6163,7 @@
               <bundle>ca_object_representations</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Conservation Media</setting>
+                <setting name="restrict_to_types">condition</setting>
               </settings>
             </placement>
           </bundlePlacements>
@@ -7968,6 +8012,8 @@
           <settings>
             <setting name="label" locale="en_AU">Images / Media</setting>
             <setting name="description" locale="en_AU">Images to be attached to a Library record</setting>
+            <setting name="restrict_to_types">front</setting>
+            <setting name="restrict_to_types">back</setting>
           </settings>
         </placement>
         <placement code="ca_attribute_Review">
@@ -8612,7 +8658,7 @@
           <bundle>ca_occurrences</bundle>
           <settings>
             <setting name="label" locale="en_AU">Conservation Details</setting>
-            <setting name="restrict_to_type">Conservation</setting>
+            <setting name="restrict_to_types">Conservation</setting>
             <setting name="restrict_to_relationship_types">conservation</setting>
             <setting name="dont_include_subtypes_in_type_restriction">0</setting>
             <setting name="list_format">list</setting>
@@ -8653,6 +8699,12 @@
         <placement code="ca_attribute_VisualCondition">
           <bundle>ca_objects.VisualCondition</bundle>
           <settings/>
+        </placement>
+        <placement code="ca_object_representations">
+          <bundle>ca_object_representations</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Media</setting>
+          </settings>
         </placement>
       </bundlePlacements>
     </display>
@@ -8901,6 +8953,8 @@
           <bundle>ca_object_representations</bundle>
           <settings>
             <setting name="label" locale="en_AU">Media</setting>
+            <setting name="restrict_to_types">front</setting>
+            <setting name="restrict_to_types">back</setting>
           </settings>
         </placement>
         <placement code="access">
@@ -9069,6 +9123,7 @@
           <bundle>ca_object_representations</bundle>
           <settings>
             <setting name="label" locale="en_AU">Conservation Media</setting>
+            <setting name="restrict_to_types">condition</setting>
           </settings>
         </placement>
         <placement code="ca_objects">
