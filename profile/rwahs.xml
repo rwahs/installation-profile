@@ -5247,7 +5247,7 @@
               <bundle>ca_occurrences</bundle>
               <settings>
                 <setting name="label" locale="en_AU">Conservation Details</setting>
-                <setting name="restrict_to_type">Conservation</setting>
+                <setting name="restrict_to_types">Conservation</setting>
                 <setting name="restrict_to_relationship_types">conservation</setting>
                 <setting name="dont_include_subtypes_in_type_restriction">0</setting>
                 <setting name="list_format">list</setting>
@@ -8637,7 +8637,7 @@
           <bundle>ca_occurrences</bundle>
           <settings>
             <setting name="label" locale="en_AU">Conservation Details</setting>
-            <setting name="restrict_to_type">Conservation</setting>
+            <setting name="restrict_to_types">Conservation</setting>
             <setting name="restrict_to_relationship_types">conservation</setting>
             <setting name="dont_include_subtypes_in_type_restriction">0</setting>
             <setting name="list_format">list</setting>
