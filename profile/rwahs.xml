@@ -7823,7 +7823,7 @@
         </placement>
       </bundlePlacements>
     </display>
-    <display code="museum_object_search" type="ca_objects" system="1">
+    <display code="museum_search_display" type="ca_objects" system="1">
       <labels>
         <label locale="en_AU">
           <name>Museum Object search</name>
