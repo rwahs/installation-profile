@@ -7621,6 +7621,16 @@
         <action>can_delete_ca_lists</action>
       </actions>
     </role>
+    <role code="ws_agent">
+      <name>Web Services Agent</name>
+      <description>Gives read-only access to the JSON web services, which is used by the public research frontend.</description>
+      <actions>
+        <action>can_use_json_find_service</action>
+        <action>can_use_json_item_service</action>
+        <action>can_use_json_model_service</action>
+        <action>can_use_json_browse_service</action>
+      </actions>
+    </role>
   </roles>
   <groups>
     <group code="museum">
@@ -9680,6 +9690,9 @@
     </login>
     <login user_name="cataloguer" password="cataloguer" fname="Cataloguer" lname="User" email="cataloguer@histwest.org.au">
       <role code="cataloguer"/>
+    </login>
+    <login user_name="research-frontend" password="NotReallySecret" fname="Research" lname="Frontend" email="research@histwest.org.au">
+      <role code="ws_agent"/>
     </login>
   </logins>
 </profile>
