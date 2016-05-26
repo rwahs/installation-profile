@@ -7779,10 +7779,13 @@
         <permission group="memorial" access="read"/>
       </groupAccess>
       <bundlePlacements>
-        <placement code="preferred_labels">
-          <bundle>ca_object_labels.name</bundle>
+        <placement code="ca_objects_preferred_labels">
+          <bundle>ca_objects.preferred_labels</bundle>
           <settings>
             <setting name="label" locale="en_AU">Title</setting>
+            <setting name="format"><![CDATA[<div style="min-width:30em;">^preferred_labels</div>]]></setting>
+            <setting name="delimiter"><![CDATA[]]></setting>
+            <setting name="maximum_length"><![CDATA[100]]></setting>
           </settings>
         </placement>
         <placement code="Author">
@@ -7830,10 +7833,13 @@
         </label>
       </labels>
       <bundlePlacements>
-        <placement code="preferred_labels">
-          <bundle>ca_object_labels.name</bundle>
+        <placement code="ca_objects_preferred_labels">
+          <bundle>ca_objects.preferred_labels</bundle>
           <settings>
-            <setting name="label" locale="en_AU">Item Name</setting>
+            <setting name="label" locale="en_AU">Title</setting>
+            <setting name="format"><![CDATA[<div style="min-width:30em;">^preferred_labels</div>]]></setting>
+            <setting name="delimiter"><![CDATA[]]></setting>
+            <setting name="maximum_length"><![CDATA[100]]></setting>
           </settings>
         </placement>
         <placement code="ItemDates">
