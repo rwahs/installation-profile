@@ -7625,10 +7625,7 @@
       <name>Web Services Agent</name>
       <description>Gives read-only access to the JSON web services, which is used by the public research frontend.</description>
       <actions>
-        <action>can_use_json_find_service</action>
-        <action>can_use_json_item_service</action>
-        <action>can_use_json_model_service</action>
-        <action>can_use_json_browse_service</action>
+        <action>can_use_json_simple_service</action>
       </actions>
     </role>
   </roles>
