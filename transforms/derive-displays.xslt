@@ -122,6 +122,7 @@
           </xsl:element>
         </xsl:element>
       </xsl:element>
+      <xsl:copy-of select="/profile/userInterfaces/userInterface[@code = $ui_code]/typeRestrictions" />
       <xsl:element name="bundlePlacements">
         <xsl:for-each select="/profile/userInterfaces/userInterface[@code = $ui_code]/screens/screen/bundlePlacements/placement">
           <xsl:element name="placement">
@@ -130,8 +131,7 @@
             </xsl:attribute>
             <xsl:element name="bundle">
               <xsl:if test="starts-with(bundle/text(), 'ca_attribute_')">
-                <xsl:value-of
-                    select="concat($base_data_type, '.', substring-after(bundle/text(), 'ca_attribute_'))"/>
+                <xsl:value-of select="concat($base_data_type, '.', substring-after(bundle/text(), 'ca_attribute_'))"/>
               </xsl:if>
               <xsl:if test="not(starts-with(bundle/text(), 'ca_attribute_'))">
                 <xsl:if test="starts-with(bundle/text(), 'ca_')">
