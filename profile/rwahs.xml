@@ -7919,6 +7919,9 @@
           <name>Library Object display</name>
         </label>
       </labels>
+      <typeRestrictions>
+        <restriction type="library"/>
+      </typeRestrictions>
       <bundlePlacements>
         <placement code="idno">
           <bundle>ca_objects.idno</bundle>
@@ -8182,6 +8185,9 @@
           <name>Memorial Object display</name>
         </label>
       </labels>
+      <typeRestrictions>
+        <restriction type="publicMemorial"/>
+      </typeRestrictions>
       <bundlePlacements>
         <placement code="idno">
           <bundle>ca_objects.idno</bundle>
@@ -8312,6 +8318,9 @@
           <name>Museum Object display</name>
         </label>
       </labels>
+      <typeRestrictions>
+        <restriction type="museum"/>
+      </typeRestrictions>
       <bundlePlacements>
         <placement code="idno">
           <bundle>ca_objects.idno</bundle>
@@ -8752,6 +8761,9 @@
           <name>Photograph Object display</name>
         </label>
       </labels>
+      <typeRestrictions>
+        <restriction type="photograph"/>
+      </typeRestrictions>
       <bundlePlacements>
         <placement code="idno">
           <bundle>ca_objects.idno</bundle>
@@ -9097,6 +9109,9 @@
           <name>Subject List display</name>
         </label>
       </labels>
+      <typeRestrictions>
+        <restriction type="Subject"/>
+      </typeRestrictions>
       <bundlePlacements>
         <placement code="idno">
           <bundle>ca_occurrences.idno</bundle>
@@ -9137,6 +9152,9 @@
           <name>Conservation display</name>
         </label>
       </labels>
+      <typeRestrictions>
+        <restriction type="Conservation"/>
+      </typeRestrictions>
       <bundlePlacements>
         <placement code="preferred_labels">
           <bundle>ca_occurrences.preferred_labels</bundle>
