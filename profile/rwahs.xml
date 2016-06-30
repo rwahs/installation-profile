@@ -4291,7 +4291,7 @@
           <type>photograph</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
-            <setting name="minAttributesPerRow">1</setting>
+            <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">255</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
@@ -4301,7 +4301,7 @@
           <type>publicMemorial</type>
           <includeSubtypes>true</includeSubtypes>
           <settings>
-            <setting name="minAttributesPerRow">1</setting>
+            <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">255</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
