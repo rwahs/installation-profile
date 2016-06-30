@@ -9525,6 +9525,47 @@
         </placement>
       </bundlePlacements>
     </searchForm>
+    <searchForm code="memorial_search" type="ca_objects" system="1">
+      <labels>
+        <label locale="en_AU">
+          <name>Public Memorial search</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="form_width">3</setting>
+      </settings>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="library" access="read"/>
+        <permission group="museum" access="read"/>
+        <permission group="photograph" access="read"/>
+        <permission group="memorial" access="read"/>
+      </groupAccess>
+      <bundlePlacements>
+        <placement code="hideme">
+          <bundle>hideme</bundle>
+          <!-- Adding this bundle to work around the issue where the first item in the form ends up the last item on the page-->
+        </placement>
+        <placement code="fulltext">
+          <bundle>_fulltext</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Keywords (Full text)</setting>
+          </settings>
+        </placement>
+        <placement code="preferred_labels">
+          <bundle>ca_object_labels.name</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Name</setting>
+          </settings>
+        </placement>
+        <placement code="idno">
+          <bundle>ca_objects.idno</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Accession number</setting>
+          </settings>
+        </placement>
+      </bundlePlacements>
+    </searchForm>
     <searchForm code="ca_entities_adv_search" type="ca_entities" system="1">
       <labels>
         <label locale="en_AU">
