@@ -932,6 +932,14 @@
             </label>
           </labels>
         </item>
+        <item idno="Unknown" enabled="1" default="0">
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>Unknown</name_singular>
+              <name_plural>Unknown</name_plural>
+            </label>
+          </labels>
+        </item>
         <item idno="Other" enabled="1" default="0">
           <labels>
             <label locale="en_AU" preferred="1">
