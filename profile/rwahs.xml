@@ -831,7 +831,7 @@
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Book</name_singular>
-              <name_plural>Books</name_plural>
+              <name_plural>Book</name_plural>
             </label>
           </labels>
         </item>
@@ -839,7 +839,7 @@
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Document</name_singular>
-              <name_plural>Documents</name_plural>
+              <name_plural>Document</name_plural>
             </label>
           </labels>
         </item>
@@ -847,7 +847,7 @@
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Journal article</name_singular>
-              <name_plural>Journal articles</name_plural>
+              <name_plural>Journal article</name_plural>
             </label>
           </labels>
         </item>
@@ -855,7 +855,7 @@
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Journal title</name_singular>
-              <name_plural>Journal titles</name_plural>
+              <name_plural>Journal title</name_plural>
             </label>
           </labels>
         </item>
@@ -863,7 +863,7 @@
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Map</name_singular>
-              <name_plural>Maps</name_plural>
+              <name_plural>Map</name_plural>
             </label>
           </labels>
         </item>
@@ -871,7 +871,7 @@
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Non-book</name_singular>
-              <name_plural>Non-books</name_plural>
+              <name_plural>Non-book</name_plural>
             </label>
           </labels>
         </item>
@@ -879,7 +879,7 @@
           <labels>
             <label locale="en_AU" preferred="1">
               <name_singular>Pamphlet</name_singular>
-              <name_plural>Pamphlets</name_plural>
+              <name_plural>Pamphlet</name_plural>
             </label>
           </labels>
         </item>
