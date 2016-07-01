@@ -2218,7 +2218,7 @@
         <metadataElement code="CopyrightDetails" datatype="Text">
           <labels>
             <label locale="en_AU">
-              <name>Copyright Details</name>
+              <name>Copyright Holder</name>
             </label>
           </labels>
           <settings>
