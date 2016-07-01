@@ -2218,7 +2218,7 @@
         <metadataElement code="CopyrightDetails" datatype="Text">
           <labels>
             <label locale="en_AU">
-              <name>Copyright Details</name>
+              <name>Copyright Holder</name>
             </label>
           </labels>
           <settings>
@@ -5718,6 +5718,9 @@
             <placement code="ca_attribute_Summary">
               <bundle>ca_attribute_Summary</bundle>
             </placement>
+            <placement code="ca_attribute_Dimensions">
+              <bundle>ca_attribute_Dimensions</bundle>
+            </placement>
             <placement code="ca_attribute_Notes">
               <bundle>ca_attribute_Notes</bundle>
             </placement>
@@ -8875,6 +8878,10 @@
         </placement>
         <placement code="ca_attribute_Summary">
           <bundle>ca_objects.Summary</bundle>
+          <settings/>
+        </placement>
+        <placement code="ca_attribute_Dimensions">
+          <bundle>ca_objects.Dimensions</bundle>
           <settings/>
         </placement>
         <placement code="ca_attribute_Notes">
