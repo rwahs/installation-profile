@@ -6,27 +6,35 @@
   </locales>
   <lists>
     <list code="access_statuses" hierarchical="0" system="1" vocabulary="0">
-      <labels><label locale="en_AU">
-        <name>Object access statuses</name>
-      </label></labels>
+      <labels>
+        <label locale="en_AU">
+          <name>Object access statuses</name>
+        </label>
+      </labels>
       <items>
         <item idno="internal_only" enabled="1" default="0" value="0">
-          <labels><label locale="en_AU" preferred="1">
-            <name_singular>not accessible to public</name_singular>
-            <name_plural>not accessible to public</name_plural>
-          </label></labels>
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>not accessible to public</name_singular>
+              <name_plural>not accessible to public</name_plural>
+            </label>
+          </labels>
         </item>
         <item idno="restricted_public_access" enabled="1" default="0" value="2">
-          <labels><label locale="en_AU" preferred="1">
-            <name_singular>restricted public access</name_singular>
-            <name_plural>restricted public access</name_plural>
-          </label></labels>
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>restricted public access</name_singular>
+              <name_plural>restricted public access</name_plural>
+            </label>
+          </labels>
         </item>
         <item idno="public_access" enabled="1" default="1" value="1">
-          <labels><label locale="en_AU" preferred="1">
-            <name_singular>accessible to public</name_singular>
-            <name_plural>accessible to public</name_plural>
-          </label></labels>
+          <labels>
+            <label locale="en_AU" preferred="1">
+              <name_singular>accessible to public</name_singular>
+              <name_plural>accessible to public</name_plural>
+            </label>
+          </labels>
         </item>
       </items>
     </list>
@@ -7814,6 +7822,9 @@
           <name>Library Search display</name>
         </label>
       </labels>
+      <typeRestrictions>
+        <restriction type="library"/>
+      </typeRestrictions>
       <groupAccess>
         <permission group="admin" access="edit"/>
         <permission group="library" access="read"/>
@@ -7875,6 +7886,18 @@
           <name>Museum Object search</name>
         </label>
       </labels>
+      <typeRestrictions>
+        <restriction type="artwork"/>
+        <restriction type="museumArtefact"/>
+        <restriction type="costume"/>
+      </typeRestrictions>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="library" access="read"/>
+        <permission group="museum" access="read"/>
+        <permission group="photograph" access="read"/>
+        <permission group="memorial" access="read"/>
+      </groupAccess>
       <bundlePlacements>
         <placement code="ca_objects_preferred_labels">
           <bundle>ca_objects.preferred_labels</bundle>
@@ -7920,6 +7943,113 @@
           <bundle>ca_objects.idno</bundle>
           <settings>
             <setting name="label" locale="en_AU">Accession number</setting>
+          </settings>
+        </placement>
+      </bundlePlacements>
+    </display>
+    <display code="photograph_search_display" type="ca_objects" system="1">
+      <labels>
+        <label locale="en_AU">
+          <name>Photograph Object search</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction type="photograph"/>
+      </typeRestrictions>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="library" access="read"/>
+        <permission group="museum" access="read"/>
+        <permission group="photograph" access="read"/>
+        <permission group="memorial" access="read"/>
+      </groupAccess>
+      <bundlePlacements>
+        <placement code="ca_objects_preferred_labels">
+          <bundle>ca_objects.preferred_labels</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Title</setting>
+            <setting name="format"><![CDATA[<div style="min-width:30em;">^preferred_labels</div>]]></setting>
+            <setting name="delimiter"><![CDATA[]]></setting>
+            <setting name="maximum_length"><![CDATA[100]]></setting>
+          </settings>
+        </placement>
+        <placement code="Creator">
+          <bundle>ca_objects.Creator</bundle>
+        </placement>
+        <placement code="Publisher">
+          <bundle>ca_objects.Publisher</bundle>
+        </placement>
+        <placement code="DateOfCreation">
+          <bundle>ca_objects.DateOfCreation</bundle>
+        </placement>
+        <placement code="DateOfPublication">
+          <bundle>ca_objects.DateOfPublication</bundle>
+        </placement>
+        <placement code="Medium">
+          <bundle>ca_objects.Medium</bundle>
+        </placement>
+        <placement code="idno">
+          <bundle>ca_objects.idno</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Accession number</setting>
+          </settings>
+        </placement>
+        <placement code="Thumbnail">
+          <bundle>ca_object_representations.media.thumbnail</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Thumbnail</setting>
+          </settings>
+        </placement>
+      </bundlePlacements>
+    </display>
+    <display code="memorial_search_display" type="ca_objects" system="1">
+      <labels>
+        <label locale="en_AU">
+          <name>Public Memorial search</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction type="memorial"/>
+      </typeRestrictions>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="library" access="read"/>
+        <permission group="museum" access="read"/>
+        <permission group="photograph" access="read"/>
+        <permission group="memorial" access="read"/>
+      </groupAccess>
+      <bundlePlacements>
+        <placement code="ca_objects_preferred_labels">
+          <bundle>ca_objects.preferred_labels</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Name of memorial</setting>
+            <setting name="format"><![CDATA[<div style="min-width:30em;">^preferred_labels</div>]]></setting>
+            <setting name="delimiter"><![CDATA[]]></setting>
+            <setting name="maximum_length"><![CDATA[100]]></setting>
+          </settings>
+        </placement>
+        <placement code="Creator">
+          <bundle>ca_objects.Creator</bundle>
+        </placement>
+        <placement code="ErectedBy">
+          <bundle>ca_objects.ErectedBy</bundle>
+        </placement>
+        <placement code="Dates">
+          <bundle>ca_objects.Dates</bundle>
+        </placement>
+        <placement code="Location">
+          <bundle>ca_places.hierarchy.preferred_labels</bundle>
+        </placement>
+        <placement code="idno">
+          <bundle>ca_objects.idno</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Accession number</setting>
+          </settings>
+        </placement>
+        <placement code="Thumbnail">
+          <bundle>ca_object_representations.media.thumbnail</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Thumbnail</setting>
           </settings>
         </placement>
       </bundlePlacements>
