@@ -8009,7 +8009,7 @@
         </label>
       </labels>
       <typeRestrictions>
-        <restriction type="memorial"/>
+        <restriction type="publicMemorial"/>
       </typeRestrictions>
       <groupAccess>
         <permission group="admin" access="edit"/>
