@@ -6003,6 +6003,12 @@
                 <setting name="label" locale="en_AU">Media</setting>
               </settings>
             </placement>
+            <placement code="access">
+              <bundle>access</bundle>
+              <settings>
+                <setting name="label" locale="en_AU">Access Control</setting>
+              </settings>
+            </placement>
           </bundlePlacements>
         </screen>
       </screens>
@@ -8449,6 +8455,12 @@
           <bundle>ca_object_representations</bundle>
           <settings>
             <setting name="label" locale="en_AU">Media</setting>
+          </settings>
+        </placement>
+        <placement code="access">
+          <bundle>ca_objects.access</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Access Control</setting>
           </settings>
         </placement>
       </bundlePlacements>
