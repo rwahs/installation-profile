@@ -6116,6 +6116,9 @@
       <groupAccess>
         <permission group="admin" access="edit"/>
         <permission group="museum" access="edit"/>
+        <permission group="library" access="edit"/>
+        <permission group="photograph" access="edit"/>
+        <permission group="memorial" access="edit"/>
       </groupAccess>
       <screens>
         <screen idno="subjectListData" default="1">
@@ -8063,6 +8066,13 @@
       <typeRestrictions>
         <restriction type="library"/>
       </typeRestrictions>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="library" access="edit"/>
+        <permission group="museum" access="read"/>
+        <permission group="photograph" access="read"/>
+        <permission group="memorial" access="read"/>
+      </groupAccess>
       <bundlePlacements>
         <placement code="idno">
           <bundle>ca_objects.idno</bundle>
@@ -8329,6 +8339,13 @@
       <typeRestrictions>
         <restriction type="publicMemorial"/>
       </typeRestrictions>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="memorial" access="edit"/>
+        <permission group="museum" access="read"/>
+        <permission group="library" access="read"/>
+        <permission group="photograph" access="read"/>
+      </groupAccess>
       <bundlePlacements>
         <placement code="idno">
           <bundle>ca_objects.idno</bundle>
@@ -8462,6 +8479,13 @@
       <typeRestrictions>
         <restriction type="museum"/>
       </typeRestrictions>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="museum" access="edit"/>
+        <permission group="library" access="read"/>
+        <permission group="photograph" access="read"/>
+        <permission group="memorial" access="read"/>
+      </groupAccess>
       <bundlePlacements>
         <placement code="idno">
           <bundle>ca_objects.idno</bundle>
@@ -8905,6 +8929,13 @@
       <typeRestrictions>
         <restriction type="photograph"/>
       </typeRestrictions>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="photograph" access="edit"/>
+        <permission group="museum" access="read"/>
+        <permission group="library" access="read"/>
+        <permission group="memorial" access="read"/>
+      </groupAccess>
       <bundlePlacements>
         <placement code="idno">
           <bundle>ca_objects.idno</bundle>
@@ -9257,6 +9288,13 @@
       <typeRestrictions>
         <restriction type="Subject"/>
       </typeRestrictions>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="museum" access="edit"/>
+        <permission group="library" access="edit"/>
+        <permission group="photograph" access="edit"/>
+        <permission group="memorial" access="edit"/>
+      </groupAccess>
       <bundlePlacements>
         <placement code="idno">
           <bundle>ca_occurrences.idno</bundle>
@@ -9300,6 +9338,10 @@
       <typeRestrictions>
         <restriction type="Conservation"/>
       </typeRestrictions>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="museum" access="edit"/>
+      </groupAccess>
       <bundlePlacements>
         <placement code="preferred_labels">
           <bundle>ca_occurrences.preferred_labels</bundle>

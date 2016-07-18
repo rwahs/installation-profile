@@ -123,6 +123,7 @@
         </xsl:element>
       </xsl:element>
       <xsl:copy-of select="/profile/userInterfaces/userInterface[@code = $ui_code]/typeRestrictions" />
+      <xsl:copy-of select="/profile/userInterfaces/userInterface[@code = $ui_code]/groupAccess" />
       <xsl:element name="bundlePlacements">
         <xsl:for-each select="/profile/userInterfaces/userInterface[@code = $ui_code]/screens/screen/bundlePlacements/placement">
           <xsl:element name="placement">
