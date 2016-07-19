@@ -7718,7 +7718,7 @@
         </label>
       </labels>
       <settings>
-        <setting name="show_empty_values"><![CDATA[0]]></setting>
+        <setting name="show_empty_values"><![CDATA[1]]></setting>
       </settings>
       <userAccess>
         <permission user="administrator" access="edit"/>
