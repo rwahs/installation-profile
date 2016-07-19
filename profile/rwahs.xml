@@ -7859,7 +7859,10 @@
         <placement code="ca_entities">
           <bundle>ca_entities</bundle>
           <settings>
-            <setting name="format"><![CDATA[]]></setting>
+            <setting name="label" locale="en_AU">Source / Donor</setting>
+            <setting name="format"><![CDATA[<unit relativeTo="ca_entities">
+                    <l>^preferred_labels</l>
+                    </unit>]]></setting>
             <setting name="restrict_to_relationship_types"><![CDATA[donor]]></setting>
             <setting name="hierarchy_order"><![CDATA[ASC]]></setting>
           </settings>
