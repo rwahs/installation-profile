@@ -7711,111 +7711,193 @@
     </group>
   </groups>
   <displays>
-    <display code="simple_report" type="ca_objects" system="1">
+    <display code="item_report" type="ca_objects" system="1">
       <labels>
         <label locale="en_AU">
-          <name>Simple DublinCore Display</name>
+          <name>Item Report</name>
         </label>
       </labels>
+      <settings>
+        <setting name="show_empty_values"><![CDATA[1]]></setting>
+      </settings>
+      <userAccess>
+        <permission user="administrator" access="edit"/>
+      </userAccess>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="museum" access="read"/>
+      </groupAccess>
       <bundlePlacements>
-        <placement code="preferred_labels">
-          <bundle>ca_objects.preferred_labels</bundle>
-        </placement>
-        <placement code="creator">
-          <bundle>ca_entities</bundle>
-          <settings>
-            <setting name="restrict_to_relationship_types">creator</setting>
-            <setting name="label" locale="en_AU">Creator(s)</setting>
-          </settings>
-        </placement>
-        <placement code="subject">
-          <bundle>ca_objects.lcsh_terms</bundle>
-        </placement>
-        <placement code="description">
-          <bundle>ca_objects.description</bundle>
-        </placement>
-        <placement code="publisher">
-          <bundle>ca_entities</bundle>
-          <settings>
-            <setting name="restrict_to_relationship_types">publisher</setting>
-            <setting name="label" locale="en_AU">Publisher(s)</setting>
-          </settings>
-        </placement>
-        <placement code="contributor">
-          <bundle>ca_entities</bundle>
-          <settings>
-            <setting name="restrict_to_relationship_types">contributor</setting>
-            <setting name="label" locale="en_AU">Contributor(s)</setting>
-          </settings>
-        </placement>
-        <placement code="date">
-          <bundle>ca_objects.date</bundle>
-        </placement>
-        <placement code="type">
+        <placement code="ca_objects_type_id">
           <bundle>ca_objects.type_id</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Item Type</setting>
+          </settings>
         </placement>
-        <placement code="audio_format">
-          <bundle>ca_objects.audio_format</bundle>
-        </placement>
-        <placement code="video_format">
-          <bundle>ca_objects.video_format</bundle>
-        </placement>
-        <placement code="text_format">
-          <bundle>ca_objects.text_format</bundle>
-        </placement>
-        <placement code="image_format">
-          <bundle>ca_objects.image_format</bundle>
-        </placement>
-        <placement code="gen_format">
-          <bundle>ca_objects.gen_format</bundle>
-        </placement>
-        <placement code="idno">
+        <placement code="ca_objects_idno">
           <bundle>ca_objects.idno</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Accession No</setting>
+          </settings>
         </placement>
-        <placement code="language">
-          <bundle>ca_objects.language</bundle>
+        <placement code="ca_objects_ReceiptNum">
+          <bundle>ca_objects.ReceiptNum</bundle>
         </placement>
-        <placement code="relation">
-          <bundle>ca_objects.related.preferred_labels</bundle>
-        </placement>
-        <placement code="georeference">
-          <bundle>ca_objects.georeference</bundle>
-        </placement>
-        <placement code="coverageNotes">
-          <bundle>ca_objects.coverageNotes</bundle>
-        </placement>
-        <placement code="coverageDates">
-          <bundle>ca_objects.coverageDates</bundle>
-        </placement>
-        <placement code="rights">
-          <bundle>ca_objects.rights</bundle>
-        </placement>
-      </bundlePlacements>
-    </display>
-    <display code="researcher_display" type="ca_objects" system="1">
-      <labels>
-        <label locale="en_AU">
-          <name>Researcher Display</name>
-        </label>
-      </labels>
-      <bundlePlacements>
-        <placement code="idno">
-          <bundle>ca_objects.idno</bundle>
-        </placement>
-        <placement code="preferred_labels">
+        <placement code="ca_objects_preferred_labels">
           <bundle>ca_objects.preferred_labels</bundle>
+          <settings>
+            <setting name="format"><![CDATA[]]></setting>
+            <setting name="label" locale="en_AU">Item Name</setting>
+            <setting name="delimiter"><![CDATA[]]></setting>
+            <setting name="maximum_length"><![CDATA[100]]></setting>
+          </settings>
         </placement>
-        <placement code="description">
-          <bundle>ca_objects.description</bundle>
+        <placement code="ca_list_items">
+          <bundle>ca_list_items</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Classification</setting>
+            <setting name="format"><![CDATA[^ca_list_item_labels.hierarchy]]></setting>
+            <setting name="delimiter"><![CDATA[;]]></setting>
+            <setting name="sort"><![CDATA[]]></setting>
+            <setting name="show_hierarchy"><![CDATA[0]]></setting>
+            <setting name="remove_first_items"><![CDATA[1]]></setting>
+            <setting name="hierarchy_order"><![CDATA[ASC]]></setting>
+            <setting name="hierarchy_limit"><![CDATA[0]]></setting>
+            <setting name="hierarchical_delimiter"><![CDATA[ &rArr; ]]></setting>
+          </settings>
         </placement>
-        <placement code="date">
-          <bundle>ca_objects.date</bundle>
+        <placement code="ca_objects_Description">
+          <bundle>ca_objects.Description</bundle>
         </placement>
-        <placement code="type">
-          <bundle>ca_objects.type_id</bundle>
+        <placement code="ca_objects_ItemDates">
+          <bundle>ca_objects.ItemDates</bundle>
         </placement>
-        <placement code="entities">
+        <placement code="ca_objects_EarliestYear">
+          <bundle>ca_objects.EarliestYear</bundle>
+        </placement>
+        <placement code="ca_objects_LatestYear">
+          <bundle>ca_objects.LatestYear</bundle>
+        </placement>
+        <placement code="ca_objects_Materials">
+          <bundle>ca_objects.Materials</bundle>
+        </placement>
+        <placement code="ca_objects_Dimensions">
+          <bundle>ca_objects.Dimensions</bundle>
+        </placement>
+        <placement code="ca_objects_Importance">
+          <bundle>ca_objects.Importance</bundle>
+        </placement>
+        <placement code="ca_objects_SignificanceCriteria">
+          <bundle>ca_objects.SignificanceCriteria</bundle>
+          <settings>
+            <setting name="label" locale="en_AU"/>
+            <setting name="format"><![CDATA[]]></setting>
+            <setting name="delimiter"><![CDATA[; ]]></setting>
+            <setting name="maximum_length"><![CDATA[2048]]></setting>
+            <setting name="filter"><![CDATA[]]></setting>
+            <setting name="sense"><![CDATA[singular]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_objects_ComparativeCriteria">
+          <bundle>ca_objects.ComparativeCriteria</bundle>
+          <settings>
+            <setting name="label" locale="en_AU"/>
+            <setting name="format"><![CDATA[]]></setting>
+            <setting name="delimiter"><![CDATA[; ]]></setting>
+            <setting name="maximum_length"><![CDATA[2048]]></setting>
+            <setting name="filter"><![CDATA[]]></setting>
+            <setting name="sense"><![CDATA[singular]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_objects_StatementOfSignificance">
+          <bundle>ca_objects.StatementOfSignificance</bundle>
+        </placement>
+        <placement code="ca_objects_HistoricalDetails">
+          <bundle>ca_objects.HistoricalDetails</bundle>
+        </placement>
+        <placement code="ca_objects_ResearchBy">
+          <bundle>ca_objects.ResearchBy</bundle>
+        </placement>
+        <placement code="ca_objects_BibliographReferences">
+          <bundle>ca_objects.BibliographReferences</bundle>
+        </placement>
+        <placement code="ca_occurrences">
+          <bundle>ca_occurrences</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Subjects</setting>
+            <setting name="format"><![CDATA[<unit relativeTo="ca_occurrences">
+                    <l>^preferred_labels</l>
+                    </unit>
+                    <dl>
+                    <ifdef code="ca_occurrences.SubjectDates">
+                      <dt>Subject Dates:</dt>
+                      <dd>^ca_occurrences.SubjectDates</dd>
+                    </ifdef>
+                    <ifdef code="ca_occurrences.Description">
+                      <dt>Description:</dt>
+                      <dd>^ca_occurrences.Description</dd>
+                    </ifdef>
+                    <ifdef code="ca_objects_x_occurrences.Association">
+                      <dt>Association:</dt>
+                      <dd>^ca_objects_x_occurrences.Association</dd>
+                    </ifdef>
+                    <ifdef code="ca_objects_x_occurrences.SubjectDates">
+                      <dt>Relationship Dates:</dt>
+                      <dd>^ca_objects_x_occurrences.SubjectDates</dd>
+                    </ifdef>
+                  </dl>]]></setting>
+            <setting name="restrict_to_types"><![CDATA[Subject]]></setting>
+            <setting name="delimiter"><![CDATA[]]></setting>
+            <setting name="sort"><![CDATA[]]></setting>
+            <setting name="remove_first_items"><![CDATA[0]]></setting>
+            <setting name="hierarchy_order"><![CDATA[ASC]]></setting>
+            <setting name="hierarchy_limit"><![CDATA[0]]></setting>
+            <setting name="hierarchical_delimiter"><![CDATA[ ➔ ]]></setting>
+            <setting name="show_hierarchy"><![CDATA[0]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_entities">
           <bundle>ca_entities</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Source / Donor</setting>
+            <setting name="format"><![CDATA[<unit relativeTo="ca_entities">
+                    <l>^preferred_labels</l>
+                    </unit>]]></setting>
+            <setting name="restrict_to_relationship_types"><![CDATA[donor]]></setting>
+            <setting name="hierarchy_order"><![CDATA[ASC]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_objects_DateReceived">
+          <bundle>ca_objects.DateReceived</bundle>
+        </placement>
+        <placement code="ca_objects_acquisition_type_id">
+          <bundle>ca_objects.acquisition_type_id</bundle>
+        </placement>
+        <placement code="ca_objects_ConditionOnReceipt">
+          <bundle>ca_objects.ConditionOnReceipt</bundle>
+        </placement>
+        <placement code="ca_objects_LegalTitle">
+          <bundle>ca_objects.LegalTitle</bundle>
+        </placement>
+        <placement code="ca_objects_Copyright">
+          <bundle>ca_objects.Copyright</bundle>
+        </placement>
+        <placement code="ca_objects_Correspondence">
+          <bundle>ca_objects.Correspondence</bundle>
+        </placement>
+        <placement code="ca_objects_AccessionByContainer">
+          <bundle>ca_objects.AccessionByContainer</bundle>
+          <settings>
+            <setting name="label" locale="en_AU"/>
+            <setting name="format"><![CDATA[<table>
+<tr><td>^ca_objects.AccessionByContainer.AccessionBy</td><td>Date: ^ca_objects.AccessionByContainer.AccessionDate</td>
+</tr>
+</table>]]></setting>
+            <setting name="delimiter"><![CDATA[]]></setting>
+            <setting name="maximum_length"><![CDATA[2048]]></setting>
+            <setting name="filter"><![CDATA[]]></setting>
+            <setting name="bottom_line"><![CDATA[]]></setting>
+          </settings>
         </placement>
       </bundlePlacements>
     </display>
