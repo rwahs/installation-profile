@@ -7806,9 +7806,11 @@
       <settings>
         <setting name="show_empty_values"><![CDATA[1]]></setting>
       </settings>
-      <userAccess>
-        <permission user="administrator" access="edit"/>
-      </userAccess>
+      <typeRestrictions>
+        <restriction type="artwork"/>
+        <restriction type="costume"/>
+        <restriction type="museumArtefact"/>
+      </typeRestrictions>
       <groupAccess>
         <permission group="admin" access="edit"/>
         <permission group="museum" access="read"/>
