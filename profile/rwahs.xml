@@ -7596,58 +7596,28 @@
       <typeLevelAccessControl>
         <permission table="ca_objects" type="artwork" access="edit"/>
         <permission table="ca_objects" type="costume" access="edit"/>
-        <permission table="ca_objects" type="library" access="read"/>
         <permission table="ca_objects" type="museumArtefact" access="edit"/>
-        <permission table="ca_objects" type="museum" access="read"/>
-        <permission table="ca_objects" type="photograph" access="read"/>
-        <permission table="ca_objects" type="publicMemorial" access="read"/>
-        <permission table="ca_objects" type="Root node for object_types" access="none"/>
         <permission table="ca_entities" type="family" access="edit"/>
         <permission table="ca_entities" type="individual" access="edit"/>
         <permission table="ca_entities" type="organisation" access="edit"/>
-        <permission table="ca_entities" type="Root node for entity_types" access="none"/>
-        <permission table="ca_places" type="city" access="read"/>
-        <permission table="ca_places" type="continent" access="read"/>
-        <permission table="ca_places" type="county" access="read"/>
-        <permission table="ca_places" type="country" access="read"/>
-        <permission table="ca_places" type="location" access="read"/>
-        <permission table="ca_places" type="neighborhood" access="read"/>
-        <permission table="ca_places" type="other" access="read"/>
-        <permission table="ca_places" type="socken" access="read"/>
-        <permission table="ca_places" type="river" access="read"/>
-        <permission table="ca_places" type="Root node for place_types" access="none"/>
-        <permission table="ca_places" type="state" access="read"/>
         <permission table="ca_occurrences" type="Conservation" access="edit"/>
-        <permission table="ca_occurrences" type="Root node for occurrence_types" access="none"/>
         <permission table="ca_occurrences" type="Subject" access="edit"/>
         <permission table="ca_storage_locations" type="box" access="edit"/>
-        <permission table="ca_storage_locations" type="building" access="read"/>
-        <permission table="ca_storage_locations" type="cabinet" access="read"/>
         <permission table="ca_storage_locations" type="container" access="edit"/>
         <permission table="ca_storage_locations" type="drawer" access="edit"/>
-        <permission table="ca_storage_locations" type="floor" access="read"/>
         <permission table="ca_storage_locations" type="room" access="edit"/>
-        <permission table="ca_storage_locations" type="Root node for storage_location_types" access="none"/>
         <permission table="ca_storage_locations" type="shelf" access="edit"/>
-        <permission table="ca_storage_locations" type="site" access="read"/>
         <permission table="ca_loans" type="in" access="edit"/>
         <permission table="ca_loans" type="out" access="edit"/>
-        <permission table="ca_loans" type="Root node for loan_types" access="none"/>
         <permission table="ca_object_representations" type="back" access="edit"/>
         <permission table="ca_object_representations" type="condition" access="edit"/>
         <permission table="ca_object_representations" type="front" access="edit"/>
-        <permission table="ca_object_representations" type="Root node for object_representation_types" access="none"/>
-        <permission table="ca_sets" type="public_presentation" access="read"/>
-        <permission table="ca_sets" type="Root node for set_types" access="none"/>
         <permission table="ca_sets" type="user" access="edit"/>
-        <permission table="ca_set_items" type="public_presentation" access="read"/>
-        <permission table="ca_set_items" type="Root node for set_types" access="none"/>
         <permission table="ca_set_items" type="user" access="edit"/>
         <permission table="ca_list_items" type="concept" access="edit"/>
         <permission table="ca_list_items" type="facet" access="edit"/>
         <permission table="ca_list_items" type="guide_term" access="edit"/>
         <permission table="ca_list_items" type="hierarchy_name" access="edit"/>
-        <permission table="ca_list_items" type="Root node for list_item_types" access="none"/>
       </typeLevelAccessControl>
     </role>
     <role code="library">
@@ -7656,60 +7626,21 @@
       <actions>
       </actions>
       <typeLevelAccessControl>
-        <permission table="ca_objects" type="artwork" access="read"/>
-        <permission table="ca_objects" type="costume" access="read"/>
         <permission table="ca_objects" type="library" access="edit"/>
-        <permission table="ca_objects" type="museumArtefact" access="read"/>
-        <permission table="ca_objects" type="museum" access="read"/>
-        <permission table="ca_objects" type="photograph" access="read"/>
-        <permission table="ca_objects" type="publicMemorial" access="read"/>
-        <permission table="ca_objects" type="Root node for object_types" access="none"/>
         <permission table="ca_entities" type="family" access="edit"/>
         <permission table="ca_entities" type="individual" access="edit"/>
         <permission table="ca_entities" type="organisation" access="edit"/>
-        <permission table="ca_entities" type="Root node for entity_types" access="none"/>
-        <permission table="ca_places" type="city" access="read"/>
-        <permission table="ca_places" type="continent" access="read"/>
-        <permission table="ca_places" type="county" access="read"/>
-        <permission table="ca_places" type="country" access="read"/>
-        <permission table="ca_places" type="location" access="read"/>
-        <permission table="ca_places" type="neighborhood" access="read"/>
-        <permission table="ca_places" type="other" access="read"/>
-        <permission table="ca_places" type="socken" access="read"/>
-        <permission table="ca_places" type="river" access="read"/>
-        <permission table="ca_places" type="Root node for place_types" access="none"/>
-        <permission table="ca_places" type="state" access="read"/>
-        <permission table="ca_occurrences" type="Conservation" access="read"/>
-        <permission table="ca_occurrences" type="Root node for occurrence_types" access="none"/>
         <permission table="ca_occurrences" type="Subject" access="edit"/>
-        <permission table="ca_storage_locations" type="box" access="read"/>
-        <permission table="ca_storage_locations" type="building" access="read"/>
-        <permission table="ca_storage_locations" type="cabinet" access="read"/>
-        <permission table="ca_storage_locations" type="container" access="read"/>
-        <permission table="ca_storage_locations" type="drawer" access="read"/>
-        <permission table="ca_storage_locations" type="floor" access="read"/>
-        <permission table="ca_storage_locations" type="room" access="read"/>
-        <permission table="ca_storage_locations" type="Root node for storage_location_types" access="none"/>
-        <permission table="ca_storage_locations" type="shelf" access="read"/>
-        <permission table="ca_storage_locations" type="site" access="read"/>
         <permission table="ca_loans" type="in" access="edit"/>
         <permission table="ca_loans" type="out" access="edit"/>
-        <permission table="ca_loans" type="Root node for loan_types" access="none"/>
         <permission table="ca_object_representations" type="back" access="edit"/>
-        <permission table="ca_object_representations" type="condition" access="read"/>
         <permission table="ca_object_representations" type="front" access="edit"/>
-        <permission table="ca_object_representations" type="Root node for object_representation_types" access="none"/>
-        <permission table="ca_sets" type="public_presentation" access="read"/>
-        <permission table="ca_sets" type="Root node for set_types" access="none"/>
         <permission table="ca_sets" type="user" access="edit"/>
-        <permission table="ca_set_items" type="public_presentation" access="read"/>
-        <permission table="ca_set_items" type="Root node for set_types" access="none"/>
         <permission table="ca_set_items" type="user" access="edit"/>
         <permission table="ca_list_items" type="concept" access="edit"/>
         <permission table="ca_list_items" type="facet" access="edit"/>
         <permission table="ca_list_items" type="guide_term" access="edit"/>
         <permission table="ca_list_items" type="hierarchy_name" access="edit"/>
-        <permission table="ca_list_items" type="Root node for list_item_types" access="none"/>
       </typeLevelAccessControl>
     </role>
     <role code="photograph">
@@ -7718,60 +7649,21 @@
       <actions>
       </actions>
       <typeLevelAccessControl>
-        <permission table="ca_objects" type="artwork" access="read"/>
-        <permission table="ca_objects" type="costume" access="read"/>
-        <permission table="ca_objects" type="library" access="read"/>
-        <permission table="ca_objects" type="museumArtefact" access="read"/>
-        <permission table="ca_objects" type="museum" access="read"/>
         <permission table="ca_objects" type="photograph" access="edit"/>
-        <permission table="ca_objects" type="publicMemorial" access="read"/>
-        <permission table="ca_objects" type="Root node for object_types" access="none"/>
         <permission table="ca_entities" type="family" access="edit"/>
         <permission table="ca_entities" type="individual" access="edit"/>
         <permission table="ca_entities" type="organisation" access="edit"/>
-        <permission table="ca_entities" type="Root node for entity_types" access="none"/>
-        <permission table="ca_places" type="city" access="read"/>
-        <permission table="ca_places" type="continent" access="read"/>
-        <permission table="ca_places" type="county" access="read"/>
-        <permission table="ca_places" type="country" access="read"/>
-        <permission table="ca_places" type="location" access="read"/>
-        <permission table="ca_places" type="neighborhood" access="read"/>
-        <permission table="ca_places" type="other" access="read"/>
-        <permission table="ca_places" type="socken" access="read"/>
-        <permission table="ca_places" type="river" access="read"/>
-        <permission table="ca_places" type="Root node for place_types" access="none"/>
-        <permission table="ca_places" type="state" access="read"/>
-        <permission table="ca_occurrences" type="Conservation" access="read"/>
-        <permission table="ca_occurrences" type="Root node for occurrence_types" access="none"/>
         <permission table="ca_occurrences" type="Subject" access="edit"/>
-        <permission table="ca_storage_locations" type="box" access="read"/>
-        <permission table="ca_storage_locations" type="building" access="read"/>
-        <permission table="ca_storage_locations" type="cabinet" access="read"/>
-        <permission table="ca_storage_locations" type="container" access="read"/>
-        <permission table="ca_storage_locations" type="drawer" access="read"/>
-        <permission table="ca_storage_locations" type="floor" access="read"/>
-        <permission table="ca_storage_locations" type="room" access="read"/>
-        <permission table="ca_storage_locations" type="Root node for storage_location_types" access="none"/>
-        <permission table="ca_storage_locations" type="shelf" access="read"/>
-        <permission table="ca_storage_locations" type="site" access="read"/>
         <permission table="ca_loans" type="in" access="edit"/>
         <permission table="ca_loans" type="out" access="edit"/>
-        <permission table="ca_loans" type="Root node for loan_types" access="none"/>
         <permission table="ca_object_representations" type="back" access="edit"/>
-        <permission table="ca_object_representations" type="condition" access="read"/>
         <permission table="ca_object_representations" type="front" access="edit"/>
-        <permission table="ca_object_representations" type="Root node for object_representation_types" access="none"/>
-        <permission table="ca_sets" type="public_presentation" access="read"/>
-        <permission table="ca_sets" type="Root node for set_types" access="none"/>
         <permission table="ca_sets" type="user" access="edit"/>
-        <permission table="ca_set_items" type="public_presentation" access="read"/>
-        <permission table="ca_set_items" type="Root node for set_types" access="none"/>
         <permission table="ca_set_items" type="user" access="edit"/>
         <permission table="ca_list_items" type="concept" access="edit"/>
         <permission table="ca_list_items" type="facet" access="edit"/>
         <permission table="ca_list_items" type="guide_term" access="edit"/>
         <permission table="ca_list_items" type="hierarchy_name" access="edit"/>
-        <permission table="ca_list_items" type="Root node for list_item_types" access="none"/>
       </typeLevelAccessControl>
     </role>
     <role code="memorial">
@@ -7780,18 +7672,10 @@
       <actions>
       </actions>
       <typeLevelAccessControl>
-        <permission table="ca_objects" type="artwork" access="read"/>
-        <permission table="ca_objects" type="costume" access="read"/>
-        <permission table="ca_objects" type="library" access="read"/>
-        <permission table="ca_objects" type="museumArtefact" access="read"/>
-        <permission table="ca_objects" type="museum" access="read"/>
-        <permission table="ca_objects" type="photograph" access="read"/>
         <permission table="ca_objects" type="publicMemorial" access="edit"/>
-        <permission table="ca_objects" type="Root node for object_types" access="none"/>
         <permission table="ca_entities" type="family" access="edit"/>
         <permission table="ca_entities" type="individual" access="edit"/>
         <permission table="ca_entities" type="organisation" access="edit"/>
-        <permission table="ca_entities" type="Root node for entity_types" access="none"/>
         <permission table="ca_places" type="city" access="edit"/>
         <permission table="ca_places" type="continent" access="edit"/>
         <permission table="ca_places" type="county" access="edit"/>
@@ -7801,39 +7685,17 @@
         <permission table="ca_places" type="other" access="edit"/>
         <permission table="ca_places" type="socken" access="edit"/>
         <permission table="ca_places" type="river" access="edit"/>
-        <permission table="ca_places" type="Root node for place_types" access="none"/>
-        <permission table="ca_places" type="state" access="read"/>
-        <permission table="ca_occurrences" type="Conservation" access="read"/>
-        <permission table="ca_occurrences" type="Root node for occurrence_types" access="none"/>
         <permission table="ca_occurrences" type="Subject" access="edit"/>
-        <permission table="ca_storage_locations" type="box" access="read"/>
-        <permission table="ca_storage_locations" type="building" access="read"/>
-        <permission table="ca_storage_locations" type="cabinet" access="read"/>
-        <permission table="ca_storage_locations" type="container" access="read"/>
-        <permission table="ca_storage_locations" type="drawer" access="read"/>
-        <permission table="ca_storage_locations" type="floor" access="read"/>
-        <permission table="ca_storage_locations" type="room" access="read"/>
-        <permission table="ca_storage_locations" type="Root node for storage_location_types" access="none"/>
-        <permission table="ca_storage_locations" type="shelf" access="read"/>
-        <permission table="ca_storage_locations" type="site" access="read"/>
         <permission table="ca_loans" type="in" access="edit"/>
         <permission table="ca_loans" type="out" access="edit"/>
-        <permission table="ca_loans" type="Root node for loan_types" access="none"/>
         <permission table="ca_object_representations" type="back" access="edit"/>
-        <permission table="ca_object_representations" type="condition" access="read"/>
         <permission table="ca_object_representations" type="front" access="edit"/>
-        <permission table="ca_object_representations" type="Root node for object_representation_types" access="none"/>
-        <permission table="ca_sets" type="public_presentation" access="read"/>
-        <permission table="ca_sets" type="Root node for set_types" access="none"/>
         <permission table="ca_sets" type="user" access="edit"/>
-        <permission table="ca_set_items" type="public_presentation" access="read"/>
-        <permission table="ca_set_items" type="Root node for set_types" access="none"/>
         <permission table="ca_set_items" type="user" access="edit"/>
         <permission table="ca_list_items" type="concept" access="edit"/>
         <permission table="ca_list_items" type="facet" access="edit"/>
         <permission table="ca_list_items" type="guide_term" access="edit"/>
         <permission table="ca_list_items" type="hierarchy_name" access="edit"/>
-        <permission table="ca_list_items" type="Root node for list_item_types" access="none"/>
       </typeLevelAccessControl>
     </role>
     <role code="cataloguer">
