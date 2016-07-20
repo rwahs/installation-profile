@@ -7631,8 +7631,6 @@
         <permission table="ca_entities" type="individual" access="edit"/>
         <permission table="ca_entities" type="organisation" access="edit"/>
         <permission table="ca_occurrences" type="Subject" access="edit"/>
-        <permission table="ca_loans" type="in" access="edit"/>
-        <permission table="ca_loans" type="out" access="edit"/>
         <permission table="ca_object_representations" type="back" access="edit"/>
         <permission table="ca_object_representations" type="front" access="edit"/>
         <permission table="ca_sets" type="user" access="edit"/>
@@ -7654,8 +7652,6 @@
         <permission table="ca_entities" type="individual" access="edit"/>
         <permission table="ca_entities" type="organisation" access="edit"/>
         <permission table="ca_occurrences" type="Subject" access="edit"/>
-        <permission table="ca_loans" type="in" access="edit"/>
-        <permission table="ca_loans" type="out" access="edit"/>
         <permission table="ca_object_representations" type="back" access="edit"/>
         <permission table="ca_object_representations" type="front" access="edit"/>
         <permission table="ca_sets" type="user" access="edit"/>
@@ -7686,8 +7682,6 @@
         <permission table="ca_places" type="socken" access="edit"/>
         <permission table="ca_places" type="river" access="edit"/>
         <permission table="ca_occurrences" type="Subject" access="edit"/>
-        <permission table="ca_loans" type="in" access="edit"/>
-        <permission table="ca_loans" type="out" access="edit"/>
         <permission table="ca_object_representations" type="back" access="edit"/>
         <permission table="ca_object_representations" type="front" access="edit"/>
         <permission table="ca_sets" type="user" access="edit"/>
