@@ -7844,7 +7844,7 @@
             <setting name="remove_first_items"><![CDATA[1]]></setting>
             <setting name="hierarchy_order"><![CDATA[ASC]]></setting>
             <setting name="hierarchy_limit"><![CDATA[0]]></setting>
-            <setting name="hierarchical_delimiter"><![CDATA[ &rArr; ]]></setting>
+            <setting name="hierarchical_delimiter"><![CDATA[ => ]]></setting>
           </settings>
         </placement>
         <placement code="ca_objects_Description">
@@ -7979,6 +7979,68 @@
             <setting name="filter"><![CDATA[]]></setting>
             <setting name="bottom_line"><![CDATA[]]></setting>
           </settings>
+        </placement>
+      </bundlePlacements>
+    </display>
+    <display code="representations" type="ca_object_representations" system="1">
+      <labels>
+        <label locale="en_AU">
+          <name>Media / representation display</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="show_empty_values"><![CDATA[1]]></setting>
+      </settings>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+        <permission group="library" access="read"/>
+        <permission group="photograph" access="read"/>
+        <permission group="museum" access="read"/>
+        <permission group="memorial" access="read"/>
+      </groupAccess>
+      <bundlePlacements>
+        <placement code="ca_object_representations_media">
+          <bundle>ca_object_representations.media</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Media</setting>
+            <setting name="maximum_length"><![CDATA[100]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_object_representations_idno">
+          <bundle>ca_object_representations.idno</bundle>
+        </placement>
+        <placement code="ca_object_representations_access">
+          <bundle>ca_object_representations.access</bundle>
+        </placement>
+        <placement code="ca_objects">
+          <bundle>ca_objects</bundle>
+          <settings>
+            <setting name="label" locale="en_AU"/>
+            <setting name="format"><![CDATA[<unit relativeTo="ca_objects"><l>^preferred_labels [^idno]</l> - ^type_id</unit>]]></setting>
+            <setting name="delimiter"><![CDATA[, ]]></setting>
+            <setting name="sort"><![CDATA[]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_object_representations_status">
+          <bundle>ca_object_representations.status</bundle>
+        </placement>
+        <placement code="ca_object_representations_preferred_labels">
+          <bundle>ca_object_representations.preferred_labels</bundle>
+        </placement>
+        <placement code="ca_object_representations_Description">
+          <bundle>ca_object_representations.Description</bundle>
+        </placement>
+        <placement code="ca_object_representations_original_filename">
+          <bundle>ca_object_representations.original_filename</bundle>
+        </placement>
+        <placement code="ca_object_representations_type_id">
+          <bundle>ca_object_representations.type_id</bundle>
+        </placement>
+        <placement code="ca_object_representations_created">
+          <bundle>ca_object_representations.created</bundle>
+        </placement>
+        <placement code="ca_object_representations_lastModified">
+          <bundle>ca_object_representations.lastModified</bundle>
         </placement>
       </bundlePlacements>
     </display>
