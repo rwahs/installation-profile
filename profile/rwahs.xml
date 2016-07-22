@@ -2605,6 +2605,11 @@
           <name>Importance</name>
         </label>
       </labels>
+      <settings>
+        <setting name="render">select</setting>
+        <setting name="requireValue">0</setting>
+        <setting name="nullOptionText">Not Set</setting>
+      </settings>
       <typeRestrictions>
         <restriction code="museum_Importance">
           <table>ca_objects</table>
@@ -2730,6 +2735,11 @@
           <name>Physical Condition</name>
         </label>
       </labels>
+      <settings>
+        <setting name="render">select</setting>
+        <setting name="requireValue">0</setting>
+        <setting name="nullOptionText">Not Set</setting>
+      </settings>
       <typeRestrictions>
         <restriction code="museum_PhysicalCondition">
           <table>ca_objects</table>
@@ -2769,6 +2779,11 @@
           <name>Visual Condition</name>
         </label>
       </labels>
+      <settings>
+        <setting name="render">select</setting>
+        <setting name="requireValue">0</setting>
+        <setting name="nullOptionText">Not Set</setting>
+      </settings>
       <typeRestrictions>
         <restriction code="museum_VisualCondition">
           <table>ca_objects</table>
@@ -2908,6 +2923,11 @@
               <name>Dimension Type</name>
             </label>
           </labels>
+          <settings>
+            <setting name="render">select</setting>
+            <setting name="requireValue">0</setting>
+            <setting name="nullOptionText">Not Set</setting>
+          </settings>
         </metadataElement>
       </elements>
       <typeRestrictions>
@@ -4280,12 +4300,9 @@
             </label>
           </labels>
           <settings>
-            <setting name="usewysiwygeditor">0</setting>
-            <setting name="fieldWidth">70</setting>
-            <setting name="fieldHeight">1</setting>
-            <setting name="minChars">0</setting>
-            <setting name="maxChars">255</setting>
-            <setting name="suggestExistingValues">1</setting>
+            <setting name="render">select</setting>
+            <setting name="requireValue">0</setting>
+            <setting name="nullOptionText">Not Set</setting>
           </settings>
         </metadataElement>
         <metadataElement code="CreatorName" datatype="Text">
