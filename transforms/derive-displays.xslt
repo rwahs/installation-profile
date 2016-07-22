@@ -11,7 +11,7 @@
   </xsl:template>
 
   <!-- Don't munge the CDATA sections in UI placement template settings. -->
-  <xsl:template match="/profile/userInterfaces/userInterface/screens/screen/bundlePlacements/placement/settings/setting[substring(@name, string-length(@name) - 6) = 'emplate']">
+  <xsl:template match="/profile/userInterfaces/userInterface/screens/screen/bundlePlacements/placement/settings/setting[@name = 'displayTemplate' or @name = 'display_template' or @name = 'format' or @name = 'historyTemplate']">
     <xsl:element name="setting">
       <xsl:copy-of select="@name" />
       <xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
@@ -145,15 +145,16 @@
             </xsl:element>
             <xsl:element name="settings">
               <xsl:for-each select="settings/setting">
-                <xsl:if test="substring(@name, string-length(@name) - 6) = 'emplate'">
+                <xsl:if test="@name = 'displayTemplate' or @name = 'display_template' or @name = 'format'">
                   <xsl:element name="setting">
                     <xsl:copy-of select="@name" />
+                    <xsl:attribute name="name"><xsl:text>format</xsl:text></xsl:attribute>
                     <xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
                     <xsl:value-of select="text()" disable-output-escaping="yes"/>
                     <xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>
                   </xsl:element>
                 </xsl:if>
-                <xsl:if test="substring(@name, string-length(@name) - 6) != 'emplate'">
+                <xsl:if test="@name != 'displayTemplate' and @name != 'display_template' and @name != 'format'  and @name != 'historyTemplate'">
                   <xsl:copy-of select="."/>
                 </xsl:if>
               </xsl:for-each>

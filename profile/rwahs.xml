@@ -8371,7 +8371,7 @@
             <setting name="list_format">list</setting>
             <setting name="sortDirection">ASC</setting>
             <setting name="dontShowDeleteButton">0</setting>
-            <setting name="display_template"><![CDATA[
+            <setting name="format"><![CDATA[
 
                   <dl>
                     <dt>Subject:</dt>
@@ -8469,7 +8469,7 @@
             <setting name="minRelationshipsPerRow">0</setting>
             <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
-            <setting name="display_template"><![CDATA[
+            <setting name="format"><![CDATA[
                   <dl>
                     <dt>Donor Name:
                     </dt>
@@ -8628,7 +8628,7 @@
             <setting name="list_format">list</setting>
             <setting name="sortDirection">ASC</setting>
             <setting name="dontShowDeleteButton">0</setting>
-            <setting name="display_template"><![CDATA[
+            <setting name="format"><![CDATA[
 
                   <dl>
                     <dt>Subject:</dt>
@@ -8743,7 +8743,7 @@
             <setting name="minRelationshipsPerRow">0</setting>
             <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
-            <setting name="display_template"><![CDATA[
+            <setting name="format"><![CDATA[
                   <dl>
                     <dt>Donor Name:
                     </dt>
@@ -8857,7 +8857,7 @@
             <setting name="maxRelationshipsPerRow">1</setting>
             <setting name="showCurrentOnly">1</setting>
             <setting name="useHierarchicalBrowser">1</setting>
-            <setting name="display_template"><![CDATA[
+            <setting name="format"><![CDATA[
 
                   <unit relativeTo="ca_storage_locations">
                     <unit relativeTo="ca_storage_locations.hierarchy">
@@ -8873,19 +8873,7 @@
           <settings>
             <setting name="label" locale="en_AU">Stored Location</setting>
             <setting name="locationTrackingMode">ca_movements</setting>
-            <setting name="displayTemplate"><![CDATA[
-
-                  <unit relativeTo="ca_movements">
-                    <unit relativeTo="ca_storage_locations">
-                      <unit relativeTo="ca_storage_locations.hierarchy">
-                        <l>^preferred_labels</l>
-                      </unit>
-                    </unit>
-                    (Status: ^LocationStatus, Authorised by: ^AuthorizedBy on ^MovementDate)
-                  </unit>
-
-                  ]]></setting>
-            <setting name="historyTemplate"><![CDATA[
+            <setting name="format"><![CDATA[
 
                   <unit relativeTo="ca_movements">
                     <unit relativeTo="ca_storage_locations">
@@ -8993,7 +8981,7 @@
             <setting name="list_format">list</setting>
             <setting name="sortDirection">ASC</setting>
             <setting name="dontShowDeleteButton">0</setting>
-            <setting name="display_template"><![CDATA[
+            <setting name="format"><![CDATA[
 
                   <dl>
                     <dt>Subject:</dt>
@@ -9064,7 +9052,7 @@
             <setting name="showCurrentOnly">0</setting>
             <setting name="useHierarchicalBrowser">1</setting>
             <setting name="restrict_to_lists">Classification</setting>
-            <setting name="display_template"><![CDATA[
+            <setting name="format"><![CDATA[
                   <unit relativeTo="ca_list_items">
                     <unit relativeTo="ca_list_items.hierarchy">
                       <l>^ca_list_items.preferred_labels.name_singular</l>
@@ -9110,7 +9098,7 @@
             <setting name="minRelationshipsPerRow">0</setting>
             <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
-            <setting name="display_template"><![CDATA[
+            <setting name="format"><![CDATA[
 
                   <unit relativeTo="ca_occurrences">
                     <l>^preferred_labels (^idno)</l>
@@ -9235,7 +9223,7 @@
             <setting name="list_format">list</setting>
             <setting name="sortDirection">ASC</setting>
             <setting name="dontShowDeleteButton">0</setting>
-            <setting name="display_template"><![CDATA[
+            <setting name="format"><![CDATA[
 
                   <dl>
                     <dt>Subject:</dt>
@@ -9312,7 +9300,7 @@
             <setting name="minRelationshipsPerRow">0</setting>
             <setting name="maxRelationshipsPerRow">255</setting>
             <setting name="showCurrentOnly">0</setting>
-            <setting name="display_template"><![CDATA[
+            <setting name="format"><![CDATA[
                   <dl>
                     <dt>Donor Name:
                     </dt>
@@ -9717,7 +9705,7 @@
             <setting name="list_format">bubbles</setting>
             <setting name="locationTrackingMode">ca_movements</setting>
             <setting name="colorItem">#ffffff</setting>
-            <setting name="displayTemplate"><![CDATA[
+            <setting name="format"><![CDATA[
                   <unit relativeTo="ca_objects">
                     <l>^ca_objects.preferred_labels (^ca_objects.idno)</l>
                   </unit>
@@ -9756,7 +9744,7 @@
             <setting name="list_format">bubbles</setting>
             <setting name="sortDirection">ASC</setting>
             <setting name="dontShowDeleteButton">0</setting>
-            <setting name="display_template"><![CDATA[
+            <setting name="format"><![CDATA[
                   <unit relativeTo="ca_storage_locations">
                     <unit relativeTo="ca_storage_locations.hierarchy">
                       <l>^preferred_labels</l>
