@@ -7985,6 +7985,97 @@
         </placement>
       </bundlePlacements>
     </display>
+    <display code="register" type="ca_objects" system="1">
+      <labels>
+        <label locale="en_AU">
+          <name>Register</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="show_empty_values"><![CDATA[0]]></setting>
+      </settings>
+      <groupAccess>
+        <permission group="admin" access="edit"/>
+      </groupAccess>
+      <bundlePlacements>
+        <placement code="ca_objects_idno">
+          <bundle>ca_objects.idno</bundle>
+        </placement>
+        <placement code="ca_objects_preferred_labels">
+          <bundle>ca_objects.preferred_labels</bundle>
+          <settings>
+            <setting name="format"><![CDATA[]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_objects_Description">
+          <bundle>ca_objects.Description</bundle>
+          <settings>
+            <setting name="format"><![CDATA[^ca_objects.ItemDates ^ca_objects.Description]]></setting>
+            <setting name="filter"><![CDATA[]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_objects_StatementOfSignificance">
+          <bundle>ca_objects.StatementOfSignificance</bundle>
+        </placement>
+        <placement code="ca_entities">
+          <bundle>ca_entities</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Donor / Source</setting>
+            <setting name="format"><![CDATA[]]></setting>
+            <setting name="restrict_to_relationship_types"><![CDATA[donor]]></setting>
+            <setting name="delimiter"><![CDATA[]]></setting>
+            <setting name="sort"><![CDATA[]]></setting>
+            <setting name="show_hierarchy"><![CDATA[0]]></setting>
+            <setting name="remove_first_items"><![CDATA[0]]></setting>
+            <setting name="hierarchy_order"><![CDATA[ASC]]></setting>
+            <setting name="hierarchy_limit"><![CDATA[0]]></setting>
+            <setting name="hierarchical_delimiter"><![CDATA[ ➔ ]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_entities">
+          <bundle>ca_entities</bundle>
+          <settings>
+            <setting name="label" locale="en_AU">Source Address</setting>
+            <setting name="format"><![CDATA[<ifdef code="ca_entities.AddressContainer.Address1">
+^ca_entities.AddressContainer.Address1<br/>
+</ifdef>
+<ifdef code="ca_entities.AddressContainer.Address2">
+^ca_entities.AddressContainer.Address2<br/>
+</ifdef>
+<ifdef code="ca_entities.AddressContainer.TownCity">
+^ca_entities.AddressContainer.TownCity<br/>
+</ifdef>
+<ifdef code="ca_entities.AddressContainer.State">
+^ca_entities.AddressContainer.State
+</ifdef>
+<ifdef code="ca_entities.AddressContainer.PostCode">
+^ca_entities.AddressContainer.PostCode<br/>
+</ifdef>
+<ifdef code="ca_entities.AddressContainer.Country">
+^ca_entities.AddressContainer.Country
+</ifdef>]]></setting>
+            <setting name="restrict_to_relationship_types"><![CDATA[donor]]></setting>
+            <setting name="delimiter"><![CDATA[]]></setting>
+            <setting name="sort"><![CDATA[]]></setting>
+            <setting name="remove_first_items"><![CDATA[0]]></setting>
+            <setting name="hierarchy_order"><![CDATA[ASC]]></setting>
+            <setting name="hierarchy_limit"><![CDATA[0]]></setting>
+            <setting name="hierarchical_delimiter"><![CDATA[ ➔ ]]></setting>
+            <setting name="show_hierarchy"><![CDATA[0]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_objects_acquisition_type_id">
+          <bundle>ca_objects.acquisition_type_id</bundle>
+          <settings>
+            <setting name="label" locale="en_AU"/>
+            <setting name="maximum_length"><![CDATA[100]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_objects_DateReceived">
+          <bundle>ca_objects.DateReceived</bundle>
+        </placement>
+      </bundlePlacements>
+    </display>
     <display code="representations" type="ca_object_representations" system="1">
       <labels>
         <label locale="en_AU">
